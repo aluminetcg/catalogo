@@ -279,7 +279,7 @@ RAREZA = {}
 for _canon, _raws in {
     "Common": ["C (Common)"],
     "Uncommon": ["U (Uncommon)", "UC (Uncommon)"],
-    "Rare": ["R (Rare)", "Rare Holo"],
+    "Rare": ["R (Rare)", "Rare Holo", "Pikachu Rare"],
     "Double Rare": ["RR (Double Rare)", "RRR (Triple Rare)", "Rare Holo V", "Rare Holo VMAX", "Rare Holo VSTAR",
                     "Rare Holo GX", "Rare Holo EX", "Rare BREAK", "Rare Prime", "Rare Prism Star"],
     "Ultra Rare": ["Rare Ultra", "SR (Super Rare)", "Full Art", "TR (Trainer Rare)"],
