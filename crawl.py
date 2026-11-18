@@ -33,8 +33,8 @@ import requests
 BASE = "https://aluminetcg.com.ar"
 CDN = "https://d22fxaf9t8d39k.cloudfront.net/"
 PTCG = "https://raw.githubusercontent.com/PokemonTCG/pokemon-tcg-data/master/"
-DELAY = 0.5          # segundos entre pedidos de cada hilo: amable con la tienda
-WORKERS = 2          # categorías en paralelo (la tienda respondió bien a 6 simultáneos)
+DELAY = 1.0          # segundos entre pedidos de cada hilo: amable con la tienda
+WORKERS = 1          # categorías en paralelo (la tienda respondió bien a 6 simultáneos)
 MAX_PAGES = 3000     # tope de seguridad por categoría
 TRANSFER_DISCOUNT = 0.10
 
@@ -101,6 +101,7 @@ def load_categories():
 def fetch_category(cid):
     products, page = [], 1
     while page <= MAX_PAGES:
+        time.sleep(DELAY)   # la tienda bloquea (403) si se le pide muy rápido
         r = get(f"{BASE}/v4/product/category", params={
             "filter_page": page, "filter_order": 0, "filter_categories[]": cid})
         if r.status_code != 200:
@@ -109,8 +110,9 @@ def fetch_category(cid):
         if not data:
             break
         products.extend(data)
+        if len(data) < 12:      # última página: no hace falta pedir otra
+            break
         page += 1
-        time.sleep(DELAY)
     return products
 
 
