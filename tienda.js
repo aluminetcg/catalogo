@@ -16,7 +16,7 @@
     ["game", "Juego"], ["kind", "Tipo de producto"], ["lang", "Idioma"], ["year", "Año"], ["set", "Expansión"],
     ["rarity", "Rareza"], ["finish", "Acabado"], ["ptype", "Tipo"], ["super", "Clase de carta"], ["variant", "Variante"]
   ];
-  var ALL = null, loading = null, view = [], shown = 0, root, facetSearch = {};
+  var ALL = null, loading = null, view = [], shown = 0, root, facetSearch = {}, expanded = {};
   var state = { q: "", sort: "rel", stock: true, min: "", max: "", f: {} };
   FACETS.forEach(function (f) { state.f[f[0]] = new Set(); });
 
@@ -41,7 +41,9 @@
   .layout{max-width:1400px;margin:0 auto;padding:16px;display:grid;grid-template-columns:270px 1fr;gap:18px;align-items:start}\
   aside{background:#fff;border:1px solid #e2e2dc;border-radius:12px;padding:6px 14px 14px;position:sticky;top:74px;max-height:calc(100vh - 90px);overflow:auto}\
   aside h3{margin:16px 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#6a7080;font-weight:600}\
-  .opts{display:flex;flex-direction:column;gap:2px;max-height:210px;overflow:auto}\
+  .opts{display:flex;flex-direction:column;gap:2px}\
+  .vermas{margin-top:4px;padding:6px 8px;border:0;background:none;color:#2f5fd0;font:inherit;font-size:13px;font-weight:600;text-align:left;cursor:pointer;border-radius:8px}\
+  .vermas:hover{background:#f0f0ec}\
   .opt{display:flex;gap:8px;align-items:center;padding:4px 6px;border-radius:8px;cursor:pointer}\
   .opt:hover{background:#f0f0ec}\
   .opt .n{margin-left:auto;color:#6a7080;font-size:12px}\
@@ -215,6 +217,10 @@
       state.stock = true; state.min = state.max = ""; FACETS.forEach(function (f) { state.f[f[0]].clear(); });
       $("#fStock").checked = true; $("#pMin").value = $("#pMax").value = ""; apply();
     };
+    $("#filters").addEventListener("click", function (e) {
+      var b = e.target.closest("[data-more]"); if (!b) return;
+      expanded[b.dataset.more] = !expanded[b.dataset.more]; facetCounts();
+    });
     $("#filters").addEventListener("change", function (e) {
       var i = e.target.closest("input[data-k]"); if (!i) return;
       var s = state.f[i.dataset.k]; if (i.checked) s.add(i.dataset.v); else s["delete"](i.dataset.v); apply(true);
@@ -229,9 +235,11 @@
       root.querySelector('input.mini[data-fs="' + k + '"]').hidden = counts.size <= 8 && !fs;
       if (fs) items = items.filter(function (x) { return norm(x[0]).indexOf(fs) >= 0; });
       items.sort(function (a, b) { return (state.f[k].has(b[0]) - state.f[k].has(a[0])) || (k === "year" ? b[0].localeCompare(a[0]) : b[1] - a[1] || a[0].localeCompare(b[0])); });
-      $("#opts-" + k).innerHTML = items.slice(0, 300).map(function (x) {
+      var lim = (expanded[k] || fs) ? 300 : Math.max(6, state.f[k].size);
+      var btn = (!fs && items.length > Math.max(6, state.f[k].size)) ? '<button type="button" class="vermas" data-more="' + k + '">' + (expanded[k] ? "Ver menos" : "Ver más (" + (items.length - lim) + ")") + "</button>" : "";
+      $("#opts-" + k).innerHTML = items.slice(0, lim).map(function (x) {
         return '<label class="opt' + (x[1] ? "" : " zero") + '"><input type="checkbox" data-k="' + k + '" data-v="' + esc(x[0]) + '"' + (state.f[k].has(x[0]) ? " checked" : "") + "><span>" + esc(x[0]) + '</span><span class="n">' + x[1].toLocaleString("es-AR") + "</span></label>";
-      }).join("");
+      }).join("") + btn;
     });
   }
   function chips() {
