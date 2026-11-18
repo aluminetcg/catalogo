@@ -33,8 +33,8 @@ import requests
 BASE = "https://aluminetcg.com.ar"
 CDN = "https://d22fxaf9t8d39k.cloudfront.net/"
 PTCG = "https://raw.githubusercontent.com/PokemonTCG/pokemon-tcg-data/master/"
-DELAY = 0.2          # segundos entre pedidos de cada hilo: amable con la tienda
-WORKERS = 4          # categorías en paralelo (la tienda respondió bien a 6 simultáneos)
+DELAY = 0.5          # segundos entre pedidos de cada hilo: amable con la tienda
+WORKERS = 2          # categorías en paralelo (la tienda respondió bien a 6 simultáneos)
 MAX_PAGES = 3000     # tope de seguridad por categoría
 TRANSFER_DISCOUNT = 0.10
 
@@ -49,11 +49,12 @@ session.headers.update({"User-Agent": "Mozilla/5.0 (catalogo-aluminetcg; uso pro
 
 # --------------------------------------------------------------------------- red
 def get(url, **kw):
-    for attempt in range(5):
+    for attempt in range(7):
         try:
             r = session.get(url, timeout=30, **kw)
-            if r.status_code in (429, 500, 502, 503, 504):
-                time.sleep(5 * (attempt + 1))
+            if r.status_code in (403, 429, 500, 502, 503, 504):
+                print(f"  la tienda respondió {r.status_code}; espero {30 * (attempt + 1)}s y reintento", flush=True)
+                time.sleep(30 * (attempt + 1))
                 continue
             return r
         except requests.RequestException:
@@ -103,7 +104,7 @@ def fetch_category(cid):
         r = get(f"{BASE}/v4/product/category", params={
             "filter_page": page, "filter_order": 0, "filter_categories[]": cid})
         if r.status_code != 200:
-            break
+            raise RuntimeError(f"La tienda respondió {r.status_code} en la categoría {cid}")
         data = r.json().get("data") or []
         if not data:
             break
