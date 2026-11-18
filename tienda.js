@@ -338,3 +338,61 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
+
+/* Filtro "Solo con stock" en las páginas de categoría de la tienda.
+   Oculta los productos marcados SIN STOCK y va cargando más páginas solo hasta completar la grilla. */
+(function () {
+  "use strict";
+  function init() {
+    var feed = document.querySelector(".products-feed__products");
+    if (!feed || document.querySelector(".alumine-stock-toggle")) return;
+    var KEY = "alumine-solo-stock", on = false, want = 12, clicks = 0, waiting = false;
+    try { on = localStorage.getItem(KEY) === "1"; } catch (e) { }
+    var st = document.createElement("style");
+    st.textContent = ".alumine-solo-stock .products-feed__product.alumine-out{display:none!important}" +
+      ".alumine-stock-toggle{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-weight:600;padding:8px 4px;user-select:none;white-space:nowrap}" +
+      ".alumine-stock-toggle input{width:18px;height:18px;accent-color:#111;margin:0}" +
+      ".alumine-stock-note{font-weight:400;opacity:.65;font-size:.9em}";
+    document.head.appendChild(st);
+    var label = document.createElement("label");
+    label.className = "alumine-stock-toggle";
+    label.innerHTML = '<input type="checkbox"> Solo con stock <span class="alumine-stock-note"></span>';
+    var cb = label.querySelector("input"), note = label.querySelector("span");
+    cb.checked = on;
+    var head = document.querySelector(".category-feed__head");
+    if (head) { var col = document.createElement("div"); col.className = "uk-width-auto"; col.appendChild(label); head.appendChild(col); }
+    else feed.parentNode.insertBefore(label, feed);
+
+    var btn = function () { var b = document.getElementById("products_feed-btn"); return b && b.offsetParent !== null && !b.disabled ? b : null; };
+    function mark() {
+      var hidden = 0, shown = 0;
+      feed.querySelectorAll(".products-feed__product").forEach(function (p) {
+        var out = !!p.querySelector(".products-feed__product-out-stock");
+        p.classList.toggle("alumine-out", out);
+        if (out) hidden++; else shown++;
+      });
+      feed.classList.toggle("alumine-solo-stock", on);
+      note.textContent = on && hidden ? "(" + hidden + " sin stock ocultos)" : "";
+      return shown;
+    }
+    function fill() {
+      var shown = mark();
+      if (!on || waiting || shown >= want || clicks >= 40) return;
+      var b = btn(); if (!b) return;
+      var before = feed.children.length;
+      waiting = true; clicks++; b.click();
+      setTimeout(function () { waiting = false; if (feed.children.length > before) fill(); }, 2500);
+    }
+    cb.addEventListener("change", function () {
+      on = cb.checked; try { localStorage.setItem(KEY, on ? "1" : "0"); } catch (e) { }
+      fill();
+    });
+    document.addEventListener("click", function (e) {
+      if (e.isTrusted && e.target.closest && e.target.closest("#products_feed-btn")) want += 12;
+    }, true);
+    new MutationObserver(function () { waiting = false; setTimeout(fill, 150); }).observe(feed, { childList: true });
+    fill();
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+})();
