@@ -348,7 +348,7 @@ def tcg_rarities(rows):
     """Segunda fuente: completa con TCGplayer la rareza de las cartas que quedaron sin dato."""
     for r in rows:              # las Radiant (Kagayaku) tienen rareza propia en todos los idiomas
         if (not r["rarity"] and r["game"] == "Pokémon" and r["kind"] in ("Cartas", "Gradeadas")
-                and re.search(r"\bradiant\b(?! collection)", r["title"].lower())):
+                and re.search(r"(?<!\()\bradiant (?!collection)", r["title"].lower())):
             r["rarity"] = "Radiant Rare"
     try:
         import precios
