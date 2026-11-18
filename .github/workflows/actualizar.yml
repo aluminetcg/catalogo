@@ -33,21 +33,26 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install requests cryptography
-      - name: Bajar catálogo de la tienda
-        if: ${{ !inputs.solo_precios }}
-        run: python crawl.py
       - name: Fecha de hoy
         id: hoy
         run: echo "d=$(date -u +%F)" >> "$GITHUB_OUTPUT"
       - uses: actions/cache@v4
         with:
           path: data/tcgcsv
-          key: tcgcsv-${{ steps.hoy.outputs.d }}
-          restore-keys: tcgcsv-
+          key: tcgcsv2-${{ steps.hoy.outputs.d }}
+          restore-keys: tcgcsv2-
+      - name: Bajar catálogo de la tienda
+        if: ${{ !inputs.solo_precios }}
+        run: python crawl.py
+      - name: Recalcular rarezas sin recorrer la tienda
+        if: ${{ inputs.solo_precios }}
+        run: python crawl.py --reenrich
       - name: Comparar precios con TCGplayer
         env:
           PRECIOS_CLAVE: ${{ secrets.PRECIOS_CLAVE }}
