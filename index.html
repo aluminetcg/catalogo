@@ -34,7 +34,9 @@ header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px s
 .layout{max-width:1400px;margin:0 auto;padding:16px;display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
 aside{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 14px 14px;position:sticky;top:78px;max-height:calc(100vh - 94px);overflow:auto}
 aside h3{margin:16px 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-.opts{display:flex;flex-direction:column;gap:2px;max-height:220px;overflow:auto}
+.opts{display:flex;flex-direction:column;gap:2px}
+.vermas{margin-top:4px;padding:6px 8px;border:0;background:none;color:var(--accent);font:inherit;font-size:13px;font-weight:600;text-align:left;cursor:pointer;border-radius:8px}
+.vermas:hover{background:var(--chip)}
 .opt{display:flex;gap:8px;align-items:center;padding:4px 6px;border-radius:8px;cursor:pointer}
 .opt:hover{background:var(--chip)}
 .opt input{accent-color:var(--accent)}
@@ -138,7 +140,7 @@ const FACETS = [
 let ALL = [], view = [], shown = 0;
 const state = { q: "", sort: "rel", stock: false, min: "", max: "", f: {} };
 FACETS.forEach(([k]) => state.f[k] = new Set());
-const facetSearch = {};   // texto del mini buscador de cada faceta
+const facetSearch = {}, expanded = {};   // texto del mini buscador de cada faceta
 
 // ---------- carga
 const ago = iso => { const m = Math.round((Date.now() - new Date(iso)) / 60000); return m < 2 ? "recién" : m < 90 ? `hace ${m} min` : m < 2880 ? `hace ${Math.round(m / 60)} h` : `hace ${Math.round(m / 1440)} días`; };
@@ -241,6 +243,10 @@ function buildFilters() {
   $("#pMin").oninput = $("#pMax").oninput = debounced;
   el.querySelectorAll(".mini").forEach(i => i.oninput = () => { facetSearch[i.dataset.fs] = norm(i.value); updateFacetCounts(); });
   $("#reset").onclick = resetAll;
+  el.addEventListener("click", e => {
+    const b = e.target.closest("[data-more]"); if (!b) return;
+    expanded[b.dataset.more] = !expanded[b.dataset.more]; updateFacetCounts();
+  });
   el.addEventListener("change", e => {
     const i = e.target.closest("input[data-k]"); if (!i) return;
     const s = state.f[i.dataset.k]; i.checked ? s.add(i.dataset.v) : s.delete(i.dataset.v); apply(false);
@@ -259,8 +265,10 @@ function updateFacetCounts() {
     const fs = facetSearch[k];
     document.querySelector(`.mini[data-fs="${k}"]`).hidden = counts.size <= 8 && !fs; if (fs) items = items.filter(([v]) => norm(v).includes(fs));
     items.sort((a, b) => (state.f[k].has(b[0]) - state.f[k].has(a[0])) || (k === "year" ? b[0].localeCompare(a[0]) : b[1] - a[1] || a[0].localeCompare(b[0])));
-    $("#opts-" + k).innerHTML = items.slice(0, 300).map(([v, n]) =>
-      `<label class="opt${n ? "" : " zero"}"><input type="checkbox" data-k="${k}" data-v="${esc(v)}"${state.f[k].has(v) ? " checked" : ""}><span>${esc(v)}</span><span class="n">${n.toLocaleString("es-AR")}</span></label>`).join("") || `<div class="meta" style="padding:4px 6px">Sin opciones</div>`;
+    const base = Math.max(6, state.f[k].size), lim = (expanded[k] || fs) ? 300 : base;
+    const btn = (!fs && items.length > base) ? `<button type="button" class="vermas" data-more="${k}">${expanded[k] ? "Ver menos" : `Ver más (${items.length - lim})`}</button>` : "";
+    $("#opts-" + k).innerHTML = (items.slice(0, lim).map(([v, n]) =>
+      `<label class="opt${n ? "" : " zero"}"><input type="checkbox" data-k="${k}" data-v="${esc(v)}"${state.f[k].has(v) ? " checked" : ""}><span>${esc(v)}</span><span class="n">${n.toLocaleString("es-AR")}</span></label>`).join("") || `<div class="meta" style="padding:4px 6px">Sin opciones</div>`) + btn;
   }
 }
 function renderChips() {
