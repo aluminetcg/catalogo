@@ -1,0 +1,232 @@
+#!/usr/bin/env python3
+"""
+Comparador interno de precios: tienda (ARS) vs TCGplayer (USD) -> data/precios.bin (cifrado)
+
+Uso:
+    pip install requests cryptography
+    PRECIOS_CLAVE="tu-clave" python precios.py
+
+Qué hace:
+  1. Lee data/cards.json (lo genera crawl.py).
+  2. Baja los precios de TCGplayer desde tcgcsv.com (se actualizan una vez por día; se
+     guardan en data/tcgcsv/ y no se vuelven a bajar hasta que cambian).
+  3. Empareja cada carta por número + nombre + set y elige el precio del acabado correcto
+     (Normal / Holofoil / Reverse Holofoil).
+  4. Toma el dólar oficial del día y guarda todo cifrado con la clave PRECIOS_CLAVE.
+     La página precios.html lo abre solo con esa misma clave.
+"""
+import gzip
+import json
+import os
+import re
+import sys
+import time
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timezone
+from pathlib import Path
+
+import requests
+
+from crawl import norm, normnum
+
+TCG = "https://tcgcsv.com"
+CATEGORIES = {("Pokémon", "Inglés"): 3, ("Pokémon", "Japonés"): 85}   # categorías de TCGplayer
+SALT = b"aluminetcg-precios-v1"
+ITERATIONS = 200_000
+
+HERE = Path(__file__).parent
+CARDS = HERE / "data" / "cards.json"
+CACHE = HERE / "data" / "tcgcsv"
+OUT = HERE / "data" / "precios.bin"
+
+session = requests.Session()
+session.headers.update({"User-Agent": "catalogo-aluminetcg/1.0 (comparador interno de precios)"})
+
+
+def get_json(url):
+    for attempt in range(4):
+        try:
+            r = session.get(url, timeout=60)
+            if r.status_code == 200:
+                return r.json()
+        except (requests.RequestException, ValueError):
+            pass
+        time.sleep(3 * (attempt + 1))
+    raise RuntimeError(f"No pude bajar {url}")
+
+
+# ---------------------------------------------------------------- TCGplayer
+def load_tcg(cat):
+    """Devuelve la lista de grupos (sets) de una categoría, con productos y precios. Usa caché diaria."""
+    CACHE.mkdir(parents=True, exist_ok=True)
+    f = CACHE / f"{cat}.json"
+    stamp = session.get(f"{TCG}/last-updated.txt", timeout=30).text.strip()
+    if f.exists():
+        old = json.loads(f.read_text())
+        if old.get("stamp") == stamp:
+            return old["groups"], stamp
+    groups = get_json(f"{TCG}/tcgplayer/{cat}/groups")["results"]
+
+    def one(g):
+        gid = g["groupId"]
+        prods = get_json(f"{TCG}/tcgplayer/{cat}/{gid}/products")["results"]
+        prices = {}
+        for p in get_json(f"{TCG}/tcgplayer/{cat}/{gid}/prices")["results"]:
+            if p.get("marketPrice"):
+                prices.setdefault(p["productId"], {})[p["subTypeName"]] = p["marketPrice"]
+        rows = []
+        for p in prods:
+            ext = {e["name"]: e["value"] for e in p.get("extendedData") or []}
+            if ext.get("Number") and p["productId"] in prices:
+                rows.append([p["productId"], p["name"], ext["Number"], prices[p["productId"]]])
+        return {"id": gid, "name": g["name"], "year": (g.get("publishedOn") or "")[:4], "products": rows}
+
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        out = list(ex.map(one, groups))
+    f.write_text(json.dumps({"stamp": stamp, "groups": out}, ensure_ascii=False, separators=(",", ":")))
+    print(f"TCGplayer categoría {cat}: {len(out)} sets, {sum(len(g['products']) for g in out)} cartas con precio")
+    return out, stamp
+
+
+PAREN = re.compile(r"\(([^)]*)\)")
+
+
+def words(s):
+    """Normaliza para comparar nombres: sin acentos ni signos, 'and' fuera, pokeball = poke ball."""
+    s = norm(s).replace("pokeball", "poke ball").replace("masterball", "master ball")
+    return " ".join(w for w in s.split() if w not in ("and", "the", "pattern"))
+
+
+def split_number(n):
+    a, _, b = n.partition("/")
+    return normnum(a.strip()), normnum(b.strip())
+
+
+def build_index(groups):
+    idx = {}
+    for g in groups:
+        gname = words(g["name"].split(": ", 1)[-1])     # "SV: Scarlet & Violet 151" -> "scarlet violet 151"
+        for pid, name, number, prices in g["products"]:
+            head = name.split(" - ")[0]
+            idx.setdefault(split_number(number), []).append({
+                "pid": pid, "base": words(PAREN.sub(" ", head)),
+                "tags": [words(t) for t in PAREN.findall(head) if words(t)],
+                "group": gname, "year": g["year"], "prices": prices,
+            })
+    return idx
+
+
+def find_product(idx, card):
+    if "/" not in card["number"]:
+        return None
+    cands = idx.get(split_number(card["number"]), [])
+    base = words(card["card"])
+    if not base or not cands:
+        return None
+    title = words(card["title"])
+    context = words(card["set"] + " " + card["title"])
+    scored = []
+    for c in cands:
+        if c["base"] != base and not (c["base"].split()[:1] == base.split()[:1] and (c["base"] in base or base in c["base"])):
+            continue
+        score = (2 if c["base"] == base else 0)
+        score += sum(2 if t in title else -2 for t in c["tags"])     # variantes: Master Ball, Cosmos Holo...
+        score += 3 if c["group"] and c["group"] in context else 0
+        score += 1 if c["year"] and c["year"] == card["year"] else 0
+        scored.append((score, c))
+    if not scored:
+        return None
+    scored.sort(key=lambda x: -x[0])
+    if len(scored) > 1 and scored[0][0] == scored[1][0] and scored[0][1]["prices"] != scored[1][1]["prices"]:
+        return None              # empate entre productos distintos: mejor no comparar que comparar mal
+    return scored[0][1]
+
+
+def pick_price(prices, card):
+    """Elige el acabado de TCGplayer que corresponde a la carta de la tienda."""
+    title = words(card["title"])
+    subs = list(prices)
+    if card["finish"] == "Reverse Holo" or "reverse" in title:
+        subs = [s for s in subs if "Reverse" in s]
+    else:
+        subs = [s for s in subs if "Reverse" not in s]
+        first = [s for s in subs if "1st Edition" in s]
+        if "1st edition" in title or "1st ed" in title:
+            subs = first
+        elif len(first) < len(subs):
+            subs = [s for s in subs if s not in first]
+        holo = [s for s in subs if "Holofoil" in s]
+        plain = [s for s in subs if "Holofoil" not in s]
+        wants_holo = card["finish"] in ("Holo", "Cosmos Holo", "Master Ball", "Poké Ball")
+        subs = (holo or plain) if wants_holo else (plain or holo)
+    return (subs[0], prices[subs[0]]) if subs else None
+
+
+# -------------------------------------------------------------------- dólar
+def dolar_oficial():
+    try:
+        d = get_json("https://dolarapi.com/v1/dolares/oficial")
+        return float(d["venta"]), "dolarapi.com"
+    except Exception:
+        d = get_json("https://api.bluelytics.com.ar/v2/latest")
+        return float(d["oficial"]["value_sell"]), "bluelytics.com.ar"
+
+
+# ------------------------------------------------------------------ cifrado
+def encrypt(data, password):
+    from cryptography.hazmat.primitives import hashes
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+    from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+    key = PBKDF2HMAC(algorithm=hashes.SHA256(), length=32, salt=SALT, iterations=ITERATIONS).derive(password.encode())
+    iv = os.urandom(12)
+    return iv + AESGCM(key).encrypt(iv, data, None)
+
+
+def main():
+    password = os.environ.get("PRECIOS_CLAVE", "").strip()
+    if not password:
+        print("AVISO: falta el secreto PRECIOS_CLAVE. No genero el comparador de precios.")
+        return
+    cards = json.loads(CARDS.read_text())
+    cards = cards["cards"] if isinstance(cards, dict) else cards
+    usd, fuente = dolar_oficial()
+    print(f"Dólar oficial (venta): ${usd:,.2f} ({fuente})")
+
+    rows, stats, stamp = [], {}, ""
+    for (game, lang), cat in CATEGORIES.items():
+        mine = [c for c in cards if c["game"] == game and c["lang"] == lang and c["kind"] == "Cartas" and c["price"]]
+        if not mine:
+            continue
+        groups, stamp = load_tcg(cat)
+        idx = build_index(groups)
+        ok, sin = 0, []
+        for c in mine:
+            prod = find_product(idx, c)
+            hit = pick_price(prod["prices"], c) if prod else None
+            if not hit:
+                sin.append(c["title"])
+                continue
+            ok += 1
+            rows.append([c["card"], c["set"], c["number"], c["finish"], c["rarity"], lang, c["stock"], c["price"],
+                         c["transfer"], round(hit[1], 2), hit[0], c["url"], prod["pid"], c["img"]])
+        stats[lang] = [ok, len(mine)]
+        print(f"{game} {lang}: {ok} de {len(mine)} cartas comparadas con TCGplayer")
+        for t in sin[:: max(1, len(sin) // 15)][:15]:
+            print("   sin precio:", t)
+
+    payload = {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "tcg_updated": stamp,
+               "usd": usd, "usd_source": fuente, "stats": stats, "total": len(cards),
+               "cols": ["card", "set", "number", "finish", "rarity", "lang", "stock", "ars", "transfer", "tcg",
+                        "sub", "url", "pid", "img"],
+               "rows": rows}
+    raw = gzip.compress(json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode(), mtime=0)
+    OUT.write_bytes(encrypt(raw, password))
+    print(f"{len(rows)} comparaciones -> {OUT} ({OUT.stat().st_size // 1024} KB, cifrado)")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:      # el comparador nunca debe frenar la actualización del catálogo
+        print(f"AVISO: no pude generar el comparador de precios: {e}")
+        sys.exit(0)
