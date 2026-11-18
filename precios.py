@@ -32,7 +32,8 @@ from crawl import norm, normnum
 TCG = "https://tcgcsv.com"
 CATEGORIES = {("Pokémon", "Inglés"): 3, ("Pokémon", "Japonés"): 85}   # categorías de TCGplayer (precios)
 # Categorías que se usan para completar rarezas (crawl.py). Idioma vacío = cualquiera.
-RARITY_CATEGORIES = {("Pokémon", "Inglés"): 3, ("Pokémon", "Japonés"): 85, ("One Piece", ""): 68,
+RARITY_CATEGORIES = {("Pokémon", "Inglés"): 3, ("Pokémon", "Japonés"): 85, ("Pokémon", "Coreano"): 85,
+                     ("One Piece", ""): 68,
                      ("Magic", ""): 1, ("Lorcana", ""): 71}
 SALT = b"aluminetcg-precios-v1"
 ITERATIONS = 200_000
