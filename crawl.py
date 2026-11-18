@@ -272,6 +272,45 @@ def lookup(db, t, year, context):
     return hit[0]
 
 
+# ------------------------------------------------- rarezas unificadas
+# Cada idioma y cada época nombran la rareza distinto (C, Common, RR, Rare Holo V...).
+# Acá se agrupan en pocos nombres para que el filtro sea claro.
+RAREZA = {}
+for _canon, _raws in {
+    "Common": ["C (Common)"],
+    "Uncommon": ["U (Uncommon)", "UC (Uncommon)"],
+    "Rare": ["R (Rare)", "Rare Holo"],
+    "Double Rare": ["RR (Double Rare)", "RRR (Triple Rare)", "Rare Holo V", "Rare Holo VMAX", "Rare Holo VSTAR",
+                    "Rare Holo GX", "Rare Holo EX", "Rare BREAK", "Rare Prime", "Rare Prism Star"],
+    "Ultra Rare": ["Rare Ultra", "SR (Super Rare)", "Full Art", "TR (Trainer Rare)"],
+    "Illustration Rare": ["AR (Art Rare)", "CHR (Character Rare)", "Trainer Gallery Rare Holo"],
+    "Special Illustration Rare": ["SAR (Special Art Rare)", "CSR (Character Super Rare)", "Alt Art"],
+    "Hyper Rare": ["HR (Hyper Rare)", "UR (Ultra Rare)", "Rare Rainbow", "Rare Secret", "SEC (Secret Rare)"],
+    "Shiny Rare": ["Rare Shiny", "Shiny Ultra Rare", "Rare Shiny GX", "SSR (Shiny Super Rare)"],
+    "ACE SPEC": ["ACE SPEC Rare", "ACE"],
+    "Mega Attack Rare": ["MEGA_ATTACK_RARE"],
+    "Leader": ["L (Leader)"],
+    "Promo": ["PR (Promo)"],
+}.items():
+    for _r in _raws:
+        RAREZA[_r] = _canon
+# En One Piece y Dragon Ball, SR y SEC son escalones propios (no equivalen a los de Pokémon).
+RAREZA_OTROS = {"SR (Super Rare)": "Super Rare", "SEC (Secret Rare)": "Secret Rare"}
+
+
+def unify(rarity, game, finish):
+    """Devuelve (rareza unificada, acabado). 'Rare Holo' pasa a Rare + acabado Holo."""
+    if not rarity:
+        return rarity, finish
+    if game == "Magic" and rarity != "Promo":
+        return "", finish            # en Magic el título no trae rareza; "Full Art" es un estilo
+    if rarity in ("Rare Holo", "Trainer Gallery Rare Holo") and not finish:
+        finish = "Holo"
+    if game != "Pokémon" and rarity in RAREZA_OTROS:
+        return RAREZA_OTROS[rarity], finish
+    return RAREZA.get(rarity, rarity), finish
+
+
 # ------------------------------------------------------------------- registros
 GAMES = {
     "pokemon-cartas-ingles": ("Pokémon", "Inglés", "Cartas"),
@@ -321,10 +360,11 @@ def build_record(p, cat, db=None):
         hit = lookup(db, t, year, norm(" ".join(names) + " " + title))
         if hit:
             rarity, supert, ptype = hit["rarity"] or rarity, hit["super"], hit["type"]
+    rarity, finish = unify(rarity, game, t["finish"])
     return {
         "id": p["idProductos"], "title": title, "card": t["name"],
         "number": t["number"] + ("/" + t["total"] if t["total"] else ""),
-        "rarity": rarity, "finish": t["finish"], "variant": t["variant"], "super": supert, "ptype": ptype,
+        "rarity": rarity, "finish": finish, "variant": t["variant"], "super": supert, "ptype": ptype,
         "price": price, "transfer": round(price * (1 - TRANSFER_DISCOUNT)) if price else None, "stock": qty,
         "url": f"{BASE}/{cat['path']}/{p['p_link']}", "img": (CDN + imgs[0]["i_link"]) if imgs else "",
         "game": game, "lang": lang, "kind": kind, "year": year, "set": names[-1],
