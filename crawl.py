@@ -368,7 +368,7 @@ def tcg_rarities(rows):
             print(f"Rareza por TCGplayer, {game} {lang}: {ok} de {len(mine)} que faltaban", flush=True)
         # Chino: sets con numeración propia que reimprimen cartas japonesas -> rareza de la carta japonesa
         chino = [r for r in rows if not r["rarity"] and r["game"] == "Pokémon" and r["lang"] == "Chino"
-                 and r["kind"] in ("Cartas", "Gradeadas") and "gem pack" not in (r["set"] + " " + r["title"]).lower()]
+                 and r["kind"] in ("Cartas", "Gradeadas") and not re.search(r"gem .*pack|cbb\d", (r["set"] + " " + r["title"]).lower())]
         if chino:
             idx = precios.build_index(precios.load_tcg(85)[0])
             ok = 0
