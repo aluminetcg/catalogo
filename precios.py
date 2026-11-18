@@ -174,7 +174,7 @@ SIN_RAREZA = ("", "None", "Classic Collection")     # reimpresiones sin símbolo
 BASICAS = ("Common", "Uncommon", "Rare")
 
 
-def original_rarity(idx, card):
+def original_rarity(idx, card, year=""):
     """Reimpresiones sin rareza impresa (high class japoneses, espejos Quick Ball / Friend Ball,
     Pokémon TCG Classic): se usa la rareza de la carta original, buscándola por nombre."""
     a, _, b = card["number"].partition("/")
@@ -183,10 +183,17 @@ def original_rarity(idx, card):
     base = words(card["card"])
     if not base:
         return ""
-    count = {}
+    count, prev = {}, []
     for c in idx.get(("w", base.split()[0]), []):
         if c["base"] == base and c["rarity"] in BASICAS:
             count[c["rarity"]] = count.get(c["rarity"], 0) + 1
+            if year and c["year"] and c["year"] <= year:
+                prev.append((c["year"], c["rarity"]))
+    if prev:                     # la impresión anterior más cercana es la carta que se reimprimió
+        last = max(y for y, _ in prev)
+        near = {r for y, r in prev if y == last}
+        if len(near) == 1:
+            return near.pop()
     best = sorted(count.items(), key=lambda x: -x[1])
     if not best or (len(best) > 1 and best[0][1] == best[1][1]):
         return ""
@@ -238,7 +245,7 @@ def find_rarity(idx, card):
     if len(rs) == 1:
         return rs.pop(), top[0][1]["name"]
     if not rs and card["number"]:
-        return original_rarity(idx, card), None
+        return original_rarity(idx, card, top[0][1]["year"]), None
     return "", None
 
 
