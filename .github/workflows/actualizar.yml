@@ -4,7 +4,7 @@ name: Actualizar catálogo
 
 on:
   schedule:
-    - cron: "17 */2 * * *"   # cada 2 horas (hora UTC). Para cada hora: "17 * * * *"
+    - cron: "17 */3 * * *"   # cada 3 horas (hora UTC)
   workflow_dispatch:
   push:
     branches: [main]
@@ -22,7 +22,7 @@ concurrency:
 jobs:
   actualizar:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 150
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
