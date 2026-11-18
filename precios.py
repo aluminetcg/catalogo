@@ -193,6 +193,33 @@ def original_rarity(idx, card):
     return best[0][0]
 
 
+TIERS = BASICAS + ("Holo Rare", "Double Rare", "Triple Rare")
+
+
+def name_rarity(idx, card):
+    """Cartas chinas: numeración propia, pero son reimpresiones de cartas japonesas.
+    Se busca la carta japonesa cuyo nombre es el comienzo del título y se usa su rareza más habitual."""
+    a, _, b = card["number"].partition("/")
+    if a.strip().isdigit() and b.strip().isdigit() and int(a) > int(b):
+        return ""                # secretas: no adivinar
+    title = words(card["title"])
+    if title.startswith("pokemon "):
+        title = title[8:]
+    if not title:
+        return ""
+    pool = [c for c in idx.get(("w", title.split()[0]), [])
+            if c["base"] and (title == c["base"] or title.startswith(c["base"] + " "))]
+    longest = max((len(c["base"]) for c in pool), default=0)
+    count = {}
+    for c in pool:
+        if len(c["base"]) == longest and c["rarity"] in TIERS:
+            count[c["rarity"]] = count.get(c["rarity"], 0) + 1
+    best = sorted(count.items(), key=lambda x: -x[1])
+    if not best or (len(best) > 1 and best[0][1] == best[1][1]):
+        return ""
+    return best[0][0]
+
+
 def find_rarity(idx, card):
     """Para rarezas: alcanza con que los mejores candidatos coincidan en la rareza."""
     scored = candidates(idx, card)
