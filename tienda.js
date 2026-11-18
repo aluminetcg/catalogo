@@ -84,6 +84,9 @@
   @media (max-width:860px){\
     .layout{grid-template-columns:1fr;padding:12px}\
     .bar b{display:none}\
+    .bar{flex-wrap:wrap;gap:8px}\
+    .bar input{flex:1 1 100%;order:-1}\
+    .bar button{flex:1}\
     .bar .fbtn{display:block}\
     aside{position:fixed;inset:0 18% 0 0;top:0;max-height:none;border-radius:0 12px 12px 0;z-index:8;transform:translateX(-105%);transition:transform .2s}\
     aside.open{transform:none;box-shadow:0 0 0 100vw rgba(0,0,0,.45)}\
@@ -161,7 +164,7 @@
       out.push(c);
     });
     out.sort({
-      rel: function (a, b) { return b._s - a._s || (b.stock > 0) - (a.stock > 0) || a.card.localeCompare(b.card); },
+      rel: function (a, b) { return (b.stock > 0) - (a.stock > 0) || b._s - a._s || a.card.localeCompare(b.card); },
       pa: function (a, b) { return a.price - b.price; }, pd: function (a, b) { return b.price - a.price; },
       az: function (a, b) { return a.card.localeCompare(b.card) || a.price - b.price; },
       "new": function (a, b) { return b.id - a.id; }
@@ -311,7 +314,8 @@
     $("#cart").onclick = openStoreCart;
     $("#openF").onclick = function () { $("#filters").classList.toggle("open"); };
     $("#ov").addEventListener("click", function (e) { if (!e.target.closest("aside") && e.target.id !== "openF") $("#filters").classList.remove("open"); });
-    var qt; $("#q").addEventListener("input", function (e) { clearTimeout(qt); qt = setTimeout(function () { state.q = e.target.value; apply(); }, 150); });
+    var qt; $("#q").addEventListener("input", function (e) { clearTimeout(qt); qt = setTimeout(function () { state.q = $("#q").value; apply(); }, 150); });
+    $("#q").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); clearTimeout(qt); state.q = $("#q").value; apply(); $("#q").blur(); } });
     $("#sort").onchange = function (e) { state.sort = e.target.value; apply(); };
     $("#grid").addEventListener("click", function (e) {
       var b = e.target.closest("button[data-add]"); if (!b || b.disabled) return;
