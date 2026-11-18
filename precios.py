@@ -194,7 +194,7 @@ def original_rarity(idx, card):
 
 
 TIERS = BASICAS + ("Holo Rare", "Double Rare", "Triple Rare")
-SUFIJOS = ("v", "vmax", "vstar", "vunion", "gx", "ex", "break", "lv", "prime", "star", "tag")
+SUFIJOS = ("v", "vmax", "vstar", "gx", "ex")
 
 
 def name_rarity(idx, card):
@@ -211,8 +211,11 @@ def name_rarity(idx, card):
     pool = [c for c in idx.get(("w", title.split()[0]), [])
             if c["base"] and (title == c["base"] or title.startswith(c["base"] + " "))]
     longest = max((len(c["base"]) for c in pool), default=0)
-    if title[longest:].split()[:1] and title[longest:].split()[0] in SUFIJOS:
-        return ""                # "Flareon VMAX" no es "Flareon": si falta la carta exacta, no adivinar
+    for w in title.split()[1:]:  # nombre con V, VMAX, VSTAR, GX o ex y número normal: siempre es RR / RRR
+        if any(ch.isdigit() for ch in w):
+            break
+        if w in SUFIJOS:
+            return "Double Rare"
     count = {}
     for c in pool:
         if len(c["base"]) == longest and c["rarity"] in TIERS:
