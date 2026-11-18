@@ -294,6 +294,16 @@ for _canon, _raws in {
 }.items():
     for _r in _raws:
         RAREZA[_r] = _canon
+# Nombres que usa TCGplayer (segunda fuente de rarezas)
+RAREZA.update({"Holo Rare": "Rare", "Triple Rare": "Double Rare", "Prism Rare": "Double Rare", "Super Rare": "Ultra Rare",
+               "Art Rare": "Illustration Rare", "Character Rare": "Illustration Rare",
+               "Special Art Rare": "Special Illustration Rare", "Character Super Rare": "Special Illustration Rare",
+               "Secret Rare": "Hyper Rare", "Mega Hyper Rare": "Hyper Rare", "Shiny Holo Rare": "Shiny Rare",
+               "Shiny Super Rare": "Shiny Rare", "Rare ACE": "ACE SPEC", "Code Card": ""})
+# En otros juegos TCGplayer da la rareza como sigla
+SIGLAS = {"C": "Common", "U": "Uncommon", "UC": "Uncommon", "R": "Rare", "M": "Mythic Rare", "SR": "Super Rare",
+          "SEC": "Secret Rare", "L": "Leader", "P": "Promo", "PR": "Promo", "T": "Token", "TR": "Treasure Rare",
+          "SP": "Special", "S": "Special"}
 # En One Piece y Dragon Ball, SR y SEC son escalones propios (no equivalen a los de Pokémon).
 RAREZA_OTROS = {"SR (Super Rare)": "Super Rare", "SEC (Secret Rare)": "Secret Rare"}
 
@@ -302,13 +312,82 @@ def unify(rarity, game, finish):
     """Devuelve (rareza unificada, acabado). 'Rare Holo' pasa a Rare + acabado Holo."""
     if not rarity:
         return rarity, finish
-    if game == "Magic" and rarity != "Promo":
-        return "", finish            # en Magic el título no trae rareza; "Full Art" es un estilo
-    if rarity in ("Rare Holo", "Trainer Gallery Rare Holo") and not finish:
+    if rarity in ("Rare Holo", "Holo Rare", "Trainer Gallery Rare Holo") and not finish:
         finish = "Holo"
-    if game != "Pokémon" and rarity in RAREZA_OTROS:
-        return RAREZA_OTROS[rarity], finish
+    if game != "Pokémon":
+        if game == "Magic" and rarity == "L":
+            return "Land", finish
+        if rarity in SIGLAS:
+            return SIGLAS[rarity], finish
+        if rarity in RAREZA_OTROS:
+            return RAREZA_OTROS[rarity], finish
+        return (RAREZA.get(rarity, rarity) if "(" in rarity else rarity), finish
     return RAREZA.get(rarity, rarity), finish
+
+
+def classify(title, game, lang, kind, year, context, db):
+    """Lee el título y devuelve nombre, número, rareza, acabado, variante, clase y tipo."""
+    t = parse_title(title) if kind in ("Cartas", "Gradeadas") else {
+        "name": title, "number": "", "total": "", "finish": "", "rarity": "", "variant": ""}
+    rarity, supert, ptype = t["rarity"], "", ""
+    if game != "Pokémon" and rarity in ("Full Art", "Alt Art"):
+        rarity = ""                  # en otros juegos son estilos de la carta, no rarezas
+    if game == "Pokémon" and lang == "Inglés" and kind == "Cartas":
+        hit = lookup(db, t, year, norm(context + " " + title))
+        if hit:
+            rarity, supert, ptype = hit["rarity"] or rarity, hit["super"], hit["type"]
+    rarity, finish = unify(rarity, game, t["finish"])
+    return {"card": t["name"], "number": t["number"] + ("/" + t["total"] if t["total"] else ""),
+            "rarity": rarity, "finish": finish, "variant": t["variant"], "super": supert, "ptype": ptype}
+
+
+def tcg_rarities(rows):
+    """Segunda fuente: completa con TCGplayer la rareza de las cartas que quedaron sin dato."""
+    try:
+        import precios
+        falta = [r for r in rows if not r["rarity"] and r["kind"] in ("Cartas", "Gradeadas")
+                 and "art card" not in r["title"].lower()]
+        for (game, lang), cat in precios.RARITY_CATEGORIES.items():
+            mine = [r for r in falta if r["game"] == game and (not lang or r["lang"] == lang)]
+            if not mine:
+                continue
+            sets = None if game == "Pokémon" else {precios.words(r["set"]) for r in rows if r["game"] == game}
+            groups, _ = precios.load_tcg(cat, sets)
+            idx = precios.build_index(groups)
+            ok = 0
+            for r in mine:
+                raw, name = precios.find_rarity(idx, r)
+                if raw:
+                    r["rarity"], r["finish"] = unify(raw, game, r["finish"])
+                    ok += bool(r["rarity"])
+                    if not r["number"] and name:
+                        r["card"] = name     # título sin separadores: usar el nombre limpio de la carta
+            print(f"Rareza por TCGplayer, {game} {lang}: {ok} de {len(mine)} que faltaban", flush=True)
+    except Exception as e:      # nunca frenar el catálogo por esto
+        print(f"AVISO: no pude completar rarezas con TCGplayer ({e})")
+
+
+def resumen(rows):
+    cartas = [r for r in rows if r["kind"] == "Cartas"]
+    print(f"  con stock: {sum(1 for r in rows if r['stock'] > 0)}")
+    print(f"  cartas sueltas: {len(cartas)} | con rareza: {sum(1 for r in cartas if r['rarity'])}")
+    for g in sorted({(r["game"], r["lang"]) for r in cartas}):
+        mine = [r for r in cartas if (r["game"], r["lang"]) == g]
+        print(f"    {g[0]} {g[1]}: {sum(1 for r in mine if r['rarity'])} de {len(mine)}")
+
+
+def reenrich():
+    """Recalcula rareza, acabado y tipo sobre el cards.json que ya existe, sin recorrer la tienda."""
+    data = json.loads(OUT.read_text())
+    db = load_card_db()
+    for r in data["cards"]:
+        r.update(classify(r["title"], r["game"], r["lang"], r["kind"], r["year"], r["set"], db))
+    tcg_rarities(data["cards"])
+    tmp = OUT.with_suffix(".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
+    tmp.replace(OUT)
+    print(f"\n{len(data['cards'])} productos reclasificados -> {OUT}")
+    resumen(data["cards"])
 
 
 # ------------------------------------------------------------------- registros
@@ -353,18 +432,8 @@ def build_record(p, cat, db=None):
     if "sellad" in cat["path"]:
         kind = "Sellado"
     year = next((n for n in names if re.fullmatch(r"(19|20)\d\d", n)), "")
-    t = parse_title(title) if kind in ("Cartas", "Gradeadas") else {
-        "name": title, "number": "", "total": "", "finish": "", "rarity": "", "variant": ""}
-    rarity, supert, ptype = t["rarity"], "", ""
-    if game == "Pokémon" and lang == "Inglés" and kind == "Cartas":
-        hit = lookup(db, t, year, norm(" ".join(names) + " " + title))
-        if hit:
-            rarity, supert, ptype = hit["rarity"] or rarity, hit["super"], hit["type"]
-    rarity, finish = unify(rarity, game, t["finish"])
     return {
-        "id": p["idProductos"], "title": title, "card": t["name"],
-        "number": t["number"] + ("/" + t["total"] if t["total"] else ""),
-        "rarity": rarity, "finish": finish, "variant": t["variant"], "super": supert, "ptype": ptype,
+        "id": p["idProductos"], "title": title, **classify(title, game, lang, kind, year, " ".join(names), db),
         "price": price, "transfer": round(price * (1 - TRANSFER_DISCOUNT)) if price else None, "stock": qty,
         "url": f"{BASE}/{cat['path']}/{p['p_link']}", "img": (CDN + imgs[0]["i_link"]) if imgs else "",
         "game": game, "lang": lang, "kind": kind, "year": year, "set": names[-1],
@@ -383,6 +452,7 @@ def rebuild(cats, force=False):
                 continue
             seen.add(p["idProductos"])
             rows.append(build_record(p, cat, db))
+    tcg_rarities(rows)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     # Red de seguridad: si la tienda falló a mitad de camino y vino mucho menos que antes,
     # no pisamos el catálogo publicado con uno incompleto.
@@ -398,10 +468,8 @@ def rebuild(cats, force=False):
     tmp = OUT.with_suffix(".tmp")
     tmp.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
     tmp.replace(OUT)
-    cartas = [r for r in rows if r["kind"] == "Cartas"]
     print(f"\n{len(rows)} productos -> {OUT}")
-    print(f"  con stock: {sum(1 for r in rows if r['stock'] > 0)}")
-    print(f"  cartas sueltas: {len(cartas)} | con rareza: {sum(1 for r in cartas if r['rarity'])}")
+    resumen(rows)
 
 
 def main():
@@ -410,7 +478,11 @@ def main():
     ap.add_argument("--rebuild", action="store_true", help="no baja nada, solo regenera cards.json")
     ap.add_argument("--resume", action="store_true", help="retoma una corrida cortada")
     ap.add_argument("--force", action="store_true", help="publica aunque haya muchos menos productos que antes")
+    ap.add_argument("--reenrich", action="store_true", help="recalcula rarezas sobre cards.json sin recorrer la tienda")
     a = ap.parse_args()
+    if a.reenrich:
+        reenrich()
+        return
     cats = load_categories()
     print(f"{len(cats)} categorías encontradas")
     if not a.rebuild:
