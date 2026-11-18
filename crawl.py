@@ -366,6 +366,18 @@ def tcg_rarities(rows):
                     if not r["number"] and name:
                         r["card"] = name     # título sin separadores: usar el nombre limpio de la carta
             print(f"Rareza por TCGplayer, {game} {lang}: {ok} de {len(mine)} que faltaban", flush=True)
+        # Chino: sets con numeración propia que reimprimen cartas japonesas -> rareza de la carta japonesa
+        chino = [r for r in rows if not r["rarity"] and r["game"] == "Pokémon" and r["lang"] == "Chino"
+                 and r["kind"] in ("Cartas", "Gradeadas") and "gem pack" not in (r["set"] + " " + r["title"]).lower()]
+        if chino:
+            idx = precios.build_index(precios.load_tcg(85)[0])
+            ok = 0
+            for r in chino:
+                raw = precios.name_rarity(idx, r)
+                if raw:
+                    r["rarity"], r["finish"] = unify(raw, "Pokémon", r["finish"])
+                    ok += bool(r["rarity"])
+            print(f"Rareza por carta japonesa, Pokémon Chino: {ok} de {len(chino)} que faltaban", flush=True)
     except Exception as e:      # nunca frenar el catálogo por esto
         print(f"AVISO: no pude completar rarezas con TCGplayer ({e})")
 
