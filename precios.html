@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Precios ALUMINETCG</title>
+<style>
+:root{
+  --bg:#f6f4ef; --panel:#fffdf8; --ink:#1d2330; --muted:#6a7080; --line:#e3dfd3; --chip:#efe9da;
+  --accent:#c2410c; --low:#b91c1c; --low-bg:#fee2e2; --high:#1d4ed8; --high-bg:#dbeafe; --ok:#15803d; --ok-bg:#dcfce7;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#12151c; --panel:#1a1f2a; --ink:#e9e6dd; --muted:#9097a7; --line:#2b3242; --chip:#252c3b;
+  --accent:#fb923c; --low:#fca5a5; --low-bg:#3b1516; --high:#93c5fd; --high-bg:#14253f; --ok:#86efac; --ok-bg:#14301f;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+.wrap{max-width:1300px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:0}
+h1 span{color:var(--accent)}
+.muted{color:var(--muted);font-size:13px}
+input,select,button{font:inherit;color:var(--ink);background:var(--panel);border:1.5px solid var(--line);border-radius:10px;padding:8px 10px}
+button{cursor:pointer}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+input:focus,select:focus,button:focus-visible{outline:none;border-color:var(--accent)}
+#login{max-width:380px;margin:12vh auto 0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:12px}
+#login input[type=password]{width:100%;font-size:16px}
+#err{color:var(--low);min-height:1.2em;font-size:13px}
+.head{display:flex;gap:12px;align-items:baseline;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:12px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.tile b{display:block;font-size:24px;font-variant-numeric:tabular-nums}
+.tile.low b{color:var(--low)} .tile.high b{color:var(--high)}
+.controls{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;gap:12px 18px;flex-wrap:wrap;align-items:end;margin-bottom:12px}
+.controls label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted)}
+.controls label.chk{flex-direction:row;align-items:center;gap:6px;font-size:14px;color:var(--ink);padding-bottom:8px}
+.controls input[type=number]{width:100px}
+#q{width:220px}
+.tabs{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.tabs button{border-radius:999px;padding:6px 14px}
+.tabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tw{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:900px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);cursor:pointer;user-select:none;position:sticky;top:0;background:var(--panel)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+td.name{white-space:normal;min-width:200px;font-weight:600}
+td.name small{display:block;font-weight:400;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700}
+.pill.low{background:var(--low-bg);color:var(--low)} .pill.high{background:var(--high-bg);color:var(--high)} .pill.ok{background:var(--ok-bg);color:var(--ok)}
+#more{margin:12px auto;display:block}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<form id="login">
+  <h1>ALUMINE<span>TCG</span> · precios</h1>
+  <div class="muted">Comparación interna contra TCGplayer. Ingresá tu clave para ver los datos.</div>
+  <input id="pw" type="password" placeholder="Clave" autocomplete="current-password" autofocus>
+  <label class="muted"><input id="remember" type="checkbox"> Recordar en este dispositivo</label>
+  <button class="primary" type="submit">Entrar</button>
+  <div id="err"></div>
+</form>
+
+<div class="wrap" id="app" hidden>
+  <div class="head">
+    <h1>ALUMINE<span>TCG</span> · precios vs TCGplayer</h1>
+    <div class="muted" id="meta"></div>
+  </div>
+  <div class="tiles">
+    <div class="tile low"><b id="tLow">0</b>por debajo del mercado</div>
+    <div class="tile high"><b id="tHigh">0</b>por encima del mercado</div>
+    <div class="tile"><b id="tGap">$0</b>diferencia total en las baratas (precio de mercado menos el tuyo, por stock)</div>
+    <div class="tile"><b id="tAll">0</b><span id="tAllTxt">cartas comparadas</span></div>
+  </div>
+  <div class="controls">
+    <label>Dólar oficial (ARS)<input id="usd" type="number" min="1" step="1"></label>
+    <label>Barata si está por debajo del<input id="low" type="number" min="1" max="100" step="5" value="90"></label>
+    <label>Cara si está por encima del<input id="high" type="number" min="100" step="10" value="150"></label>
+    <label>Precio TCGplayer mínimo (USD)<input id="minTcg" type="number" min="0" step="0.5" value="1"></label>
+    <label>Idioma<select id="lang"><option value="">Todos</option></select></label>
+    <label>Buscar<input id="q" type="search" placeholder="carta, set o número"></label>
+    <label class="chk"><input id="stock" type="checkbox" checked> Solo con stock</label>
+    <label class="chk"><input id="transfer" type="checkbox"> Usar precio con transferencia</label>
+    <button id="logout" type="button">Salir</button>
+  </div>
+  <div class="tabs" id="tabs">
+    <button data-t="low" class="on">Baratas</button><button data-t="high">Caras</button><button data-t="ok">En precio</button><button data-t="all">Todas</button>
+  </div>
+  <div class="tw"><table>
+    <thead><tr>
+      <th data-s="card">Carta</th><th data-s="finish">Acabado</th><th class="n" data-s="stock">Stock</th>
+      <th class="n" data-s="mine">Tu precio</th><th class="n" data-s="myUsd">En USD</th><th class="n" data-s="tcg">TCGplayer</th>
+      <th class="n" data-s="ratio">Diferencia</th><th class="n" data-s="sug">Precio de mercado en ARS</th><th>Estado</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <button id="more" hidden>Mostrar más</button>
+  <p class="muted">La diferencia compara tu precio convertido a dólar oficial contra el precio de mercado de TCGplayer (cartas Near Mint) para el mismo acabado. Las cartas jugadas o dañadas van a figurar como baratas aunque no lo estén. Las cartas de menos de 1 USD se ocultan por defecto porque en ese rango la diferencia siempre es grande.</p>
+</div>
+
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const enc = new TextEncoder();
+const SALT = "aluminetcg-precios-v1", ITER = 200000, KEYSTORE = "precios-key";
+const ars = n => "$" + Math.round(n).toLocaleString("es-AR");
+const usdf = n => "US$ " + n.toLocaleString("es-AR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+const b64 = { to: u => btoa(String.fromCharCode(...u)), from: s => Uint8Array.from(atob(s), c => c.charCodeAt(0)) };
+let DATA = null, ROWS = [], view = [], shown = 0, tab = "low", sort = { k: "ratio", dir: 1 };
+
+async function keyFromPassword(pw) {
+  const km = await crypto.subtle.importKey("raw", enc.encode(pw), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey({ name: "PBKDF2", salt: enc.encode(SALT), iterations: ITER, hash: "SHA-256" }, km, { name: "AES-GCM", length: 256 }, true, ["decrypt"]);
+}
+async function load(key) {
+  const res = await fetch("data/precios.bin?t=" + Math.floor(Date.now() / 6e5), { cache: "no-cache" });
+  if (!res.ok) throw new Error("nodata");
+  const buf = new Uint8Array(await res.arrayBuffer());
+  let plain;
+  try { plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: buf.slice(0, 12) }, key, buf.slice(12)); }
+  catch { throw new Error("badkey"); }
+  const text = await new Response(new Blob([plain]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
+  return JSON.parse(text);
+}
+async function open(key, remember) {
+  DATA = await load(key);
+  if (remember) { try { localStorage.setItem(KEYSTORE, b64.to(new Uint8Array(await crypto.subtle.exportKey("raw", key)))); } catch {} }
+  const C = DATA.cols;
+  ROWS = DATA.rows.map(r => Object.fromEntries(C.map((c, i) => [c, r[i]])));
+  for (const r of ROWS) r._hay = norm([r.card, r.set, r.number, r.finish, r.rarity].join(" "));
+  $("#usd").value = Math.round(DATA.usd);
+  for (const l of [...new Set(ROWS.map(r => r.lang))]) $("#lang").insertAdjacentHTML("beforeend", `<option>${esc(l)}</option>`);
+  const d = iso => new Date(iso).toLocaleString("es-AR", { dateStyle: "short", timeStyle: "short" });
+  const cov = Object.entries(DATA.stats).map(([l, [a, b]]) => `${l}: ${a.toLocaleString("es-AR")} de ${b.toLocaleString("es-AR")}`).join(" · ");
+  $("#meta").textContent = `Tienda: ${d(DATA.updated)} · TCGplayer: ${d(DATA.tcg_updated)} · Dólar oficial ${ars(DATA.usd)} (${DATA.usd_source}) · Comparadas → ${cov}`;
+  $("#login").hidden = true; $("#app").hidden = false;
+  apply();
+}
+
+function apply() {
+  const usd = +$("#usd").value || DATA.usd, low = (+$("#low").value || 90) / 100, high = (+$("#high").value || 150) / 100;
+  const minTcg = +$("#minTcg").value || 0, onlyStock = $("#stock").checked, tr = $("#transfer").checked;
+  const lang = $("#lang").value, toks = norm($("#q").value).split(/\s+/).filter(Boolean);
+  let nLow = 0, nHigh = 0, gap = 0, nAll = 0;
+  view = [];
+  for (const r of ROWS) {
+    if (onlyStock && r.stock <= 0) continue;
+    if (r.tcg < minTcg) continue;
+    if (lang && r.lang !== lang) continue;
+    if (toks.length && !toks.every(t => r._hay.includes(t))) continue;
+    r.mine = tr ? r.transfer : r.ars;
+    r.myUsd = r.mine / usd; r.ratio = r.myUsd / r.tcg; r.sug = Math.round(r.tcg * usd / 10) * 10;
+    r.st = r.ratio < low ? "low" : r.ratio > high ? "high" : "ok";
+    nAll++;
+    if (r.st === "low") { nLow++; gap += (r.tcg * usd - r.mine) * Math.min(Math.max(r.stock, 1), 999); }
+    if (r.st === "high") nHigh++;
+    if (tab === "all" || tab === r.st) view.push(r);
+  }
+  const k = sort.k;
+  view.sort((a, b) => (typeof a[k] === "string" ? a[k].localeCompare(b[k]) : a[k] - b[k]) * sort.dir);
+  $("#tLow").textContent = nLow.toLocaleString("es-AR"); $("#tHigh").textContent = nHigh.toLocaleString("es-AR");
+  $("#tGap").textContent = ars(gap); $("#tAll").textContent = nAll.toLocaleString("es-AR");
+  $("#tAllTxt").textContent = "cartas comparadas con estos filtros";
+  $("#rows").innerHTML = ""; shown = 0; more();
+}
+function more() {
+  const pill = { low: ["low", "Barata"], high: ["high", "Cara"], ok: ["ok", "En precio"] };
+  const html = view.slice(shown, shown + 200).map(r => {
+    const pct = (r.ratio - 1) * 100;
+    return `<tr><td class="name"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.card)}</a><small>${esc(r.set)} · ${esc(r.number)}${r.rarity ? " · " + esc(r.rarity) : ""} · ${esc(r.lang)}</small></td>
+    <td>${esc(r.finish || r.sub)}</td><td class="n">${r.stock >= 9999 ? "∞" : r.stock}</td><td class="n">${ars(r.mine)}</td><td class="n">${usdf(r.myUsd)}</td>
+    <td class="n"><a href="https://www.tcgplayer.com/product/${r.pid}" target="_blank" rel="noopener">${usdf(r.tcg)}</a></td>
+    <td class="n">${pct > 0 ? "+" : ""}${pct.toFixed(0)}%</td><td class="n">${ars(r.sug)}</td><td><span class="pill ${pill[r.st][0]}">${pill[r.st][1]}</span></td></tr>`;
+  }).join("");
+  $("#rows").insertAdjacentHTML("beforeend", html || (shown ? "" : `<tr><td colspan="9" class="muted">No hay cartas en esta vista con los filtros actuales.</td></tr>`));
+  shown = Math.min(view.length, shown + 200);
+  $("#more").hidden = shown >= view.length;
+  $("#more").textContent = `Mostrar más (${(view.length - shown).toLocaleString("es-AR")} restantes)`;
+}
+
+// ---------- eventos
+$("#login").addEventListener("submit", async e => {
+  e.preventDefault(); $("#err").textContent = "Abriendo…";
+  try { await open(await keyFromPassword($("#pw").value), $("#remember").checked); $("#pw").value = ""; }
+  catch (x) { $("#err").textContent = x.message === "badkey" ? "Clave incorrecta." : x.message === "nodata" ? "Todavía no hay datos de precios generados." : "No pude abrir los datos: " + x.message; }
+});
+let t; const later = () => { clearTimeout(t); t = setTimeout(apply, 200); };
+["usd", "low", "high", "minTcg", "q"].forEach(id => $("#" + id).addEventListener("input", later));
+["stock", "transfer", "lang"].forEach(id => $("#" + id).addEventListener("change", apply));
+$("#tabs").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; tab = b.dataset.t; document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x === b)); sort = { k: "ratio", dir: tab === "high" ? -1 : 1 }; apply(); });
+document.querySelector("thead").addEventListener("click", e => { const th = e.target.closest("th[data-s]"); if (!th) return; sort = { k: th.dataset.s, dir: sort.k === th.dataset.s ? -sort.dir : 1 }; apply(); });
+$("#more").onclick = more;
+$("#logout").onclick = () => { try { localStorage.removeItem(KEYSTORE); } catch {} location.reload(); };
+
+// ---------- sesión recordada
+(async () => {
+  let saved = null; try { saved = localStorage.getItem(KEYSTORE); } catch {}
+  if (!saved) return;
+  try { await open(await crypto.subtle.importKey("raw", b64.from(saved), "AES-GCM", true, ["decrypt"]), false); }
+  catch { try { localStorage.removeItem(KEYSTORE); } catch {} }
+})();
+</script>
+</body>
+</html>
