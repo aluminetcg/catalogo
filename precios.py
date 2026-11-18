@@ -189,15 +189,17 @@ def original_rarity(idx, card, year=""):
             count[c["rarity"]] = count.get(c["rarity"], 0) + 1
             if year and c["year"] and c["year"] <= year:
                 prev.append((c["year"], c["rarity"]))
-    if prev:                     # la impresión anterior más cercana es la carta que se reimprimió
+    best = sorted(count.items(), key=lambda x: -x[1])
+    if not best:
+        return ""
+    if len(best) == 1 or best[0][1] > best[1][1]:
+        return best[0][0]        # la rareza más habitual de esa carta
+    if prev:                     # empate: vale la impresión anterior más cercana (la que se reimprimió)
         last = max(y for y, _ in prev)
         near = {r for y, r in prev if y == last}
         if len(near) == 1:
             return near.pop()
-    best = sorted(count.items(), key=lambda x: -x[1])
-    if not best or (len(best) > 1 and best[0][1] == best[1][1]):
-        return ""
-    return best[0][0]
+    return ""
 
 
 TIERS = BASICAS + ("Holo Rare", "Double Rare", "Triple Rare")
