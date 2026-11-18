@@ -299,7 +299,8 @@ RAREZA.update({"Holo Rare": "Rare", "Triple Rare": "Double Rare", "Prism Rare": 
                "Art Rare": "Illustration Rare", "Character Rare": "Illustration Rare",
                "Special Art Rare": "Special Illustration Rare", "Character Super Rare": "Special Illustration Rare",
                "Secret Rare": "Hyper Rare", "Mega Hyper Rare": "Hyper Rare", "Shiny Holo Rare": "Shiny Rare",
-               "Shiny Super Rare": "Shiny Rare", "Rare ACE": "ACE SPEC", "Code Card": ""})
+               "Shiny Super Rare": "Shiny Rare", "Rare ACE": "ACE SPEC", "ACE Rare": "ACE SPEC", "Kagayaku": "Radiant Rare",
+               "Code Card": ""})
 # En otros juegos TCGplayer da la rareza como sigla
 SIGLAS = {"C": "Common", "U": "Uncommon", "UC": "Uncommon", "R": "Rare", "M": "Mythic Rare", "SR": "Super Rare",
           "SEC": "Secret Rare", "L": "Leader", "P": "Promo", "PR": "Promo", "T": "Token", "TR": "Treasure Rare",
@@ -310,8 +311,8 @@ RAREZA_OTROS = {"SR (Super Rare)": "Super Rare", "SEC (Secret Rare)": "Secret Ra
 
 def unify(rarity, game, finish):
     """Devuelve (rareza unificada, acabado). 'Rare Holo' pasa a Rare + acabado Holo."""
-    if not rarity:
-        return rarity, finish
+    if not rarity or rarity == "None":
+        return "", finish
     if rarity in ("Rare Holo", "Holo Rare", "Trainer Gallery Rare Holo") and not finish:
         finish = "Holo"
     if game != "Pokémon":
