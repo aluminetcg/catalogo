@@ -169,6 +169,29 @@ def find_product(idx, card):
     return scored[0][1]
 
 
+SIN_RAREZA = ("", "None", "Classic Collection")     # reimpresiones sin símbolo de rareza propio
+BASICAS = ("Common", "Uncommon", "Rare")
+
+
+def original_rarity(idx, card):
+    """Reimpresiones sin rareza impresa (high class japoneses, espejos Quick Ball / Friend Ball,
+    Pokémon TCG Classic): se usa la rareza de la carta original, buscándola por nombre."""
+    a, _, b = card["number"].partition("/")
+    if a.strip().isdigit() and b.strip().isdigit() and int(a) > int(b):
+        return ""                # las secretas tienen su propia rareza: no adivinar
+    base = words(card["card"])
+    if not base:
+        return ""
+    count = {}
+    for c in idx.get(("w", base.split()[0]), []):
+        if c["base"] == base and c["rarity"] in BASICAS:
+            count[c["rarity"]] = count.get(c["rarity"], 0) + 1
+    best = sorted(count.items(), key=lambda x: -x[1])
+    if not best or (len(best) > 1 and best[0][1] == best[1][1]):
+        return ""
+    return best[0][0]
+
+
 def find_rarity(idx, card):
     """Para rarezas: alcanza con que los mejores candidatos coincidan en la rareza."""
     scored = candidates(idx, card)
@@ -177,8 +200,12 @@ def find_rarity(idx, card):
     top = [x for x in scored if x[0] == scored[0][0]]
     if "/" not in card["number"] and not top[0][2]:
         return "", None          # sin total impreso hace falta que coincida el set
-    rs = {x[1]["rarity"] for x in top if x[1]["rarity"]}
-    return (rs.pop(), top[0][1]["name"]) if len(rs) == 1 else ("", None)
+    rs = {x[1]["rarity"] for x in top if x[1]["rarity"] not in SIN_RAREZA}
+    if len(rs) == 1:
+        return rs.pop(), top[0][1]["name"]
+    if not rs and card["number"]:
+        return original_rarity(idx, card), None
+    return "", None
 
 
 def pick_price(prices, card):
