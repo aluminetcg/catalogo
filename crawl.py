@@ -232,7 +232,7 @@ def load_card_db():
                 for c in cards:
                     n += 1
                     idx.setdefault(normnum(c.get("number")), []).append({
-                        "name": norm(c["name"]), "total": s.get("printedTotal"), "set": norm(s["name"]),
+                        "name": norm(c["name"]).replace("impostor", "imposter"), "total": s.get("printedTotal"), "set": norm(s["name"]),
                         "year": (s.get("releaseDate") or "")[:4], "rarity": c.get("rarity") or "",
                         "super": SUPER_ES.get(c.get("supertype"), ""),
                         "type": TYPES_ES.get((c.get("types") or [""])[0], ""),
@@ -249,7 +249,7 @@ def lookup(db, t, year, context):
     if not db or not t["number"]:
         return None
     cands = db.get(normnum(t["number"]), [])
-    nn = norm(t["name"])
+    nn = norm(t["name"]).replace(" pokemon c ", " c ").replace("impostor", "imposter")
     if not nn or not cands:
         return None
     hit = [c for c in cands if c["name"] == nn]
@@ -258,6 +258,8 @@ def lookup(db, t, year, context):
         hit = [c for c in cands if c["name"].split()[:1] == [first] and (c["name"] in nn or nn in c["name"])]
     if not hit:
         return None
+    # "Classic Collection" es un set de reimpresiones, no una rareza: vale la de la carta original
+    hit = [c for c in hit if c["rarity"] != "Classic Collection"] or hit
     if t["total"].isdigit():
         same_total = [c for c in hit if c["total"] == int(t["total"])]
         if not same_total:
@@ -281,7 +283,7 @@ for _canon, _raws in {
     "Uncommon": ["U (Uncommon)", "UC (Uncommon)"],
     "Rare": ["R (Rare)", "Rare Holo", "Pikachu Rare"],
     "Double Rare": ["RR (Double Rare)", "RRR (Triple Rare)", "Rare Holo V", "Rare Holo VMAX", "Rare Holo VSTAR",
-                    "Rare Holo GX", "Rare Holo EX", "Rare BREAK", "Rare Prime", "Rare Prism Star"],
+                    "Rare Holo GX", "Rare Holo EX", "Rare BREAK", "Rare Holo LV.X", "Rare Prime", "Rare Prism Star"],
     "Ultra Rare": ["Rare Ultra", "SR (Super Rare)", "Full Art", "TR (Trainer Rare)"],
     "Illustration Rare": ["AR (Art Rare)", "CHR (Character Rare)", "Trainer Gallery Rare Holo"],
     "Special Illustration Rare": ["SAR (Special Art Rare)", "CSR (Character Super Rare)", "Alt Art"],
@@ -311,7 +313,7 @@ RAREZA_OTROS = {"SR (Super Rare)": "Super Rare", "SEC (Secret Rare)": "Secret Ra
 
 def unify(rarity, game, finish):
     """Devuelve (rareza unificada, acabado). 'Rare Holo' pasa a Rare + acabado Holo."""
-    if not rarity or rarity == "None":
+    if not rarity or rarity in ("None", "Classic Collection"):
         return "", finish
     if rarity in ("Rare Holo", "Holo Rare", "Trainer Gallery Rare Holo") and not finish:
         finish = "Holo"
