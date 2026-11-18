@@ -1,0 +1,5 @@
+data/raw/
+data/ptcg/
+data/*.tmp
+__pycache__/
+_site/
