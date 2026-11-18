@@ -350,6 +350,8 @@ def tcg_rarities(rows):
         if (not r["rarity"] and r["game"] == "Pokémon" and r["kind"] in ("Cartas", "Gradeadas")
                 and re.search(r"(?<!\()\bradiant (?!collection)", r["title"].lower())):
             r["rarity"] = "Radiant Rare"
+        if r["game"] == "Pokémon" and "/energias/" in r["url"]:
+            r["rarity"] = "Energía"     # la categoría Energías de la tienda es su propio filtro
     try:
         import precios
         falta = [r for r in rows if not r["rarity"] and r["kind"] in ("Cartas", "Gradeadas")
