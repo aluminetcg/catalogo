@@ -1,11 +1,16 @@
-# Actualiza el catálogo solo: baja precios y stock de la tienda y republica la web.
-# Corre cada 2 horas y también a mano desde la pestaña "Actions" -> "Run workflow".
+# Actualiza el catálogo solo: baja precios y stock de la tienda, compara con TCGplayer y republica la web.
+# Corre cada 3 horas y también a mano desde la pestaña "Actions" -> "Run workflow".
 name: Actualizar catálogo
 
 on:
   schedule:
     - cron: "17 */3 * * *"   # cada 3 horas (hora UTC)
   workflow_dispatch:
+    inputs:
+      solo_precios:
+        description: "Solo recalcular la comparación de precios (no volver a bajar la tienda)"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths: ["index.html", "crawl.py", ".github/workflows/actualizar.yml"]
@@ -31,21 +36,37 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests
+      - run: pip install requests cryptography
       - name: Bajar catálogo de la tienda
+        if: ${{ !inputs.solo_precios }}
         run: python crawl.py
-      - name: Guardar cards.json en el repo (historial + respaldo)
+      - name: Fecha de hoy
+        id: hoy
+        run: echo "d=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: data/tcgcsv
+          key: tcgcsv-${{ steps.hoy.outputs.d }}
+          restore-keys: tcgcsv-
+      - name: Comparar precios con TCGplayer
+        env:
+          PRECIOS_CLAVE: ${{ secrets.PRECIOS_CLAVE }}
+        run: python precios.py
+      - name: Guardar datos en el repo (historial + respaldo)
         run: |
           git config user.name "catalogo-bot"
           git config user.email "catalogo-bot@users.noreply.github.com"
           git add data/cards.json
+          if [ -f data/precios.bin ]; then git add data/precios.bin; fi
           git diff --cached --quiet || git commit -m "Actualizar catálogo"
+          git pull --rebase --autostash
           git push
       - name: Armar sitio
         run: |
           mkdir -p _site/data
-          cp index.html _site/
+          cp index.html precios.html _site/
           cp data/cards.json _site/data/
+          if [ -f data/precios.bin ]; then cp data/precios.bin _site/data/; fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
