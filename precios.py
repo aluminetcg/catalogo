@@ -30,7 +30,10 @@ import requests
 from crawl import norm, normnum
 
 TCG = "https://tcgcsv.com"
-CATEGORIES = {("Pokémon", "Inglés"): 3, ("Pokémon", "Japonés"): 85}   # categorías de TCGplayer
+CATEGORIES = {("Pokémon", "Inglés"): 3, ("Pokémon", "Japonés"): 85}   # categorías de TCGplayer (precios)
+# Categorías que se usan para completar rarezas (crawl.py). Idioma vacío = cualquiera.
+RARITY_CATEGORIES = {("Pokémon", "Inglés"): 3, ("Pokémon", "Japonés"): 85, ("One Piece", ""): 68,
+                     ("Magic", ""): 1, ("Lorcana", ""): 71}
 SALT = b"aluminetcg-precios-v1"
 ITERATIONS = 200_000
 
@@ -56,16 +59,23 @@ def get_json(url):
 
 
 # ---------------------------------------------------------------- TCGplayer
-def load_tcg(cat):
+def load_tcg(cat, only=None):
     """Devuelve la lista de grupos (sets) de una categoría, con productos y precios. Usa caché diaria."""
     CACHE.mkdir(parents=True, exist_ok=True)
-    f = CACHE / f"{cat}.json"
+    f = CACHE / f"{cat}.v2.json"
     stamp = session.get(f"{TCG}/last-updated.txt", timeout=30).text.strip()
     if f.exists():
         old = json.loads(f.read_text())
         if old.get("stamp") == stamp:
             return old["groups"], stamp
     groups = get_json(f"{TCG}/tcgplayer/{cat}/groups")["results"]
+    if only is not None:        # otros juegos: bajar solo los sets que la tienda tiene
+        def needed(g):
+            gw = words(g["name"].split(": ", 1)[-1])
+            ws = set(gw.split())
+            return any(gw == o or (len(gw) > 3 and len(o) > 3 and (gw in o or o in gw)) or
+                       len(ws & set(o.split())) >= 0.6 * len(ws | set(o.split())) for o in only)
+        groups = [g for g in groups if needed(g)]
 
     def one(g):
         gid = g["groupId"]
@@ -77,8 +87,8 @@ def load_tcg(cat):
         rows = []
         for p in prods:
             ext = {e["name"]: e["value"] for e in p.get("extendedData") or []}
-            if ext.get("Number") and p["productId"] in prices:
-                rows.append([p["productId"], p["name"], ext["Number"], prices[p["productId"]]])
+            if ext.get("Number"):
+                rows.append([p["productId"], p["name"], ext["Number"], prices.get(p["productId"], {}), ext.get("Rarity") or ""])
         return {"id": gid, "name": g["name"], "year": (g.get("publishedOn") or "")[:4], "products": rows}
 
     with ThreadPoolExecutor(max_workers=4) as ex:
@@ -93,7 +103,7 @@ PAREN = re.compile(r"\(([^)]*)\)")
 
 def words(s):
     """Normaliza para comparar nombres: sin acentos ni signos, 'and' fuera, pokeball = poke ball."""
-    s = norm(s).replace("pokeball", "poke ball").replace("masterball", "master ball")
+    s = norm((s or "").replace("'", "").replace("\u2019", "")).replace("pokeball", "poke ball").replace("masterball", "master ball")
     return " ".join(w for w in s.split() if w not in ("and", "the", "pattern"))
 
 
@@ -106,40 +116,69 @@ def build_index(groups):
     idx = {}
     for g in groups:
         gname = words(g["name"].split(": ", 1)[-1])     # "SV: Scarlet & Violet 151" -> "scarlet violet 151"
-        for pid, name, number, prices in g["products"]:
+        for pid, name, number, prices, rarity in g["products"]:
             head = name.split(" - ")[0]
-            idx.setdefault(split_number(number), []).append({
+            entry = {"name": " ".join(PAREN.sub(" ", head).split())}
+            if words(entry["name"]):
+                idx.setdefault(("w", words(entry["name"]).split()[0]), []).append(entry)   # para buscar por nombre
+            idx.setdefault(split_number(number), []).append(entry)
+            entry.update({
                 "pid": pid, "base": words(PAREN.sub(" ", head)),
                 "tags": [words(t) for t in PAREN.findall(head) if words(t)],
-                "group": gname, "year": g["year"], "prices": prices,
+                "group": gname, "year": g["year"], "prices": prices, "rarity": rarity,
             })
     return idx
 
 
-def find_product(idx, card):
-    if "/" not in card["number"]:
-        return None
+def candidates(idx, card):
+    """Productos de TCGplayer con el mismo número y nombre, del más al menos parecido."""
+    title = words(card["title"])
+    context = words(card["set"] + " " + card["title"])
+    if not card["number"]:       # títulos sin número (Magic): "<nombre> [Foil] <set>" -> el nombre es el comienzo
+        out = [c for c in idx.get(("w", title.split()[0] if title else ""), [])
+               if c["group"] and c["group"] in context and (title == c["base"] or title.startswith(c["base"] + " "))]
+        longest = max((len(c["base"]) for c in out), default=0)
+        return [(0, c, True) for c in out if len(c["base"]) == longest]
     cands = idx.get(split_number(card["number"]), [])
     base = words(card["card"])
     if not base or not cands:
-        return None
-    title = words(card["title"])
-    context = words(card["set"] + " " + card["title"])
+        return []
     scored = []
     for c in cands:
         if c["base"] != base and not (c["base"].split()[:1] == base.split()[:1] and (c["base"] in base or base in c["base"])):
             continue
+        gm = bool(c["group"]) and c["group"] in context
         score = (2 if c["base"] == base else 0)
         score += sum(2 if t in title else -2 for t in c["tags"])     # variantes: Master Ball, Cosmos Holo...
-        score += 3 if c["group"] and c["group"] in context else 0
+        score += 3 if gm else 0
         score += 1 if c["year"] and c["year"] == card["year"] else 0
-        scored.append((score, c))
+        scored.append((score, c, gm))
+    scored.sort(key=lambda x: -x[0])
+    return scored
+
+
+def find_product(idx, card):
+    """Para precios: exige número con total impreso y que no haya empate entre productos distintos."""
+    if "/" not in card["number"]:
+        return None
+    scored = [x for x in candidates(idx, card) if x[1]["prices"]]
     if not scored:
         return None
-    scored.sort(key=lambda x: -x[0])
     if len(scored) > 1 and scored[0][0] == scored[1][0] and scored[0][1]["prices"] != scored[1][1]["prices"]:
         return None              # empate entre productos distintos: mejor no comparar que comparar mal
     return scored[0][1]
+
+
+def find_rarity(idx, card):
+    """Para rarezas: alcanza con que los mejores candidatos coincidan en la rareza."""
+    scored = candidates(idx, card)
+    if not scored:
+        return "", None
+    top = [x for x in scored if x[0] == scored[0][0]]
+    if "/" not in card["number"] and not top[0][2]:
+        return "", None          # sin total impreso hace falta que coincida el set
+    rs = {x[1]["rarity"] for x in top if x[1]["rarity"]}
+    return (rs.pop(), top[0][1]["name"]) if len(rs) == 1 else ("", None)
 
 
 def pick_price(prices, card):
