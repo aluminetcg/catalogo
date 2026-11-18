@@ -1,0 +1,53 @@
+# Actualiza el catálogo solo: baja precios y stock de la tienda y republica la web.
+# Corre cada 2 horas y también a mano desde la pestaña "Actions" -> "Run workflow".
+name: Actualizar catálogo
+
+on:
+  schedule:
+    - cron: "17 */2 * * *"   # cada 2 horas (hora UTC). Para cada hora: "17 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["index.html", "crawl.py", ".github/workflows/actualizar.yml"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: catalogo
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Bajar catálogo de la tienda
+        run: python crawl.py
+      - name: Guardar cards.json en el repo (historial + respaldo)
+        run: |
+          git config user.name "catalogo-bot"
+          git config user.email "catalogo-bot@users.noreply.github.com"
+          git add data/cards.json
+          git diff --cached --quiet || git commit -m "Actualizar catálogo"
+          git push
+      - name: Armar sitio
+        run: |
+          mkdir -p _site/data
+          cp index.html _site/
+          cp data/cards.json _site/data/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
