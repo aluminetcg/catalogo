@@ -1,19 +1,25 @@
-# Actualiza el catálogo solo: baja precios y stock de la tienda, compara con TCGplayer y republica la web.
-# Corre cada 6 horas y también a mano desde la pestaña "Actions" -> "Run workflow".
+# Actualiza el catálogo: baja precios y stock de la tienda, compara con TCGplayer y republica la web.
+#  - A mano (pestaña "Actions" -> "Run workflow"): por defecto trae solo los últimos productos subidos (1-2 minutos).
+#  - Solo, una vez por día de madrugada: recorre la tienda completa (precios y stock de todo).
 name: Actualizar catálogo
 
 on:
   schedule:
-    - cron: "17 */6 * * *"   # cada 6 horas (hora UTC)
+    - cron: "17 7 * * *"   # todos los días 04:17 de Argentina (07:17 UTC)
   workflow_dispatch:
     inputs:
-      solo_precios:
-        description: "Solo recalcular la comparación de precios (no volver a bajar la tienda)"
-        type: boolean
-        default: false
+      modo:
+        description: "ultimos = solo lo recién subido (rápido) · completo = toda la tienda (1 hora) · recalcular = no baja nada"
+        type: choice
+        options: [ultimos, completo, recalcular]
+        default: ultimos
+      cantidad:
+        description: "Cuántos de los últimos productos subidos revisar (modo ultimos)"
+        type: number
+        default: 100
   push:
     branches: [main]
-    paths: ["index.html", "crawl.py", ".github/workflows/actualizar.yml"]
+    paths: ["index.html", "precios.html", "tienda.js", "crawl.py", "precios.py", ".github/workflows/actualizar.yml"]
 
 permissions:
   contents: write
@@ -47,11 +53,16 @@ jobs:
           path: data/tcgcsv
           key: tcgcsv2-${{ steps.hoy.outputs.d }}
           restore-keys: tcgcsv2-
-      - name: Bajar catálogo de la tienda
-        if: ${{ !inputs.solo_precios }}
+      - name: Bajar la tienda completa
+        if: ${{ github.event_name == 'schedule' || inputs.modo == 'completo' }}
         run: python crawl.py
+      - name: Traer solo los últimos productos subidos
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.modo == 'ultimos' }}
+        env:
+          CANTIDAD: ${{ inputs.cantidad }}
+        run: python crawl.py --recientes "${CANTIDAD:-100}"
       - name: Recalcular rarezas sin recorrer la tienda
-        if: ${{ inputs.solo_precios }}
+        if: ${{ github.event_name == 'push' || inputs.modo == 'recalcular' }}
         run: python crawl.py --reenrich
       - name: Comparar precios con TCGplayer
         env:
