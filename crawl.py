@@ -99,7 +99,7 @@ def load_categories():
 
 # ------------------------------------------------------------------ descarga
 def fetch_category(cid):
-    products, page = [], 1
+    products, page = [], 0      # la primera página de la tienda es la 0
     while page <= MAX_PAGES:
         time.sleep(DELAY)   # la tienda bloquea (403) si se le pide muy rápido
         r = get(f"{BASE}/v4/product/category", params={
@@ -411,6 +411,55 @@ def reenrich():
     resumen(data["cards"])
 
 
+def recientes(n):
+    """Actualización rápida: baja solo los últimos N productos subidos a la tienda (los de /productos,
+    del más nuevo al más viejo) y los suma o actualiza en el cards.json que ya existe."""
+    cats = load_categories()
+    data = json.loads(OUT.read_text())
+    rows = data["cards"]
+    pos = {r["id"]: i for i, r in enumerate(rows)}
+    db = load_card_db()
+    seen, nuevos, quitar, cambiados, page = set(), [], set(), 0, 0
+    while len(seen) < n and page <= MAX_PAGES:
+        time.sleep(DELAY)
+        r = get(f"{BASE}/v4/product", params={"filter_page": page, "filter_order": 0})
+        if r.status_code != 200:
+            raise RuntimeError(f"La tienda respondió {r.status_code} al pedir los últimos productos")
+        prods = r.json().get("data") or []
+        if not prods:
+            break
+        for p in prods:
+            pid = p["idProductos"]
+            if pid in seen:
+                continue
+            seen.add(pid)
+            if p.get("p_desactivado"):
+                quitar.add(pid)
+                continue
+            cat = cats.get(int(p.get("Categorias_idCategorias") or 0))
+            if not cat:
+                print(f"AVISO: no conozco la categoría de '{p['p_nombre']}', lo salteo")
+                continue
+            rec = build_record(p, cat, db)
+            if pid in pos:
+                rows[pos[pid]] = rec
+                cambiados += 1
+            else:
+                nuevos.append(rec)
+        page += 1
+    rows = nuevos + [r for r in rows if r["id"] not in quitar]
+    tcg_rarities(rows)
+    data["cards"] = rows
+    data["updated"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    tmp = OUT.with_suffix(".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
+    tmp.replace(OUT)
+    print(f"\nÚltimos {len(seen)} productos revisados: {len(nuevos)} nuevos, {cambiados} actualizados -> {len(rows)} en total")
+    for r in nuevos[:15]:
+        print("   nuevo:", r["title"], "|", r["rarity"] or "sin rareza")
+    resumen(rows)
+
+
 # ------------------------------------------------------------------- registros
 GAMES = {
     "pokemon-cartas-ingles": ("Pokémon", "Inglés", "Cartas"),
@@ -500,7 +549,11 @@ def main():
     ap.add_argument("--resume", action="store_true", help="retoma una corrida cortada")
     ap.add_argument("--force", action="store_true", help="publica aunque haya muchos menos productos que antes")
     ap.add_argument("--reenrich", action="store_true", help="recalcula rarezas sobre cards.json sin recorrer la tienda")
+    ap.add_argument("--recientes", type=int, metavar="N", help="actualiza solo los últimos N productos subidos")
     a = ap.parse_args()
+    if a.recientes:
+        recientes(max(12, min(a.recientes, 2000)))
+        return
     if a.reenrich:
         reenrich()
         return
