@@ -1,11 +1,11 @@
 # Actualiza el catálogo: baja precios y stock de la tienda, compara con TCGplayer y republica la web.
 #  - A mano (pestaña "Actions" -> "Run workflow"): por defecto trae solo los últimos productos subidos (1-2 minutos).
-#  - Solo, una vez por día de madrugada: recorre la tienda completa (precios y stock de todo).
+#  - Solo, cada 6 horas: recorre la tienda completa (precios y stock de todo).
 name: Actualizar catálogo
 
 on:
   schedule:
-    - cron: "17 7 * * *"   # todos los días 04:17 de Argentina (07:17 UTC)
+    - cron: "17 1,7,13,19 * * *"   # cada 6 horas: 22:17, 04:17, 10:17 y 16:17 de Argentina
   workflow_dispatch:
     inputs:
       modo:
