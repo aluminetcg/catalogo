@@ -31,7 +31,7 @@
     set: function (k, v) { try { localStorage.setItem("alumine-carga-" + k, JSON.stringify(v)); } catch (e) {} }
   };
   var S = {
-    lang: ls.get("lang", "en"), mult: ls.get("mult", 1), usd: 0,
+    lang: ls.get("lang", "all"), mult: ls.get("mult", 1), usd: 0,
     idx: {}, cats: [], catMap: ls.get("cats", {}), sel: null, log: [], busy: false
   };
 
@@ -97,6 +97,7 @@
     '.t{background:#fff;border:2px solid transparent;border-radius:12px;padding:8px;cursor:pointer;display:flex;flex-direction:column;gap:4px;box-shadow:0 1px 3px rgba(0,0,0,.08)}' +
     '.t:hover{border-color:#fb923c}.t.on{border-color:#c2410c}' +
     '.t img{width:100%;aspect-ratio:1;object-fit:contain;background:#f4f2ec;border-radius:8px}' +
+    '.lg{display:inline-block;font-size:10px;font-weight:800;background:#1d2330;color:#fff;border-radius:5px;padding:1px 5px;vertical-align:1px}' +
     '.t b{font-size:13px;line-height:1.2}.t small{color:#6a7080;font-size:12px;line-height:1.25}' +
     '.msg{grid-column:1/-1;color:#6a7080;padding:30px;text-align:center}' +
     'aside{background:#fff;border-left:1px solid #e3dfd3;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:12px}' +
@@ -117,7 +118,7 @@
     '</style>' +
     '<div class="wrap"><header>' +
     '<b>ALUMINE<span>TCG</span> \u00b7 carga r\u00e1pida</b>' +
-    '<select id="lang"><option value="en">Pok\u00e9mon Ingl\u00e9s</option><option value="jp">Pok\u00e9mon Japon\u00e9s</option></select>' +
+    '<select id="lang"><option value="all">Pok\u00e9mon Ingl\u00e9s + Japon\u00e9s</option><option value="en">Pok\u00e9mon Ingl\u00e9s</option><option value="jp">Pok\u00e9mon Japon\u00e9s</option></select>' +
     '<input id="q" type="search" placeholder="N\u00famero y/o nombre: 143/128, kommo-o 143, charizard 151\u2026" autocomplete="off">' +
     '<label>Precio = TCG \u00d7 d\u00f3lar \u00d7 <input id="mult" type="number" step="0.05" min="0.1"></label>' +
     '<label id="dolar"></label>' +
@@ -133,7 +134,7 @@
     if (S.idx[lang]) return S.idx[lang];
     $("#res").innerHTML = '<div class="msg">Cargando la base de cartas\u2026</div>';
     var d = await fetch(PAGES + "data/singles/" + lang + ".json?t=" + Math.floor(Date.now() / 36e5)).then(function (r) { if (!r.ok) throw new Error("No encontr\u00e9 la base de cartas (" + r.status + ")"); return r.json(); });
-    d.cards.forEach(function (c) { c.n = nnum(c[2]); c.w = norm(cardName(c[1])); c.s = norm(d.sets[c[3]][0]); });
+    d.cards.forEach(function (c) { c.L = lang; c.n = nnum(c[2]); c.w = norm(cardName(c[1])); c.s = norm(d.sets[c[3]][0]); });
     S.idx[lang] = d; return d;
   }
   function flatCats(list, path, out) {
@@ -144,12 +145,16 @@
     });
     return out;
   }
-  function guessCat(setFull) {
+  function langs() { return S.lang === "all" ? ["en", "jp"] : [S.lang]; }
+  async function loadAll() { for (var i = 0, l = langs(); i < l.length; i++) await loadIndex(l[i]); }
+  function setOf(c) { return S.idx[c.L].sets[c[3]][0]; }
+  function guessCat(setFull, L) {
+    if (S.catMap[L + "|" + setFull]) return S.catMap[L + "|" + setFull];
     if (S.catMap[setFull]) return S.catMap[setFull];
     var target = words(setName(setFull)), code = (String(setFull).match(/^([A-Za-z0-9.]+):/) || [])[1];
     var best = null, bestScore = 0;
     S.cats.forEach(function (c) {
-      if (!c.leaf || !ROOTS[S.lang].test(c.root)) return;
+      if (!c.leaf || !ROOTS[L].test(c.root)) return;
       var cw = words(c.name), inter = target.filter(function (w) { return cw.indexOf(w) >= 0; }).length;
       var score = inter / Math.max(target.length, cw.length, 1);
       if (code && norm(c.name).split(" ").indexOf(norm(code)) >= 0) score += 0.5;
@@ -160,12 +165,14 @@
 
   // ------------------------------------------------------------------ b\u00fasqueda
   function search() {
-    var d = S.idx[S.lang]; if (!d) return;
+    var L = langs().filter(function (l) { return S.idx[l]; }); if (!L.length) return;
     var toks = norm($("#q").value).split(" ").filter(Boolean);
     if (!toks.length) { $("#res").innerHTML = '<div class="msg">Escrib\u00ed el n\u00famero de la carta (por ejemplo 143/128) o parte del nombre.</div>'; return; }
     var nums = toks.filter(function (t) { return /\d/.test(t); }), names = toks.filter(function (t) { return !/\d/.test(t); });
     var out = [];
-    for (var i = 0; i < d.cards.length && out.length < 80; i++) {
+    for (var li = 0; li < L.length; li++) {
+    var d = S.idx[L[li]], lim = out.length + 80;
+    for (var i = 0; i < d.cards.length && out.length < lim; i++) {
       var c = d.cards[i], ok = true;
       for (var a = 0; a < nums.length && ok; a++) {
         var t = nnum(nums[a]);
@@ -174,10 +181,11 @@
       for (var b = 0; b < names.length && ok; b++) ok = c.w.indexOf(names[b]) >= 0 || c.s.indexOf(names[b]) >= 0;
       if (ok) out.push(c);
     }
+    }
     $("#res").innerHTML = out.length ? out.map(function (c) {
       var p = bestPrice(c[5]);
-      return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + c[0] + '"><img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">' +
-        '<b>' + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(d.sets[c[3]][0])) + "</small>" +
+      return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + c[0] + '" data-l="' + c.L + '"><img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">' +
+        '<b>' + (L.length > 1 ? '<span class="lg">' + (c.L === "jp" ? "JAP" : "ING") + "</span> " : "") + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(setOf(c))) + "</small>" +
         "<small>" + esc(c[4] || "") + (p ? " \u00b7 US$" + p[1] : "") + "</small></div>";
     }).join("") : '<div class="msg">No encontr\u00e9 cartas con eso. Prob\u00e1 solo con el n\u00famero (143/128) o con otra parte del nombre.</div>';
   }
@@ -191,11 +199,11 @@
   // ------------------------------------------------------------------ detalle
   function titleFor(c, catId) {
     var cat = S.cats.filter(function (x) { return x.id == catId; })[0];
-    var set = cat ? cat.name : setName(S.idx[S.lang].sets[c[3]][0]);
+    var set = cat ? cat.name : setName(setOf(c));
     return [cardName(c[1]), BASICAS[c[4]] ? "" : c[4], c[2], set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
   }
-  function catOptions(sel) {
-    var rootRe = ROOTS[S.lang];
+  function catOptions(sel, L) {
+    var rootRe = ROOTS[L];
     var list = S.cats.filter(function (c) { return c.leaf && rootRe.test(c.root); });
     var others = S.cats.filter(function (c) { return c.leaf && !rootRe.test(c.root); });
     var opt = function (c) { return '<option value="' + c.id + '"' + (c.id == sel ? " selected" : "") + ">" + esc(c.path) + "</option>"; };
@@ -204,12 +212,12 @@
   function showDetail(c) {
     S.sel = c;
     root.querySelectorAll(".t").forEach(function (t) { t.classList.toggle("on", t.dataset.pid == c[0]); });
-    var d = S.idx[S.lang], setFull = d.sets[c[3]][0], cat = guessCat(setFull);
+    var setFull = setOf(c), cat = guessCat(setFull, c.L);
     var keys = Object.keys(c[5] || {}), bp = bestPrice(c[5]);
     $("#det").innerHTML = '<img class="big" src="' + IMG(c[0], 1000) + '" alt="">' +
       '<div><b>' + esc(cardName(c[1])) + "</b> \u00b7 " + esc(c[2]) + '<br><small class="hint">' + esc(setFull) + " \u00b7 " + esc(c[4] || "sin rareza") + "</small></div>" +
       '<label>T\u00edtulo del producto<input id="ti" maxlength="80"></label>' +
-      '<label>Categor\u00eda<select id="ca">' + catOptions(cat) + "</select></label>" +
+      '<label>Categor\u00eda<select id="ca">' + catOptions(cat, c.L) + "</select></label>" +
       '<div class="row"><label>Precio TCGplayer<select id="pk">' + (keys.length ? keys.map(function (k) { return '<option value="' + esc(k) + '"' + (bp && bp[0] === k ? " selected" : "") + ">" + esc(k) + " \u00b7 US$" + c[5][k] + "</option>"; }).join("") : '<option value="">Sin precio</option>') + "</select></label>" +
       '<label>Precio $<input id="pr" type="number" min="1" step="1"></label></div>' +
       '<div class="row"><label>Stock<input id="st" type="number" min="1" step="1" value="1"></label><label>&nbsp;<button class="go" id="add">Cargar nueva</button></label></div>' +
@@ -284,7 +292,7 @@
           s_sku: "", s_precio_mayorista: "", s_cantidad: String(stock), s_cantidad_minima: "1", s_producto_digital_link: "",
           s_producto_digital_observacion: "", s_producto_digital_plazo: "", s_mostrar_precio: 1, s_imagen: 0 }]
       } });
-      S.catMap[S.idx[S.lang].sets[c[3]][0]] = +cat; ls.set("cats", S.catMap);
+      S.catMap[c.L + "|" + setOf(c)] = +cat; ls.set("cats", S.catMap);
       var id = prod && (prod.idProductos || (prod.producto && prod.producto.idProductos));
       S.log.unshift({ t: title, s: stock, p: price, id: id, nuevo: true, re: !!reemplaza });
       say("ok", "Listo: <b>" + esc(title) + "</b> " + (reemplaza ? "publicada de nuevo" : "cargada") + " con stock " + stock + " a " + money(price) + "." + borrada + (id ? ' <a target="_blank" href="/productos/editar/' + id + '">Ver en el panel</a>' : ""));
@@ -338,9 +346,9 @@
   });
   $("#res").addEventListener("click", function (e) {
     var t = e.target.closest(".t"); if (!t) return;
-    var c = S.idx[S.lang].cards.filter(function (x) { return x[0] == t.dataset.pid; })[0]; if (c) showDetail(c);
+    var c = S.idx[t.dataset.l].cards.filter(function (x) { return x[0] == t.dataset.pid; })[0]; if (c) showDetail(c);
   });
-  $("#lang").onchange = async function () { S.lang = this.value; ls.set("lang", S.lang); S.sel = null; try { await loadIndex(S.lang); search(); } catch (e) { $("#res").innerHTML = '<div class="msg err">' + esc(e.message) + "</div>"; } };
+  $("#lang").onchange = async function () { S.lang = this.value; ls.set("lang", S.lang); S.sel = null; try { await loadAll(); search(); } catch (e) { $("#res").innerHTML = '<div class="msg err">' + esc(e.message) + "</div>"; } };
   $("#mult").onchange = function () { S.mult = Math.max(0.1, +this.value || 1); ls.set("mult", S.mult); if (S.sel) $("#pk").onchange(); };
 
   window.__alumineCarga = { open: function () { host.hidden = false; $("#q").focus(); } };
@@ -352,7 +360,7 @@
       $("#dolar").textContent = S.usd ? "D\u00f3lar oficial " + money(S.usd) : "Sin d\u00f3lar: pon\u00e9 el precio a mano";
       await token();
       S.cats = flatCats(await api("/categoria"), [], []);
-      await loadIndex(S.lang);
+      await loadAll();
       $("#res").innerHTML = '<div class="msg">Escrib\u00ed el n\u00famero de la carta (por ejemplo 143/128) o parte del nombre.</div>';
       $("#q").focus();
     } catch (e) { $("#res").innerHTML = '<div class="msg err">' + esc(e.message) + "</div>"; }
