@@ -67,7 +67,7 @@
     var headers = Object.assign({ Authorization: "Bearer " + (await token()) }, opts.json ? { "Content-Type": "application/json" } : {});
     var r = await fetch(API + path, { method: opts.method || "GET", headers: headers, body: opts.json ? JSON.stringify(opts.json) : opts.body });
     var j = null; try { j = await r.json(); } catch (e) {}
-    if (!r.ok || (j && j.status && j.status !== 200)) throw new Error((j && j.message) || ("Empretienda respondi\u00f3 " + r.status));
+    if (!r.ok || (j && j.status && (j.status < 200 || j.status > 299))) throw new Error((j && j.message) || ("Empretienda respondi\u00f3 " + r.status));
     return j ? j.data : null;
   }
 
