@@ -235,6 +235,26 @@ def name_rarity(idx, card):
     return best[0][0]
 
 
+def secret_rarities(idx, card):
+    """Cartas chinas con número secreto (132/127): rarezas especiales (AR, SR, SAR...) que tiene la carta
+    japonesa del mismo nombre. Devuelve (rarezas, si el nombre lleva V / ex / GX)."""
+    title = words(card["title"])
+    if title.startswith("pokemon "):
+        title = title[8:]
+    if not title:
+        return set(), False
+    sufijo = False
+    for w in title.split()[1:]:
+        if any(ch.isdigit() for ch in w):
+            break
+        sufijo = sufijo or w in SUFIJOS
+    pool = [c for c in idx.get(("w", title.split()[0]), [])
+            if c["base"] and (title == c["base"] or title.startswith(c["base"] + " "))]
+    longest = max((len(c["base"]) for c in pool), default=0)
+    return {c["rarity"] for c in pool if len(c["base"]) == longest and c["rarity"] not in TIERS
+            and c["rarity"] not in SIN_RAREZA and c["rarity"] != "Promo"}, sufijo
+
+
 def find_rarity(idx, card):
     """Para rarezas: alcanza con que los mejores candidatos coincidan en la rareza."""
     scored = candidates(idx, card)
