@@ -262,12 +262,20 @@
     if (!(price > 0)) return say("err", "Pon\u00e9 un precio.");
     if (!(stock > 0)) return say("err", "Pon\u00e9 el stock (1 o m\u00e1s).");
     lock(true); say("hint", "Subiendo la foto\u2026");
+    var reemplazada = false;
     try {
       var blob = await fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); });
       var fd = new FormData(); fd.append("max_width", "600"); fd.append("max_height", "1200");
       fd.append("images[]", new File([blob], "carta-" + c[0] + ".jpg", { type: blob.type || "image/jpeg" }));
       var imgs = await api("/upload/products", { method: "POST", body: fd });
       if (!imgs || !imgs.length) throw new Error("Empretienda no devolvi\u00f3 la foto subida");
+      var borrada = "";
+      if (reemplaza) {                 // Empretienda no deja dos productos con el mismo nombre: primero se borra la vieja (sin stock)
+        say("hint", "Borrando la publicaci\u00f3n vieja\u2026");
+        await api("/producto/" + reemplaza, { method: "DELETE" });
+        borrada = " La publicaci\u00f3n vieja se borr\u00f3.";
+        reemplazada = true;
+      }
       say("hint", "Creando el producto\u2026");
       var prod = await api("/producto", { method: "POST", json: {
         atributos: [], imagenes: [imgs[0]], categorias_secundarias: [+cat], idCategorias: +cat,
@@ -278,17 +286,17 @@
       } });
       S.catMap[S.idx[S.lang].sets[c[3]][0]] = +cat; ls.set("cats", S.catMap);
       var id = prod && (prod.idProductos || (prod.producto && prod.producto.idProductos));
-      var borrada = "";
-      if (reemplaza) {                 // la nueva ya est\u00e1 creada: reci\u00e9n ahora se borra la vieja (sin stock)
-        say("hint", "Borrando la publicaci\u00f3n vieja\u2026");
-        try { await api("/producto/" + reemplaza, { method: "DELETE" }); borrada = " La publicaci\u00f3n vieja se borr\u00f3."; }
-        catch (e) { borrada = " <b>Ojo:</b> no pude borrar la vieja (" + esc(e.message) + "); borrala desde el panel."; }
-      }
       S.log.unshift({ t: title, s: stock, p: price, id: id, nuevo: true, re: !!reemplaza });
       say("ok", "Listo: <b>" + esc(title) + "</b> " + (reemplaza ? "publicada de nuevo" : "cargada") + " con stock " + stock + " a " + money(price) + "." + borrada + (id ? ' <a target="_blank" href="/productos/editar/' + id + '">Ver en el panel</a>' : ""));
       renderLog(); existentes(c);
       $("#q").focus(); $("#q").select();
-    } catch (e) { say("err", "No se pudo cargar: " + esc(e.message)); }
+    } catch (e) {
+      var m = esc(e.message);
+      if (reemplazada) m += ". <b>La publicaci\u00f3n vieja ya se borr\u00f3</b>: toc\u00e1 <b>Cargar nueva</b> para volver a intentar.";
+      else if (/ya existe/i.test(e.message)) m += ". Ya hay un producto con ese t\u00edtulo: sumale stock, us\u00e1 <b>Borrar y publicar de nuevo</b> o cambi\u00e1 el t\u00edtulo.";
+      say("err", "No se pudo cargar: " + m);
+      if (reemplazada) existentes(c);
+    }
     lock(false);
   }
   async function sumar(c, id) {
