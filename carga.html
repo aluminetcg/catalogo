@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Carga rápida · ALUMINETCG</title>
+<style>
+:root{--bg:#f6f4ef;--panel:#fffdf8;--ink:#1d2330;--muted:#6a7080;--line:#e3dfd3;--accent:#c2410c;--accent-ink:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#12151c;--panel:#1a1f2a;--ink:#e9e6dd;--muted:#9097a7;--line:#2b3242;--accent:#fb923c;--accent-ink:#1a1206}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:32px max(16px,env(safe-area-inset-left,0px)) 48px max(16px,env(safe-area-inset-right,0px))}
+main{max-width:720px;margin:0 auto}
+h1{font-size:28px;margin:0 0 6px;text-wrap:balance}
+h1 span{color:var(--accent)}
+.lead{color:var(--muted);margin:0 0 24px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 16px}
+.card h2{font-size:17px;margin:0 0 8px}
+ol{margin:0;padding-left:22px}li{margin:6px 0}
+.bm{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:800;padding:12px 20px;border-radius:12px;cursor:grab;margin:6px 0}
+code{display:block;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:13px;overflow-wrap:anywhere;user-select:all}
+small{color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <h1>ALUMINE<span>TCG</span> · carga rápida de singles</h1>
+  <p class="lead">Buscás la carta por número, ponés el stock y se crea en Empretienda con la foto, el título, la categoría y el precio sugerido.</p>
+
+  <div class="card">
+    <h2>1. Instalala una sola vez</h2>
+    <ol>
+      <li>Mostrá la barra de marcadores de Chrome (<b>Ctrl + Shift + B</b>).</li>
+      <li>Arrastrá este botón a la barra de marcadores:<br>
+        <a class="bm" id="bm" href="#">⚡ Carga rápida</a><br>
+        <small>Si no se puede arrastrar: creá un marcador nuevo, ponele de nombre “Carga rápida” y pegá este texto como dirección:</small>
+        <code id="code"></code></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>2. Cada vez que cargues cartas</h2>
+    <ol>
+      <li>Entrá a <b>panel.empretienda.com</b> con tu cuenta.</li>
+      <li>Tocá el marcador <b>⚡ Carga rápida</b>: se abre la herramienta encima del panel.</li>
+      <li>Escribí el número (por ejemplo <b>143/128</b>) y, si hace falta, parte del nombre. Enter elige la primera.</li>
+      <li>Revisá título, categoría y precio, poné el stock y tocá <b>Cargar nueva</b>. Si la carta ya existe en tu tienda, aparece abajo con <b>Sumar stock</b>.</li>
+      <li>Al terminar, corré la actualización rápida del catálogo (“Run workflow”) para que salgan en el buscador.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Bueno saber</h2>
+    <ol>
+      <li>El precio sugerido es el de mercado de TCGplayer × dólar oficial, redondeado a tu estilo (…79). El número “×” de arriba lo ajusta y queda guardado.</li>
+      <li>La categoría que elijas para un set se recuerda para las próximas cartas de ese set.</li>
+      <li>Por ahora tiene Pokémon en inglés y en japonés. Las fotos son las de TCGplayer.</li>
+    </ol>
+  </div>
+</main>
+<script>
+const code = "javascript:(function(){var s=document.createElement('script');s.src='https://aluminetcg.github.io/catalogo/carga.js?v='+Date.now();document.body.appendChild(s)})();";
+document.getElementById("bm").setAttribute("href", code);
+document.getElementById("code").textContent = code;
+document.getElementById("bm").addEventListener("click", e => { e.preventDefault(); });
+</script>
+</body>
+</html>
