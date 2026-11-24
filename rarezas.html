@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Rarezas a mano · ALUMINETCG</title>
+<style>
+:root{
+  --bg:#f6f4ef; --panel:#fffdf8; --ink:#1d2330; --muted:#6a7080; --line:#e3dfd3;
+  --accent:#c2410c; --accent-ink:#fff; --ok:#15803d; --ok-bg:#dcfce7; --chip:#efe9da;
+  --shadow:0 1px 2px rgba(29,35,48,.06),0 6px 18px rgba(29,35,48,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#12151c; --panel:#1a1f2a; --ink:#e9e6dd; --muted:#9097a7; --line:#2b3242;
+  --accent:#fb923c; --accent-ink:#1a1206; --ok:#86efac; --ok-bg:#14301f; --chip:#252c3b;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.3);}
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:96px}
+a{color:inherit}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{max-width:1500px;margin:0 auto;padding:12px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.02em;white-space:nowrap}
+.brand span{color:var(--accent)}
+.bar input[type=search],.bar select{padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:inherit;font-size:16px;min-width:0}
+.bar input[type=search]{flex:1 1 220px}
+.bar select{flex:0 1 230px;max-width:100%}
+.bar label{display:flex;gap:6px;align-items:center;white-space:nowrap;color:var(--muted);font-size:14px}
+.info{max-width:1500px;margin:0 auto;padding:10px 16px 0;color:var(--muted);font-size:14px}
+.info b{color:var(--ink)}
+.grid{max-width:1500px;margin:0 auto;padding:14px 16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--panel);border:1.5px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:10px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card.done{border-color:var(--ok)}
+.top{display:flex;gap:10px;min-width:0}
+.top img{width:92px;height:128px;object-fit:contain;border-radius:6px;background:var(--chip);flex:none;cursor:zoom-in}
+.t{min-width:0;display:flex;flex-direction:column;gap:3px}
+.t a{font-weight:700;text-decoration:none;overflow-wrap:anywhere;line-height:1.25}
+.t a:hover{text-decoration:underline}
+.t small{color:var(--muted);overflow-wrap:anywhere}
+.now{font-size:13px;color:var(--muted)}
+.now b{color:var(--ok)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chips button{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:5px 10px;font:inherit;font-size:13px;cursor:pointer}
+.chips button:hover{border-color:var(--accent)}
+.chips button.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}
+.chips button.x{color:var(--muted)}
+.more{display:flex;justify-content:center;padding:6px 16px 20px}
+.btn{border:1.5px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:10px 16px;font:inherit;cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.save{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--panel);border-top:1.5px solid var(--line);box-shadow:0 -6px 18px rgba(0,0,0,.12)}
+.save div{max-width:1500px;margin:0 auto;padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.save span{flex:1 1 200px;min-width:0}
+.save .go{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:800;font-size:16px;padding:12px 22px}
+.save .go:disabled{opacity:.45;cursor:default}
+.help{max-width:1500px;margin:0 auto;padding:0 16px}
+.help details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-top:12px}
+.help summary{cursor:pointer;font-weight:700}
+.help ol{margin:8px 0 2px;padding-left:20px}
+#zoom{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;cursor:zoom-out}
+#zoom img{max-width:94vw;max-height:94vh;border-radius:10px}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand">ALUMINE<span>TCG</span> · rarezas a mano</div>
+    <input id="q" type="search" placeholder="Buscar por nombre, set o número…" autocomplete="off">
+    <select id="grupo" aria-label="Juego e idioma"></select>
+    <select id="set" aria-label="Set"></select>
+    <label><input id="todas" type="checkbox"> Ver también las que ya tienen rareza</label>
+  </div>
+</header>
+
+<div class="help">
+  <details>
+    <summary>Cómo se usa</summary>
+    <ol>
+      <li>Tocá la rareza correcta en cada carta (podés marcar muchas seguidas). Tocá la imagen para verla grande.</li>
+      <li>Apretá <b>Guardar</b> abajo. Se abre GitHub con un archivo ya escrito.</li>
+      <li>En GitHub tocá el botón verde <b>Commit changes…</b> y de nuevo <b>Commit changes</b>. Listo: en 1 o 2 minutos el catálogo y el buscador de la tienda muestran esas rarezas.</li>
+    </ol>
+    Lo que cargues a mano manda siempre sobre lo automático, también para corregir una rareza que quedó mal (tildá “Ver también las que ya tienen rareza”).
+  </details>
+</div>
+
+<div class="info" id="info">Cargando catálogo…</div>
+<main class="grid" id="grid"></main>
+<div class="more"><button class="btn" id="mas" hidden>Ver más</button></div>
+
+<div class="save"><div>
+  <span id="pend">Todavía no marcaste ninguna.</span>
+  <button class="btn" id="deshacer" hidden>Descartar lo marcado</button>
+  <button class="btn go" id="guardar" disabled>Guardar</button>
+</div></div>
+<div id="zoom" hidden><img alt=""></div>
+
+<script>
+const REPO = "aluminetcg/catalogo";
+const POR_PAGINA = 60, MAX_POR_GUARDADO = 150;
+const BASE_POKEMON = ["Common", "Uncommon", "Rare", "Double Rare", "Ultra Rare", "Illustration Rare",
+  "Special Illustration Rare", "Hyper Rare", "Shiny Rare", "ACE SPEC", "Radiant Rare", "Promo", "Energía"];
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const leer = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } };
+const escribir = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+
+let CARDS = [], opciones = {}, visibles = POR_PAGINA;
+let marcadas = leer("rarezas-marcadas", {});      // id -> rareza, todavía sin guardar
+let enviadas = leer("rarezas-enviadas", {});      // id -> rareza, ya guardadas en GitHub (esperando que se publiquen)
+
+const grupoDe = c => c.game === "Pokémon" ? "Pokémon " + (c.lang || "otros") : c.game;
+
+fetch("data/cards.json?t=" + Date.now(), { cache: "no-cache" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(data => {
+  CARDS = (data.cards || data).filter(c => c.kind === "Cartas" || c.kind === "Gradeadas");
+  // lo ya publicado deja de estar "enviado"
+  for (const c of CARDS) if (enviadas[c.id] !== undefined && (c.rarity || "") === enviadas[c.id]) delete enviadas[c.id];
+  escribir("rarezas-enviadas", enviadas);
+  const cuenta = {};
+  for (const c of CARDS) if (c.rarity) { const g = c.game; (cuenta[g] = cuenta[g] || {})[c.rarity] = (cuenta[g][c.rarity] || 0) + 1; }
+  for (const g in cuenta) opciones[g] = Object.entries(cuenta[g]).sort((a, b) => b[1] - a[1]).map(x => x[0]);
+  opciones["Pokémon"] = BASE_POKEMON.concat((opciones["Pokémon"] || []).filter(r => !BASE_POKEMON.includes(r)));
+  llenarGrupos(); llenarSets(); pintar();
+}).catch(e => { $("#info").textContent = "No pude cargar el catálogo (" + e.message + "). Probá recargar la página."; });
+
+const falta = c => !c.rarity && enviadas[c.id] === undefined;
+function base() { return $("#todas").checked ? CARDS : CARDS.filter(c => falta(c) || marcadas[c.id] !== undefined); }
+
+function llenarGrupos() {
+  const n = {};
+  for (const c of base()) n[grupoDe(c)] = (n[grupoDe(c)] || 0) + 1;
+  const prev = $("#grupo").value;
+  $("#grupo").innerHTML = '<option value="">Todos los juegos</option>' + Object.entries(n).sort((a, b) => b[1] - a[1])
+    .map(([g, k]) => `<option value="${esc(g)}">${esc(g)} (${k})</option>`).join("");
+  $("#grupo").value = n[prev] ? prev : "";
+}
+function llenarSets() {
+  const g = $("#grupo").value, n = {};
+  for (const c of base()) if (!g || grupoDe(c) === g) n[c.set] = (n[c.set] || 0) + 1;
+  const prev = $("#set").value;
+  $("#set").innerHTML = '<option value="">Todos los sets</option>' + Object.entries(n).sort((a, b) => b[1] - a[1])
+    .map(([s, k]) => `<option value="${esc(s)}">${esc(s)} (${k})</option>`).join("");
+  $("#set").value = n[prev] ? prev : "";
+}
+
+function lista() {
+  const g = $("#grupo").value, s = $("#set").value, q = norm($("#q").value).split(/\s+/).filter(Boolean);
+  return base().filter(c => (!g || grupoDe(c) === g) && (!s || c.set === s) &&
+    (!q.length || q.every(w => norm(c.title + " " + c.set + " " + c.number).includes(w))));
+}
+
+function tarjeta(c) {
+  const sel = marcadas[c.id];
+  const ops = opciones[c.game] || opciones["Pokémon"];
+  const chips = ops.map(r => `<button type="button" data-r="${esc(r)}"${sel === r ? ' class="on"' : ""}>${esc(r)}</button>`).join("") +
+    (c.rarity ? `<button type="button" class="x${sel === "" ? " on" : ""}" data-r="">Quitar rareza</button>` : "");
+  return `<article class="card${sel !== undefined ? " done" : ""}" data-id="${c.id}">
+    <div class="top">
+      ${c.img ? `<img loading="lazy" src="${esc(c.img)}" alt="">` : ""}
+      <div class="t"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>
+        <small>${esc(c.set)}${c.number ? " · " + esc(c.number) : ""} · ${esc(c.lang || c.game)}</small>
+        <span class="now">${c.rarity ? "Ahora: <b>" + esc(c.rarity) + "</b>" : "Sin rareza"}${sel !== undefined ? " → <b>" + (esc(sel) || "sin rareza") + "</b>" : ""}</span>
+      </div>
+    </div>
+    <div class="chips">${chips}</div>
+  </article>`;
+}
+
+function pintar() {
+  const l = lista(), sin = CARDS.filter(falta).length;
+  $("#info").innerHTML = `<b>${sin.toLocaleString("es-AR")}</b> cartas sin rareza en total · mostrando ${Math.min(visibles, l.length).toLocaleString("es-AR")} de ${l.length.toLocaleString("es-AR")}` +
+    (Object.keys(enviadas).length ? ` · ${Object.keys(enviadas).length} guardadas esperando publicarse <button class="btn" id="reponer" style="padding:3px 9px;font-size:13px">No llegué a guardarlas: volver a marcarlas</button>` : "");
+  $("#grid").innerHTML = l.slice(0, visibles).map(tarjeta).join("") || '<div class="empty">No hay cartas para mostrar con estos filtros.</div>';
+  $("#mas").hidden = l.length <= visibles;
+  estado();
+}
+function estado() {
+  const n = Object.keys(marcadas).length;
+  $("#pend").textContent = n ? `${n} carta${n > 1 ? "s" : ""} marcada${n > 1 ? "s" : ""} sin guardar.` + (n > MAX_POR_GUARDADO ? ` Se guardan de a ${MAX_POR_GUARDADO}.` : "") : "Todavía no marcaste ninguna.";
+  $("#guardar").disabled = !n; $("#deshacer").hidden = !n;
+  $("#guardar").textContent = n ? `Guardar ${Math.min(n, MAX_POR_GUARDADO)}` : "Guardar";
+}
+
+$("#grid").addEventListener("click", e => {
+  const img = e.target.closest(".top img");
+  if (img) { $("#zoom img").src = img.src; $("#zoom").hidden = false; return; }
+  const b = e.target.closest(".chips button"); if (!b) return;
+  const art = b.closest(".card"), id = art.dataset.id, r = b.dataset.r;
+  if (marcadas[id] === r) delete marcadas[id]; else marcadas[id] = r;
+  escribir("rarezas-marcadas", marcadas);
+  const c = CARDS.find(x => String(x.id) === id);
+  art.outerHTML = tarjeta(c); estado();
+});
+$("#zoom").addEventListener("click", () => { $("#zoom").hidden = true; });
+$("#info").addEventListener("click", e => {
+  if (e.target.id !== "reponer") return;
+  Object.assign(marcadas, enviadas); enviadas = {};
+  escribir("rarezas-marcadas", marcadas); escribir("rarezas-enviadas", enviadas);
+  llenarGrupos(); llenarSets(); pintar();
+});
+let t; $("#q").addEventListener("input", () => { clearTimeout(t); t = setTimeout(() => { visibles = POR_PAGINA; pintar(); }, 150); });
+$("#grupo").addEventListener("change", () => { $("#set").value = ""; llenarSets(); visibles = POR_PAGINA; pintar(); });
+$("#set").addEventListener("change", () => { visibles = POR_PAGINA; pintar(); });
+$("#todas").addEventListener("change", () => { llenarGrupos(); llenarSets(); visibles = POR_PAGINA; pintar(); });
+$("#mas").addEventListener("click", () => { visibles += POR_PAGINA; pintar(); });
+$("#deshacer").addEventListener("click", () => { marcadas = {}; escribir("rarezas-marcadas", marcadas); pintar(); });
+
+$("#guardar").addEventListener("click", () => {
+  const ids = Object.keys(marcadas).slice(0, MAX_POR_GUARDADO);
+  if (!ids.length) return;
+  const lote = {}; for (const id of ids) lote[id] = marcadas[id];
+  const d = new Date(), p = n => String(n).padStart(2, "0");
+  const nombre = `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}.json`;
+  const url = `https://github.com/${REPO}/new/main/data/manual?filename=${encodeURIComponent(nombre)}&value=${encodeURIComponent(JSON.stringify(lote))}`;
+  window.open(url, "_blank", "noopener");
+  for (const id of ids) { enviadas[id] = marcadas[id]; delete marcadas[id]; }
+  escribir("rarezas-marcadas", marcadas); escribir("rarezas-enviadas", enviadas);
+  llenarGrupos(); llenarSets(); pintar();
+  $("#pend").textContent = "Se abrió GitHub en otra pestaña: tocá «Commit changes…» y de nuevo «Commit changes» para terminar." + (Object.keys(marcadas).length ? " Después guardá el resto." : "");
+});
+</script>
+</body>
+</html>
