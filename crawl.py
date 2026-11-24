@@ -344,6 +344,10 @@ def classify(title, game, lang, kind, year, context, db):
             "rarity": rarity, "finish": finish, "variant": t["variant"], "super": supert, "ptype": ptype}
 
 
+SECRETAS = [(r"\bSAR\b", "Special Art Rare"), (r"\bCHR\b|character rare", "Character Rare"), (r"\bAR\b", "Art Rare"),
+            (r"\bSR\b", "Super Rare"), (r"\b(UR|HR)\b", "Secret Rare")]
+
+
 def tcg_rarities(rows):
     """Segunda fuente: completa con TCGplayer la rareza de las cartas que quedaron sin dato."""
     for r in rows:              # las Radiant (Kagayaku) tienen rareza propia en todos los idiomas
@@ -380,6 +384,17 @@ def tcg_rarities(rows):
             ok = 0
             for r in chino:
                 raw = precios.name_rarity(idx, r)
+                a, _, b = r["number"].partition("/")
+                if not raw and a.strip().isdigit() and b.strip().isdigit() and int(a) > int(b):
+                    # número secreto: primero lo que diga el título, si no la carta japonesa del mismo nombre
+                    raw = next((n for p, n in SECRETAS if re.search(p, r["title"], re.I)), "")
+                    if not raw:
+                        found, sufijo = precios.secret_rarities(idx, r)
+                        found = {unify(x, "Pokémon", "")[0] for x in found} - {""}
+                        if len(found) == 1:
+                            raw = found.pop()
+                        elif not sufijo and "Illustration Rare" in found:
+                            raw = "Illustration Rare"      # Pokémon sin V / ex con número secreto: es la AR
                 if raw:
                     r["rarity"], r["finish"] = unify(raw, "Pokémon", r["finish"])
                     ok += bool(r["rarity"])
