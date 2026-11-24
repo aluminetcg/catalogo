@@ -86,5 +86,14 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+      - name: Dar tiempo a que GitHub registre el sitio subido
+        run: sleep 20
       - id: deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Esperar antes de reintentar la publicación
+        if: ${{ steps.deploy.outcome == 'failure' }}
+        run: sleep 90
+      - name: Reintentar la publicación
+        if: ${{ steps.deploy.outcome == 'failure' }}
         uses: actions/deploy-pages@v4
