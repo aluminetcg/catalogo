@@ -348,8 +348,39 @@ SECRETAS = [(r"\bSAR\b", "Special Art Rare"), (r"\bCHR\b|character rare", "Chara
             (r"\bSR\b", "Super Rare"), (r"\b(UR|HR)\b", "Secret Rare")]
 
 
+MANUAL = HERE / "data" / "manual"
+
+
+def apply_manual(rows):
+    """Rarezas cargadas a mano desde rarezas.html (data/manual/*.json, {id: rareza}). Mandan sobre todo lo demás;
+    si una carta aparece en varios archivos vale el más nuevo. Rareza vacía = dejarla sin dato."""
+    manual = {}
+    for f in sorted(MANUAL.glob("*.json")):
+        try:
+            manual.update({str(k): str(v).strip() for k, v in json.loads(f.read_text()).items()})
+        except Exception as e:
+            print(f"AVISO: no pude leer {f.name} ({e})")
+    n = 0
+    for r in rows:
+        v = manual.get(str(r["id"]))
+        if v is not None:
+            r["rarity"] = v[:40]
+            n += 1
+    return n
+
+
 def tcg_rarities(rows):
     """Segunda fuente: completa con TCGplayer la rareza de las cartas que quedaron sin dato."""
+    apply_manual(rows)          # primero, para que lo automático no las busque
+    try:
+        _tcg_rarities(rows)
+    finally:
+        n = apply_manual(rows)  # y al final, para que nada las pise
+        if n:
+            print(f"Rarezas cargadas a mano: {n}", flush=True)
+
+
+def _tcg_rarities(rows):
     for r in rows:              # las Radiant (Kagayaku) tienen rareza propia en todos los idiomas
         if (not r["rarity"] and r["game"] == "Pokémon" and r["kind"] in ("Cartas", "Gradeadas")
                 and re.search(r"(?<!\()\bradiant (?!collection)", r["title"].lower())):
