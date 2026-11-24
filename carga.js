@@ -236,16 +236,25 @@
       box.innerHTML = "<b>Ya ten\u00e9s cargada" + (hits.length > 1 ? "s estas" : " esta") + ":</b>" + hits.map(function (p) {
         var s = (p.stock || [])[0] || {};
         return '<div class="ex"><div>' + esc(p.p_nombre) + "<br><small>Stock " + (s.s_ilimitado ? "ilimitado" : s.s_cantidad) + " \u00b7 " + money(p.p_precio) + (p.p_desactivado ? " \u00b7 desactivado" : "") + "</small></div>" +
-          '<button class="sec" data-id="' + p.idProductos + '">Sumar stock</button></div>';
+          '<div style="display:flex;flex-direction:column;gap:6px;flex:none"><button class="sec" data-id="' + p.idProductos + '">Sumar stock</button>' +
+          ((p.stock || []).length === 1 && !s.s_ilimitado && !(+s.s_cantidad > 0) ? '<button class="sec" data-re="' + p.idProductos + '" title="Crea una publicaci\u00f3n nueva con los datos de arriba (queda primera como reci\u00e9n subida) y borra esta">Borrar y publicar de nuevo</button>' : "") + "</div></div>";
       }).join("") + '<label style="flex-direction:row;align-items:center;gap:6px;margin-top:6px"><input id="np" type="checkbox" style="width:auto"> y ponerle el precio de arriba</label>';
       box.querySelectorAll("[data-id]").forEach(function (b) { b.onclick = function () { sumar(c, +b.dataset.id); }; });
+      box.querySelectorAll("[data-re]").forEach(function (b) {
+        b.onclick = function () {
+          if (b.dataset.ok) { crear(c, +b.dataset.re); return; }
+          b.dataset.ok = "1"; b.textContent = "\u00bfSeguro? Toc\u00e1 de nuevo";
+          b.style.background = "#c2410c"; b.style.color = "#fff";
+          setTimeout(function () { if (b.isConnected) { delete b.dataset.ok; b.textContent = "Borrar y publicar de nuevo"; b.style.background = ""; b.style.color = ""; } }, 6000);
+        };
+      });
     } catch (e) { box.innerHTML = '<span class="err">No pude revisar si ya existe: ' + esc(e.message) + "</span>"; }
   }
 
   // ------------------------------------------------------------------ acciones
   function lock(on) { S.busy = on; root.querySelectorAll("#det button").forEach(function (b) { b.disabled = on; }); }
   function say(cls, html) { $("#out").innerHTML = '<div class="' + cls + '">' + html + "</div>"; }
-  async function crear(c) {
+  async function crear(c, reemplaza) {
     if (S.busy) return;
     var cat = $("#ca").value, title = $("#ti").value.trim(), price = Math.round(+$("#pr").value), stock = Math.round(+$("#st").value);
     if (!cat) return say("err", "Eleg\u00ed la categor\u00eda.");
@@ -269,8 +278,14 @@
       } });
       S.catMap[S.idx[S.lang].sets[c[3]][0]] = +cat; ls.set("cats", S.catMap);
       var id = prod && (prod.idProductos || (prod.producto && prod.producto.idProductos));
-      S.log.unshift({ t: title, s: stock, p: price, id: id, nuevo: true });
-      say("ok", "Listo: <b>" + esc(title) + "</b> cargada con stock " + stock + " a " + money(price) + "." + (id ? ' <a target="_blank" href="/productos/editar/' + id + '">Ver en el panel</a>' : ""));
+      var borrada = "";
+      if (reemplaza) {                 // la nueva ya est\u00e1 creada: reci\u00e9n ahora se borra la vieja (sin stock)
+        say("hint", "Borrando la publicaci\u00f3n vieja\u2026");
+        try { await api("/producto/" + reemplaza, { method: "DELETE" }); borrada = " La publicaci\u00f3n vieja se borr\u00f3."; }
+        catch (e) { borrada = " <b>Ojo:</b> no pude borrar la vieja (" + esc(e.message) + "); borrala desde el panel."; }
+      }
+      S.log.unshift({ t: title, s: stock, p: price, id: id, nuevo: true, re: !!reemplaza });
+      say("ok", "Listo: <b>" + esc(title) + "</b> " + (reemplaza ? "publicada de nuevo" : "cargada") + " con stock " + stock + " a " + money(price) + "." + borrada + (id ? ' <a target="_blank" href="/productos/editar/' + id + '">Ver en el panel</a>' : ""));
       renderLog(); existentes(c);
       $("#q").focus(); $("#q").select();
     } catch (e) { say("err", "No se pudo cargar: " + esc(e.message)); }
@@ -303,7 +318,7 @@
   function renderLog() {
     var el = $("#log"); if (!el) return;
     el.innerHTML = S.log.length ? "<b>Cargadas en esta sesi\u00f3n (" + S.log.length + ")</b><br>" + S.log.slice(0, 30).map(function (l) {
-      return (l.nuevo ? "Nueva: " : "Stock +" + l.s + " \u2192 " + l.total + ": ") + (l.id ? '<a target="_blank" href="/productos/editar/' + l.id + '">' + esc(l.t) + "</a>" : esc(l.t)) + (l.nuevo ? " (stock " + l.s + ", " + money(l.p) + ")" : "");
+      return (l.re ? "Republicada: " : l.nuevo ? "Nueva: " : "Stock +" + l.s + " \u2192 " + l.total + ": ") + (l.id ? '<a target="_blank" href="/productos/editar/' + l.id + '">' + esc(l.t) + "</a>" : esc(l.t)) + (l.nuevo ? " (stock " + l.s + ", " + money(l.p) + ")" : "");
     }).join("<br>") + '<br><br>Cuando termines, toc\u00e1 <a target="_blank" href="https://github.com/aluminetcg/catalogo/actions/workflows/actualizar.yml">Run workflow</a> para que aparezcan en el buscador.' : "";
   }
 
