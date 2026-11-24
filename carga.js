@@ -254,7 +254,7 @@
     if (!(stock > 0)) return say("err", "Pon\u00e9 el stock (1 o m\u00e1s).");
     lock(true); say("hint", "Subiendo la foto\u2026");
     try {
-      var blob = await fetch(IMG(c[0], 1000)).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); });
+      var blob = await fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); });
       var fd = new FormData(); fd.append("max_width", "600"); fd.append("max_height", "1200");
       fd.append("images[]", new File([blob], "carta-" + c[0] + ".jpg", { type: blob.type || "image/jpeg" }));
       var imgs = await api("/upload/products", { method: "POST", body: fd });
