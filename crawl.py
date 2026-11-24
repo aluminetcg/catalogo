@@ -354,6 +354,8 @@ def tcg_rarities(rows):
         if (not r["rarity"] and r["game"] == "Pokémon" and r["kind"] in ("Cartas", "Gradeadas")
                 and re.search(r"(?<!\()\bradiant (?!collection)", r["title"].lower())):
             r["rarity"] = "Radiant Rare"
+        if "30th" in r["set"] and re.search(r"\bpikachu \d+/30\b", r["title"].lower()):
+            r["rarity"], r["finish"] = "Rare", "Holo"       # las 30 Pikachu con sello del 30th: Holo Rare
         if r["game"] == "Pokémon" and "/energias/" in r["url"]:
             r["rarity"] = "Energía"     # la categoría Energías de la tienda es su propio filtro
     try:
