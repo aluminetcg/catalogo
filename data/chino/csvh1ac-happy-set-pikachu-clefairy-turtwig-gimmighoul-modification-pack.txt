@@ -1,0 +1,24 @@
+# set: CSVH1aC Happy Set: Pikachu & Clefairy & Turtwig & Gimmighoul (Modification Pack)
+001/023|Snorlax|
+002/023|Bouffalant|
+003/023|Hawlucha|
+004/023|Indeedee|
+005/023|Cyclizar|
+006/023|Cyclizar ex|
+007/023|Lucky Ice Pop|
+008/023|Energy Switch|
+009/023|Capturing Aroma|
+010/023|Camping Gear|
+011/023|Crushing Hammer|
+012/023|Boost Shake|
+013/023|Rugged Helmet|
+014/023|Exp. Share|
+015/023|Pot Helmet|
+016/023|Defiance Band|
+017/023|Bravery Charm|
+018/023|Agatha|
+019/023|Cook|
+020/023|Giovanni's Charisma|
+021/023|Avery|
+022/023|Roxanne|
+023/023|Boss's Orders|
