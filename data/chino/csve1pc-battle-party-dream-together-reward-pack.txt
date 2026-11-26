@@ -1,0 +1,25 @@
+# set: CSVE1pC Battle Party: Dream Together (Reward Pack)
+001/024|Venusaur ex|
+002/024|Charizard ex|
+003/024|Blastoise ex|
+004/024|Octillery|
+005/024|Flaaffy|
+006/024|Radiant Gardevoir|
+007/024|Houndoom|
+008/024|Rare Candy|
+009/024|Rescue Carrier|
+010/024|Level Ball|
+011/024|Professor's Research|
+012/024|Basic Lightning Energy|
+013/024|Radiant Charizard|
+014/024|Pyukumuku|
+015/024|Zapdos|
+016/024|Miraidon ex|
+017/024|Gardevoir ex|
+018/024|Koraidon ex|
+019/024|Altaria|
+020/024|Nest Ball|
+021/024|Battle VIP Pass|
+022/024|Boss's Orders|
+023/024|Fusion Strike Energy|
+024/024|Basic Psychic Energy|
