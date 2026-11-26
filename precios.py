@@ -63,7 +63,7 @@ def get_json(url):
 def load_tcg(cat, only=None):
     """Devuelve la lista de grupos (sets) de una categoría, con productos y precios. Usa caché diaria."""
     CACHE.mkdir(parents=True, exist_ok=True)
-    full = CACHE / f"{cat}.v2.json"                 # categoría completa (la usa singles.py)
+    full = CACHE / f"{cat}.v3.json"                 # categoría completa (la usa singles.py)
     f = full if only is None else CACHE / f"{cat}.part.v2.json"   # solo los sets que tiene la tienda (crawl.py)
     stamp = session.get(f"{TCG}/last-updated.txt", timeout=30).text.strip()
 
