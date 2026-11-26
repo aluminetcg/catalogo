@@ -1,0 +1,151 @@
+# set: 1994 Fleer The Amazing Spider-Man
+1|Wall-Crawling|
+2|Web-Shooting|
+3|Web-Slinging|
+4|Spider-Tracer|
+5|Spider-Agility|
+6|Spider-Signal|
+7|Spider-Strength|
+8|Spider-Leap|
+9|Spider-Sense|
+10|Vulnerable to Sonics|
+11|Web-Shooting|
+12|Spider-Agility|
+13|Living Costume|
+14|Disguise|
+15|Fearsome|
+16|Vulnerable to Fire|
+17|Immune to Spider-Sense|
+18|Super Strength|
+19|Black Costume|
+20|Captain Universe|
+21|Spider-Lizard|
+22|Man-Spider|
+23|Extra Arms|
+24|Spider-Clone|
+25|Spider-Hulk|
+26|Doppelganger|
+27|Shrinking Spidey|
+28|Tarantula|
+29|Spider-Slayers|
+30|Jackal|
+31|Puma|
+32|Spider-Man|
+33|Cardiac|
+34|Chance|
+35|Styx and Stone|
+36|Tombstone|
+37|Sandstorm|
+38|Demogoblin|
+39|Silvermane|
+40|Hammerhead|
+41|Spider-Man|
+42|Man-Wolf|
+43|Warrant|
+44|Blood Rose|
+45|Calypso|
+46|Green Goblin|
+47|Spider-Man|
+48|The Jury|
+49|Carrion|
+50|Vermin|
+51|Shocker|
+52|Kingpin|
+53|Sin-Eater|
+54|Rhino|
+55|Beetle|
+56|Solo|
+57|Boomerang|
+58|Hydro-Man|
+59|Scorpion|
+60|Speed Demon|
+61|Kraven|
+62|Spider-Man|
+63|Chameleon|
+64|Doctor Octopus|
+65|Vulture|
+66|Carnage|
+67|Venom|
+68|Spider-Man|
+69|Electro|
+70|Lizard|
+71|Hobgoblin|
+72|Mysterio|
+73|Black Cat|
+74|Nightwatch|
+75|Spider-Man|
+76|Sandman|
+77|Molten Man|
+78|Cloak and Dagger|
+79|Silver Sable|
+80|Prowler|
+81|Annex|
+82|Spider-Man & Wolverine|
+83|Spider-Man & Daredevil|
+84|Spider-Man & Punisher|
+85|Spider-Man & Avengers|
+86|Spider-Man & Green Goblin|
+87|Spider-Man & Ghost Rider|
+88|Spider-Man & X-Men|
+89|Spider-Man & Venom|
+90|Spider-Man & Captain America|
+91|Spider-Man & Doctor Strange|
+92|Spider-Man / Silver Sable|
+93|Spider-Man & Human Torch|
+94|Spider-Man & Nova|
+95|Spider-Man & New Warriors|
+96|Spider-Man / Darkhawk|
+97|Spider-Man vs. Venom|
+98|Spider-Man vs. Carnage|
+99|Spider-Man vs. Hobgoblin|
+100|Spider-Man vs. Green Goblin|
+101|Spider-Man vs. Doctor Octopus|
+102|Spider-Man vs. Lizard|
+103|Spider-Man vs. Firelord|
+104|Spider-Man vs. Silver Surfer|
+105|Spider-Man vs. Tombstone|
+106|Spider-Man vs. Rhino|
+107|Spider-Man vs. Hulk|
+108|Spider-Man vs. Electro|
+109|Spider-Man vs. Kraven|
+110|Spider-Man vs. Mysterio|
+111|Spider-Man vs. Kingpin|
+112|Spider-Man vs. Vulture|
+113|Spider-Man vs. Doctor Doom|
+114|Spider-Man vs. Puma|
+115|Spider-Man vs. Black Cat|
+116|Spider-Man vs. Juggernaut|
+117|Spider-Man / Vermin|
+118|Spider-Man vs. Scorpion|
+119|Spider-Man vs. Red Skull|
+120|Spider-Man / Sabretooth|
+121|Spider-Man vs. Morbius|
+122|Mary Jane|
+123|Flash Thompson|
+124|J. Jonah Jameson|
+125|Aunt May|
+126|Robbie Robertson|
+127|Peter Parker|
+128|The Spider's Bite!|
+129|Powers for Profit!|
+130|Not My Job!|
+131|To Catch a Thief!|
+132|A Graveside Vow!|
+133|Maximum Carnage|
+134|Round Robin|
+135|Return of the Sinister Six|
+136|Revenge of the Sinister Six|
+137|The Child Within|
+138|Spirits of Venom|
+139|Fearful Symmetry|
+140|Assassin Nation Plot|
+141|Death of Gwen Stacy|
+142|The Wedding of Peter and Mary Jane|
+143|Invasion of the Spider-Slayers|
+144|The Osborn Legacy|
+145|The Return of Peter Parker's Parents|
+146|The Black Costume Saga|
+147|Return of the Burglar|
+148|Funeral Arrangements|
+149|Eye of the Puma|
+150|The Amazing Spider-Man - 1st Edition CL|
