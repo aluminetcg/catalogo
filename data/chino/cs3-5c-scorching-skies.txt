@@ -1,0 +1,91 @@
+# set: CS3.5C Scorching Skies
+001/066|Weedle|C
+002/066|Kakuna|U
+003/066|Beedrill|R
+004/066|Celebi|U
+005/066|Kricketune V|RR
+006/066|Durant|U
+007/066|Castform Sunny Form|C
+008/066|Victini V|RR
+009/066|Victini VMAX|RRR
+010/066|Tepig|C
+011/066|Pignite|U
+012/066|Emboar|R
+013/066|Volcanion V|RR
+014/066|Sizzlipede|C
+015/066|Centiskorch|U
+016/066|Sneasel|C
+017/066|Weavile|R
+018/066|Delibird|C
+019/066|Castform Rainy Form|C
+020/066|Castform Snowy Form|C
+021/066|Empoleon V|RR
+022/066|Manaphy|U
+023/066|Sobble|C
+024/066|Drizzile|U
+025/066|Inteleon|R
+026/066|Arctovish V|RR
+027/066|Rapid Strike Urshifu|R
+028/066|Dracozolt V|RR
+029/066|Dracozolt VMAX|RRR
+030/066|Galarian Slowpoke|C
+031/066|Woobat|C
+032/066|Swoobat|U
+033/066|Inkay|C
+034/066|Malamar|U
+035/066|Hatenna|C
+036/066|Hattrem|U
+037/066|Hatterene|R
+038/066|Galarian Yamask|C
+039/066|Galarian Runerigus|R
+040/066|Kubfu|C
+041/066|Galarian Moltres V|RR
+042/066|Galarian Slowking|R
+043/066|Spiritomb|U
+044/066|Single Strike Urshifu|R
+045/066|Honedge|C
+046/066|Doublade|U
+047/066|Aegislash|R
+048/066|Aegislash|U
+049/066|Lickitung|C
+050/066|Lickilicky|U
+051/066|Castform|C
+052/066|Bouffalant|U
+053/066|Skwovet|C
+054/066|Greedent|R
+055/066|Energy Recycler|U
+056/066|Great Ball|U
+057/066|Echoing Horn|U
+058/066|Galarian Chestplate|U
+059/066|Tool Jammer|U
+060/066|Klara|U
+061/066|Avery|U
+062/066|Peony|U
+063/066|Path to the Peak|U
+064/066|Impact Energy|U
+065/066|Spiral Energy|U
+066/066|Lucky Energy|U
+067/066|Malamar|CHR
+068/066|Castform|CHR
+069/066|Kricketune V|SR
+070/066|Victini V|SR
+071/066|Volcanion V|SR
+072/066|Empoleon V|SR
+073/066|Empoleon V|SR
+074/066|Arctovish V|SR
+075/066|Dracozolt V|SR
+076/066|Galarian Moltres V|SR
+077/066|Galarian Moltres V|SR
+078/066|Klara|SR
+079/066|Avery|SR
+080/066|Peony|SR
+081/066|Kricketune V|CSR
+082/066|Galarian Moltres V|CSR
+083/066|Victini VMAX|HR
+084/066|Dracozolt VMAX|HR
+085/066|Klara|HR
+086/066|Avery|HR
+087/066|Peony|HR
+088/066|Inteleon|UR
+089/066|Echoing Horn|UR
+090/066|Path to the Peak|UR
