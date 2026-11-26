@@ -1,0 +1,17 @@
+# set: CSYC Pokémon Art Illustration Festival: Gather
+001/011|Riolu|
+002/011|Swablu|
+003/011|Duskull|
+004/011|Bidoof|
+005/011|Pikachu|
+006/011|Turtwig|
+007/011|Paras|
+008/011|Poochyena|
+009/011|Mareep|
+010/011|Poké Ball|
+011/011|Level Ball|
+012/011|Allister|
+013/011|Raihan|
+014/011|Piers|
+015/011|Opal|
+016/011|Melony|
