@@ -14,7 +14,7 @@
   var PAGE = 60;
   var FACETS = [
     ["game", "Juego"], ["kind", "Tipo de producto"], ["lang", "Idioma"], ["year", "Año"], ["set", "Expansión"],
-    ["rarity", "Rareza"], ["finish", "Acabado"], ["ptype", "Tipo"], ["super", "Clase de carta"], ["variant", "Variante"]
+    ["rarity", "Rareza"], ["color", "Color (Magic)"], ["finish", "Acabado"], ["ptype", "Tipo"], ["super", "Clase de carta"], ["variant", "Variante"]
   ];
   var ALL = null, loading = null, view = [], shown = 0, root, facetSearch = {}, expanded = {};
   var state = { q: "", sort: "rel", stock: true, min: "", max: "", f: {} };
@@ -130,7 +130,7 @@
     }).then(function (data) {
       ALL = Array.isArray(data) ? data : data.cards;
       ALL.forEach(function (c) {
-        c._hay = norm([c.title, c.card, c.set, c.number, c.rarity, c.finish, c.ptype, c.super, c.game, c.lang, c.year].join(" "));
+        c._hay = norm([c.title, c.card, c.set, c.number, c.rarity, c.finish, c.ptype, c.super, c.game, c.lang, c.year, (c.color || []).join(" ")].join(" "));
         c._num = c.number ? c.number.toLowerCase() : "";
       });
       buildFilters();
@@ -146,7 +146,8 @@
     for (var i = 0; i < FACETS.length; i++) {
       var k = FACETS[i][0];
       if (k === skip) continue;
-      if (state.f[k].size && !state.f[k].has(c[k] || "Sin dato")) return false;
+      if (!state.f[k].size) continue;
+      if (Array.isArray(c[k]) ? !c[k].some(function (v) { return state.f[k].has(v); }) : !state.f[k].has(c[k] || (k === "color" ? "" : "Sin dato"))) return false;
     }
     return true;
   }
@@ -232,7 +233,11 @@
   function facetCounts() {
     FACETS.forEach(function (f) {
       var k = f[0], counts = new Map();
-      ALL.forEach(function (c) { if (!matches(c, k)) return; var v = c[k] || "Sin dato"; counts.set(v, (counts.get(v) || 0) + 1); });
+      ALL.forEach(function (c) {
+        if (!matches(c, k)) return;
+        var vs = Array.isArray(c[k]) ? c[k] : k === "color" ? [] : [c[k] || "Sin dato"];      // color: solo Magic, y una carta puede tener varios
+        vs.forEach(function (v) { counts.set(v, (counts.get(v) || 0) + 1); });
+      });
       state.f[k].forEach(function (v) { if (!counts.has(v)) counts.set(v, 0); });
       var items = Array.from(counts.entries()), fs = facetSearch[k];
       root.querySelector('input.mini[data-fs="' + k + '"]').hidden = counts.size <= 8 && !fs;
@@ -240,6 +245,8 @@
       items.sort(function (a, b) { return (state.f[k].has(b[0]) - state.f[k].has(a[0])) || (k === "year" ? b[0].localeCompare(a[0]) : b[1] - a[1] || a[0].localeCompare(b[0])); });
       var lim = (expanded[k] || fs) ? 300 : Math.max(6, state.f[k].size);
       var btn = (!fs && items.length > Math.max(6, state.f[k].size)) ? '<button type="button" class="vermas" data-more="' + k + '">' + (expanded[k] ? "Ver menos" : "Ver más (" + (items.length - lim) + ")") + "</button>" : "";
+      var ob = $("#opts-" + k), hd = ob.previousElementSibling && ob.previousElementSibling.previousElementSibling;
+      if (hd && hd.tagName === "H3") hd.hidden = !items.length;     // sin opciones (p. ej. Color cuando no hay Magic): ocultar el t\u00edtulo
       $("#opts-" + k).innerHTML = items.slice(0, lim).map(function (x) {
         return '<label class="opt' + (x[1] ? "" : " zero") + '"><input type="checkbox" data-k="' + k + '" data-v="' + esc(x[0]) + '"' + (state.f[k].has(x[0]) ? " checked" : "") + "><span>" + esc(x[0]) + '</span><span class="n">' + x[1].toLocaleString("es-AR") + "</span></label>";
       }).join("") + btn;

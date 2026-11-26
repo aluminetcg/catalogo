@@ -378,6 +378,60 @@ def tcg_rarities(rows):
         n = apply_manual(rows)  # y al final, para que nada las pise
         if n:
             print(f"Rarezas cargadas a mano: {n}", flush=True)
+        mtg_colors(rows)
+
+
+# ------------------------------------- colores de Magic (datos públicos de Scryfall, bulk "oracle-cards")
+COLORES_ES = {"W": "Blanco", "U": "Azul", "B": "Negro", "R": "Rojo", "G": "Verde"}
+
+
+def load_mtg_colors():
+    """{nombre normalizado: ["Rojo", "Verde", "Multicolor"]}. Se baja una vez por semana (Scryfall pide cachear)."""
+    import precios
+    f = precios.CACHE / "mtg_colores.json"
+    if f.exists() and time.time() - f.stat().st_mtime < 7 * 86400:
+        return json.loads(f.read_text())
+    h = {"User-Agent": "AlumineTCG-catalogo/1.0", "Accept": "application/json"}
+    meta = requests.get("https://api.scryfall.com/bulk-data/oracle-cards", headers=h, timeout=60).json()
+    cards = requests.get(meta["download_uri"], headers=h, timeout=600).json()
+    out = {}
+    for c in cards:
+        cols = c.get("colors")
+        if cols is None:
+            cols = sorted({x for face in c.get("card_faces") or [] for x in face.get("colors") or []})
+        vals = [COLORES_ES[x] for x in "WUBRG" if x in cols]
+        if not vals:
+            vals = ["Tierra" if "Land" in (c.get("type_line") or "") else "Incoloro"]
+        elif len(vals) > 1:
+            vals.append("Multicolor")
+        for name in [c["name"]] + c["name"].split(" // "):
+            out.setdefault(norm(name), vals)
+    precios.CACHE.mkdir(parents=True, exist_ok=True)
+    f.write_text(json.dumps(out, ensure_ascii=False))
+    return out
+
+
+def mtg_colors(rows):
+    mine = [r for r in rows if r["game"] == "Magic" and r["kind"] in ("Cartas", "Gradeadas")]
+    if not mine:
+        return
+    try:
+        idx = load_mtg_colors()
+    except Exception as e:      # nunca frenar el catálogo por esto
+        print(f"AVISO: no pude bajar los colores de Magic ({e})")
+        return
+    ok = 0
+    for r in mine:
+        ws = norm(re.sub(r"\(.*?\)", " ", r.get("card") or r["title"])).split()
+        for n in range(len(ws), 0, -1):          # títulos viejos "Griffin Aerie Enchanting Tales": el nombre es el prefijo más largo
+            if n == 1 and len(ws) > 1:
+                break
+            v = idx.get(" ".join(ws[:n]))
+            if v:
+                r["color"] = v
+                ok += 1
+                break
+    print(f"Colores de Magic: {ok} de {len(mine)}", flush=True)
 
 
 def _tcg_rarities(rows):
