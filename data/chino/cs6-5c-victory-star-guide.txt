@@ -1,0 +1,97 @@
+# set: CS6.5C Victory Star Guide
+001/072|Alolan Exeggutor V|RR
+002/072|Seedot|C
+003/072|Nuzleaf|U
+004/072|Shiftry|R
+005/072|Carnivine|U
+006/072|Leafeon|U
+007/072|Chesnaught V|RR
+008/072|Calyrex|R
+009/072|Slugma|C
+010/072|Magcargo|U
+011/072|Entei|R
+012/072|Delphox V|RR
+013/072|Alolan Vulpix V|RR
+014/072|Alolan Vulpix VSTAR|RRR
+015/072|Articuno|R
+016/072|Feebas|C
+017/072|Milotic|U
+018/072|Kyogre|R
+019/072|Glaceon|U
+020/072|Radiant Greninja|K
+021/072|Pikachu|C
+022/072|Raichu|U
+023/072|Rotom V|RR
+024/072|Rotom VSTAR|RRR
+025/072|Radiant Charjabug|K
+026/072|Jynx|U
+027/072|Unown V|RR
+028/072|Unown VSTAR|RRR
+029/072|Ralts|C
+030/072|Kirlia|U
+031/072|Gardevoir|U
+032/072|Sableye|R
+033/072|Cresselia|R
+034/072|Espurr|C
+035/072|Meowstic|U
+036/072|Dedenne|U
+037/072|Hatterene V|RR
+038/072|Hatterene VMAX|RRR
+039/072|Murkrow|C
+040/072|Honchkrow|U
+041/072|Spiritomb|C
+042/072|Morpeko|U
+043/072|Klink|C
+044/072|Klang|U
+045/072|Klinklang|U
+046/072|Togedemaru|C
+047/072|Magearna|U
+048/072|Zacian|R
+049/072|Zamazenta|R
+050/072|Dratini|C
+051/072|Dragonair|U
+052/072|Dragonite|R
+053/072|Zygarde|C
+054/072|Regidrago V|RR
+055/072|Regidrago VSTAR|RRR
+056/072|Eevee|C
+057/072|Porygon|C
+058/072|Porygon2|U
+059/072|Porygon-Z|U
+060/072|Smeargle|C
+061/072|Chatot|C
+062/072|Tool Box|U
+063/072|Trekking Shoes|U
+064/072|Emergency Jelly|U
+065/072|Panic Mask|U
+066/072|Forest Seal Stone|R
+067/072|Raihan|U
+068/072|Gardenia's Vigor|U
+069/072|Melony|U
+070/072|Lance|U
+071/072|Collapsed Stadium|U
+072/072|V Guard Energy|U
+073/072|Alolan Exeggutor V|SR
+074/072|Chesnaught V|SR
+075/072|Delphox V|SR
+076/072|Alolan Vulpix V|SR
+077/072|Rotom V|SR
+078/072|Rotom V|SR
+079/072|Unown V|SR
+080/072|Unown V|SR
+081/072|Regidrago V|SR
+082/072|Regidrago V|SR
+083/072|Gardenia's Vigor|SR
+084/072|Lance|SR
+085/072|Hatterene VMAX|SAR
+086/072|Raihan|SAR
+087/072|Gardenia's Vigor|SAR
+088/072|Melony|SAR
+089/072|Alolan Vulpix VSTAR|HR
+090/072|Unown VSTAR|HR
+091/072|Regidrago VSTAR|HR
+092/072|Gardenia's Vigor|HR
+093/072|Lance|HR
+094/072|Trekking Shoes|UR
+095/072|Collapsed Stadium|UR
+096/072|V Guard Energy|UR
