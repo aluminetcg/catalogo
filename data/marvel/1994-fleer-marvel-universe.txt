@@ -1,0 +1,201 @@
+# set: 1994 Fleer Marvel Universe
+1|Spider-Man FF|
+2|Venom FF|
+3|Punisher FF|
+4|Wolverine FF|
+5|Gambit FF|
+6|Silver Surfer|
+7|Rogue FF|
+8|Iron Man FF|
+9|Ghost Rider FF|
+10|Exodus / Cannonball|
+11|Siryn / Shatterstar|
+12|Wolverine & Rogue FA FA|
+13|Rictor, Warpath, Boomer & Feral FA|
+14|Magneto|
+15|Bishop / Colossus|
+16|Cable & Sunspot FA|
+17|Gambit & Quicksilver|
+18|Professor X & Jean Grey FA|
+19|Captain America|
+20|Firestar & Carnage|
+21|Demogoblin / Cloak / Nightwatch|
+22|Shriek & Doppelganger|
+23|Spider-Man MC|
+24|Dagger, Morbius, Deathlok MC|
+25|Black Cat|
+26|Iron Fist|
+27|Venom|
+28|Iceman & Rogue|
+29|Crystal / Cyclops / Psylocke|
+30|Exodus / Black Knight|
+31|U.S. Agent BT|
+32|Gambit / Professor X|
+33|Beast BT|
+34|Sersi & Captain America|
+35|Quicksilver / Fabian Cortez BT|
+36|War Machine BT|
+37|Sister Nil|
+38|Strange|
+39|Victoria Montesi SOD|
+40|Morbius SOD|
+41|Dr. Strange SOD|
+42|Ghost Rider|
+43|Blade SOD|
+44|Blaze|
+45|Vengeance|
+46|Hitman SR|
+47|Desmond Kline|
+48|Punisher|
+49|Rapido|
+50|Payback SR|
+51|Outlaw SR|
+52|Lynn Michaels|
+53|V.I.G.I.L.|
+54|Yuppunisher|
+55|Dr. Strange|
+56|Moondragon|
+57|Maxam & Pip the Troll|
+58|Silver Surfer B&T|
+59|Thor|
+60|Warlock B&T|
+61|Thanos|
+62|Gamora|
+63|Drax B&T|
+64|Venom|
+65|Siege|
+66|Morbius|
+67|Crippler & Silver Sable FFG|
+68|Snakeroot FFG|
+69|John Garrett & Erynys|
+70|Hellspawn FFG|
+71|Elektra & Daredevil|
+72|Stone & Eddie Passim FFG|
+73|Rage & Firestar CB|
+74|Nova|
+75|Iron Man: Hulkbuster|
+76|Thunderstrike|
+77|Venom|
+78|Hulk|
+79|Speedball & Night Thrasher|
+80|Iron Man|
+81|Deathlok|
+82|Spider-Man 2099 FOH|
+83|Thor 2099 FOH|
+84|Ravage 2099|
+85|Bloodhawk, Krystalin & Meanstreak|
+86|Heimdall 2099|
+87|Punisher 2099|
+88|Loki 2099 FOH|
+89|Doom 2099 FOH|
+90|Hela 2099 FOH|
+91|Banshee|
+92|Beast|
+93|Bishop|
+94|Cable|
+95|Chamber|
+96|Colossus|
+97|Cyclops|
+98|Deadpool|
+99|Exodus|
+100|Gambit|
+101|Gamesmaster SV|
+102|Haven|
+103|Husk|
+104|Jubilee|
+105|Juggernaut|
+106|M|
+107|Mondo|
+108|Mystique|
+109|Penance|
+110|Phoenix|
+111|Polaris SH|
+112|Psylocke|
+113|Random|
+114|Rogue|
+115|Sabretooth|
+116|Shadowcat SH|
+117|Shatterstar|
+118|Siena Blaze|
+119|Skin|
+120|Storm|
+121|Synch SH|
+122|Warpath|
+123|White Queen|
+124|Wolverine|
+125|Carnage SV|
+126|Chameleon SV|
+127|Hobgoblin|
+128|Nightwatch|
+129|Solo|
+130|Spider-Man SH|
+131|Venom|
+132|Vulture|
+133|Warrant|
+134|Punisher|
+135|Blade|
+136|Blaze|
+137|Ghost Rider|
+138|Morbius|
+139|Salome|
+140|Strange|
+141|Vengeance|
+142|Zarathos|
+143|Black Knight|
+144|Black Widow|
+145|Captain America|
+146|Crystal|
+147|Giant-Man|
+148|Hawkeye|
+149|Quicksilver|
+150|Thor|
+151|Thunderstrike|
+152|Vision SH|
+153|Legacy|
+154|Morg|
+155|Silver Surfer|
+156|Terrax|
+157|Thanos|
+158|Tyrant|
+159|Warlock|
+160|Century|
+161|Iron Man|
+162|Scarlet Witch|
+163|U.S. Agent|
+164|War Machine|
+165|Darkhawk|
+166|Justice|
+167|Kymaera|
+168|Night Thrasher SH|
+169|Nova|
+170|Sphinx|
+171|Bloodhawk|
+172|Brimstone Love|
+173|Cerebra|
+174|Doom 2099 SH|
+175|Ghost Rider 2099|
+176|Hulk 2099|
+177|Junkpile|
+178|Krystalin|
+179|Meanstreak|
+180|Metalhead|
+181|Punisher 2099|
+182|Ravage 2099|
+183|Skullfire|
+184|Spider-Man 2099|
+185|Xi'an|
+186|Abomination|
+187|Blackwulf|
+188|Daredevil|
+189|Elektra SV|
+190|Hulk|
+191|Human Torch|
+192|Invisible Woman|
+193|Lyja|
+194|Namor|
+195|Psi-Lord|
+196|Silver Sable|
+197|Thing|
+198|Trauma|
+199|Typhoid Mary|
+200|Checklist CL|
