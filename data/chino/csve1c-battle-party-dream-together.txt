@@ -1,0 +1,179 @@
+# set: CSVE1C Battle Party: Dream Together
+001/177|Bulbasaur|
+002/177|Ivysaur|
+003/177|Venusaur ex|
+004/177|Hisuian Voltorb|
+005/177|Kricketot|
+006/177|Kricketune|
+007/177|Carnivine|
+008/177|Shelmet|
+009/177|Accelgor|
+010/177|Zarude|
+011/177|Calyrex|
+012/177|Charmander|
+013/177|Charmeleon|
+014/177|Charizard|
+015/177|Charizard ex|
+016/177|Moltres|
+017/177|Entei|
+018/177|Victini|
+019/177|Heatmor|
+020/177|Fennekin|
+021/177|Braixen|
+022/177|Delphox|
+023/177|Oricorio|
+024/177|Squirtle|
+025/177|Wartortle|
+026/177|Blastoise ex|
+027/177|Seel|
+028/177|Dewgong|
+029/177|Horsea|
+030/177|Seadra|
+031/177|Articuno|
+032/177|Remoraid|
+033/177|Octillery|
+034/177|Regice|
+035/177|Finneon|
+036/177|Hisuian Basculin|
+037/177|Hisuian Basculegion|
+038/177|Keldeo|
+039/177|Bruxish|
+040/177|Eiscue|
+041/177|Raichu V|
+042/177|Voltorb|
+043/177|Electrode|
+044/177|Zapdos|
+045/177|Mareep|
+046/177|Flaaffy|
+047/177|Plusle|
+048/177|Minun|
+049/177|Pachirisu|
+050/177|Zeraora|
+051/177|Regieleki|
+052/177|Regieleki|
+053/177|Galarian Articuno|
+054/177|Mewtwo V|
+055/177|Mewtwo VSTAR|
+056/177|Mew ex|
+057/177|Lunatone|
+058/177|Cresselia|
+059/177|Meloetta|
+060/177|Espurr|
+061/177|Meowstic|
+062/177|Sylveon V|
+063/177|Sylveon VMAX|
+064/177|Oricorio|
+065/177|Dreepy|
+066/177|Drakloak|
+067/177|Dragapult|
+068/177|Machamp V|
+069/177|Machamp VMAX|
+070/177|Galarian Zapdos|
+071/177|Solrock|
+072/177|Regirock|
+073/177|Riolu|
+074/177|Lucario|
+075/177|Falinks|
+076/177|Falinks|
+077/177|Kubfu|
+078/177|Ekans|
+079/177|Arbok ex|
+080/177|Galarian Moltres|
+081/177|Houndour|
+082/177|Houndoom|
+083/177|Tyranitar V|
+084/177|Absol|
+085/177|Morpeko|
+086/177|Single Strike Urshifu|
+087/177|Mawile|
+088/177|Registeel|
+089/177|Altaria|
+090/177|Zygarde|
+091/177|Regidrago|
+092/177|Tauros|
+093/177|Snorlax|
+094/177|Swablu|
+095/177|Zangoose|
+096/177|Bidoof|
+097/177|Bibarel|
+098/177|Regigigas|
+099/177|Drampa|
+100/177|Skwovet|
+101/177|Switch Cart|
+102/177|Fan of Waves|
+103/177|Energy Loto|
+104/177|Energy Retrieval|
+105/177|Energy Search|
+106/177|Energy Switch|
+107/177|Energy Recycler|
+108/177|Electric Generator|
+109/177|Urn of Vitality|
+110/177|Gutsy Pickaxe|
+111/177|Fog Crystal|
+112/177|Super Rod|
+113/177|Dark Patch|
+114/177|Tool Box|
+115/177|Pal Pad|
+116/177|Trekking Shoes|
+117/177|Nest Ball|
+118/177|Ultra Ball|
+119/177|Power Tablet|
+120/177|Hisuian Heavy Ball|
+121/177|Rare Candy|
+122/177|Pokégear 3.0|
+123/177|Switch|
+124/177|Rescue Carrier|
+125/177|Level Ball|
+126/177|Digging Gloves|
+127/177|Single Strike Scroll of Scorn|
+128/177|Cleansing Gloves|
+129/177|Exp. Share|
+130/177|Weeding Gloves|
+131/177|Choice Belt|
+132/177|Fire-Resistant Gloves|
+133/177|Leftovers|
+134/177|Leafy Camo Poncho|
+135/177|Ribbon Badge|
+136/177|Spirit Mask|
+137/177|Rapid Strike Scroll of Swirls|
+138/177|Irida|
+139/177|Sidney|
+140/177|Elesa's Sparkle|
+141/177|Karen's Conviction|
+142/177|Raihan|
+143/177|Kindler|
+144/177|Klara|
+145/177|Korrina's Focus|
+146/177|Grant|
+147/177|Bruno|
+148/177|Judge|
+149/177|Cynthia's Ambition|
+150/177|Candice|
+151/177|Siebold|
+152/177|Serena|
+153/177|Youngster|
+154/177|Roxanne|
+155/177|Brawly|
+156/177|Gardenia's Vigor|
+157/177|Thorton|
+158/177|Professor's Research|
+159/177|Professor's Research|
+160/177|Peony|
+161/177|Arven|
+162/177|Boss's Orders|
+163/177|Boss's Orders|
+164/177|Chili & Cilan & Cress|
+165/177|Tower of Darkness|
+166/177|Stormy Mountains|
+167/177|Lake Acuity|
+168/177|Mesagoza|
+169/177|Magma Basin|
+170/177|Tower of Waters|
+171/177|Single Strike Energy|
+172/177|Gift Energy|
+173/177|Spiral Energy|
+174/177|Double Turbo Energy|
+175/177|Fusion Strike Energy|
+176/177|Luminous Energy|
+177/177|Rapid Strike Energy|
+178/177|Professor's Research|
