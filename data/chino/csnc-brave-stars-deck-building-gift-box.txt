@@ -1,0 +1,25 @@
+# set: CSNC Brave Stars Deck Building Gift Box
+001/024|Serperior V|
+002/024|Charizard V|
+003/024|Origin Forme Palkia V|
+004/024|Zeraora V|
+005/024|Deoxys V|
+006/024|Kleavor V|
+007/024|Hisuian Samurott V|
+008/024|Origin Forme Dialga V|
+009/024|Arceus V|
+010/024|Scoop Up Net|
+011/024|Evolution Incense|
+012/024|Ultra Ball|
+013/024|Battle VIP Pass|
+014/024|Rare Candy|
+015/024|Ordinary Rod|
+016/024|Switch|
+017/024|Level Ball|
+018/024|Choice Belt|
+019/024|Raihan|
+020/024|Cynthia's Ambition|
+021/024|Professor's Research|
+022/024|Boss's Orders|
+023/024|Marnie|
+024/024|Double Turbo Energy|
