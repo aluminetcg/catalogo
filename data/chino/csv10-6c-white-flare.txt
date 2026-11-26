@@ -1,0 +1,175 @@
+# set: CSV10.6C White Flare
+001/086|Sewaddle|C
+002/086|Swadloon|C
+003/086|Leavanny|U
+004/086|Cottonee|C
+005/086|Whimsicott ex|RR
+006/086|Deerling|C
+007/086|Sawsbuck|U
+008/086|Shelmet|C
+009/086|Accelgor|U
+010/086|Virizion|R
+011/086|Tepig|C
+012/086|Pignite|C
+013/086|Emboar|R
+014/086|Pansear|C
+015/086|Simisear|U
+016/086|Heatmor|U
+017/086|Reshiram ex|RR
+018/086|Oshawott|C
+019/086|Dewott|C
+020/086|Samurott|R
+021/086|Basculin|C
+022/086|Ducklett|C
+023/086|Swanna|U
+024/086|Vanillite|C
+025/086|Vanillish|C
+026/086|Vanilluxe|U
+027/086|Keldeo ex|RR
+028/086|Blitzle|C
+029/086|Zebstrika|U
+030/086|Joltik|C
+031/086|Galvantula|U
+032/086|Stunfisk|U
+033/086|Woobat|C
+034/086|Swoobat|U
+035/086|Sigilyph|U
+036/086|Yamask|C
+037/086|Cofagrigus|R
+038/086|Gothita|C
+039/086|Gothorita|C
+040/086|Gothitelle|R
+041/086|Frillish|C
+042/086|Jellicent ex|RR
+043/086|Roggenrola|C
+044/086|Boldore|C
+045/086|Gigalith|U
+046/086|Sawk|U
+047/086|Archen|U
+048/086|Archeops|R
+049/086|Mienfoo|C
+050/086|Mienshao|U
+051/086|Terrakion|R
+052/086|Purrloin|C
+053/086|Liepard|U
+054/086|Scraggy|C
+055/086|Scrafty|U
+056/086|Trubbish|C
+057/086|Garbodor|U
+058/086|Zorua|C
+059/086|Zoroark|R
+060/086|Deino|C
+061/086|Zweilous|C
+062/086|Hydreigon ex|RR
+063/086|Ferroseed|C
+064/086|Ferrothorn|U
+065/086|Klink|C
+066/086|Klang|C
+067/086|Klinklang|R
+068/086|Durant|U
+069/086|Druddigon|U
+070/086|Patrat|C
+071/086|Watchog|U
+072/086|Lillipup|C
+073/086|Herdier|C
+074/086|Stoutland|U
+075/086|Bouffalant ex|RR
+076/086|Rufflet|C
+077/086|Braviary|U
+078/086|Tornadus|R
+079/086|Energy Retrieval|U
+080/086|Tool Scrapper|U
+081/086|Antique Plume Fossil|C
+082/086|Brave Bangle|U
+083/086|Harlequin|U
+084/086|Cheren|U
+085/086|Hilda|U
+086/086|Ignition Energy|U
+087/086|Sewaddle|AR
+088/086|Swadloon|AR
+089/086|Leavanny|AR
+090/086|Cottonee|AR
+091/086|Deerling|AR
+092/086|Sawsbuck|AR
+093/086|Shelmet|AR
+094/086|Accelgor|AR
+095/086|Virizion|AR
+096/086|Tepig|AR
+097/086|Pignite|AR
+098/086|Emboar|AR
+099/086|Pansear|AR
+100/086|Simisear|AR
+101/086|Heatmor|AR
+102/086|Oshawott|AR
+103/086|Dewott|AR
+104/086|Samurott|AR
+105/086|Basculin|AR
+106/086|Ducklett|AR
+107/086|Swanna|AR
+108/086|Vanillite|AR
+109/086|Vanillish|AR
+110/086|Vanilluxe|AR
+111/086|Blitzle|AR
+112/086|Zebstrika|AR
+113/086|Joltik|AR
+114/086|Galvantula|AR
+115/086|Stunfisk|AR
+116/086|Woobat|AR
+117/086|Swoobat|AR
+118/086|Sigilyph|AR
+119/086|Yamask|AR
+120/086|Cofagrigus|AR
+121/086|Gothita|AR
+122/086|Gothorita|AR
+123/086|Gothitelle|AR
+124/086|Frillish|AR
+125/086|Roggenrola|AR
+126/086|Boldore|AR
+127/086|Gigalith|AR
+128/086|Sawk|AR
+129/086|Archen|AR
+130/086|Archeops|AR
+131/086|Mienfoo|AR
+132/086|Mienshao|AR
+133/086|Terrakion|AR
+134/086|Purrloin|AR
+135/086|Liepard|AR
+136/086|Scraggy|AR
+137/086|Scrafty|AR
+138/086|Trubbish|AR
+139/086|Garbodor|AR
+140/086|Zorua|AR
+141/086|Zoroark|AR
+142/086|Deino|AR
+143/086|Zweilous|AR
+144/086|Ferroseed|AR
+145/086|Ferrothorn|AR
+146/086|Klink|AR
+147/086|Klang|AR
+148/086|Klinklang|AR
+149/086|Durant|AR
+150/086|Druddigon|AR
+151/086|Patrat|AR
+152/086|Watchog|AR
+153/086|Lillipup|AR
+154/086|Herdier|AR
+155/086|Stoutland|AR
+156/086|Rufflet|AR
+157/086|Braviary|AR
+158/086|Tornadus|AR
+159/086|Whimsicott ex|SR
+160/086|Reshiram ex|SR
+161/086|Keldeo ex|SR
+162/086|Jellicent ex|SR
+163/086|Hydreigon ex|SR
+164/086|Bouffalant ex|SR
+165/086|Harlequin|SR
+166/086|Hilda|SR
+167/086|Whimsicott ex|SAR
+168/086|Reshiram ex|SAR
+169/086|Keldeo ex|SAR
+170/086|Jellicent ex|SAR
+171/086|Hydreigon ex|SAR
+172/086|Bouffalant ex|SAR
+173/086|Hilda|SAR
+174/086|Reshiram ex|BWR
