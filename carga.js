@@ -107,9 +107,28 @@
     return await new Promise(function (res) { cv.toBlob(res, "image/jpeg", 0.92); });
   }
   async function stockBlob(c) { return fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); }); }
+  // Magic: misma carta impresa en espa\u00f1ol, desde la API p\u00fablica de Scryfall (sus im\u00e1genes no se pueden alterar: sin efecto foil)
+  async function scryfallEs(c) {
+    S.esCache = S.esCache || {};
+    if (c[0] in S.esCache) return S.esCache[c[0]];
+    var name = mtgName(c[1]).split(" // ")[0].replace(/"/g, ""), cn = String(c[2] || "").replace(/^0+(?=\d)/, "");
+    var q = '!"' + name + '" lang:es' + (cn ? " cn:" + cn : "");
+    var url = null;
+    try {
+      var r = await fetch("https://api.scryfall.com/cards/search?unique=prints&include_extras=true&q=" + encodeURIComponent(q), { headers: { Accept: "application/json" } });
+      if (r.ok) {
+        var d = (await r.json()).data || [], want = norm(setName(setOf(c)));
+        var best = d.filter(function (x) { return norm(x.set_name) === want; })[0] || d[0];
+        if (best) url = (best.image_uris || (best.card_faces && best.card_faces[0].image_uris) || {}).large || null;
+      }
+    } catch (e) { url = null; }
+    S.esCache[c[0]] = url;
+    return url;
+  }
   async function foilPreview(c) {
     var on = $("#fx") && $("#fx").checked;
     if (S.own || S.sel !== c) return;
+    if ($("#es") && $("#es").checked && S.esCache && S.esCache[c[0]]) { $("#big").src = S.esCache[c[0]]; return; }
     if (!on) { $("#big").src = IMG(c[0], 1000); return; }
     try {
       if (!S.foilBlob || S.foilFor !== c) { S.foilBlob = await foilize(await stockBlob(c)); S.foilFor = c; if (S.foilUrl) URL.revokeObjectURL(S.foilUrl); S.foilUrl = URL.createObjectURL(S.foilBlob); }
@@ -358,7 +377,8 @@
     $("#det").innerHTML = '<img class="big" id="big" src="' + IMG(c[0], 1000) + '" alt="">' +
       '<div class="foto"><label class="sec">Usar foto propia<input id="own" type="file" accept="image/*" hidden></label>' +
       '<button class="sec" id="rmown" hidden>Volver a la de stock</button><span id="fotoinfo">o peg\u00e1 (Ctrl+V) / arrastr\u00e1 una imagen ac\u00e1</span></div>' +
-      (c.L === "mtg" ? '<label style="flex-direction:row;align-items:center;gap:6px"><input id="fx" type="checkbox" style="width:auto"> Efecto foil en la foto de stock</label>' : "") +
+      (c.L === "mtg" ? '<label style="flex-direction:row;align-items:center;gap:6px"><input id="fx" type="checkbox" style="width:auto"> Efecto foil en la foto de stock</label>' +
+        '<label id="eslb" style="flex-direction:row;align-items:center;gap:6px" hidden><input id="es" type="checkbox" style="width:auto"> Usar la foto de la carta en espa\u00f1ol (Scryfall, sin efecto foil)</label>' : "") +
       '<div><b>' + esc(cardName(c[1])) + "</b> \u00b7 " + esc(c[2]) + '<br><small class="hint">' + esc(setFull) + " \u00b7 " + esc(c[4] || "sin rareza") + "</small></div>" +
       '<label>T\u00edtulo del producto<input id="ti" maxlength="80"></label>' +
       '<label>Categor\u00eda<select id="ca">' + catOptions(cat, c.L) + "</select></label>" +
@@ -368,10 +388,14 @@
       '<div id="out"></div><div id="ex" class="hint">Buscando si ya la ten\u00e9s cargada\u2026</div>' +
       '<div class="log" id="log"></div>';
     $("#ti").value = titleFor(c, cat);
-    var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k]) || "" : ""; if (c.L === "mtg") { $("#ti").value = titleFor(c, $("#ca").value); $("#fx").checked = /foil/i.test(k); foilPreview(c); } };
+    var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k]) || "" : ""; if (c.L === "mtg") { $("#ti").value = titleFor(c, $("#ca").value); $("#fx").checked = /foil/i.test(k) && !$("#es").checked; foilPreview(c); } };
     setPrice();
     $("#pk").onchange = setPrice;
     if ($("#fx")) $("#fx").onchange = function () { foilPreview(c); };
+    if ($("#es")) {
+      $("#es").onchange = function () { $("#fx").disabled = this.checked; if (this.checked) $("#fx").checked = false; foilPreview(c); };
+      scryfallEs(c).then(function (u) { if (u && S.sel === c && $("#eslb")) $("#eslb").hidden = false; });
+    }
     $("#ca").onchange = function () { $("#ti").value = titleFor(c, $("#ca").value); };
     $("#add").onclick = function () { crear(c); };
     $("#own").onchange = function () { if (this.files && this.files[0]) setOwn(this.files[0]); this.value = ""; };
@@ -424,7 +448,7 @@
     S.ownUrl = f ? URL.createObjectURL(f) : null;
     var cn = S.sel && MAN[S.sel.L];
     if ($("#big")) { $("#big").src = S.ownUrl || (cn ? S.sel[6] || "" : IMG(S.sel[0], 1000)); if (cn) $("#big").hidden = !f && !S.sel[6]; }
-    if (!f && !cn && $("#fx") && $("#fx").checked) foilPreview(S.sel);
+    if (!f && !cn && (($("#fx") && $("#fx").checked) || ($("#es") && $("#es").checked))) foilPreview(S.sel);
     if ($("#nof")) $("#nof").hidden = !!f || !!(cn && S.sel[6]);
     if ($("#rmown")) $("#rmown").hidden = !f;
     if ($("#fotoinfo")) $("#fotoinfo").textContent = f ? "Se va a subir tu foto (" + Math.round(f.size / 1024) + " KB)." : cn ? "" : "o peg\u00e1 (Ctrl+V) / arrastr\u00e1 una imagen ac\u00e1";
@@ -474,8 +498,10 @@
     async function subirStock() {
       if (MAN[c.L] && !S.own) return [];             // chino sin foto: el producto va sin imagen
       say("hint", "Subiendo la foto\u2026");
-      var foil = !S.own && $("#fx") && $("#fx").checked;
-      var blob = S.own || (foil && S.foilFor === c && S.foilBlob) || await stockBlob(c);
+      var es = !S.own && $("#es") && $("#es").checked && S.esCache && S.esCache[c[0]];
+      var foil = !S.own && !es && $("#fx") && $("#fx").checked;
+      var blob = S.own || (es && await fetch(es).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto en espa\u00f1ol"); return r.blob(); })) ||
+        (foil && S.foilFor === c && S.foilBlob) || await stockBlob(c);
       if (foil && blob !== S.foilBlob) blob = await foilize(blob);
       var fd = new FormData(); fd.append("max_width", "600"); fd.append("max_height", "1200");
       fd.append("images[]", S.own ? S.own : new File([blob], "carta-" + c[0] + ".jpg", { type: blob.type || "image/jpeg" }));
