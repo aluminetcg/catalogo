@@ -215,7 +215,7 @@
   function langs() { return S.lang === "all" ? ["en", "jp", "cn"] : S.lang === "cn" ? ["en", "cn"] : [S.lang]; }
   // Magic: "Nombre (Borderless)" de TCGplayer -> nombre y variante por separado
   function mtgName(n) { return cardName(n).replace(/\s*\(.*?\)\s*/g, " ").replace(/\s+/g, " ").trim(); }
-  function mtgVar(n) { return (cardName(n).match(/\(([^)]*)\)/g) || []).map(function (v) { return v.slice(1, -1); }).join(" "); }
+  function mtgVar(n) { return (cardName(n).match(/\(([^)]*)\)/g) || []).map(function (v) { return v.slice(1, -1); }).filter(function (v) { return !/^\d+[a-z]?$/i.test(v.trim()); }).join(" "); }   // "(0268)" es el n\u00famero, no una variante
   function searchLangs() { return S.lang === "all" ? ["en", "jp", "cn"] : [S.lang]; }
   async function loadAll() { for (var i = 0, l = langs(); i < l.length; i++) await loadIndex(l[i]); }
   function setOf(c) { return S.idx[c.L].sets[c[3]][0]; }
@@ -433,7 +433,11 @@
       var viejas = false;
       if (!hits.length && c.L === "mtg") {      // publicaciones de Magic de antes, sin n\u00famero en el t\u00edtulo: alcanza con el nombre exacto
         var nm = norm(name);
-        hits = (list || []).filter(function (p) { var t = norm(p.p_nombre); return (t === nm || t.indexOf(nm + " ") === 0) && !/#\s*\d/.test(p.p_nombre); });
+        hits = (list || []).filter(function (p) {
+          var t = norm(p.p_nombre); if (!(t === nm || t.indexOf(nm + " ") === 0) || /#\s*\d/.test(p.p_nombre)) return false;
+          var sig = (t.slice(nm.length).trim().split(" ")[0] || "").replace(/^0+(?=\d)/, "");   // t\u00edtulos viejos "Island 280 Lorwyn Eclipsed": el n\u00famero va pegado al nombre
+          return !/^\d+[a-z]?$/.test(sig) || sig === dig;
+        });
         viejas = hits.length > 0;
       }
       if (!hits.length) { box.innerHTML = "No hay ning\u00fan producto con ese nombre y n\u00famero en tu tienda."; return; }
