@@ -1,0 +1,38 @@
+# set: 30thP 30th Celebration Promos
+001/30th-P|Bulbasaur|
+002/30th-P|Charmander|
+003/30th-P|Squirtle|
+004/30th-P|Chikorita|
+005/30th-P|Cyndaquil|
+006/30th-P|Totodile|
+007/30th-P|Treecko|
+008/30th-P|Torchic|
+009/30th-P|Mudkip|
+010/30th-P|Turtwig|
+011/30th-P|Chimchar|
+012/30th-P|Piplup|
+013/30th-P|Snivy|
+014/30th-P|Tepig|
+015/30th-P|Oshawott|
+016/30th-P|Chespin|
+017/30th-P|Fennekin|
+018/30th-P|Froakie|
+019/30th-P|Rowlet|
+020/30th-P|Litten|
+021/30th-P|Popplio|
+022/30th-P|Grookey|
+023/30th-P|Scorbunny|
+024/30th-P|Sobble|
+025/30th-P|Sprigatito|
+026/30th-P|Fuecoco|
+027/30th-P|Quaxly|
+028/30th-P|Espeon ex|
+029/30th-P|Umbreon ex|
+030/30th-P|Pikachu ex|
+031/30th-P|Pikachu ex|
+032/30th-P|Greninja ex|
+033/30th-P|Sylveon ex|
+034/30th-P|Victini|
+035/30th-P|Zeraora|
+036/30th-P|Alolan Exeggutor|
+040/30th-P|Lucario|
