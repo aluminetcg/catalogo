@@ -1,0 +1,14 @@
+# set: CSMC Pokémon Card Display Set Gift Box Vol. 2
+001/012|Charizard|
+002/012|Flaaffy|
+003/012|Zekrom|
+004/012|Dedenne|
+005/012|Alcremie|
+006/012|Wyrdeer|
+007/012|Kleavor|
+008/012|Ariados|
+009/012|Spiritomb|
+010/012|Galarian Obstagoon|
+011/012|Druddigon|
+012/012|Hoothoot|
+013/012|Pikachu|
