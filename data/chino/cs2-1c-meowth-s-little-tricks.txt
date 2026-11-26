@@ -1,0 +1,11 @@
+# set: CS2.1C Meowth's Little Tricks
+001/010|Meowth V|
+002/010|Meowth VMAX|
+003/010|Pal Pad|
+004/010|Moomoo Cheese|
+005/010|Big Parasol|
+006/010|Telescopic Sight|
+007/010|Team Yell Grunt|
+008/010|Galar Mine|
+009/010|Level Ball|
+010/010|Cook|
