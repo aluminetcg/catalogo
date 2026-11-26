@@ -401,7 +401,7 @@ def set_icons(rows):
         ORD = {"4th": "fourth", "5th": "fifth", "6th": "sixth", "7th": "seventh", "8th": "eighth", "9th": "ninth", "10th": "tenth"}
         def key(n):
             n = re.sub(r"['’]", "", (n or "").replace("&", " and ").replace("Mistery", "Mystery"))
-            return " ".join(ORD.get(w, w) for w in norm(n).split())
+            return " ".join(re.sub(r"(?<=\w{3})s$", "", ORD.get(w, w)) for w in norm(n).split())   # Urza Saga = Urza's Saga, Forbidden Lights
         fuentes = {"Magic": [(key(n), u) for n, u in mtg if u], "Pokémon": [(key(n), u) for n, u in poke if u]}
         out = {}
         for r in rows:
