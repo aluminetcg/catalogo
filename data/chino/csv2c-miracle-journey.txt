@@ -1,0 +1,164 @@
+# set: CSV2C Miracle Journey
+001/128|Heracross|U
+002/128|Tropius|C
+003/128|Combee|C
+004/128|Vespiquen|U
+005/128|Foongus|C
+006/128|Amoonguss|U
+007/128|Scatterbug|C
+008/128|Spewpa|C
+009/128|Vivillon|U
+010/128|Sprigatito|C
+011/128|Floragato|U
+012/128|Meowscarada ex|RR
+013/128|Nymble|C
+014/128|Lokix|R
+015/128|Paldean Tauros|U
+016/128|Litleo|C
+017/128|Pyroar|U
+018/128|Oricorio|R
+019/128|Fuecoco|C
+020/128|Crocalor|U
+021/128|Skeledirge ex|RR
+022/128|Paldean Tauros|U
+023/128|Magikarp|C
+024/128|Gyarados|R
+025/128|Delibird|C
+026/128|Buizel|C
+027/128|Floatzel|U
+028/128|Froakie|C
+029/128|Frogadier|U
+030/128|Greninja ex|RR
+031/128|Quaxly|C
+032/128|Quaxwell|U
+033/128|Quaquaval ex|RR
+034/128|Cetoddle|C
+035/128|Cetitan|U
+036/128|Magnemite|C
+037/128|Magneton|C
+038/128|Magnezone|U
+039/128|Shinx|C
+040/128|Luxio|U
+041/128|Luxray|R
+042/128|Rotom|C
+043/128|Pawmi|C
+044/128|Pawmo|C
+045/128|Pawmot|R
+046/128|Tadbulb|C
+047/128|Bellibolt|U
+048/128|Wattrel|C
+049/128|Kilowattrel|U
+050/128|Miraidon ex|RR
+051/128|Misdreavus|C
+052/128|Mismagius|U
+053/128|Ralts|C
+054/128|Kirlia|C
+055/128|Gardevoir ex|RR
+056/128|Mawile|C
+057/128|Spoink|C
+058/128|Grumpig|U
+059/128|Latias|R
+060/128|Drifloon|C
+061/128|Drifblim|U
+062/128|Gothita|C
+063/128|Gothorita|U
+064/128|Gothitelle|U
+065/128|Dedenne|C
+066/128|Sinistea|C
+067/128|Polteageist|U
+068/128|Tinkatink|C
+069/128|Tinkatuff|U
+070/128|Tinkaton|U
+071/128|Diglett|C
+072/128|Dugtrio|U
+073/128|Paldean Tauros|U
+074/128|Makuhita|C
+075/128|Hariyama|R
+076/128|Riolu|C
+077/128|Lucario|U
+078/128|Rockruff|C
+079/128|Lycanroc ex|RR
+080/128|Klawf|R
+081/128|Koraidon ex|RR
+082/128|Grimer|C
+083/128|Muk|U
+084/128|Paldean Wooper|C
+085/128|Paldean Clodsire ex|RR
+086/128|Murkrow|C
+087/128|Honchkrow|U
+088/128|Sableye|R
+089/128|Spiritomb|U
+090/128|Deino|C
+091/128|Zweilous|U
+092/128|Hydreigon|R
+093/128|Salandit|C
+094/128|Salazzle|U
+095/128|Maschiff|C
+096/128|Mabosstiff ex|RR
+097/128|Skarmory|U
+098/128|Cufant|C
+099/128|Copperajah ex|RR
+100/128|Chansey|C
+101/128|Blissey|U
+102/128|Starly|C
+103/128|Staravia|C
+104/128|Staraptor|U
+105/128|Squawkabilly ex|RR
+106/128|Shroodle|C
+107/128|Grafaiai ex|RR
+108/128|Cyclizar|R
+109/128|Flamigo|U
+110/128|Nest Ball|U
+111/128|Letter of Encouragement|U
+112/128|Rare Candy|C
+113/128|Pokégear 3.0|C
+114/128|Rigid Band|U
+115/128|Vitality Band|U
+116/128|Rocky Helmet|U
+117/128|Leftovers|U
+118/128|Erika's Invitation|U
+119/128|Katy|U
+120/128|Dendra|U
+121/128|Clavell|C
+122/128|Saguaro|U
+123/128|Judge|U
+124/128|Atticus|U
+125/128|Team Star Grunt|U
+126/128|Moonlit Hill|U
+127/128|Artazon|U
+128/128|Reversal Energy|U
+129/128|Tropius|AR
+130/128|Pyroar|AR
+131/128|Bellibolt|AR
+132/128|Ralts|AR
+133/128|Kirlia|AR
+134/128|Paldean Tauros|AR
+135/128|Klawf|AR
+136/128|Flamigo|AR
+137/128|Meowscarada ex|SR
+138/128|Skeledirge ex|SR
+139/128|Quaquaval ex|SR
+140/128|Gardevoir ex|SR
+141/128|Lycanroc ex|SR
+142/128|Paldean Clodsire ex|SR
+143/128|Copperajah ex|SR
+144/128|Squawkabilly ex|SR
+145/128|Erika's Invitation|SR
+146/128|Katy|SR
+147/128|Dendra|SR
+148/128|Clavell|SR
+149/128|Saguaro|SR
+150/128|Judge|SR
+151/128|Team Star Grunt|SR
+152/128|Meowscarada ex|SAR
+153/128|Skeledirge ex|SAR
+154/128|Quaquaval ex|SAR
+155/128|Gardevoir ex|SAR
+156/128|Squawkabilly ex|SAR
+157/128|Erika's Invitation|SAR
+158/128|Dendra|SAR
+159/128|Saguaro|SAR
+160/128|Meowscarada ex|UR
+161/128|Skeledirge ex|UR
+162/128|Quaquaval ex|UR
+163/128|Artazon|UR
