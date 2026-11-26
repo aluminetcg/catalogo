@@ -1,0 +1,24 @@
+# set: CSVH3aC Happy Set: Altaria & Latios & Infernape & Maushold (Modification Pack)
+001/023|Chansey|
+002/023|Dunsparce|
+003/023|Smeargle|
+004/023|Lugia|
+005/023|Bombirdier ex|
+006/023|Cyclizar|
+007/023|Switch Cart|
+008/023|Energy Sticker|
+009/023|Energy Switch|
+010/023|Trekking Shoes|
+011/023|Fighting Au Lait|
+012/023|Pokégear 3.0|
+013/023|Rocky Helmet|
+014/023|Leftovers|
+015/023|Defiance Band|
+016/023|Vengeful Punch|
+017/023|Technical Machine: Crisis Punch|
+018/023|Larry|
+019/023|Shauntal|
+020/023|Cynthia's Ambition|
+021/023|Iono|
+022/023|Boss's Orders|
+023/023|Marnie's Pride|
