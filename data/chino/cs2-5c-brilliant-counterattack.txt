@@ -1,0 +1,80 @@
+# set: CS2.5C Brilliant Counterattack
+001/059|Celebi|Amazing Rare
+002/059|Seedot|C
+003/059|Nuzleaf|U
+004/059|Shiftry|U
+005/059|Flareon|U
+006/059|Torchic|C
+007/059|Combusken|U
+008/059|Blaziken|R
+009/059|Talonflame V|RR
+010/059|Vaporeon|U
+011/059|Oshawott|C
+012/059|Dewott|U
+013/059|Samurott|U
+014/059|Jolteon|U
+015/059|Electrike|C
+016/059|Manectric|U
+017/059|Duskull|C
+018/059|Dusclops|U
+019/059|Dusknoir|R
+020/059|Mimikyu|U
+021/059|Galarian Cursola V|RR
+022/059|Machop|C
+023/059|Machoke|U
+024/059|Machamp|R
+025/059|Galarian Sirfetch'd V|RR
+026/059|Galarian Zigzagoon|C
+027/059|Galarian Linoone|C
+028/059|Galarian Obstagoon|R
+029/059|Yveltal|Amazing Rare
+030/059|Jirachi|Amazing Rare
+031/059|Klink|C
+032/059|Klang|U
+033/059|Klinklang|U
+034/059|Aegislash V|RR
+035/059|Aegislash VMAX|RRR
+036/059|Cufant|C
+037/059|Copperajah|R
+038/059|Ditto V|RR
+039/059|Ditto VMAX|RRR
+040/059|Eevee|C
+041/059|Lugia|R
+042/059|Taillow|C
+043/059|Swellow|U
+044/059|Togekiss V|RR
+045/059|Togekiss VMAX|RRR
+046/059|Quick Ball|U
+047/059|Turbo Patch|U
+048/059|Rusted Sword|U
+049/059|Rusted Shield|U
+050/059|Memory Capsule|U
+051/059|Beauty|U
+052/059|Sordward and Shielbert|U
+053/059|Professor's Research|U
+054/059|Ball Guy|U
+055/059|Boss's Orders|U
+056/059|Rose|U
+057/059|Rose Tower|U
+058/059|Aromatic Grass Energy|U
+059/059|Coating Metal Energy|U
+060/059|Cufant|S
+061/059|Copperajah|S
+062/059|Talonflame V|SR
+063/059|Galarian Cursola V|SR
+064/059|Galarian Sirfetch'd V|SR
+065/059|Aegislash V|SR
+066/059|Togekiss V|SR
+067/059|Beauty|SR
+068/059|Professor's Research|SR
+069/059|Ball Guy|SR
+070/059|Boss's Orders|SR
+071/059|Rose|SR
+072/059|Ditto V|SSR
+073/059|Ditto VMAX|SSR
+074/059|Aegislash VMAX|HR
+075/059|Togekiss VMAX|HR
+076/059|Beauty|HR
+077/059|Rose|HR
+078/059|Turbo Patch|UR
+079/059|Memory Capsule|UR
