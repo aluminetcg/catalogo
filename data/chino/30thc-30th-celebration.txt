@@ -1,0 +1,174 @@
+# set: 30thC 30th Celebration
+169|Basic Grass Energy|
+170|Basic Fire Energy|
+171|Basic Water Energy|
+172|Basic Lightning Energy|
+173|Basic Psychic Energy|
+174|Basic Fighting Energy|
+175|Basic Darkness Energy|
+176|Basic Metal Energy|
+001/103|Exeggcute|C
+002/103|Alolan Exeggutor|C
+003/103|Volbeat|C
+004/103|Illumise|C
+005/103|Vivillon|C
+006/103|Moltres|C
+007/103|Ho-Oh|R
+008/103|Reshiram|R
+009/103|Fuecoco ex|RR
+010/103|Slowpoke|C
+011/103|Lapras|C
+012/103|Articuno|C
+013/103|Kyogre|R
+014/103|Palkia|R
+015/103|Greninja ex|RR
+016/103|Wishiwashi|C
+017/103|Pikachu|
+018/103|Pikachu|
+019/103|Pikachu|
+020/103|Pikachu|
+021/103|Pikachu|
+022/103|Pikachu|
+023/103|Pikachu|
+024/103|Pikachu|
+025/103|Pikachu|
+026/103|Pikachu|
+027/103|Pikachu|
+028/103|Pikachu|
+029/103|Pikachu|
+030/103|Pikachu|
+031/103|Pikachu|
+032/103|Pikachu|
+033/103|Pikachu|
+034/103|Pikachu|
+035/103|Pikachu|
+036/103|Pikachu|
+037/103|Pikachu|
+038/103|Pikachu|
+039/103|Pikachu|
+040/103|Pikachu|
+041/103|Pikachu|
+042/103|Pikachu|
+043/103|Pikachu|
+044/103|Pikachu|
+045/103|Pikachu|
+046/103|Pikachu|
+047/103|Pikachu ex|RR
+048/103|Pikachu ex|RR
+049/103|Zapdos|C
+050/103|Zekrom|R
+051/103|Toxtricity|C
+052/103|Morpeko|C
+053/103|Miraidon|R
+054/103|Mewtwo|R
+055/103|Mewtwo ex|RR
+056/103|Mew|R
+057/103|Mew ex|RR
+058/103|Espeon|C
+059/103|Sylveon ex|RR
+060/103|Unown|C
+061/103|Drifloon|C
+062/103|Chandelure|C
+063/103|Xerneas|R
+064/103|Cosmog|C
+065/103|Cosmoem|C
+066/103|Lunala|R
+067/103|Gimmighoul|C
+068/103|Groudon|R
+069/103|Lucario|C
+070/103|Seismitoad|C
+071/103|Lycanroc|C
+072/103|Koraidon|R
+073/103|Nidoran ♀|C
+074/103|Nidorina|C
+075/103|Alolan Meowth|C
+076/103|Gengar ex|RR
+077/103|Umbreon|C
+078/103|Scraggy|C
+079/103|Yveltal|R
+080/103|Galarian Meowth|C
+081/103|Jirachi ex|RR
+082/103|Dialga|R
+083/103|Ferrothorn|C
+084/103|Solgaleo|R
+085/103|Zacian|R
+086/103|Zamazenta|R
+087/103|Gholdengo|C
+088/103|Salamence ex|RR
+089/103|Jangmo-o|C
+090/103|Hakamo-o|C
+091/103|Kommo-o|C
+092/103|Meowth|C
+093/103|Ditto|C
+094/103|Eevee|C
+095/103|Snorlax|C
+096/103|Igglybuff|C
+097/103|Lugia|R
+098/103|Hisuian Zorua|C
+099/103|Hisuian Zoroark|C
+100/103|Maushold|C
+101/103|Ultra Ball|C
+102/103|Poké Pad|C
+103/103|Switch|C
+104/103|Alolan Exeggutor|AR
+105/103|Moltres|AR
+106/103|Lapras|AR
+107/103|Articuno|AR
+108/103|Zapdos|AR
+109/103|Toxtricity|AR
+110/103|Morpeko|AR
+111/103|Drifloon|AR
+112/103|Chandelure|AR
+113/103|Lycanroc|AR
+114/103|Nidorina|AR
+115/103|Alolan Meowth|AR
+116/103|Scraggy|AR
+117/103|Galarian Meowth|AR
+118/103|Gholdengo|AR
+119/103|Kommo-o|AR
+120/103|Meowth|AR
+121/103|Ditto|AR
+122/103|Hisuian Zorua|AR
+123/103|Maushold|AR
+124/103|Fuecoco ex|SAR
+125/103|Greninja ex|SAR
+126/103|Pikachu ex|SAR
+127/103|Pikachu ex|SAR
+128/103|Mewtwo ex|SAR
+129/103|Mew ex|SAR
+130/103|Sylveon ex|SAR
+131/103|Gengar ex|SAR
+132/103|Jirachi ex|SAR
+133/103|Salamence ex|SAR
+134/103|Mewtwo ex|FUR
+135/103|Mew ex|FUR
+136/103|Pikachu|
+137/103|Charizard|
+138/103|Misty|
+139/103|Erika's Jigglypuff|
+140/103|Sneasel|
+141/103|Shining Celebi|
+142/103|Lugia|
+143/103|Delcatty|
+144/103|Dark Tyranitar|
+145/103|Scizor ex|
+146/103|Metagross|
+147/103|Palkia LV.X|
+148/103|Uxie|
+149/103|Crobat G|
+150/103|Gengar|
+151/103|Darkrai & Cresselia LEGEND|
+152/103|Darkrai & Cresselia LEGEND|
+153/103|N|
+154/103|Rayquaza-EX|
+155/103|Genesect-EX|
+156/103|M Gardevoir-EX|
+157/103|Greninja BREAK|
+158/103|Solgaleo-GX|
+159/103|Buzzwole-GX|
+160/103|Pikachu & Zekrom-GX|
+161/103|Zacian V|
+162/103|Raikou|
+163/103|Mew VMAX|
+164/103|Arceus VSTAR|
+165/103|Magikarp|
