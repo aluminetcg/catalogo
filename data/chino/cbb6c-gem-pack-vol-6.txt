@@ -1,0 +1,197 @@
+# set: CBB6C Gem Pack Vol. 6
+0101/07|Alolan Dugtrio|C
+0102/07|Alolan Dugtrio|C
+0103/07|Alolan Dugtrio|U
+0104/07|Alolan Dugtrio|U
+0105/07|Alolan Dugtrio|R
+0106/07|Alolan Dugtrio|RR
+0107/07|Alolan Dugtrio|RRR
+0201/07|Persian|C
+0202/07|Persian|C
+0203/07|Persian|U
+0204/07|Persian|U
+0205/07|Persian|R
+0206/07|Persian|RR
+0207/07|Persian|RRR
+0301/07|Exeggcute|C
+0302/07|Exeggcute|C
+0303/07|Exeggcute|U
+0304/07|Exeggcute|U
+0305/07|Exeggcute|R
+0306/07|Exeggcute|RR
+0307/07|Exeggcute|RRR
+0401/07|Ledian|C
+0402/07|Ledian|C
+0403/07|Ledian|U
+0404/07|Ledian|U
+0405/07|Ledian|R
+0406/07|Ledian|RR
+0407/07|Ledian|RRR
+0501/07|Slakoth|C
+0502/07|Slakoth|C
+0503/07|Slakoth|U
+0504/07|Slakoth|U
+0505/07|Slakoth|R
+0506/07|Slakoth|RR
+0507/07|Slakoth|RRR
+0601/07|Lairon|C
+0602/07|Lairon|C
+0603/07|Lairon|U
+0604/07|Lairon|U
+0605/07|Lairon|R
+0606/07|Lairon|RR
+0607/07|Lairon|RRR
+0701/07|Meditite|C
+0702/07|Meditite|C
+0703/07|Meditite|U
+0704/07|Meditite|U
+0705/07|Meditite|R
+0706/07|Meditite|RR
+0707/07|Meditite|RRR
+0801/07|Gulpin|C
+0802/07|Gulpin|C
+0803/07|Gulpin|U
+0804/07|Gulpin|U
+0805/07|Gulpin|R
+0806/07|Gulpin|RR
+0807/07|Gulpin|RRR
+0901/07|Lileep|C
+0902/07|Lileep|C
+0903/07|Lileep|U
+0904/07|Lileep|U
+0905/07|Lileep|R
+0906/07|Lileep|RR
+0907/07|Lileep|RRR
+1001/07|Castform Sunny Form|C
+1002/07|Castform Sunny Form|C
+1003/07|Castform Sunny Form|U
+1004/07|Castform Sunny Form|U
+1005/07|Castform Sunny Form|R
+1006/07|Castform Sunny Form|RR
+1007/07|Castform Sunny Form|RRR
+1101/07|Kecleon|C
+1102/07|Kecleon|C
+1103/07|Kecleon|U
+1104/07|Kecleon|U
+1105/07|Kecleon|R
+1106/07|Kecleon|RR
+1107/07|Kecleon|RRR
+1201/07|Mesprit|C
+1202/07|Mesprit|C
+1203/07|Mesprit|U
+1204/07|Mesprit|U
+1205/07|Mesprit|R
+1206/07|Mesprit|RR
+1207/07|Mesprit|RRR
+1301/07|Reuniclus|C
+1302/07|Reuniclus|C
+1303/07|Reuniclus|U
+1304/07|Reuniclus|U
+1305/07|Reuniclus|R
+1306/07|Reuniclus|RR
+1307/07|Reuniclus|RRR
+1401/07|Crabominable|C
+1402/07|Crabominable|C
+1403/07|Crabominable|U
+1404/07|Crabominable|U
+1405/07|Crabominable|R
+1406/07|Crabominable|RR
+1407/07|Crabominable|RRR
+1501/07|Shiinotic|C
+1502/07|Shiinotic|C
+1503/07|Shiinotic|U
+1504/07|Shiinotic|U
+1505/07|Shiinotic|R
+1506/07|Shiinotic|RR
+1507/07|Shiinotic|RRR
+1601/07|Bewear|C
+1602/07|Bewear|C
+1603/07|Bewear|U
+1604/07|Bewear|U
+1605/07|Bewear|R
+1606/07|Bewear|RR
+1607/07|Bewear|RRR
+1701/07|Bruxish|C
+1702/07|Bruxish|C
+1703/07|Bruxish|U
+1704/07|Bruxish|U
+1705/07|Bruxish|R
+1706/07|Bruxish|RR
+1707/07|Bruxish|RRR
+1801/07|Tapu Bulu|C
+1802/07|Tapu Bulu|C
+1803/07|Tapu Bulu|U
+1804/07|Tapu Bulu|U
+1805/07|Tapu Bulu|R
+1806/07|Tapu Bulu|RR
+1807/07|Tapu Bulu|RRR
+1901/07|Applin|C
+1902/07|Applin|C
+1903/07|Applin|U
+1904/07|Applin|U
+1905/07|Applin|R
+1906/07|Applin|RR
+1907/07|Applin|RRR
+2001/07|Flapple|C
+2002/07|Flapple|C
+2003/07|Flapple|U
+2004/07|Flapple|U
+2005/07|Flapple|R
+2006/07|Flapple|RR
+2007/07|Flapple|RRR
+2101/07|Appletun|C
+2102/07|Appletun|C
+2103/07|Appletun|U
+2104/07|Appletun|U
+2105/07|Appletun|R
+2106/07|Appletun|RR
+2107/07|Appletun|RRR
+2201/07|Clobbopus|C
+2202/07|Clobbopus|C
+2203/07|Clobbopus|U
+2204/07|Clobbopus|U
+2205/07|Clobbopus|R
+2206/07|Clobbopus|RR
+2207/07|Clobbopus|RRR
+2301/07|Cufant|C
+2302/07|Cufant|C
+2303/07|Cufant|U
+2304/07|Cufant|U
+2305/07|Cufant|R
+2306/07|Cufant|RR
+2307/07|Cufant|RRR
+2401/07|Dipplin|C
+2402/07|Dipplin|C
+2403/07|Dipplin|U
+2404/07|Dipplin|U
+2405/07|Dipplin|R
+2406/07|Dipplin|RR
+2407/07|Dipplin|RRR
+2501/07|Poltchageist|C
+2502/07|Poltchageist|C
+2503/07|Poltchageist|U
+2504/07|Poltchageist|U
+2505/07|Poltchageist|R
+2506/07|Poltchageist|RR
+2507/07|Poltchageist|RRR
+2601/07|Okidogi|C
+2602/07|Okidogi|C
+2603/07|Okidogi|U
+2604/07|Okidogi|U
+2605/07|Okidogi|R
+2606/07|Okidogi|RR
+2607/07|Okidogi|RRR
+2701/07|Munkidori|C
+2702/07|Munkidori|C
+2703/07|Munkidori|U
+2704/07|Munkidori|U
+2705/07|Munkidori|R
+2706/07|Munkidori|RR
+2707/07|Munkidori|RRR
+2801/07|Fezandipiti|C
+2802/07|Fezandipiti|C
+2803/07|Fezandipiti|U
+2804/07|Fezandipiti|U
+2805/07|Fezandipiti|R
+2806/07|Fezandipiti|RR
+2807/07|Fezandipiti|RRR
