@@ -1,0 +1,165 @@
+# set: CSV5C Dark Crystal Blaze
+001/129|Oddish|C
+002/129|Gloom|C
+003/129|Bellossom|U
+004/129|Shuckle|C
+005/129|Combee|C
+006/129|Phantump|C
+007/129|Trevenant|U
+008/129|Toedscool|C
+009/129|Toedscruel|U
+010/129|Toedscruel ex|RR
+011/129|Capsakid|C
+012/129|Scovillain ex|RR
+013/129|Wo-Chien|R
+014/129|Charmander|C
+015/129|Charmeleon|C
+016/129|Darumaka|C
+017/129|Darmanitan|U
+018/129|Heatmor|C
+019/129|Eiscue ex|RR
+020/129|Charcadet|C
+021/129|Armarouge ex|RR
+022/129|Chi-Yu|R
+023/129|Lapras|C
+024/129|Remoraid|C
+025/129|Octillery|C
+026/129|Carvanha|C
+027/129|Sharpedo|U
+028/129|Garchomp ex|RR
+029/129|Mantyke|C
+030/129|Palkia|R
+031/129|Tympole|C
+032/129|Palpitoad|C
+033/129|Seismitoad|U
+034/129|Wimpod|C
+035/129|Golisopod|R
+036/129|Cetoddle|C
+037/129|Cetitan|R
+038/129|Dondozo|U
+039/129|Mewtwo ex|RR
+040/129|Chinchou|C
+041/129|Lanturn|U
+042/129|Plusle|C
+043/129|Minun|C
+044/129|Joltik|C
+045/129|Galvantula|C
+046/129|Tynamo|C
+047/129|Eelektrik|C
+048/129|Eelektross|U
+049/129|Zekrom|R
+050/129|Toxel|C
+051/129|Exeggcute|C
+052/129|Exeggutor|U
+053/129|Natu|C
+054/129|Xatu|R
+055/129|Deoxys|R
+056/129|Vespiquen ex|RR
+057/129|Greavard|C
+058/129|Houndstone|U
+059/129|Gligar|C
+060/129|Gliscor|U
+061/129|Phanpy|C
+062/129|Donphan|U
+063/129|Nosepass|C
+064/129|Groudon|R
+065/129|Bonsly|C
+066/129|Gible|C
+067/129|Gabite|C
+068/129|Stunfisk|U
+069/129|Hoopa ex|RR
+070/129|Minior|U
+071/129|Toxtricity ex|RR
+072/129|Glimmet|C
+073/129|Glimmora ex|RR
+074/129|Flamigo|C
+075/129|Charizard ex|RR
+076/129|Gastly|C
+077/129|Haunter|C
+078/129|Gengar|U
+079/129|Paldean Wooper|C
+080/129|Paldean Clodsire|U
+081/129|Houndour|C
+082/129|Houndoom|U
+083/129|Absol|U
+084/129|Darkrai|R
+085/129|Scraggy|C
+086/129|Scrafty|U
+087/129|Inkay|C
+088/129|Malamar|U
+089/129|Yveltal|R
+090/129|Nickit|C
+091/129|Thievul|R
+092/129|Jirachi|C
+093/129|Probopass|C
+094/129|Ferroseed|C
+095/129|Ferrothorn|U
+096/129|Pawniard|C
+097/129|Bisharp|C
+098/129|Kingambit|U
+099/129|Honedge|C
+100/129|Doublade|C
+101/129|Aegislash ex|RR
+102/129|Zacian|R
+103/129|Orthworm|U
+104/129|Altaria ex|RR
+105/129|Zigzagoon|C
+106/129|Linoone|C
+107/129|Swablu|C
+108/129|Skwovet|C
+109/129|Greedent ex|RR
+110/129|Lechonk|C
+111/129|Oinkologne|U
+112/129|Cyclizar|U
+113/129|Flamigo|U
+114/129|Energy Sticker|U
+115/129|Snorlax Doll|U
+116/129|Fighting Au Lait|U
+117/129|Cursed Duster|U
+118/129|Patrol Cap|U
+119/129|Technical Machine: Evolution|U
+120/129|Technical Machine: Devolution|U
+121/129|Larry|C
+122/129|Shauntal|U
+123/129|Clive|U
+124/129|Paldean Student|U
+125/129|Paldean Student|U
+126/129|Poppy|U
+127/129|Mela|U
+128/129|Town Store|U
+129/129|Medical Energy|U
+130/129|Gloom|AR
+131/129|Toedscruel|AR
+132/129|Joltik|AR
+133/129|Minior|AR
+134/129|Houndour|AR
+135/129|Yveltal|AR
+136/129|Swablu|AR
+137/129|Lechonk|AR
+138/129|Eiscue ex|SR
+139/129|Armarouge ex|SR
+140/129|Garchomp ex|SR
+141/129|Vespiquen ex|SR
+142/129|Hoopa ex|SR
+143/129|Toxtricity ex|SR
+144/129|Glimmora ex|SR
+145/129|Charizard ex|SR
+146/129|Aegislash ex|SR
+147/129|Altaria ex|SR
+148/129|Larry|SR
+149/129|Shauntal|SR
+150/129|Clive|SR
+151/129|Poppy|SR
+152/129|Mela|SR
+153/129|Eiscue ex|SAR
+154/129|Garchomp ex|SAR
+155/129|Charizard ex|SAR
+156/129|Altaria ex|SAR
+157/129|Larry|SAR
+158/129|Clive|SAR
+159/129|Poppy|SAR
+160/129|Mela|SAR
+161/129|Garchomp ex|UR
+162/129|Charizard ex|UR
+163/129|Rare Candy|UR
+164/129|Defiance Band|UR

@@ -1,0 +1,166 @@
+# set: CSV4C Bonus Round
+001/129|Scyther|C
+002/129|Skiddo|C
+003/129|Gogoat|C
+004/129|Tarountula|C
+005/129|Spidops|U
+006/129|Smoliv|C
+007/129|Dolliv|U
+008/129|Arboliva|U
+009/129|Bramblin|C
+010/129|Brambleghast|U
+011/129|Capsakid|C
+012/129|Scovillain|R
+013/129|Rellor|C
+014/129|Vulpix|C
+015/129|Ninetales|U
+016/129|Entei|R
+017/129|Numel|C
+018/129|Camerupt|U
+019/129|Charcadet|C
+020/129|Buizel|C
+021/129|Floatzel|U
+022/129|Cubchoo|C
+023/129|Beartic|U
+024/129|Cryogonal|C
+025/129|Wimpod|C
+026/129|Golisopod ex|RR
+027/129|Wiglett|C
+028/129|Wugtrio|U
+029/129|Finizen|C
+030/129|Palafin|R
+031/129|Veluza|R
+032/129|Tapu Koko ex|RR
+033/129|Toxel|C
+034/129|Toxtricity|R
+035/129|Pincurchin|C
+036/129|Pawmi|C
+037/129|Pawmo|U
+038/129|Pawmot|U
+039/129|Pawmot ex|RR
+040/129|Tadbulb|C
+041/129|Bellibolt|C
+042/129|Slowpoke|C
+043/129|Slowking ex|RR
+044/129|Cleffa|C
+045/129|Togepi|C
+046/129|Togetic|U
+047/129|Togekiss|R
+048/129|Espeon|U
+049/129|Snubbull|C
+050/129|Granbull|U
+051/129|Lunatone|U
+052/129|Solrock|U
+053/129|Baltoy|C
+054/129|Claydol|R
+055/129|Cottonee|C
+056/129|Whimsicott|U
+057/129|Dedenne|C
+058/129|Dedenne ex|RR
+059/129|Ceruledge|R
+060/129|Rabsca|R
+061/129|Greavard|C
+062/129|Houndstone ex|RR
+063/129|Gimmighoul|C
+064/129|Mankey|C
+065/129|Primeape|U
+066/129|Annihilape ex|RR
+067/129|Larvitar|C
+068/129|Pupitar|U
+069/129|Rockruff|C
+070/129|Lycanroc|U
+071/129|Falinks|C
+072/129|Nacli|C
+073/129|Naclstack|U
+074/129|Garganacl|R
+075/129|Garganacl ex|RR
+076/129|Umbreon|U
+077/129|Tyranitar|R
+078/129|Maschiff|C
+079/129|Mabosstiff|U
+080/129|Bombirdier|U
+081/129|Scizor|R
+082/129|Mawile|U
+083/129|Honedge|C
+084/129|Doublade|C
+085/129|Aegislash|R
+086/129|Togedemaru|U
+087/129|Varoom|C
+088/129|Revavroom ex|RR
+089/129|Gholdengo ex|RR
+090/129|Dratini|C
+091/129|Dragonair|U
+092/129|Dragonite ex|RR
+093/129|Altaria|U
+094/129|Noibat|C
+095/129|Noivern ex|RR
+096/129|Drampa|U
+097/129|Cyclizar|U
+098/129|Tatsugiri|U
+099/129|Pidgey|C
+100/129|Pidgeotto|U
+101/129|Pidgeot ex|RR
+102/129|Kangaskhan|U
+103/129|Eevee|C
+104/129|Swablu|C
+105/129|Zangoose|C
+106/129|Lillipup|C
+107/129|Herdier|C
+108/129|Stoutland|U
+109/129|Audino|C
+110/129|Lechonk|C
+111/129|Oinkologne|U
+112/129|Tandemaus|C
+113/129|Maushold|U
+114/129|Maushold ex|RR
+115/129|Energy Retrieval|U
+116/129|Delivery Drone|U
+117/129|Luxurious Cape|U
+118/129|Defiance Vest|U
+119/129|Technical Machine: Turbo Energize|U
+120/129|Technical Machine: Blindside|U
+121/129|Ortega|U
+122/129|Rika|U
+123/129|Daisy's Help|U
+124/129|Parasol Lady|C
+125/129|Boss's Orders|R
+126/129|Raifort|U
+127/129|Beach Court|U
+128/129|Practice Studio|U
+129/129|Jet Energy|U
+130/129|Bramblin|AR
+131/129|Wimpod|AR
+132/129|Palafin|AR
+133/129|Gimmighoul|AR
+134/129|Nacli|AR
+135/129|Varoom|AR
+136/129|Pidgey|AR
+137/129|Pidgeotto|AR
+138/129|Golisopod ex|SR
+139/129|Tapu Koko ex|SR
+140/129|Slowking ex|SR
+141/129|Dedenne ex|SR
+142/129|Annihilape ex|SR
+143/129|Revavroom ex|SR
+144/129|Gholdengo ex|SR
+145/129|Noivern ex|SR
+146/129|Pidgeot ex|SR
+147/129|Maushold ex|SR
+148/129|Ortega|SR
+149/129|Rika|SR
+150/129|Daisy's Help|SR
+151/129|Parasol Lady|SR
+152/129|Boss's Orders|SR
+153/129|Golisopod ex|SAR
+154/129|Tapu Koko ex|SAR
+155/129|Revavroom ex|SAR
+156/129|Gholdengo ex|SAR
+157/129|Pidgeot ex|SAR
+158/129|Maushold ex|SAR
+159/129|Rika|SAR
+160/129|Parasol Lady|SAR
+161/129|Boss's Orders|SAR
+162/129|Gholdengo ex|UR
+163/129|Nest Ball|UR
+164/129|Luxurious Cape|UR
+165/129|Beach Court|UR
