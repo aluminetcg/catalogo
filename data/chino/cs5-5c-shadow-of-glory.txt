@@ -1,0 +1,90 @@
+# set: CS5.5C Shadow of Glory
+001/066|Paras|C
+002/066|Parasect|U
+003/066|Hisuian Electrode V|RR
+004/066|Kricketot|C
+005/066|Kricketune|U
+006/066|Virizion V|RR
+007/066|Radiant Charizard|K
+008/066|Moltres|R
+009/066|Litwick|C
+010/066|Lampent|U
+011/066|Chandelure|R
+012/066|Squirtle|C
+013/066|Wartortle|U
+014/066|Blastoise|R
+015/066|Radiant Blastoise|K
+016/066|Poliwag|C
+017/066|Poliwhirl|U
+018/066|Politoed|U
+019/066|Wailmer|C
+020/066|Wailord|U
+021/066|Regice|U
+022/066|Piplup|C
+023/066|Prinplup|U
+024/066|Empoleon|R
+025/066|Luxray V|RR
+026/066|Regieleki|U
+027/066|Gastly|C
+028/066|Haunter|U
+029/066|Gengar|R
+030/066|Misdreavus|C
+031/066|Mismagius|U
+032/066|Duskull|C
+033/066|Dusclops|U
+034/066|Dusknoir|R
+035/066|Chimecho|C
+036/066|Jirachi V|RR
+037/066|Sigilyph|U
+038/066|Hisuian Zorua|C
+039/066|Hisuian Zoroark|R
+040/066|Hisuian Growlithe|C
+041/066|Hisuian Arcanine|R
+042/066|Poliwrath|U
+043/066|Machop|C
+044/066|Machoke|U
+045/066|Machamp|R
+046/066|Sudowoodo|C
+047/066|Regirock|U
+048/066|Carbink|U
+049/066|Hisuian Decidueye V|RR
+050/066|Hisuian Decidueye VSTAR|RRR
+051/066|Registeel|U
+052/066|Hisuian Goodra V|RR
+053/066|Hisuian Goodra VSTAR|RRR
+054/066|Regidrago|U
+055/066|Ditto|R
+056/066|Regigigas|R
+057/066|Hisuian Zoroark V|RR
+058/066|Hisuian Zoroark VSTAR|RRR
+059/066|Damage Pump|U
+060/066|Hisuian Heavy Ball|U
+061/066|Windup Arm|U
+062/066|Box of Disaster|U
+063/066|Grant|U
+064/066|Cheren's Care|U
+065/066|Roxanne|U
+066/066|Gapejaw Bog|U
+067/066|Hisuian Electrode V|SR
+068/066|Virizion V|SR
+069/066|Luxray V|SR
+070/066|Jirachi V|SR
+071/066|Hisuian Decidueye V|SR
+072/066|Hisuian Goodra V|SR
+073/066|Hisuian Zoroark V|SR
+074/066|Grant|SR
+075/066|Cheren's Care|SR
+076/066|Roxanne|SR
+077/066|Hisuian Zoroark VSTAR|SAR
+078/066|Grant|SAR
+079/066|Cheren's Care|SAR
+080/066|Roxanne|SAR
+081/066|Hisuian Decidueye VSTAR|HR
+082/066|Hisuian Goodra VSTAR|HR
+083/066|Hisuian Zoroark VSTAR|HR
+084/066|Grant|HR
+085/066|Cheren's Care|HR
+086/066|Roxanne|HR
+087/066|Hisuian Zoroark VSTAR|UR
+088/066|Box of Disaster|UR
+089/066|Gapejaw Bog|UR
