@@ -1,0 +1,5 @@
+# set: CS0LC Quicksand Card Display Pendant Gift Box
+001/004|Pikachu V|
+002/004|Pikachu VMAX|
+003/004|Eevee V|
+004/004|Eevee VMAX|
