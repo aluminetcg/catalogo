@@ -180,11 +180,36 @@
     return S.names;
   }
   function cnKey(c) { var t = String(c[2]).split("/")[1]; return "cn|" + (t ? "/" + nnum(t) : "promo"); }
+  // chino solo con n\u00famero: busca ese n\u00famero en la tienda y muestra lo que ya ten\u00e9s cargado
+  async function storeByNum(num) {
+    var q0 = $("#q").value;
+    $("#res").innerHTML = '<div class="msg">Buscando ' + esc(num) + ' en tu tienda\u2026</div>';
+    var list = [];
+    try { list = await api("/producto?search=" + encodeURIComponent(num) + "&limit=60") || []; }
+    catch (e) { if ($("#q").value === q0) $("#res").innerHTML = '<div class="msg err">' + esc(e.message) + "</div>"; return; }
+    if ($("#q").value !== q0 || S.lang !== "cn") return;
+    var nn = nnum(num);
+    list = list.filter(function (p) { return norm(p.p_nombre).split(" ").some(function (w) { return nn.indexOf("/") > 0 ? nnum(w) === nn : nnum(w).split("/")[0] === nn; }); });
+    S.cnRes = list.map(function (p, i) {
+      var t = String(p.p_nombre), k = norm(t).split(" "), pos = t.split(/\s+/).findIndex(function (w) { return nnum(norm(w)) === nnum(norm(num)) || nnum(norm(w)).split("/")[0] === nn; });
+      var before = t.split(/\s+/).slice(0, Math.max(pos, 1)), rz = "";
+      for (var j = RZ.length - 1; j > 0; j--) { var rw = RZ[j].split(" "); if (before.slice(-rw.length).join(" ").toLowerCase() === RZ[j].toLowerCase()) { rz = RZ[j]; before = before.slice(0, -rw.length); break; } }
+      var name = before.join(" ").replace(/\b(special illustration rare|illustration rare)$/i, "").trim() || before.join(" ");
+      var c = ["cn" + i, name, (t.split(/\s+/)[pos] || num), 0, rz, {}]; c.L = "cn"; c.img = ((p.imagenes || [])[0] || {}).i_link; c.full = t; return c;
+    });
+    $("#res").innerHTML = (S.cnRes.length ? '<div class="msg" style="padding:8px 0 0;text-align:left">Ya en tu tienda con el n\u00famero ' + esc(num) + ":</div>" + S.cnRes.map(function (c, i) {
+      return '<div class="t" data-i="' + i + '" data-l="cn">' + (c.img ? '<img loading="lazy" src="' + CDN + c.img + '" alt="">' : '<div class="ph">\u4e2d</div>') + "<b>" + esc(c.full) + "</b></div>";
+    }).join("") : '<div class="msg">No ten\u00e9s nada con el n\u00famero <b>' + esc(num) + "</b> en tu tienda.</div>") +
+      '<div class="t" data-i="' + S.cnRes.length + '" data-l="cn"><div class="ph">+</div><b>Cargar nueva con el ' + esc(num) + "</b><small>El nombre lo escrib\u00eds despu\u00e9s</small></div>";
+    var ab = num.split("/").map(function (p) { return +((p.match(/\d+/) || [0])[0]); });
+    var nc = ["cnN", "", num, 0, ab.length === 2 && ab[1] && ab[0] > ab[1] ? "AR" : "", {}]; nc.L = "cn"; S.cnRes.push(nc);
+  }
   function searchCn(quiet) {
     var raw = $("#q").value, toks = norm(raw).split(" ").filter(Boolean);
     var names = toks.filter(function (t) { return !/\d/.test(t); });
     var num = (raw.split(/\s+/).filter(function (t) { return /\d/.test(t); })[0] || "").replace(/[^A-Za-z0-9\/]/g, "").toUpperCase();
     S.cnRes = [];
+    if (!names.length && num && !quiet) return storeByNum(num);
     if (!names.length || !num) { if (quiet) return ""; $("#res").innerHTML = '<div class="msg">Chino: escrib\u00ed el nombre en ingl\u00e9s y el n\u00famero, por ejemplo <b>zeraora 210/208</b>. No hay foto ni precio de referencia: la foto es opcional y el precio lo pon\u00e9s vos.</div>'; return; }
     var typed = names.join(" ");
     var found = nameList().filter(function (x) { var ws = x.w.split(" "); return names.every(function (t) { return ws.some(function (w) { return w.indexOf(t) === 0; }); }); });
@@ -306,6 +331,7 @@
     var box = $("#ex");
     try {
       var name = cardName(c[1]).replace(/\(.*?\)/g, "").trim();
+      if (!name) { box.innerHTML = "Escrib\u00ed el nombre para revisar si ya la ten\u00e9s."; return; }
       var list = await api("/producto?search=" + encodeURIComponent(name) + "&limit=60");
       if (S.sel !== c) return;
       var num = nnum(c[2]);
@@ -375,6 +401,7 @@
     var cat = $("#ca").value, title = $("#ti").value.trim(), price = Math.round(+$("#pr").value), stock = Math.round(+$("#st").value);
     if (!cat) return say("err", "Eleg\u00ed la categor\u00eda.");
     if (!title) return say("err", "Falta el t\u00edtulo.");
+    if (c.L === "cn" && !c[1]) return say("err", "Falta el nombre de la carta.");
     if (!(price > 0) && !reemplaza) return say("err", "Pon\u00e9 un precio.");
     if (!(stock > 0) && !(reemplaza && stock === 0)) return say("err", "Pon\u00e9 el stock (1 o m\u00e1s).");
     lock(true);
