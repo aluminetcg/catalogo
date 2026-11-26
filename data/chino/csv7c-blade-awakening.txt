@@ -1,0 +1,260 @@
+# set: CSV7C Blade Awakening
+001/204|Tangela|C
+002/204|Tangrowth|C
+003/204|Scyther|C
+004/204|Pinsir|C
+005/204|Spinarak|C
+006/204|Ariados|U
+007/204|Sunkern|C
+008/204|Sunflora|U
+009/204|Heracross|U
+010/204|Seedot|C
+011/204|Nuzleaf|C
+012/204|Shiftry|U
+013/204|Shroomish|C
+014/204|Breloom|C
+015/204|Roselia|C
+016/204|Roserade|U
+017/204|Turtwig|C
+018/204|Grotle|C
+019/204|Torterra ex|RR
+020/204|Leafeon|U
+021/204|Shaymin|U
+022/204|Cottonee|C
+023/204|Whimsicott|R
+024/204|Deerling|C
+025/204|Sawsbuck|U
+026/204|Grubbin|C
+027/204|Dhelmise|U
+028/204|Bramblin|C
+029/204|Brambleghast|R
+030/204|Rellor|C
+031/204|Rabsca|U
+032/204|Iron Leaves|R
+033/204|Iron Leaves ex|RR
+034/204|Slugma|C
+035/204|Magcargo ex|RR
+036/204|Torchic|C
+037/204|Combusken|C
+038/204|Blaziken ex|RR
+039/204|Torkoal|C
+040/204|Chimchar|C
+041/204|Monferno|C
+042/204|Infernape|R
+043/204|Victini|C
+044/204|Heatmor|C
+045/204|Litten|C
+046/204|Torracat|C
+047/204|Incineroar ex|RR
+048/204|Sizzlipede|C
+049/204|Centiskorch|U
+050/204|Chi-Yu|U
+051/204|Gouging Fire ex|RR
+052/204|Totodile|C
+053/204|Croconaw|C
+054/204|Feraligatr|R
+055/204|Carvanha|C
+056/204|Sharpedo|U
+057/204|Snorunt|C
+058/204|Glalie|U
+059/204|Froslass|R
+060/204|Kyogre ex|RR
+061/204|Glaceon|U
+062/204|Phione|C
+063/204|Keldeo|U
+064/204|Froakie|C
+065/204|Frogadier|C
+066/204|Cramorant|U
+067/204|Snom|C
+068/204|Frosmoth|C
+069/204|Wiglett|C
+070/204|Finizen|C
+071/204|Palafin|U
+072/204|Iron Bundle|U
+073/204|Walking Wake|R
+074/204|Walking Wake ex|RR
+075/204|Electabuzz|C
+076/204|Electivire|U
+077/204|Zapdos|R
+078/204|Shinx|C
+079/204|Luxio|C
+080/204|Luxray ex|RR
+081/204|Helioptile|C
+082/204|Heliolisk|C
+083/204|Charjabug|C
+084/204|Vikavolt|U
+085/204|Tapu Koko ex|RR
+086/204|Zeraora|U
+087/204|Morpeko|U
+088/204|Wugtrio ex|RR
+089/204|Iron Hands|C
+090/204|Iron Thorns|R
+091/204|Iron Thorns ex|RR
+092/204|Mr. Mime|C
+093/204|Girafarig|C
+094/204|Bronzor|C
+095/204|Bronzong|U
+096/204|Solosis|C
+097/204|Duosion|C
+098/204|Reuniclus|U
+099/204|Flabébé|C
+100/204|Floette|C
+101/204|Florges|U
+102/204|Cutiefly|C
+103/204|Ribombee|U
+104/204|Enamorus|R
+105/204|Fidough|C
+106/204|Dachsbun ex|RR
+107/204|Scream Tail|U
+108/204|Scream Tail ex|RR
+109/204|Flutter Mane|R
+110/204|Iron Valiant|R
+111/204|Iron Crown ex|RR
+112/204|Larvitar|C
+113/204|Pupitar|C
+114/204|Nosepass|C
+115/204|Probopass|U
+116/204|Meditite|C
+117/204|Medicham|C
+118/204|Relicanth|R
+119/204|Drilbur|C
+120/204|Excadrill|U
+121/204|Golett|C
+122/204|Golurk|U
+123/204|Greninja ex|RR
+124/204|Hawlucha|C
+125/204|Mudbray|C
+126/204|Mudsdale|U
+127/204|Rolycoly|C
+128/204|Carkol|C
+129/204|Coalossal|U
+130/204|Great Tusk|U
+131/204|Great Tusk|U
+132/204|Sandy Shocks|U
+133/204|Ting-Lu|R
+134/204|Iron Boulder ex|RR
+135/204|Ekans|C
+136/204|Arbok|C
+137/204|Tyranitar ex|RR
+138/204|Poochyena|C
+139/204|Mightyena|C
+140/204|Sableye|U
+141/204|Farigiraf ex|RR
+142/204|Brute Bonnet|U
+143/204|Roaring Moon|R
+144/204|Scizor ex|RR
+145/204|Mawile|C
+146/204|Beldum|C
+147/204|Metang|C
+148/204|Metagross|U
+149/204|Meltan|C
+150/204|Melmetal|R
+151/204|Iron Treads|U
+152/204|Koraidon|R
+153/204|Miraidon|R
+154/204|Raging Bolt ex|RR
+155/204|Lickitung|C
+156/204|Lickilicky|C
+157/204|Eevee|C
+158/204|Snorlax|U
+159/204|Hoothoot|C
+160/204|Noctowl|C
+161/204|Dunsparce|C
+162/204|Dudunsparce|R
+163/204|Lugia ex|RR
+164/204|Skitty|C
+165/204|Delcatty|U
+166/204|Chatot|C
+167/204|Pidove|C
+168/204|Tranquill|C
+169/204|Unfezant|U
+170/204|Minccino|C
+171/204|Cinccino|U
+172/204|Drampa|R
+173/204|Iron Jugulis|U
+174/204|Boxed Order|U
+175/204|Enhanced Hammer|U
+176/204|Awakening Drum|ACE
+177/204|Buddy-Buddy Poffin|U
+178/204|Hyper Aroma|ACE
+179/204|Hand Trimmer|U
+180/204|Prime Catcher|ACE
+181/204|Master Ball|ACE
+182/204|Love Ball|U
+183/204|Reboot Pod|ACE
+184/204|Passho Berry|U
+185/204|Rescue Board|U
+186/204|Survival Brace|ACE
+187/204|Hero's Cape|ACE
+188/204|Heavy Baton|U
+189/204|Maximum Belt|ACE
+190/204|Lucky Helmet|U
+191/204|Ciphermaniac's Codebreaking|U
+192/204|Lucian|U
+193/204|Lana's Aid|U
+194/204|Salvatore|U
+195/204|Explorer's Guidance|U
+196/204|Hassel|U
+197/204|Eri|U
+198/204|Bianca's Devotion|U
+199/204|Morty's Conviction|U
+200/204|Perilous Jungle|U
+201/204|Gravity Mountain|U
+202/204|Full Metal Lab|U
+203/204|Neo Upper Energy|ACE
+204/204|Mist Energy|U
+205/204|Shiftry|AR
+206/204|Iron Thorns|AR
+207/204|Bronzor|AR
+208/204|Arbok|AR
+209/204|Metagross|AR
+210/204|Drampa|AR
+211/204|Torterra ex|SR
+212/204|Iron Leaves ex|SR
+213/204|Magcargo ex|SR
+214/204|Incineroar ex|SR
+215/204|Gouging Fire ex|SR
+216/204|Walking Wake ex|SR
+217/204|Luxray ex|SR
+218/204|Wugtrio ex|SR
+219/204|Iron Thorns ex|SR
+220/204|Dachsbun ex|SR
+221/204|Scream Tail ex|SR
+222/204|Iron Crown ex|SR
+223/204|Greninja ex|SR
+224/204|Iron Boulder ex|SR
+225/204|Farigiraf ex|SR
+226/204|Scizor ex|SR
+227/204|Raging Bolt ex|SR
+228/204|Ciphermaniac's Codebreaking|SR
+229/204|Lucian|SR
+230/204|Lana's Aid|SR
+231/204|Salvatore|SR
+232/204|Explorer's Guidance|SR
+233/204|Hassel|SR
+234/204|Eri|SR
+235/204|Bianca's Devotion|SR
+236/204|Morty's Conviction|SR
+237/204|Iron Leaves ex|SAR
+238/204|Gouging Fire ex|SAR
+239/204|Walking Wake ex|SAR
+240/204|Dachsbun ex|SAR
+241/204|Iron Crown ex|SAR
+242/204|Greninja ex|SAR
+243/204|Iron Boulder ex|SAR
+244/204|Raging Bolt ex|SAR
+245/204|Ciphermaniac's Codebreaking|SAR
+246/204|Lana's Aid|SAR
+247/204|Salvatore|SAR
+248/204|Eri|SAR
+249/204|Bianca's Devotion|SAR
+250/204|Morty's Conviction|SAR
+251/204|Iron Leaves ex|UR
+252/204|Gouging Fire ex|UR
+253/204|Walking Wake ex|UR
+254/204|Iron Crown ex|UR
+255/204|Iron Boulder ex|UR
+256/204|Raging Bolt ex|UR
+257/204|Earthen Vessel|UR
+258/204|Buddy-Buddy Poffin|UR
+259/204|Rescue Board|UR
