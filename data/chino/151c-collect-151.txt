@@ -1,0 +1,193 @@
+# set: 151C Collect 151
+001/151|Bulbasaur|C
+002/151|Ivysaur|U
+003/151|Venusaur ex|RR
+004/151|Charmander|C
+005/151|Charmeleon|U
+006/151|Charizard ex|RR
+007/151|Squirtle|C
+008/151|Wartortle|U
+009/151|Blastoise ex|RR
+010/151|Caterpie|C
+011/151|Metapod|C
+012/151|Butterfree|U
+013/151|Weedle|C
+014/151|Kakuna|C
+015/151|Beedrill|R
+016/151|Pidgey|C
+017/151|Pidgeotto|C
+018/151|Pidgeot|U
+019/151|Rattata|C
+020/151|Raticate|U
+021/151|Spearow|C
+022/151|Fearow|U
+023/151|Ekans|C
+024/151|Arbok ex|RR
+025/151|Pikachu|C
+026/151|Raichu|R
+027/151|Sandshrew|C
+028/151|Sandslash|U
+029/151|Nidoran ♀|C
+030/151|Nidorina|U
+031/151|Nidoqueen|U
+032/151|Nidoran ♂|C
+033/151|Nidorino|U
+034/151|Nidoking|R
+035/151|Clefairy|C
+036/151|Clefable|U
+037/151|Vulpix|C
+038/151|Ninetales ex|RR
+039/151|Jigglypuff|C
+040/151|Wigglytuff ex|RR
+041/151|Zubat|C
+042/151|Golbat|U
+043/151|Oddish|C
+044/151|Gloom|U
+045/151|Vileplume|R
+046/151|Paras|C
+047/151|Parasect|U
+048/151|Venonat|C
+049/151|Venomoth|U
+050/151|Diglett|C
+051/151|Dugtrio|U
+052/151|Meowth|C
+053/151|Persian|U
+054/151|Psyduck|C
+055/151|Golduck|U
+056/151|Mankey|C
+057/151|Primeape|U
+058/151|Growlithe|C
+059/151|Arcanine|U
+060/151|Poliwag|C
+061/151|Poliwhirl|C
+062/151|Poliwrath|U
+063/151|Abra|C
+064/151|Kadabra|U
+065/151|Alakazam ex|RR
+066/151|Machop|C
+067/151|Machoke|U
+068/151|Machamp|R
+069/151|Bellsprout|C
+070/151|Weepinbell|C
+071/151|Victreebel|U
+072/151|Tentacool|C
+073/151|Tentacruel|U
+074/151|Geodude|C
+075/151|Graveler|U
+076/151|Golem ex|RR
+077/151|Ponyta|C
+078/151|Rapidash|U
+079/151|Slowpoke|C
+080/151|Slowbro|U
+081/151|Magnemite|C
+082/151|Magneton|U
+083/151|Farfetch'd|C
+084/151|Doduo|C
+085/151|Dodrio|R
+086/151|Seel|C
+087/151|Dewgong|U
+088/151|Grimer|C
+089/151|Muk|U
+090/151|Shellder|C
+091/151|Cloyster|U
+092/151|Gastly|C
+093/151|Haunter|U
+094/151|Gengar|R
+095/151|Onix|U
+096/151|Drowzee|C
+097/151|Hypno|U
+098/151|Krabby|C
+099/151|Kingler|U
+100/151|Voltorb|C
+101/151|Electrode|R
+102/151|Exeggcute|C
+103/151|Exeggutor|U
+104/151|Cubone|C
+105/151|Marowak|R
+106/151|Hitmonlee|U
+107/151|Hitmonchan|U
+108/151|Lickitung|C
+109/151|Koffing|C
+110/151|Weezing|R
+111/151|Rhyhorn|C
+112/151|Rhydon|U
+113/151|Chansey|R
+114/151|Tangela|C
+115/151|Kangaskhan ex|RR
+116/151|Horsea|C
+117/151|Seadra|U
+118/151|Goldeen|C
+119/151|Seaking|U
+120/151|Staryu|C
+121/151|Starmie|R
+122/151|Mr. Mime|R
+123/151|Scyther|U
+124/151|Jynx ex|RR
+125/151|Electabuzz|C
+126/151|Magmar|C
+127/151|Pinsir|U
+128/151|Tauros|U
+129/151|Magikarp|C
+130/151|Gyarados|R
+131/151|Lapras|U
+132/151|Ditto|R
+133/151|Eevee|C
+134/151|Vaporeon|R
+135/151|Jolteon|R
+136/151|Flareon|R
+137/151|Porygon|C
+138/151|Omanyte|U
+139/151|Omastar|R
+140/151|Kabuto|U
+141/151|Kabutops|R
+142/151|Aerodactyl|R
+143/151|Snorlax|U
+144/151|Articuno|R
+145/151|Zapdos ex|RR
+146/151|Moltres|R
+147/151|Dratini|C
+148/151|Dragonair|U
+149/151|Dragonite|R
+150/151|Mewtwo|R
+151/151|Mew ex|RR
+152/151|Charmander|S
+153/151|Pidgey|S
+154/151|Pidgeotto|S
+155/151|Raichu|S
+156/151|Jigglypuff|S
+157/151|Oddish|S
+158/151|Gloom|S
+159/151|Vileplume|S
+160/151|Abra|S
+161/151|Kadabra|S
+162/151|Doduo|S
+163/151|Dodrio|S
+164/151|Voltorb|S
+165/151|Electrode|S
+166/151|Staryu|S
+167/151|Starmie|S
+168/151|Ditto|S
+169/151|Snorlax|S
+170/151|Pikachu|AR
+171/151|Pikachu|AR
+172/151|Pikachu|AR
+173/151|Pikachu|AR
+174/151|Venusaur ex|SR
+175/151|Charizard ex|SR
+176/151|Blastoise ex|SR
+177/151|Arbok ex|SR
+178/151|Ninetales ex|SR
+179/151|Wigglytuff ex|SR
+180/151|Alakazam ex|SR
+181/151|Golem ex|SR
+182/151|Kangaskhan ex|SR
+183/151|Jynx ex|SR
+184/151|Zapdos ex|SR
+185/151|Mew ex|SR
+186/151|Wigglytuff ex|SSR
+187/151|Alakazam ex|SSR
+188/151|Mew ex|SSR
+189/151|Alakazam ex|SAR
+190/151|Zapdos ex|SAR
+191/151|Mew ex|SAR
+192/151|Mew ex|UR
