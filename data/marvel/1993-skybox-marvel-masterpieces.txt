@@ -1,0 +1,91 @@
+# set: 1993 SkyBox Marvel Masterpieces
+1|Hulk|
+2|Human Torch|
+3|Thor|
+4|Iron Man|
+5|Spider-Man|
+6|Wolverine|
+7|Cyclops|
+8|Doctor Strange|
+9|Namor|
+10|Storm|
+11|Silver Surfer|
+12|Vision|
+13|Ghost Rider|
+14|Thing|
+15|Captain America|
+16|Archangel|
+17|Beast|
+18|Cable|
+19|Carnage|
+20|Hulk 2099|
+21|Doctor Doom|
+22|Daredevil|
+23|Iron Fist|
+24|Psylocke|
+25|Morbius|
+26|Punisher|
+27|Rogue|
+28|Sabretooth|
+29|Forge|
+30|She-Hulk|
+31|Gambit|
+32|U.S. Agent|
+33|Spider-Woman|
+34|Stryfe|
+35|Thanos|
+36|Blade|
+37|Adam Warlock|
+38|Colossus|
+39|Magneto|
+40|Vulture|
+41|Spider-Man 2099|
+42|Punisher 2099|
+43|Doom 2099|
+44|Ravage 2099|
+45|Venom|
+46|Domino|
+47|Annihilus|
+48|Rhino|
+49|Puma|
+50|Cannonball|
+51|Polaris|
+52|Longshot|
+53|Cyber|
+54|Omega Red|
+55|Deadpool|
+56|Kingpin|
+57|Bishop|
+58|Absorbing Man|
+59|Darkhawk|
+60|Mystique|
+61|Abomination|
+62|Wasp|
+63|Scorpion|
+64|Captain Britain|
+65|Black Knight|
+66|Sasquatch|
+67|Black Widow|
+68|Typhoid Mary|
+69|War Machine|
+70|Hawkeye|
+71|Deathlok|
+72|Nightcrawler|
+73|Thunderstrike|
+74|Vengeance|
+75|Jean Grey|
+76|Shatterstar|
+77|Beta Ray Bill|
+78|Night Thrasher|
+79|Red Skull|
+80|Lilith|
+81|Falcon|
+82|Hercules|
+83|Nova|
+84|Havok|
+85|Phoenix|
+86|Crystal|
+87|Drax|
+88|Terrax|
+89|Vulture 2099|
+90|Checklist CL|
