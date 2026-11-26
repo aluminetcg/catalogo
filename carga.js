@@ -103,6 +103,9 @@
     '.msg{grid-column:1/-1;color:#6a7080;padding:30px;text-align:center}' +
     'aside{background:#fff;border-left:1px solid #e3dfd3;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:12px}' +
     'aside img.big{width:100%;max-height:340px;object-fit:contain}' +
+    '.foto{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px;color:#6a7080}' +
+    '.foto label.sec{display:inline-block;font-size:13px;color:#c2410c;flex-direction:row}' +
+    '.drop{outline:3px dashed #c2410c;outline-offset:-6px}' +
     'aside label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:#6a7080;font-weight:600}' +
     'aside input,aside select{padding:9px 10px;border:1.5px solid #e3dfd3;border-radius:9px;font:inherit;font-size:15px;color:#1d2330;width:100%}' +
     '.row{display:flex;gap:10px}.row>*{flex:1;min-width:0}' +
@@ -211,11 +214,13 @@
     return '<option value="">\u2014 Eleg\u00ed la categor\u00eda \u2014</option>' + list.map(opt).join("") + (others.length ? '<optgroup label="Otras categor\u00edas">' + others.map(opt).join("") + "</optgroup>" : "");
   }
   function showDetail(c) {
-    S.sel = c;
+    S.sel = c; S.own = null;
     root.querySelectorAll(".t").forEach(function (t) { t.classList.toggle("on", t.dataset.pid == c[0]); });
     var setFull = setOf(c), cat = guessCat(setFull, c.L);
     var keys = Object.keys(c[5] || {}), bp = bestPrice(c[5]);
-    $("#det").innerHTML = '<img class="big" src="' + IMG(c[0], 1000) + '" alt="">' +
+    $("#det").innerHTML = '<img class="big" id="big" src="' + IMG(c[0], 1000) + '" alt="">' +
+      '<div class="foto"><label class="sec">Usar foto propia<input id="own" type="file" accept="image/*" hidden></label>' +
+      '<button class="sec" id="rmown" hidden>Volver a la de stock</button><span id="fotoinfo">o peg\u00e1 (Ctrl+V) / arrastr\u00e1 una imagen ac\u00e1</span></div>' +
       '<div><b>' + esc(cardName(c[1])) + "</b> \u00b7 " + esc(c[2]) + '<br><small class="hint">' + esc(setFull) + " \u00b7 " + esc(c[4] || "sin rareza") + "</small></div>" +
       '<label>T\u00edtulo del producto<input id="ti" maxlength="80"></label>' +
       '<label>Categor\u00eda<select id="ca">' + catOptions(cat, c.L) + "</select></label>" +
@@ -230,6 +235,8 @@
     $("#pk").onchange = setPrice;
     $("#ca").onchange = function () { $("#ti").value = titleFor(c, $("#ca").value); };
     $("#add").onclick = function () { crear(c); };
+    $("#own").onchange = function () { if (this.files && this.files[0]) setOwn(this.files[0]); this.value = ""; };
+    $("#rmown").onclick = function () { setOwn(null); };
     renderLog();
     existentes(c);
   }
@@ -264,6 +271,34 @@
   }
 
   // ------------------------------------------------------------------ acciones
+  function setOwn(f) {
+    if (f && !/^image\/(jpe?g|png|webp)$/i.test(f.type)) { say("err", "La foto tiene que ser JPG, PNG o WEBP."); return; }
+    if (f && f.size > 10 * 1024 * 1024) { say("err", "La foto pesa m\u00e1s de 10 MB."); return; }
+    S.own = f || null;
+    if (S.ownUrl) URL.revokeObjectURL(S.ownUrl);
+    S.ownUrl = f ? URL.createObjectURL(f) : null;
+    if ($("#big")) $("#big").src = S.ownUrl || IMG(S.sel[0], 1000);
+    if ($("#rmown")) $("#rmown").hidden = !f;
+    if ($("#fotoinfo")) $("#fotoinfo").textContent = f ? "Se va a subir tu foto (" + Math.round(f.size / 1024) + " KB)." : "o peg\u00e1 (Ctrl+V) / arrastr\u00e1 una imagen ac\u00e1";
+  }
+  root.addEventListener("paste", function (e) {
+    if (!S.sel || host.hidden) return;
+    var it = [].slice.call((e.clipboardData && e.clipboardData.items) || []).filter(function (i) { return /^image\//.test(i.type); })[0];
+    if (it) { e.preventDefault(); setOwn(it.getAsFile()); }
+  });
+  document.addEventListener("paste", function (e) {
+    if (!S.sel || host.hidden || e.composedPath().indexOf(host) >= 0) return;
+    var it = [].slice.call((e.clipboardData && e.clipboardData.items) || []).filter(function (i) { return /^image\//.test(i.type); })[0];
+    if (it) { e.preventDefault(); setOwn(it.getAsFile()); }
+  });
+  ["dragover", "dragleave", "drop"].forEach(function (ev) {
+    root.addEventListener(ev, function (e) {
+      var det = e.target.closest && e.target.closest("#det"); if (!det || !S.sel) return;
+      e.preventDefault();
+      det.classList.toggle("drop", ev === "dragover");
+      if (ev === "drop" && e.dataTransfer.files && e.dataTransfer.files[0]) setOwn(e.dataTransfer.files[0]);
+    });
+  });
   function lock(on) { S.busy = on; root.querySelectorAll("#det button").forEach(function (b) { b.disabled = on; }); }
   function say(cls, html) { $("#out").innerHTML = '<div class="' + cls + '">' + html + "</div>"; }
   async function crear(c, reemplaza) {
@@ -281,15 +316,15 @@
         if ((vp.stock || []).length !== 1 || vs.s_ilimitado) throw new Error("Ese producto tiene variantes o stock ilimitado; republicalo desde el panel.");
         stock += +vs.s_cantidad || 0;
         if (!($("#np") && $("#np").checked)) price = Math.round(+vs.s_precio || +vp.p_precio || price);
-        if ($("#vf") && $("#vf").checked) vieja = (vp.imagenes || []).map(function (i) { return i.i_link; }).filter(Boolean);
+        if (!S.own && $("#vf") && $("#vf").checked) vieja = (vp.imagenes || []).map(function (i) { return i.i_link; }).filter(Boolean);
       } catch (e) { lock(false); return say("err", "No se pudo republicar: " + esc(e.message)); }
       if (!(stock > 0)) { lock(false); return say("err", "Pon\u00e9 el stock (1 o m\u00e1s)."); }
     }
     async function subirStock() {
       say("hint", "Subiendo la foto\u2026");
-      var blob = await fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); });
+      var blob = S.own || await fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); });
       var fd = new FormData(); fd.append("max_width", "600"); fd.append("max_height", "1200");
-      fd.append("images[]", new File([blob], "carta-" + c[0] + ".jpg", { type: blob.type || "image/jpeg" }));
+      fd.append("images[]", S.own ? S.own : new File([blob], "carta-" + c[0] + ".jpg", { type: blob.type || "image/jpeg" }));
       var up = await api("/upload/products", { method: "POST", body: fd });
       if (!up || !up.length) throw new Error("Empretienda no devolvi\u00f3 la foto subida");
       return up.slice(0, 1);
