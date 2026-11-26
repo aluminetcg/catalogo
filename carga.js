@@ -247,9 +247,9 @@
         S.oldImgs[p.idProductos] = (p.imagenes || []).map(function (i) { return i.i_link; }).filter(Boolean);
         return '<div class="ex">' + (S.oldImgs[p.idProductos][0] ? '<img src="' + CDN + S.oldImgs[p.idProductos][0] + '" alt="" style="width:46px;height:64px;object-fit:contain;flex:none;border-radius:4px">' : "") + '<div>' + esc(p.p_nombre) + "<br><small>Stock " + (s.s_ilimitado ? "ilimitado" : s.s_cantidad) + " \u00b7 " + money(p.p_precio) + (p.p_desactivado ? " \u00b7 desactivado" : "") + "</small></div>" +
           '<div style="display:flex;flex-direction:column;gap:6px;flex:none"><button class="sec" data-id="' + p.idProductos + '">Sumar stock</button>' +
-          ((p.stock || []).length === 1 && !s.s_ilimitado && !(+s.s_cantidad > 0) ? '<button class="sec" data-re="' + p.idProductos + '" title="Crea una publicaci\u00f3n nueva con los datos de arriba (queda primera como reci\u00e9n subida) y borra esta">Borrar y publicar de nuevo</button>' : "") + "</div></div>";
+          ((p.stock || []).length === 1 && !s.s_ilimitado ? '<button class="sec" data-re="' + p.idProductos + '" data-lbl="' + (+s.s_cantidad > 0 ? "Subir arriba" : "Borrar y publicar de nuevo") + '" title="Borra esta publicaci\u00f3n y la crea de nuevo (queda primera como reci\u00e9n subida), sum\u00e1ndole el stock de arriba">' + (+s.s_cantidad > 0 ? "Subir arriba" : "Borrar y publicar de nuevo") + "</button>" : "") + "</div></div>";
       }).join("") + '<label style="flex-direction:row;align-items:center;gap:6px;margin-top:6px"><input id="np" type="checkbox" style="width:auto"> y ponerle el precio de arriba</label>' +
-        (box.innerHTML.indexOf("data-re") >= 0 || hits.some(function (p) { var s = (p.stock || [])[0] || {}; return (p.stock || []).length === 1 && !s.s_ilimitado && !(+s.s_cantidad > 0); }) ?
+        (hits.some(function (p) { var s = (p.stock || [])[0] || {}; return (p.stock || []).length === 1 && !s.s_ilimitado; }) ?
           '<label style="flex-direction:row;align-items:center;gap:6px"><input id="vf" type="checkbox" checked style="width:auto"> al republicar, usar la foto de la publicaci\u00f3n vieja</label>' : "");
       box.querySelectorAll("[data-id]").forEach(function (b) { b.onclick = function () { sumar(c, +b.dataset.id); }; });
       box.querySelectorAll("[data-re]").forEach(function (b) {
@@ -257,7 +257,7 @@
           if (b.dataset.ok) { crear(c, +b.dataset.re); return; }
           b.dataset.ok = "1"; b.textContent = "\u00bfSeguro? Toc\u00e1 de nuevo";
           b.style.background = "#c2410c"; b.style.color = "#fff";
-          setTimeout(function () { if (b.isConnected) { delete b.dataset.ok; b.textContent = "Borrar y publicar de nuevo"; b.style.background = ""; b.style.color = ""; } }, 6000);
+          setTimeout(function () { if (b.isConnected) { delete b.dataset.ok; b.textContent = b.dataset.lbl; b.style.background = ""; b.style.color = ""; } }, 6000);
         };
       });
     } catch (e) { box.innerHTML = '<span class="err">No pude revisar si ya existe: ' + esc(e.message) + "</span>"; }
@@ -272,10 +272,19 @@
     if (!cat) return say("err", "Eleg\u00ed la categor\u00eda.");
     if (!title) return say("err", "Falta el t\u00edtulo.");
     if (!(price > 0)) return say("err", "Pon\u00e9 un precio.");
-    if (!(stock > 0)) return say("err", "Pon\u00e9 el stock (1 o m\u00e1s).");
+    if (!(stock > 0) && !(reemplaza && stock === 0)) return say("err", "Pon\u00e9 el stock (1 o m\u00e1s).");
     lock(true);
-    var reemplazada = false, nota = "";
-    var vieja = reemplaza && $("#vf") && $("#vf").checked ? (S.oldImgs[reemplaza] || []) : [];
+    var reemplazada = false, nota = "", vieja = [];
+    if (reemplaza) {                   // datos frescos de la publicaci\u00f3n vieja: stock, precio y fotos
+      try {
+        var vp = await api("/producto/" + reemplaza), vs = (vp.stock || [])[0] || {};
+        if ((vp.stock || []).length !== 1 || vs.s_ilimitado) throw new Error("Ese producto tiene variantes o stock ilimitado; republicalo desde el panel.");
+        stock += +vs.s_cantidad || 0;
+        if (!($("#np") && $("#np").checked)) price = Math.round(+vs.s_precio || +vp.p_precio || price);
+        if ($("#vf") && $("#vf").checked) vieja = (vp.imagenes || []).map(function (i) { return i.i_link; }).filter(Boolean);
+      } catch (e) { lock(false); return say("err", "No se pudo republicar: " + esc(e.message)); }
+      if (!(stock > 0)) { lock(false); return say("err", "Pon\u00e9 el stock (1 o m\u00e1s)."); }
+    }
     async function subirStock() {
       say("hint", "Subiendo la foto\u2026");
       var blob = await fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); });
