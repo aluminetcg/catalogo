@@ -1,0 +1,64 @@
+# set: CSVH1C Happy Set: Pikachu & Clefairy & Turtwig & Gimmighoul
+001/059|Shroomish|
+002/059|Breloom|
+003/059|Turtwig|
+004/059|Grotle|
+005/059|Torterra|
+006/059|Zarude|
+007/059|Empoleon|
+008/059|Pikachu ex|
+009/059|Chinchou|
+010/059|Lanturn|
+011/059|Mareep|
+012/059|Flaaffy|
+013/059|Emolga|
+014/059|Thundurus|
+015/059|Zeraora|
+016/059|Clefairy|
+017/059|Clefable|
+018/059|Clefable ex|
+019/059|Exeggcute|
+020/059|Exeggutor|
+021/059|Mewtwo|
+022/059|Mawile|
+023/059|Tapu Lele|
+024/059|Gimmighoul|
+025/059|Magnemite|
+026/059|Magneton|
+027/059|Magnezone|
+028/059|Cobalion|
+029/059|Gholdengo|
+030/059|Farfetch'd|
+031/059|Tauros|
+032/059|Chatot|
+033/059|Shaymin|
+034/059|Energy Retrieval|
+035/059|Energy Search|
+036/059|Energy Recycler|
+037/059|Electric Generator|
+038/059|Potion|
+039/059|Fog Crystal|
+040/059|Crushing Hammer|
+041/059|Super Rod|
+042/059|Trekking Shoes|
+043/059|Nest Ball|
+044/059|Ultra Ball|
+045/059|Rare Candy|
+046/059|Switch|
+047/059|Pokémon Catcher|
+048/059|Exp. Share|
+049/059|Blunder Policy|
+050/059|Vitality Band|
+051/059|Judge|
+052/059|Cynthia's Ambition|
+053/059|Youngster|
+054/059|Gardenia's Vigor|
+055/059|Nemona|
+056/059|Professor's Research|
+057/059|Zinnia's Resolve|
+058/059|Arezu|
+059/059|Luminous Energy|
+060/059|Basic Grass Energy|
+061/059|Basic Lightning Energy|
+062/059|Basic Psychic Energy|
+063/059|Basic Metal Energy|
