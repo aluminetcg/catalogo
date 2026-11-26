@@ -1,0 +1,434 @@
+# set: CS4DaC Start Deck 100
+001/414|Venusaur V|
+002/414|Caterpie|
+003/414|Metapod|
+004/414|Butterfree|
+005/414|Yanma|
+006/414|Yanmega|
+007/414|Heracross|
+008/414|Shroomish|
+009/414|Breloom|
+010/414|Cacnea|
+011/414|Cacturne|
+012/414|Tropius|
+013/414|Tropius|
+014/414|Kricketune V|
+015/414|Cherubi|
+016/414|Cherrim|
+017/414|Leafeon V|
+018/414|Leafeon VMAX|
+019/414|Pansage|
+020/414|Simisage|
+021/414|Petilil|
+022/414|Lilligant|
+023/414|Dwebble|
+024/414|Crustle|
+025/414|Karrablast|
+026/414|Shelmet|
+027/414|Accelgor|
+028/414|Trevenant V|
+029/414|Trevenant VMAX|
+030/414|Dewpider|
+031/414|Araquanid|
+032/414|Fomantis|
+033/414|Lurantis|
+034/414|Tapu Bulu|
+035/414|Grookey|
+036/414|Thwackey|
+037/414|Rillaboom|
+038/414|Gossifleur|
+039/414|Eldegoss|
+040/414|Eldegoss|
+041/414|Flapple V|
+042/414|Appletun V|
+043/414|Zarude|
+044/414|Zarude|
+045/414|Zarude V|
+046/414|Vulpix|
+047/414|Ninetales|
+048/414|Ninetales|
+049/414|Growlithe|
+050/414|Arcanine|
+051/414|Flareon V|
+052/414|Flareon VMAX|
+053/414|Slugma|
+054/414|Magcargo|
+055/414|Entei|
+056/414|Entei V|
+057/414|Blaziken V|
+058/414|Torkoal|
+059/414|Victini V|
+060/414|Victini VMAX|
+061/414|Pansear|
+062/414|Simisear|
+063/414|Simisear V|
+064/414|Heatmor|
+065/414|Volcarona V|
+066/414|Litleo|
+067/414|Pyroar|
+068/414|Salandit|
+069/414|Salazzle|
+070/414|Scorbunny|
+071/414|Raboot|
+072/414|Cinderace|
+073/414|Cinderace V|
+074/414|Sizzlipede|
+075/414|Centiskorch|
+076/414|Psyduck|
+077/414|Golduck|
+078/414|Shellder|
+079/414|Cloyster|
+080/414|Kingler V|
+081/414|Kingler VMAX|
+082/414|Horsea|
+083/414|Seadra|
+084/414|Kingdra|
+085/414|Staryu|
+086/414|Lapras|
+087/414|Vaporeon V|
+088/414|Marill|
+089/414|Remoraid|
+090/414|Octillery|
+091/414|Mantine|
+092/414|Suicune V|
+093/414|Mudkip|
+094/414|Marshtomp|
+095/414|Swampert|
+096/414|Carvanha|
+097/414|Sharpedo|
+098/414|Snorunt|
+099/414|Froslass|
+100/414|Empoleon V|
+101/414|Buizel|
+102/414|Floatzel|
+103/414|Glaceon V|
+104/414|Glaceon VMAX|
+105/414|Basculin|
+106/414|Cryogonal|
+107/414|Greninja V|
+108/414|Clauncher|
+109/414|Clawitzer|
+110/414|Bergmite|
+111/414|Avalugg|
+112/414|Crabominable V|
+113/414|Wishiwashi|
+114/414|Bruxish|
+115/414|Tapu Fini|
+116/414|Sobble|
+117/414|Drizzile|
+118/414|Inteleon|
+119/414|Inteleon V|
+120/414|Chewtle|
+121/414|Drednaw|
+122/414|Cramorant|
+123/414|Eiscue|
+124/414|Arctovish V|
+125/414|Ice Rider Calyrex V|
+126/414|Ice Rider Calyrex VMAX|
+127/414|Pikachu|
+128/414|Raichu|
+129/414|Pikachu V|
+130/414|Jolteon V|
+131/414|Chinchou|
+132/414|Lanturn|
+133/414|Mareep|
+134/414|Flaaffy|
+135/414|Flaaffy|
+136/414|Ampharos|
+137/414|Raikou V|
+138/414|Plusle|
+139/414|Minun|
+140/414|Shinx|
+141/414|Luxio|
+142/414|Luxray|
+143/414|Pachirisu|
+144/414|Emolga|
+145/414|Emolga|
+146/414|Thundurus|
+147/414|Helioptile|
+148/414|Heliolisk|
+149/414|Tapu Koko V|
+150/414|Tapu Koko VMAX|
+151/414|Zeraora|
+152/414|Zeraora|
+153/414|Yamper|
+154/414|Boltund|
+155/414|Boltund V|
+156/414|Boltund V|
+157/414|Toxel|
+158/414|Toxtricity|
+159/414|Morpeko|
+160/414|Dracozolt V|
+161/414|Dracozolt VMAX|
+162/414|Jigglypuff|
+163/414|Galarian Rapidash V|
+164/414|Galarian Slowpoke|
+165/414|Drowzee|
+166/414|Hypno|
+167/414|Starmie|
+168/414|Jynx|
+169/414|Galarian Articuno V|
+170/414|Mewtwo|
+171/414|Mew|
+172/414|Espeon V|
+173/414|Espeon VMAX|
+174/414|Granbull V|
+175/414|Ralts|
+176/414|Kirlia|
+177/414|Gardevoir|
+178/414|Spoink|
+179/414|Grumpig|
+180/414|Baltoy|
+181/414|Claydol|
+182/414|Cresselia|
+183/414|Woobat|
+184/414|Swoobat|
+185/414|Sigilyph|
+186/414|Golett|
+187/414|Golurk|
+188/414|Golurk V|
+189/414|Espurr|
+190/414|Meowstic|
+191/414|Sylveon V|
+192/414|Sylveon VMAX|
+193/414|Cutiefly|
+194/414|Ribombee|
+195/414|Sandygast|
+196/414|Palossand|
+197/414|Mimikyu V|
+198/414|Necrozma V|
+199/414|Hatenna|
+200/414|Hattrem|
+201/414|Hatterene|
+202/414|Indeedee|
+203/414|Shadow Rider Calyrex V|
+204/414|Shadow Rider Calyrex VMAX|
+205/414|Sandshrew|
+206/414|Diglett|
+207/414|Dugtrio|
+208/414|Mankey|
+209/414|Primeape|
+210/414|Galarian Farfetch'd|
+211/414|Galarian Sirfetch'd|
+212/414|Onix|
+213/414|Steelix|
+214/414|Cubone|
+215/414|Marowak|
+216/414|Hitmonchan|
+217/414|Galarian Zapdos V|
+218/414|Hitmontop|
+219/414|Makuhita|
+220/414|Hariyama|
+221/414|Medicham V|
+222/414|Trapinch|
+223/414|Vibrava|
+224/414|Flygon|
+225/414|Lucario V|
+226/414|Hippopotas|
+227/414|Hippowdon|
+228/414|Gallade|
+229/414|Drilbur|
+230/414|Galarian Yamask|
+231/414|Galarian Runerigus|
+232/414|Landorus|
+233/414|Pancham|
+234/414|Lycanroc V|
+235/414|Lycanroc VMAX|
+236/414|Stufful|
+237/414|Bewear|
+238/414|Rolycoly|
+239/414|Carkol|
+240/414|Coalossal|
+241/414|Sandaconda V|
+242/414|Sandaconda VMAX|
+243/414|Clobbopus|
+244/414|Grapploct|
+245/414|Falinks|
+246/414|Stonjourner|
+247/414|Single Strike Urshifu V|
+248/414|Rapid Strike Urshifu V|
+249/414|Zubat|
+250/414|Golbat|
+251/414|Crobat|
+252/414|Galarian Slowbro|
+253/414|Gengar V|
+254/414|Galarian Moltres V|
+255/414|Umbreon V|
+256/414|Umbreon VMAX|
+257/414|Galarian Slowking|
+258/414|Galarian Slowking V|
+259/414|Galarian Slowking VMAX|
+260/414|Qwilfish|
+261/414|Houndour|
+262/414|Houndoom|
+263/414|Tyranitar V|
+264/414|Galarian Zigzagoon|
+265/414|Galarian Linoone|
+266/414|Galarian Obstagoon|
+267/414|Absol|
+268/414|Croagunk|
+269/414|Toxicroak|
+270/414|Darkrai|
+271/414|Purrloin|
+272/414|Liepard|
+273/414|Liepard V|
+274/414|Venipede|
+275/414|Whirlipede|
+276/414|Scolipede|
+277/414|Scraggy|
+278/414|Scrafty|
+279/414|Trubbish|
+280/414|Garbodor|
+281/414|Garbodor V|
+282/414|Vullaby|
+283/414|Mandibuzz|
+284/414|Pangoro|
+285/414|Yveltal|
+286/414|Impidimp|
+287/414|Morgrem|
+288/414|Grimmsnarl|
+289/414|Morpeko|
+290/414|Morpeko V|
+291/414|Galarian Meowth|
+292/414|Galarian Perrserker|
+293/414|Steelix|
+294/414|Skarmory|
+295/414|Mawile|
+296/414|Aron|
+297/414|Lairon|
+298/414|Aggron|
+299/414|Aggron V|
+300/414|Aggron VMAX|
+301/414|Metagross V|
+302/414|Bronzor|
+303/414|Bronzong|
+304/414|Excadrill|
+305/414|Escavalier|
+306/414|Cobalion|
+307/414|Klefki|
+308/414|Togedemaru|
+309/414|Corviknight V|
+310/414|Corviknight VMAX|
+311/414|Cufant|
+312/414|Copperajah|
+313/414|Zamazenta V|
+314/414|Altaria|
+315/414|Rayquaza V|
+316/414|Rayquaza VMAX|
+317/414|Axew|
+318/414|Fraxure|
+319/414|Haxorus|
+320/414|Kyurem|
+321/414|Noivern V|
+322/414|Zygarde|
+323/414|Turtonator|
+324/414|Drampa|
+325/414|Duraludon V|
+326/414|Duraludon VMAX|
+327/414|Regidrago|
+328/414|Spearow|
+329/414|Fearow|
+330/414|Meowth|
+331/414|Persian|
+332/414|Chansey|
+333/414|Blissey|
+334/414|Blissey V|
+335/414|Kangaskhan|
+336/414|Tauros|
+337/414|Eevee|
+338/414|Porygon|
+339/414|Porygon2|
+340/414|Porygon-Z|
+341/414|Snorlax|
+342/414|Snorlax|
+343/414|Stantler|
+344/414|Slakoth|
+345/414|Vigoroth|
+346/414|Slaking|
+347/414|Swablu|
+348/414|Shaymin|
+349/414|Stoutland V|
+350/414|Stoutland V|
+351/414|Rufflet|
+352/414|Braviary|
+353/414|Fletchling|
+354/414|Fletchinder|
+355/414|Talonflame|
+356/414|Furfrou|
+357/414|Hawlucha|
+358/414|Drampa|
+359/414|Drampa V|
+360/414|Greedent V|
+361/414|Greedent V|
+362/414|Wooloo|
+363/414|Indeedee|
+364/414|Escape Rope|
+365/414|Energy Retrieval|
+366/414|Energy Switch|
+367/414|Energy Search|
+368/414|Energy Recycler|
+369/414|Urn of Vitality|
+370/414|Potion|
+371/414|Fog Crystal|
+372/414|Crushing Hammer|
+373/414|Great Ball|
+374/414|Switching Cups|
+375/414|Ultra Ball|
+376/414|Rare Candy|
+377/414|Switch|
+378/414|Pokémon Catcher|
+379/414|Poké Ball|
+380/414|Echoing Horn|
+381/414|Level Ball|
+382/414|Rugged Helmet|
+383/414|Exp. Share|
+384/414|Galarian Chestplate|
+385/414|Full Face Guard|
+386/414|Spirit Mask|
+387/414|Aroma Lady|
+388/414|Team Yell's Cheer|
+389/414|Karen's Conviction|
+390/414|Agatha|
+391/414|Raihan|
+392/414|Klara|
+393/414|Cook|
+394/414|Korrina's Focus|
+395/414|Shauna|
+396/414|Bruno|
+397/414|Peonia|
+398/414|Judge|
+399/414|Barry|
+400/414|Schoolgirl|
+401/414|Schoolboy|
+402/414|Siebold|
+403/414|Professor's Research|
+404/414|Peony|
+405/414|Zinnia's Resolve|
+406/414|Boss's Orders|
+407/414|Gordie|
+408/414|Marnie's Pride|
+409/414|Melony|
+410/414|Copycat|
+411/414|Cheryl|
+412/414|Single Strike Energy|
+413/414|Lucky Energy|
+414/414|Rapid Strike Energy|
+415/414|Milcery|
+416/414|Alcremie|
+417/414|Café Master|
+418/414|Pikachu V|
+419/414|Granbull V|
+420/414|Zamazenta V|
+421/414|Barry|
+422/414|Marnie's Pride|
+423/414|Galarian Articuno V|
+424/414|Galarian Zapdos V|
+425/414|Galarian Moltres V|
+426/414|Grass Energy|
+427/414|Fire Energy|
+428/414|Water Energy|
+429/414|Lightning Energy|
+430/414|Psychic Energy|
+431/414|Fighting Energy|
+432/414|Darkness Energy|
+433/414|Metal Energy|
