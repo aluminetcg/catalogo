@@ -153,7 +153,7 @@ def main():
             if not g["products"]:
                 continue
             gi = len(sets)
-            sets.append([g["name"], g["year"]])
+            sets.append([g["name"], g["year"], (g.get("abbr") or "").strip()])     # sigla del set (CMM, MH3...) para buscar más rápido
             for pid, name, number, prices, rarity in g["products"]:
                 rar = unify(rarity, "Magic" if key == "mtg" else "Pokémon", "")[0] if rarity else ""
                 p = {k: round(v, 2) for k, v in (prices or {}).items() if v}

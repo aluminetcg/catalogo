@@ -63,8 +63,8 @@ def get_json(url):
 def load_tcg(cat, only=None):
     """Devuelve la lista de grupos (sets) de una categoría, con productos y precios. Usa caché diaria."""
     CACHE.mkdir(parents=True, exist_ok=True)
-    full = CACHE / f"{cat}.v3.json"                 # categoría completa (la usa singles.py)
-    f = full if only is None else CACHE / f"{cat}.part.v2.json"   # solo los sets que tiene la tienda (crawl.py)
+    full = CACHE / f"{cat}.v4.json"                 # categoría completa (la usa singles.py)
+    f = full if only is None else CACHE / f"{cat}.part.v4.json"   # solo los sets que tiene la tienda (crawl.py)
     stamp = session.get(f"{TCG}/last-updated.txt", timeout=30).text.strip()
 
     def needed(g):
@@ -96,7 +96,7 @@ def load_tcg(cat, only=None):
             ext = {e["name"]: e["value"] for e in p.get("extendedData") or []}
             if ext.get("Number"):
                 rows.append([p["productId"], p["name"], ext["Number"], prices.get(p["productId"], {}), ext.get("Rarity") or ""])
-        return {"id": gid, "name": g["name"], "year": (g.get("publishedOn") or "")[:4], "products": rows}
+        return {"id": gid, "name": g["name"], "year": (g.get("publishedOn") or "")[:4], "abbr": g.get("abbreviation") or "", "products": rows}
 
     with ThreadPoolExecutor(max_workers=4) as ex:
         out = list(ex.map(one, groups))

@@ -201,7 +201,7 @@
     if (S.idx[lang]) return S.idx[lang];
     $("#res").innerHTML = '<div class="msg">Cargando la base de cartas\u2026</div>';
     var d = await fetch(PAGES + "data/singles/" + lang + ".json?t=" + Math.floor(Date.now() / 36e5)).then(function (r) { if (!r.ok && MAN[lang]) return { sets: [], cards: [] }; if (!r.ok) throw new Error("No encontr\u00e9 la base de cartas (" + r.status + ")"); return r.json(); });
-    d.cards.forEach(function (c) { c.L = lang; c.n = nnum(c[2]); c.w = norm(cardName(c[1])); c.s = norm(d.sets[c[3]][0]); });
+    d.cards.forEach(function (c) { c.L = lang; c.n = nnum(c[2]); c.w = norm(cardName(c[1])); c.s = norm(d.sets[c[3]][0] + " " + (d.sets[c[3]][2] || "")); });   // incluye la sigla del set (cmm, mh3, sv3pt5...)
     S.idx[lang] = d; return d;
   }
   function flatCats(list, path, out) {
