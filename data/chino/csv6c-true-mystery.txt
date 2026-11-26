@@ -1,0 +1,164 @@
+# set: CSV6C True Mystery
+001/128|Surskit|C
+002/128|Masquerain|U
+003/128|Froslass ex|RR
+004/128|Pansage|C
+005/128|Simisage|U
+006/128|Maractus|C
+007/128|Dwebble|C
+008/128|Crustle|C
+009/128|Bounsweet|C
+010/128|Steenee|U
+011/128|Blipbug|C
+012/128|Dottler|C
+013/128|Orbeetle|U
+014/128|Nymble|C
+015/128|Espathra ex|RR
+016/128|Magby|C
+017/128|Magmar|C
+018/128|Magmortar|U
+019/128|Heat Rotom|C
+020/128|Pansear|C
+021/128|Simisear|U
+022/128|Volcanion|C
+023/128|Fuecoco|C
+024/128|Crocalor|C
+025/128|Iron Moth|R
+026/128|Horsea|C
+027/128|Seadra|C
+028/128|Kingdra|R
+029/128|Lapras|C
+030/128|Feebas|C
+031/128|Milotic|R
+032/128|Snorunt|C
+033/128|Panpour|C
+034/128|Simipour|U
+035/128|Vanillite|C
+036/128|Vanillish|C
+037/128|Vanilluxe|U
+038/128|Tsareena ex|RR
+039/128|Wiglett|C
+040/128|Wugtrio|U
+041/128|Veluza|U
+042/128|Iron Bundle|U
+043/128|Chien-Pao|R
+044/128|Elekid|C
+045/128|Tyranitar ex|RR
+046/128|Blitzle|C
+047/128|Zebstrika|U
+048/128|Oricorio|C
+049/128|Tadbulb|C
+050/128|Bellibolt|C
+051/128|Iron Hands ex|RR
+052/128|Chimecho|C
+053/128|Mime Jr.|C
+054/128|Woobat|C
+055/128|Swoobat|U
+056/128|Yamask|C
+057/128|Cofagrigus ex|RR
+058/128|Pumpkaboo|C
+059/128|Gourgeist|U
+060/128|Flittle|C
+061/128|Espathra|R
+062/128|Tinkatink|C
+063/128|Tinkatuff|C
+064/128|Tinkaton|U
+065/128|Scream Tail|U
+066/128|Iron Valiant ex|RR
+067/128|Onix|C
+068/128|Larvitar|C
+069/128|Pupitar|C
+070/128|Mienfoo|C
+071/128|Mienshao|U
+072/128|Diggersby|C
+073/128|Clobbopus|C
+074/128|Grapploct|U
+075/128|Nacli|C
+076/128|Naclstack|C
+077/128|Garganacl|R
+078/128|Toedscool|C
+079/128|Toedscruel|U
+080/128|Klawf|U
+081/128|Great Tusk ex|RR
+082/128|Slither Wing|U
+083/128|Sandy Shocks ex|RR
+084/128|Ting-Lu|R
+085/128|Zubat|C
+086/128|Golbat|C
+087/128|Crobat|U
+088/128|Paldean Wooper|C
+089/128|Paldean Clodsire|U
+090/128|Purrloin|C
+091/128|Liepard|C
+092/128|Trubbish|C
+093/128|Garbodor|U
+094/128|Lokix|R
+095/128|Brute Bonnet|R
+096/128|Roaring Moon ex|RR
+097/128|Steelix|R
+098/128|Durant|U
+099/128|Skeledirge ex|RR
+100/128|Iron Treads ex|RR
+101/128|Porygon|C
+102/128|Porygon2|C
+103/128|Porygon-Z|R
+104/128|Aipom|C
+105/128|Ambipom|U
+106/128|Miltank|C
+107/128|Whismur|C
+108/128|Loudred|C
+109/128|Exploud|U
+110/128|Spinda|C
+111/128|Bunnelby|C
+112/128|Bombirdier ex|RR
+113/128|Iron Jugulis|R
+114/128|Counter Catcher|U
+115/128|Earthen Vessel|U
+116/128|Techno Radar|U
+117/128|Nemona's Backpack|U
+118/128|Ancient Booster Energy Capsule|U
+119/128|Future Booster Energy Capsule|U
+120/128|Technical Machine: Crisis Punch|U
+121/128|Professor Sada's Vitality|U
+122/128|Geeta|R
+123/128|Norman|U
+124/128|Roark|U
+125/128|Professor Turo's Scenario|U
+126/128|Tulip|U
+127/128|Cycling Road|U
+128/128|Pokémon League Headquarters|U
+129/128|Iron Moth|AR
+130/128|Veluza|AR
+131/128|Espathra|AR
+132/128|Garganacl|AR
+133/128|Slither Wing|AR
+134/128|Garbodor|AR
+135/128|Brute Bonnet|AR
+136/128|Iron Jugulis|AR
+137/128|Froslass ex|SR
+138/128|Tsareena ex|SR
+139/128|Tyranitar ex|SR
+140/128|Iron Hands ex|SR
+141/128|Cofagrigus ex|SR
+142/128|Iron Valiant ex|SR
+143/128|Sandy Shocks ex|SR
+144/128|Roaring Moon ex|SR
+145/128|Bombirdier ex|SR
+146/128|Professor Sada's Vitality|SR
+147/128|Geeta|SR
+148/128|Norman|SR
+149/128|Roark|SR
+150/128|Professor Turo's Scenario|SR
+151/128|Tulip|SR
+152/128|Iron Hands ex|SAR
+153/128|Iron Valiant ex|SAR
+154/128|Sandy Shocks ex|SAR
+155/128|Roaring Moon ex|SAR
+156/128|Professor Sada's Vitality|SAR
+157/128|Geeta|SAR
+158/128|Professor Turo's Scenario|SAR
+159/128|Tulip|SAR
+160/128|Iron Valiant ex|UR
+161/128|Roaring Moon ex|UR
+162/128|Counter Catcher|UR
+163/128|Pal Pad|UR
