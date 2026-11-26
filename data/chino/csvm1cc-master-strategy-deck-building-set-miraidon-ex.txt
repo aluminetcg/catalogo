@@ -1,0 +1,29 @@
+# set: CSVM1cC Master Strategy Deck Building Set (Miraidon ex)
+001/028|Iron Bundle|
+002/028|Raichu V|
+003/028|Zapdos|
+004/028|Raikou V|
+005/028|Iron Hands ex|
+006/028|Miraidon ex|
+007/028|Squawkabilly ex|
+008/028|Switch Cart|
+009/028|Energy Sticker|
+010/028|Electric Generator|
+011/028|Super Rod|
+012/028|Nest Ball|
+013/028|Ultra Ball|
+014/028|Pokémon Catcher|
+015/028|Lost Vacuum|
+016/028|Exp. Share|
+017/028|Rescue Board|
+018/028|Future Booster Energy Capsule|
+019/028|Heavy Baton|
+020/028|Forest Seal Stone|
+021/028|Bravery Charm|
+022/028|Judge|
+023/028|Iono|
+024/028|Professor's Research|
+025/028|Arven|
+026/028|Boss's Orders|
+027/028|Town Store|
+028/028|Double Turbo Energy|
