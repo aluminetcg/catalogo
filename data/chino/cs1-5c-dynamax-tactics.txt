@@ -1,0 +1,97 @@
+# set: CS1.5C Dynamax Tactics
+001/055|Dhelmise V|RR
+002/055|Dhelmise VMAX|RRR
+003/055|Blipbug|C
+004/055|Dottler|U
+005/055|Orbeetle|U
+006/055|Eldegoss V|RR
+007/055|Applin|C
+008/055|Flapple|R
+009/055|Appletun|R
+010/055|Galarian Mr. Mime|C
+011/055|Galarian Mr. Rime|U
+012/055|Feebas|C
+013/055|Milotic|R
+014/055|Milotic V|RR
+015/055|Chinchou|C
+016/055|Lanturn|U
+017/055|Vikavolt V|RR
+018/055|Toxel|C
+019/055|Toxtricity|U
+020/055|Clefairy|C
+021/055|Clefable|R
+022/055|Dedenne|U
+023/055|Sinistea|C
+024/055|Polteageist|U
+025/055|Dragapult V|RR
+026/055|Dragapult VMAX|RRR
+027/055|Koffing|C
+028/055|Galarian Weezing|R
+029/055|Galarian Meowth|C
+030/055|Galarian Perrserker|R
+031/055|Galarian Stunfisk V|RR
+032/055|Hoothoot|C
+033/055|Noctowl|U
+034/055|Bunnelby|C
+035/055|Diggersby|U
+036/055|Oranguru|R
+037/055|Rookidee|C
+038/055|Corvisquire|U
+039/055|Corviknight|R
+040/055|Cramorant V|RR
+041/055|Cramorant VMAX|RRR
+042/055|Suspicious Food Tin|U
+043/055|Scoop Up Net|U
+044/055|Great Ball|U
+045/055|Familiar Bell|U
+046/055|Capacious Bucket|U
+047/055|Tool Scrapper|U
+048/055|Oleana|U
+049/055|Kabu|U
+050/055|Pokémon Breeder's Nurturing|U
+051/055|Galar Mine|U
+052/055|Heat Fire Energy|U
+053/055|Speed Lightning Energy|U
+054/055|Horror Psychic Energy|U
+055/055|Capture Energy|U
+056/055|Blipbug|S
+057/055|Dottler|S
+058/055|Orbeetle|S
+059/055|Applin|S
+060/055|Flapple|S
+061/055|Appletun|S
+062/055|Galarian Mr. Mime|S
+063/055|Galarian Mr. Rime|S
+064/055|Dedenne|S
+065/055|Sinistea|S
+066/055|Polteageist|S
+067/055|Koffing|S
+068/055|Galarian Weezing|S
+069/055|Galarian Meowth|S
+070/055|Galarian Perrserker|S
+071/055|Bunnelby|S
+072/055|Oranguru|S
+073/055|Dhelmise V|SR
+074/055|Eldegoss V|SR
+075/055|Milotic V|SR
+076/055|Vikavolt V|SR
+077/055|Dragapult V|SR
+078/055|Galarian Stunfisk V|SR
+079/055|Cramorant V|SR
+080/055|Oleana|SR
+081/055|Kabu|SR
+082/055|Pokémon Breeder's Nurturing|SR
+083/055|Eldegoss V|SSR
+084/055|Dragapult V|SSR
+085/055|Dragapult VMAX|SSR
+086/055|Cramorant V|SSR
+087/055|Dragapult VMAX|HR
+088/055|Oleana|HR
+089/055|Kabu|HR
+090/055|Pokémon Breeder's Nurturing|HR
+091/055|Galarian Perrserker|UR
+092/055|Oranguru|UR
+093/055|Suspicious Food Tin|UR
+094/055|Scoop Up Net|UR
+095/055|Tool Scrapper|UR
+096/055|Capture Energy|UR
