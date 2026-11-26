@@ -1,0 +1,84 @@
+# set: CS4.5C Final Flame Dance
+001/063|Entei|R
+002/063|Victini|R
+003/063|Volcarona V|RR
+004/063|Oricorio|U
+005/063|Lapras|U
+006/063|Marill|C
+007/063|Azumarill|U
+008/063|Suicune V|RR
+009/063|Lotad|C
+010/063|Lombre|U
+011/063|Ludicolo|R
+012/063|Basculin|C
+013/063|Cryogonal|C
+014/063|Inteleon V|RR
+015/063|Inteleon VMAX|RRR
+016/063|Plusle|C
+017/063|Minun|C
+018/063|Regieleki|R
+019/063|Jigglypuff|C
+020/063|Wigglytuff|U
+021/063|Galarian Articuno|R
+022/063|Deoxys|R
+023/063|Meloetta|U
+024/063|Mimikyu V|RR
+025/063|Mimikyu VMAX|RRR
+026/063|Marshadow|R
+027/063|Milcery|C
+028/063|Alcremie|U
+029/063|Sandshrew|C
+030/063|Sandslash|U
+031/063|Landorus|R
+032/063|Garbodor V|RR
+033/063|Garbodor VMAX|RRR
+034/063|Zorua|C
+035/063|Zoroark|R
+036/063|Yveltal|U
+037/063|Togedemaru|U
+038/063|Dragonite V|RR
+039/063|Noivern V|RR
+040/063|Regidrago|R
+041/063|Chansey|C
+042/063|Blissey|U
+043/063|Buneary|C
+044/063|Lopunny|C
+045/063|Hawlucha|U
+046/063|Wooloo|C
+047/063|Dubwool|U
+048/063|Cram-o-matic|U
+049/063|Cross Switcher|U
+050/063|Boost Shake|U
+051/063|Toy Catcher|U
+052/063|Battle VIP Pass|U
+053/063|Elemental Badge|U
+054/063|Snow Leaf Badge|U
+055/063|Spongy Gloves|U
+056/063|Moon & Sun Badge|U
+057/063|Ribbon Badge|U
+058/063|Spirit Mask|U
+059/063|Acerola's Premonition|U
+060/063|Aroma Lady|U
+061/063|Adventurer's Discovery|U
+062/063|Café Master|U
+063/063|Gloria|U
+064/063|Volcarona V|SR
+065/063|Suicune V|SR
+066/063|Mimikyu V|SR
+067/063|Garbodor V|SR
+068/063|Dragonite V|SR
+069/063|Dragonite V|SR
+070/063|Noivern V|SR
+071/063|Noivern V|SR
+072/063|Acerola's Premonition|SR
+073/063|Aroma Lady|SR
+074/063|Adventurer's Discovery|SR
+075/063|Café Master|SR
+076/063|Gloria|SR
+077/063|Mimikyu V|CSR
+078/063|Mimikyu VMAX|CSR
+079/063|Inteleon VMAX|HR
+080/063|Garbodor VMAX|HR
+081/063|Aroma Lady|HR
+082/063|Boost Shake|UR
+083/063|Toy Catcher|UR
