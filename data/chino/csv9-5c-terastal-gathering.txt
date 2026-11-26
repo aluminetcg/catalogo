@@ -1,0 +1,260 @@
+# set: CSV9.5C Terastal Gathering
+001/208|Exeggcute|C
+002/208|Exeggutor|U
+003/208|Pinsir|C
+004/208|Budew|C
+005/208|Leafeon|U
+006/208|Leafeon ex|RR
+007/208|Cottonee|C
+008/208|Whimsicott|R
+009/208|Grookey|C
+010/208|Thwackey|C
+011/208|Applin|C
+012/208|Dipplin|C
+013/208|Bramblin|C
+014/208|Brambleghast|R
+015/208|Rellor|C
+016/208|Rabsca|U
+017/208|Wo-Chien|R
+018/208|Iron Leaves ex|RR
+019/208|Poltchageist|C
+020/208|Sinistcha|R
+021/208|Teal Mask Ogerpon ex|RR
+022/208|Flareon|R
+023/208|Flareon ex|RR
+024/208|Litleo|C
+025/208|Pyroar|U
+026/208|Charcadet|C
+027/208|Iron Moth|R
+028/208|Chi-Yu|R
+029/208|Hearthflame Mask Ogerpon ex|RR
+030/208|Gouging Fire ex|RR
+031/208|Slowpoke|C
+032/208|Slowking|U
+033/208|Goldeen|C
+034/208|Seaking|U
+035/208|Vaporeon|R
+036/208|Vaporeon ex|RR
+037/208|Totodile|C
+038/208|Croconaw|C
+039/208|Feraligatr|R
+040/208|Suicune|R
+041/208|Feebas|C
+042/208|Milotic|U
+043/208|Snorunt|C
+044/208|Froslass|R
+045/208|Garchomp ex|RR
+046/208|Glaceon|U
+047/208|Glaceon ex|RR
+048/208|Wiglett|C
+049/208|Wugtrio|U
+050/208|Finizen|C
+051/208|Palafin|C
+052/208|Palafin ex|RR
+053/208|Iron Bundle|U
+054/208|Chien-Pao|R
+055/208|Walking Wake ex|RR
+056/208|Wellspring Mask Ogerpon ex|RR
+057/208|Jolteon|R
+058/208|Jolteon ex|RR
+059/208|Zeraora|R
+060/208|Iron Hands ex|RR
+061/208|Iron Thorns|R
+062/208|Abra|C
+063/208|Kadabra|C
+064/208|Alakazam|R
+065/208|Natu|C
+066/208|Xatu|U
+067/208|Espeon|U
+068/208|Espeon ex|RR
+069/208|Duskull|C
+070/208|Dusclops|C
+071/208|Dusknoir|R
+072/208|Spritzee|C
+073/208|Aromatisse|R
+074/208|Swirlix|C
+075/208|Sylveon|U
+076/208|Sylveon ex|RR
+077/208|Ceruledge|R
+078/208|Scream Tail|U
+079/208|Flutter Mane|R
+080/208|Gimmighoul|C
+081/208|Iron Valiant ex|RR
+082/208|Munkidori|R
+083/208|Fezandipiti|R
+084/208|Iron Boulder|R
+085/208|Iron Crown ex|RR
+086/208|Larvitar|C
+087/208|Pupitar|C
+088/208|Relicanth|R
+089/208|Groudon|R
+090/208|Gible|C
+091/208|Gabite|C
+092/208|Hippopotas|C
+093/208|Hippowdon|C
+094/208|Drilbur|C
+095/208|Hawlucha|R
+096/208|Bloodmoon Ursaluna|R
+097/208|Great Tusk|U
+098/208|Slither Wing|U
+099/208|Sandy Shocks ex|RR
+100/208|Ting-Lu|R
+101/208|Okidogi|R
+102/208|Cornerstone Mask Ogerpon ex|RR
+103/208|Umbreon|U
+104/208|Umbreon ex|RR
+105/208|Sneasel|C
+106/208|Houndour|C
+107/208|Houndoom|U
+108/208|Trubbish|C
+109/208|Garbodor|U
+110/208|Zorua|C
+111/208|Zoroark|R
+112/208|Morpeko|R
+113/208|Brute Bonnet|R
+114/208|Roaring Moon|R
+115/208|Roaring Moon ex|RR
+116/208|Pecharunt ex|RR
+117/208|Beldum|C
+118/208|Metang|C
+119/208|Jirachi|C
+120/208|Bronzor|C
+121/208|Bronzong|C
+122/208|Heatran|R
+123/208|Honedge|C
+124/208|Doublade|C
+125/208|Aegislash|R
+126/208|Duraludon|C
+127/208|Archaludon|R
+128/208|Varoom|C
+129/208|Revavroom|R
+130/208|Iron Treads|U
+131/208|Gholdengo ex|RR
+132/208|Dreepy|C
+133/208|Drakloak|C
+134/208|Dragapult ex|RR
+135/208|Tatsugiri|U
+136/208|Koraidon|R
+137/208|Miraidon|R
+138/208|Raging Bolt ex|RR
+139/208|Eevee|C
+140/208|Eevee ex|RR
+141/208|Hoothoot|C
+142/208|Noctowl|R
+143/208|Dunsparce|C
+144/208|Dudunsparce|R
+145/208|Miltank|R
+146/208|Buneary|C
+147/208|Lopunny|C
+148/208|Fan Rotom|C
+149/208|Regigigas|U
+150/208|Shaymin|C
+151/208|Bouffalant|U
+152/208|Furfrou|C
+153/208|Hawlucha|C
+154/208|Bloodmoon Ursaluna ex|RR
+155/208|Iron Jugulis|R
+156/208|Terapagos ex|RR
+157/208|Ogre's Mask|U
+158/208|Enhanced Hammer|U
+159/208|Counter Catcher|U
+160/208|Glass Trumpet|U
+161/208|Superior Energy Retrieval|U
+162/208|Earthen Vessel|U
+163/208|Max Rod|ACE
+164/208|Techno Radar|U
+165/208|Tera Orb|U
+166/208|Treasure Tracker|ACE
+167/208|Buddy-Buddy Poffin|U
+168/208|Prime Catcher|ACE
+169/208|Scoop Up Cyclone|ACE
+170/208|Bug Catching Set|U
+171/208|Night Stretcher|U
+172/208|Sparkling Crystal|ACE
+173/208|Rescue Board|U
+174/208|Binding Mochi|U
+175/208|Luxurious Cape|U
+176/208|Haban Berry|U
+177/208|Ancient Booster Energy Capsule|U
+178/208|Future Booster Energy Capsule|U
+179/208|Maximum Belt|ACE
+180/208|Technical Machine: Evolution|U
+181/208|Technical Machine: Devolution|U
+182/208|Larry's Skill|U
+183/208|Crispin|U
+184/208|Colress's Tenacity|U
+185/208|Ciphermaniac's Codebreaking|U
+186/208|Janine's Secret Art|U
+187/208|Professor Sada's Vitality|U
+188/208|Black Belt's Training|R
+189/208|Lana's Aid|U
+190/208|Kieran|U
+191/208|Carmine|U
+192/208|Lacey|U
+193/208|Explorer's Guidance|U
+194/208|Amarys|U
+195/208|Friends in Paldea|U
+196/208|Professor Turo's Scenario|U
+197/208|Briar|U
+198/208|Bianca's Devotion|U
+199/208|Morty's Conviction|U
+200/208|Mela|U
+201/208|Festival Grounds|U
+202/208|Jamming Tower|U
+203/208|Area Zero Underdepths|U
+204/208|Moonlit Hill|U
+205/208|Neutralization Zone|ACE
+206/208|Jet Energy|U
+207/208|Mist Energy|U
+208/208|Legacy Energy|ACE
+209/208|Larry's Skill|SR
+210/208|Ortega|SR
+211/208|Brassius|SR
+212/208|Atticus|SR
+213/208|Atticus|SR
+214/208|Tyme|SR
+215/208|Amarys|SR
+216/208|Friends in Paldea|SR
+217/208|Giacomo|SR
+218/208|Eri|SR
+219/208|Mela|SR
+220/208|Raifort|SR
+221/208|Leafeon ex|SAR
+222/208|Teal Mask Ogerpon ex|SAR
+223/208|Flareon ex|SAR
+224/208|Ceruledge ex|SAR
+225/208|Hearthflame Mask Ogerpon ex|SAR
+226/208|Vaporeon ex|SAR
+227/208|Glaceon ex|SAR
+228/208|Palafin ex|SAR
+229/208|Wellspring Mask Ogerpon ex|SAR
+230/208|Jolteon ex|SAR
+231/208|Iron Hands ex|SAR
+232/208|Espeon ex|SAR
+233/208|Sylveon ex|SAR
+234/208|Sylveon ex|SAR
+235/208|Iron Valiant ex|SAR
+236/208|Iron Crown ex|SAR
+237/208|Sandy Shocks ex|SAR
+238/208|Cornerstone Mask Ogerpon ex|SAR
+239/208|Umbreon ex|SAR
+240/208|Roaring Moon ex|SAR
+241/208|Pecharunt ex|SAR
+242/208|Gholdengo ex|SAR
+243/208|Dragapult ex|SAR
+244/208|Raging Bolt ex|SAR
+245/208|Eevee ex|SAR
+246/208|Eevee ex|SAR
+247/208|Bloodmoon Ursaluna ex|SAR
+248/208|Terapagos ex|SAR
+249/208|Crispin|SAR
+250/208|Janine's Secret Art|SAR
+251/208|Drayton|SAR
+252/208|Kieran|SAR
+253/208|Lacey|SAR
+254/208|Amarys|SAR
+255/208|Iron Leaves ex|UR
+256/208|Teal Mask Ogerpon ex|UR
+257/208|Walking Wake ex|UR
+258/208|Pikachu ex|UR
+259/208|Terapagos ex|UR
