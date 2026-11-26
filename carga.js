@@ -81,6 +81,30 @@
   function setName(n) { return String(n || "").split(": ").slice(-1)[0]; }
   function cardName(n) { return String(n || "").split(" - ")[0].trim(); }
   function money(n) { return "$" + Math.round(n).toLocaleString("es-AR"); }
+  // efecto foil simulado: brillo arco\u00edris + reflejo diagonal sobre la foto de stock (las bases solo tienen escaneos sin brillo)
+  async function foilize(blob) {
+    var img = await createImageBitmap(blob), w = img.width, h = img.height;
+    var cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+    var x = cv.getContext("2d"); x.drawImage(img, 0, 0);
+    var g = x.createLinearGradient(0, 0, w, h);
+    ["#ff4d6d", "#ffb84d", "#fff36b", "#5dff9e", "#4dd2ff", "#7a6bff", "#ff6bdc", "#ff4d6d"].forEach(function (col, i, a) { g.addColorStop(i / (a.length - 1), col); });
+    x.globalCompositeOperation = "overlay"; x.globalAlpha = 0.32; x.fillStyle = g; x.fillRect(0, 0, w, h);
+    var s = x.createLinearGradient(w * 0.15, 0, w * 0.85, h);
+    s.addColorStop(0, "rgba(255,255,255,0)"); s.addColorStop(0.42, "rgba(255,255,255,0)"); s.addColorStop(0.5, "rgba(255,255,255,.55)");
+    s.addColorStop(0.58, "rgba(255,255,255,0)"); s.addColorStop(1, "rgba(255,255,255,0)");
+    x.globalCompositeOperation = "screen"; x.globalAlpha = 0.45; x.fillStyle = s; x.fillRect(0, 0, w, h);
+    return await new Promise(function (res) { cv.toBlob(res, "image/jpeg", 0.92); });
+  }
+  async function stockBlob(c) { return fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); }); }
+  async function foilPreview(c) {
+    var on = $("#fx") && $("#fx").checked;
+    if (S.own || S.sel !== c) return;
+    if (!on) { $("#big").src = IMG(c[0], 1000); return; }
+    try {
+      if (!S.foilBlob || S.foilFor !== c) { S.foilBlob = await foilize(await stockBlob(c)); S.foilFor = c; if (S.foilUrl) URL.revokeObjectURL(S.foilUrl); S.foilUrl = URL.createObjectURL(S.foilBlob); }
+      if (S.sel === c && $("#fx").checked && !S.own) $("#big").src = S.foilUrl;
+    } catch (e) { $("#fx").checked = false; $("#fotoinfo").textContent = "No pude aplicar el efecto foil: " + e.message; }
+  }
   function sugerido(usd) { if (!usd || !S.usd) return 0; var v = usd * S.usd * S.mult; return Math.max(100, Math.ceil(v / 100) * 100 - 21); }
 
   // ------------------------------------------------------------------ interfaz
@@ -319,6 +343,7 @@
     $("#det").innerHTML = '<img class="big" id="big" src="' + IMG(c[0], 1000) + '" alt="">' +
       '<div class="foto"><label class="sec">Usar foto propia<input id="own" type="file" accept="image/*" hidden></label>' +
       '<button class="sec" id="rmown" hidden>Volver a la de stock</button><span id="fotoinfo">o peg\u00e1 (Ctrl+V) / arrastr\u00e1 una imagen ac\u00e1</span></div>' +
+      (c.L === "mtg" ? '<label style="flex-direction:row;align-items:center;gap:6px"><input id="fx" type="checkbox" style="width:auto"> Efecto foil en la foto de stock</label>' : "") +
       '<div><b>' + esc(cardName(c[1])) + "</b> \u00b7 " + esc(c[2]) + '<br><small class="hint">' + esc(setFull) + " \u00b7 " + esc(c[4] || "sin rareza") + "</small></div>" +
       '<label>T\u00edtulo del producto<input id="ti" maxlength="80"></label>' +
       '<label>Categor\u00eda<select id="ca">' + catOptions(cat, c.L) + "</select></label>" +
@@ -328,9 +353,10 @@
       '<div id="out"></div><div id="ex" class="hint">Buscando si ya la ten\u00e9s cargada\u2026</div>' +
       '<div class="log" id="log"></div>';
     $("#ti").value = titleFor(c, cat);
-    var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k]) || "" : ""; if (c.L === "mtg") $("#ti").value = titleFor(c, $("#ca").value); };
+    var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k]) || "" : ""; if (c.L === "mtg") { $("#ti").value = titleFor(c, $("#ca").value); $("#fx").checked = /foil/i.test(k); foilPreview(c); } };
     setPrice();
     $("#pk").onchange = setPrice;
+    if ($("#fx")) $("#fx").onchange = function () { foilPreview(c); };
     $("#ca").onchange = function () { $("#ti").value = titleFor(c, $("#ca").value); };
     $("#add").onclick = function () { crear(c); };
     $("#own").onchange = function () { if (this.files && this.files[0]) setOwn(this.files[0]); this.value = ""; };
@@ -383,6 +409,7 @@
     S.ownUrl = f ? URL.createObjectURL(f) : null;
     var cn = S.sel && S.sel.L === "cn";
     if ($("#big")) { $("#big").src = S.ownUrl || (cn ? "" : IMG(S.sel[0], 1000)); if (cn) $("#big").hidden = !f; }
+    if (!f && !cn && $("#fx") && $("#fx").checked) foilPreview(S.sel);
     if ($("#nof")) $("#nof").hidden = !!f;
     if ($("#rmown")) $("#rmown").hidden = !f;
     if ($("#fotoinfo")) $("#fotoinfo").textContent = f ? "Se va a subir tu foto (" + Math.round(f.size / 1024) + " KB)." : cn ? "" : "o peg\u00e1 (Ctrl+V) / arrastr\u00e1 una imagen ac\u00e1";
@@ -431,7 +458,9 @@
     async function subirStock() {
       if (c.L === "cn" && !S.own) return [];             // chino sin foto: el producto va sin imagen
       say("hint", "Subiendo la foto\u2026");
-      var blob = S.own || await fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); });
+      var foil = !S.own && $("#fx") && $("#fx").checked;
+      var blob = S.own || (foil && S.foilFor === c && S.foilBlob) || await stockBlob(c);
+      if (foil && blob !== S.foilBlob) blob = await foilize(blob);
       var fd = new FormData(); fd.append("max_width", "600"); fd.append("max_height", "1200");
       fd.append("images[]", S.own ? S.own : new File([blob], "carta-" + c[0] + ".jpg", { type: blob.type || "image/jpeg" }));
       var up = await api("/upload/products", { method: "POST", body: fd });
