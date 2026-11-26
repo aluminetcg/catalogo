@@ -135,7 +135,7 @@
       if (S.sel === c && $("#fx").checked && !S.own) $("#big").src = S.foilUrl;
     } catch (e) { $("#fx").checked = false; $("#fotoinfo").textContent = "No pude aplicar el efecto foil: " + e.message; }
   }
-  function sugerido(usd) { if (!usd || !S.usd) return 0; var v = usd * S.usd * S.mult; return Math.max(649, Math.ceil(v / 100) * 100 - 21); }   // m\u00ednimo $649
+  function sugerido(usd, foil) { if (!usd || !S.usd) return 0; var v = usd * S.usd * S.mult; return Math.max(foil ? 739 : 649, Math.ceil(v / 100) * 100 - 21); }   // m\u00ednimo $649, foil de Magic $739
 
   // ------------------------------------------------------------------ interfaz
   root.innerHTML = '<style>' +
@@ -388,13 +388,14 @@
       '<div id="out"></div><div id="ex" class="hint">Buscando si ya la ten\u00e9s cargada\u2026</div>' +
       '<div class="log" id="log"></div>';
     $("#ti").value = titleFor(c, cat);
-    var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k]) || "" : ""; if (c.L === "mtg") { $("#ti").value = titleFor(c, $("#ca").value); $("#fx").checked = /foil/i.test(k) && !$("#es").checked; foilPreview(c); } };
+    var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k], c.L === "mtg" && /foil/i.test(k)) || "" : ""; if (c.L === "mtg") { $("#ti").value = titleFor(c, $("#ca").value); $("#fx").checked = /foil/i.test(k) && !$("#es").checked; foilPreview(c); } };
     setPrice();
     $("#pk").onchange = setPrice;
     if ($("#fx")) $("#fx").onchange = function () {     // tildar foil = pasar a la versi\u00f3n foil (precio y t\u00edtulo); destildar = volver a la normal
       var on = this.checked, ks = Object.keys(c[5] || {});
       var k = on ? ks.filter(function (k) { return /foil/i.test(k); })[0] : (c[5].Normal ? "Normal" : ks.filter(function (k) { return !/foil/i.test(k); })[0]);
       if (k && k !== $("#pk").value) { $("#pk").value = k; setPrice(); }
+      else if ($("#pk").value) $("#pr").value = sugerido(c[5][$("#pk").value], on) || "";     // sin precio foil: igual el m\u00ednimo de foil
       $("#fx").checked = on; $("#ti").value = titleFor(c, $("#ca").value); foilPreview(c);
       if (on && !k) say("hint", "TCGplayer no tiene precio foil de esta carta: le puse Foil al t\u00edtulo, pero revis\u00e1 el precio.");
     };
