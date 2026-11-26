@@ -325,7 +325,7 @@
     if (c.L === "mv") return [setOf(c) + " #" + c[2], "-", c[1]].join(" ").replace(/\s+/g, " ").slice(0, 80);   // "1990 Impel Marvel Universe #19 - Mister Fantastic"
     var set = cat ? cat.name : c.L === "cn" ? "" : setName(setOf(c));
     if (c.L === "mtg") {     // como ya est\u00e1n en la tienda: "Saruman of Many Colors #35 Borderless Foil The Hobbit"
-      var foil = $("#pk") && /foil/i.test($("#pk").value) ? "Foil" : "";
+      var foil = ($("#pk") && /foil/i.test($("#pk").value)) || ($("#fx") && $("#fx").checked) ? "Foil" : "";
       return [mtgName(c[1]), "#" + c[2], mtgVar(c[1]), foil, set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
     }
     return [cardName(c[1]), BASICAS[c[4]] ? "" : c[4], c[2], set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
@@ -395,7 +395,8 @@
       var on = this.checked, ks = Object.keys(c[5] || {});
       var k = on ? ks.filter(function (k) { return /foil/i.test(k); })[0] : (c[5].Normal ? "Normal" : ks.filter(function (k) { return !/foil/i.test(k); })[0]);
       if (k && k !== $("#pk").value) { $("#pk").value = k; setPrice(); }
-      $("#fx").checked = on; foilPreview(c);
+      $("#fx").checked = on; $("#ti").value = titleFor(c, $("#ca").value); foilPreview(c);
+      if (on && !k) say("hint", "TCGplayer no tiene precio foil de esta carta: le puse Foil al t\u00edtulo, pero revis\u00e1 el precio.");
     };
     if ($("#es")) {
       $("#es").onchange = function () { $("#fx").disabled = this.checked; if (this.checked) $("#fx").checked = false; foilPreview(c); };
