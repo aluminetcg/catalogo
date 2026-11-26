@@ -1,0 +1,24 @@
+# set: CSVH6aC Happy Set: Trainer's Pokémon (Modification Pack)
+001/023|Tauros|
+002/023|Snorlax ex|
+003/023|Dunsparce|
+004/023|Bouffalant|
+005/023|Furfrou|
+006/023|Komala|
+007/023|Delivery Drone|
+008/023|Boxed Order|
+009/023|Counter Catcher|
+010/023|Redeemable Ticket|
+011/023|Night Stretcher|
+012/023|Team Rocket's Venture Bomb|
+013/023|Rocky Helmet|
+014/023|Powerglass|
+015/023|Defiance Band|
+016/023|Lucky Helmet|
+017/023|Technical Machine: Evolution|
+018/023|Larry's Skill|
+019/023|Brock's Scouting|
+020/023|Iono|
+021/023|Hassel|
+022/023|Boss's Orders|
+023/023|Lisia's Appeal|
