@@ -1,0 +1,181 @@
+# set: 1991 Impel Marvel Universe II
+1a|Spider-Man VAR|
+1b|Spider-Man VAR|
+2a|Daredevil VAR|
+2b|Daredevil VAR|
+3a|Thing VAR|
+3b|Thing VAR|
+4a|Marvel Girl VAR|
+4b|Marvel Girl VAR|
+5a|Phoenix VAR|
+5b|Phoenix VAR|
+6a|Sub-Mariner VAR|
+6b|Sub-Mariner VAR|
+7a|Mister Fantastic VAR|
+7b|Mister Fantastic VAR|
+8a|Iceman VAR|
+8b|Iceman VAR|
+9a|Shadowcat VAR|
+9b|Shadowcat VAR|
+10a|Human Torch VAR|
+10b|Human Torch VAR|
+11a|Nightcrawler VAR|
+11b|Nightcrawler VAR|
+12a|Captain Britain VAR|
+12b|Captain Britain VAR|
+13a|Iron Man VAR|
+13b|Iron Man VAR|
+14a|Punisher VAR|
+14b|Punisher VAR|
+15a|Cable VAR|
+15b|Cable VAR|
+16a|Deathlok VAR|
+16b|Deathlok VAR|
+17a|Gambit VAR|
+17b|Gambit VAR|
+18a|Psylocke VAR|
+18b|Psylocke VAR|
+19|Vision|
+20|Hawkeye|
+21|Silver Sable|
+22|Night Thrasher|
+23|Puck|
+24|Union Jack|
+25|Quicksilver|
+26|Scarlet Witch|
+27|Havok|
+28|Iron Fist|
+29|Adam Warlock|
+30|Wonder Man|
+31|Sasquatch|
+32|Firestar|
+33|Death's Head|
+34|Speedball|
+35|USAgent|
+36|Banshee|
+37|Meggan|
+38|Jubilee|
+39|Ghost Rider|
+40|Beast|
+41|Invisible Woman|
+42|Rogue|
+43|She-Hulk|
+44|Dr. Strange|
+45|Silver Surfer|
+46|Storm|
+47|Archangel|
+48|Thor|
+49|Quasar|
+50|Wolverine|
+51|Cyclops|
+52|Nick Fury|
+53|Hulk|
+54|Captain America|
+55|Kingpin|
+56|Sabretooth|
+57|Magneto|
+58|Venom|
+59|Galactus|
+60|Mandarin|
+61|Chameleon|
+62|Super Skrull|
+63|Grim Reaper|
+64|Mojo|
+65|Fin Fang Foom|
+66|Jigsaw|
+67|Tombstone|
+68|Ulik|
+69|Baron Strucker|
+70|Mysterio|
+71|Sauron|
+72|Annihilus|
+73|Rhino|
+74|Absorbing Man|
+75|Doctor Octopus|
+76|Baron Mordo|
+77|Saracen|
+78|Nebula|
+79|Puma|
+80|Deathwatch|
+81|Kang|
+82|Blackout|
+83|Calypso|
+84|Ultron|
+85|Thanos|
+86|Hobgoblin|
+87|Lizard|
+88|Doctor Doom|
+89|Loki|
+90|Red Skull|
+91|Spider-Man vs. Venom AE|
+92|Fantastic Four vs. Skrulls AE|
+93|Wolverine vs. Sabretooth AE|
+94|Silver Surfer vs. Galactus AE|
+95|Daredevil vs. Elektra AE|
+96|Avengers vs. Kang AE|
+97|Human Torch vs. Sub-Mariner AE|
+98|Spider-Man vs. Hobgoblin AE|
+99|Captain America / Baron Zemo AE|
+100|Punisher vs. Jigsaw AE|
+101|X-Factor vs. Apocalypse AE|
+102|Punisher vs. Kingpin AE|
+103|Thing vs. Hulk AE|
+104|Daredevil vs. Bullseye AE|
+105|Spider-Man vs. Doctor Octopus AE|
+106|X-Men vs. Sentinels AE|
+107|Fantastic Four vs. Galactus AE|
+108|Wolverine vs. Hulk AE|
+109|Ghost Rider vs. Deathwatch AE|
+110|Dr. Strange vs. Baron Mordo AE|
+111|Nick Fury vs. Baron Strucker AE|
+112|Spider-Man vs. Lizard AE|
+113|Silver Surfer vs. Thanos AE|
+114|Avengers vs. Ultron AE|
+115|Captain America / Red Skull AE|
+116|Daredevil vs. Punisher AE|
+117|X-Men vs. Marauders AE|
+118|Iron Man vs. Mandarin AE|
+119|Hulk vs. Leader AE|
+120|Thor vs. Loki AE|
+121|Spider-Man vs. J. Jonah Jameson AE|
+122|Thor vs. Ulik AE|
+123|Silver Surfer vs. Mephisto AE|
+124|Fantastic Four vs. Doctor Doom AE|
+125|X-Men vs. Magneto AE|
+126|Daredevil vs. Kingpin AE|
+127|Captain America (Captain America's Shield) WE|
+128|Thor's Hammer WE|
+129|Daredevil's Billy Club WE|
+130|Ultimate Nullifier WE|
+131|Spider-Man's Web-Shooters WE|
+132|Punisher's Arsenal WE|
+133|Iron Man's Armor WE|
+134|Infinity Gauntlet WE|
+135|Quasar's Quantum Bands WE|
+136|Dr. Octopus's Arms WE|
+137|Mandarin's Rings WE|
+138|Wolverine's Claws WE|
+139|Captain Marvel LGD|
+140|Bucky LGD|
+141|Green Goblin LGD|
+142|Original Ghost Rider LGD|
+143|Kraven LGD|
+144|Dark Phoenix LGD|
+145|Darkhawk ROO|
+146|Sleepwalker ROO|
+147|Rage ROO|
+148|X-Force ROO|
+149|New Fantastic Four ROO|
+150|Fantastic Four TM|
+151|The Avengers TM|
+152|Avengers West Coast TM|
+153|X-Men TM|
+154|X-Factor TM|
+155|Excalibur TM|
+156|New Warriors TM|
+157|Masters of Evil TM|
+158|Marauders TM|
+159|Strength / Speed|
+160|Agility / Stamina|
+161|Durability / Intelligence|
+162|Checklist CL, UER|
