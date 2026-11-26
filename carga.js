@@ -125,7 +125,7 @@
     '</style>' +
     '<div class="wrap"><header>' +
     '<b>ALUMINE<span>TCG</span> \u00b7 carga r\u00e1pida</b>' +
-    '<select id="lang"><option value="all">Pok\u00e9mon Ingl\u00e9s + Japon\u00e9s</option><option value="en">Pok\u00e9mon Ingl\u00e9s</option><option value="jp">Pok\u00e9mon Japon\u00e9s</option><option value="cn">Pok\u00e9mon Chino (a mano)</option></select>' +
+    '<select id="lang"><option value="all">Pok\u00e9mon Ingl\u00e9s + Japon\u00e9s + Chino</option><option value="en">Pok\u00e9mon Ingl\u00e9s</option><option value="jp">Pok\u00e9mon Japon\u00e9s</option><option value="cn">Pok\u00e9mon Chino (a mano)</option></select>' +
     '<input id="q" type="search" placeholder="N\u00famero y/o nombre: 143/128, kommo-o 143, charizard 151\u2026" autocomplete="off">' +
     '<label>Precio = TCG \u00d7 d\u00f3lar \u00d7 <input id="mult" type="number" step="0.05" min="0.1"></label>' +
     '<label id="dolar"></label>' +
@@ -180,12 +180,12 @@
     return S.names;
   }
   function cnKey(c) { var t = String(c[2]).split("/")[1]; return "cn|" + (t ? "/" + nnum(t) : "promo"); }
-  function searchCn() {
+  function searchCn(quiet) {
     var raw = $("#q").value, toks = norm(raw).split(" ").filter(Boolean);
     var names = toks.filter(function (t) { return !/\d/.test(t); });
     var num = (raw.split(/\s+/).filter(function (t) { return /\d/.test(t); })[0] || "").replace(/[^A-Za-z0-9\/]/g, "").toUpperCase();
     S.cnRes = [];
-    if (!names.length || !num) { $("#res").innerHTML = '<div class="msg">Chino: escrib\u00ed el nombre en ingl\u00e9s y el n\u00famero, por ejemplo <b>zeraora 210/208</b>. No hay foto ni precio de referencia: la foto es opcional y el precio lo pon\u00e9s vos.</div>'; return; }
+    if (!names.length || !num) { if (quiet) return ""; $("#res").innerHTML = '<div class="msg">Chino: escrib\u00ed el nombre en ingl\u00e9s y el n\u00famero, por ejemplo <b>zeraora 210/208</b>. No hay foto ni precio de referencia: la foto es opcional y el precio lo pon\u00e9s vos.</div>'; return; }
     var typed = names.join(" ");
     var found = nameList().filter(function (x) { var ws = x.w.split(" "); return names.every(function (t) { return ws.some(function (w) { return w.indexOf(t) === 0; }); }); });
     found.sort(function (a, b) { return (b.w === typed) - (a.w === typed) || (b.w.indexOf(typed) === 0) - (a.w.indexOf(typed) === 0) || b.k - a.k || a.n.length - b.n.length; });
@@ -194,9 +194,11 @@
     var ab = num.split("/").map(function (p) { return +((p.match(/\d+/) || [0])[0]); });
     var rz = ab.length === 2 && ab[1] && ab[0] > ab[1] ? "AR" : "";
     S.cnRes = opts.map(function (n, i) { var c = ["cn" + i, n, num, 0, rz, {}]; c.L = "cn"; return c; });
-    $("#res").innerHTML = S.cnRes.map(function (c, i) {
+    var html = S.cnRes.map(function (c, i) {
       return '<div class="t" data-i="' + i + '" data-l="cn"><div class="ph">\u4e2d</div><b><span class="lg">CHI</span> ' + esc(c[1]) + "</b><small>" + esc(num) + (i === S.cnRes.length - 1 && !found.some(function (x) { return x.w === typed; }) ? " \u00b7 tal cual lo escribiste" : "") + "</small></div>";
     }).join("");
+    if (quiet) return html;
+    $("#res").innerHTML = html;
   }
   function search() {
     if (S.lang === "cn") return searchCn();
@@ -217,12 +219,14 @@
       if (ok) out.push(c);
     }
     }
-    $("#res").innerHTML = out.length ? out.map(function (c) {
+    var cnHtml = S.lang === "all" ? searchCn(true) || "" : "";
+    if (cnHtml) cnHtml = '<div class="msg" style="padding:8px 0 0;text-align:left">Chino (a mano, sin foto ni precio):</div>' + cnHtml;
+    $("#res").innerHTML = out.length || cnHtml ? out.map(function (c) {
       var p = bestPrice(c[5]);
       return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + c[0] + '" data-l="' + c.L + '"><img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">' +
         '<b>' + (L.length > 1 ? '<span class="lg">' + (c.L === "jp" ? "JAP" : "ING") + "</span> " : "") + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(setOf(c))) + "</small>" +
         "<small>" + esc(c[4] || "") + (p ? " \u00b7 US$" + p[1] : "") + "</small></div>";
-    }).join("") : '<div class="msg">No encontr\u00e9 cartas con eso. Prob\u00e1 solo con el n\u00famero (143/128) o con otra parte del nombre.</div>';
+    }).join("") + cnHtml : '<div class="msg">No encontr\u00e9 cartas con eso. Prob\u00e1 solo con el n\u00famero (143/128) o con otra parte del nombre.</div>';
   }
   function bestPrice(prices, prefer) {
     var ks = Object.keys(prices || {}); if (!ks.length) return null;
