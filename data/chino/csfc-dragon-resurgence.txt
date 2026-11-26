@@ -1,0 +1,27 @@
+# set: CSFC Dragon Resurgence
+001/021|White Kyurem|
+002/021|Duraludon|
+003/021|Alolan Exeggutor|
+004/021|Alolan Exeggutor-GX|
+005/021|Dragonite|
+006/021|Flygon|
+007/021|Altaria|
+008/021|Latias|
+009/021|Latios|
+010/021|Rayquaza VMAX|
+011/021|Goodra|
+012/021|Zygarde|
+013/021|Drampa|
+014/021|Kommo-o|
+015/021|Kommo-o-GX|
+016/021|Ultra Necrozma-GX|
+017/021|Duraludon VMAX|
+018/021|Rayquaza|
+019/021|Noivern|
+020/021|Raihan|
+021/021|Zinnia's Resolve|
+022/021|Alolan Exeggutor-GX|
+023/021|Kommo-o-GX|
+024/021|Ultra Necrozma-GX|
+025/021|Rayquaza VMAX|
+026/021|Duraludon VMAX|
