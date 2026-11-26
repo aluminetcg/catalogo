@@ -1,0 +1,21 @@
+# set: CSEC Four-Party Connection Gift Box
+001/020|Greninja V-UNION|
+002/020|Greninja V-UNION|
+003/020|Greninja V-UNION|
+004/020|Greninja V-UNION|
+005/020|Morpeko V-UNION|
+006/020|Morpeko V-UNION|
+007/020|Morpeko V-UNION|
+008/020|Morpeko V-UNION|
+009/020|Mewtwo V-UNION|
+010/020|Mewtwo V-UNION|
+011/020|Mewtwo V-UNION|
+012/020|Mewtwo V-UNION|
+013/020|Zacian V-UNION|
+014/020|Zacian V-UNION|
+015/020|Zacian V-UNION|
+016/020|Zacian V-UNION|
+017/020|Morpeko V-UNION|
+018/020|Morpeko V-UNION|
+019/020|Morpeko V-UNION|
+020/020|Morpeko V-UNION|
