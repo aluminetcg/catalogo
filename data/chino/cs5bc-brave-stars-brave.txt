@@ -1,0 +1,179 @@
+# set: CS5bC Brave Stars (Brave)
+001/128|Bulbasaur|C
+002/128|Ivysaur|U
+003/128|Venusaur|R
+004/128|Radiant Venusaur|K
+005/128|Oddish|C
+006/128|Gloom|U
+007/128|Vileplume|R
+008/128|Hisuian Voltorb|C
+009/128|Hisuian Electrode|U
+010/128|Scyther|C
+011/128|Yanma|C
+012/128|Yanmega|U
+013/128|Wurmple|C
+014/128|Silcoon|U
+015/128|Beautifly|R
+016/128|Cascoon|U
+017/128|Dustox|U
+018/128|Shroomish|C
+019/128|Breloom|U
+020/128|Roselia|C
+021/128|Roserade|U
+022/128|Turtwig|C
+023/128|Grotle|U
+024/128|Torterra|R
+025/128|Burmy|C
+026/128|Wormadam|U
+027/128|Mothim|U
+028/128|Combee|C
+029/128|Vespiquen|U
+030/128|Shaymin V|RR
+031/128|Shaymin VSTAR|RRR
+032/128|Serperior V|RR
+033/128|Serperior VSTAR|RRR
+034/128|Petilil|C
+035/128|Hisuian Lilligant|U
+036/128|Blipbug|C
+037/128|Dottler|U
+038/128|Orbeetle|R
+039/128|Slowpoke|C
+040/128|Slowbro|U
+041/128|Starmie V|RR
+042/128|Swinub|C
+043/128|Piloswine|U
+044/128|Mamoswine|U
+045/128|Mantine|C
+046/128|Suicune V|RR
+047/128|Luvdisc|C
+048/128|Shellos|C
+049/128|Lumineon V|RR
+050/128|Origin Forme Palkia V|RR
+051/128|Origin Forme Palkia VSTAR|RRR
+052/128|Manaphy|U
+053/128|Hisuian Basculin|C
+054/128|Hisuian Basculegion|R
+055/128|Bergmite|C
+056/128|Hisuian Avalugg|U
+057/128|Hisuian Growlithe|C
+058/128|Hisuian Arcanine|U
+059/128|Machamp V|RR
+060/128|Machamp VMAX|RRR
+061/128|Rhyhorn|C
+062/128|Rhydon|U
+063/128|Rhyperior|U
+064/128|Sudowoodo|C
+065/128|Gligar|C
+066/128|Gliscor|U
+067/128|Nosepass|C
+068/128|Cranidos|U
+069/128|Rampardos|R
+070/128|Wormadam|U
+071/128|Gastrodon|U
+072/128|Riolu|C
+073/128|Lucario|R
+074/128|Lucario V|RR
+075/128|Lucario VSTAR|RRR
+076/128|Gallade V|RR
+077/128|Conkeldurr V|RR
+078/128|Throh|C
+079/128|Sawk|C
+080/128|Radiant Hawlucha|K
+081/128|Falinks|C
+082/128|Kleavor|R
+083/128|Kleavor V|RR
+084/128|Kleavor VSTAR|RRR
+085/128|Magnemite|C
+086/128|Magneton|U
+087/128|Magnezone|R
+088/128|Radiant Steelix|K
+089/128|Shieldon|U
+090/128|Bastiodon|R
+091/128|Wormadam|U
+092/128|Bronzor|C
+093/128|Bronzong|U
+094/128|Probopass|U
+095/128|Origin Forme Dialga V|RR
+096/128|Origin Forme Dialga VSTAR|RRR
+097/128|Heatran|U
+098/128|Klink|C
+099/128|Klang|U
+100/128|Klinklang|U
+101/128|Pawniard|C
+102/128|Bisharp|U
+103/128|Melmetal V|RR
+104/128|Melmetal VMAX|RRR
+105/128|Goomy|C
+106/128|Hisuian Sliggoo|U
+107/128|Hisuian Goodra|R
+108/128|Aipom|C
+109/128|Ambipom|U
+110/128|Slaking V|RR
+111/128|Bidoof|C
+112/128|Bibarel|C
+113/128|Oranguru V|RR
+114/128|Wait and See Turbo|U
+115/128|Sweet Honey|U
+116/128|Switch Cart|U
+117/128|Unidentified Fossil|C
+118/128|Ultra Ball|U
+119/128|Choice Belt|U
+120/128|Leafy Camo Poncho|U
+121/128|Irida|R
+122/128|Iscan|U
+123/128|Adaman|R
+124/128|Choy|U
+125/128|Roseanne's Backup|U
+126/128|Furisode Girl|C
+127/128|Lake Acuity|U
+128/128|Temple of Sinnoh|U
+129/128|Hisuian Voltorb|AR
+130/128|Manaphy|AR
+131/128|Magnezone|AR
+132/128|Hisuian Goodra|AR
+133/128|Shaymin V|SR
+134/128|Serperior V|SR
+135/128|Starmie V|SR
+136/128|Lumineon V|SR
+137/128|Lumineon V|SR
+138/128|Origin Forme Palkia V|SR
+139/128|Origin Forme Palkia V|SR
+140/128|Machamp V|SR
+141/128|Machamp V|SR
+142/128|Lucario V|SR
+143/128|Gallade V|SR
+144/128|Conkeldurr V|SR
+145/128|Kleavor V|SR
+146/128|Origin Forme Dialga V|SR
+147/128|Origin Forme Dialga V|SR
+148/128|Melmetal V|SR
+149/128|Slaking V|SR
+150/128|Oranguru V|SR
+151/128|Irida|SR
+152/128|Iscan|SR
+153/128|Adaman|SR
+154/128|Choy|SR
+155/128|Roseanne's Backup|SR
+156/128|Suicune V|SAR
+157/128|Lumineon V|SAR
+158/128|Lucario VSTAR|SAR
+159/128|Shaymin VSTAR|HR
+160/128|Serperior VSTAR|HR
+161/128|Origin Forme Palkia VSTAR|HR
+162/128|Machamp VMAX|HR
+163/128|Lucario VSTAR|HR
+164/128|Kleavor VSTAR|HR
+165/128|Origin Forme Dialga VSTAR|HR
+166/128|Melmetal VMAX|HR
+167/128|Irida|HR
+168/128|Iscan|HR
+169/128|Adaman|HR
+170/128|Choy|HR
+171/128|Roseanne's Backup|HR
+172/128|Serperior VSTAR|UR
+173/128|Origin Forme Palkia VSTAR|UR
+174/128|Origin Forme Dialga VSTAR|UR
+175/128|Ultra Ball|UR
+176/128|Choice Belt|UR
+177/128|Leafy Camo Poncho|UR
+178/128|Temple of Sinnoh|UR
