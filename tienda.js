@@ -230,6 +230,13 @@
       var s = state.f[i.dataset.k]; if (i.checked) s.add(i.dataset.v); else s["delete"](i.dataset.v); apply(true);
     });
   }
+  // símbolo de maná de cada color (imágenes de símbolos que ofrece Scryfall para apps de Magic)
+  var MANA = { Blanco: "W", Azul: "U", Negro: "B", Rojo: "R", Verde: "G", Incoloro: "C" };
+  function mana(v) {
+    if (MANA[v]) return '<img src="https://svgs.scryfall.io/card-symbols/' + MANA[v] + '.svg" alt="" width="18" height="18" style="flex:none">';
+    var bg = v === "Multicolor" ? "linear-gradient(135deg,#f8e7b9,#c9a54a)" : v === "Tierra" ? "#a5876a" : "";
+    return bg ? '<span style="flex:none;width:18px;height:18px;border-radius:50%;background:' + bg + ';box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)"></span>' : "";
+  }
   function facetCounts() {
     FACETS.forEach(function (f) {
       var k = f[0], counts = new Map();
@@ -248,7 +255,7 @@
       var ob = $("#opts-" + k), hd = ob.previousElementSibling && ob.previousElementSibling.previousElementSibling;
       if (hd && hd.tagName === "H3") hd.hidden = !items.length;     // sin opciones (p. ej. Color cuando no hay Magic): ocultar el t\u00edtulo
       $("#opts-" + k).innerHTML = items.slice(0, lim).map(function (x) {
-        return '<label class="opt' + (x[1] ? "" : " zero") + '"><input type="checkbox" data-k="' + k + '" data-v="' + esc(x[0]) + '"' + (state.f[k].has(x[0]) ? " checked" : "") + "><span>" + esc(x[0]) + '</span><span class="n">' + x[1].toLocaleString("es-AR") + "</span></label>";
+        return '<label class="opt' + (x[1] ? "" : " zero") + '"><input type="checkbox" data-k="' + k + '" data-v="' + esc(x[0]) + '"' + (state.f[k].has(x[0]) ? " checked" : "") + ">" + (k === "color" ? mana(x[0]) : "") + "<span>" + esc(x[0]) + '</span><span class="n">' + x[1].toLocaleString("es-AR") + "</span></label>";
       }).join("") + btn;
     });
   }
