@@ -1,0 +1,168 @@
+# set: CSV1C Eternal Birth
+001/127|Pineco|C
+002/127|Heracross|U
+003/127|Cacnea|C
+004/127|Cacturne|U
+005/127|Tropius|C
+006/127|Rowlet|C
+007/127|Dartrix|U
+008/127|Decidueye ex|RR
+009/127|Sprigatito|C
+010/127|Floragato|U
+011/127|Meowscarada|U
+012/127|Tarountula|C
+013/127|Spidops ex|RR
+014/127|Smoliv|C
+015/127|Dolliv|C
+016/127|Arboliva|R
+017/127|Toedscool|C
+018/127|Toedscruel|U
+019/127|Capsakid|C
+020/127|Scovillain|U
+021/127|Houndour|C
+022/127|Houndoom|C
+023/127|Victini ex|RR
+024/127|Fuecoco|C
+025/127|Crocalor|U
+026/127|Skeledirge|U
+027/127|Charcadet|C
+028/127|Armarouge|R
+029/127|Slowpoke|C
+030/127|Slowbro|R
+031/127|Alomomola|C
+032/127|Clauncher|C
+033/127|Clawitzer|C
+034/127|Bruxish|C
+035/127|Quaxly|C
+036/127|Quaxwell|U
+037/127|Quaquaval|U
+038/127|Wiglett|C
+039/127|Wugtrio|U
+040/127|Dondozo|R
+041/127|Tatsugiri|U
+042/127|Magnemite|C
+043/127|Magneton|C
+044/127|Magnezone ex|RR
+045/127|Pachirisu|U
+046/127|Rotom|C
+047/127|Thundurus|R
+048/127|Toxel|C
+049/127|Toxtricity|U
+050/127|Miraidon ex|RR
+051/127|Drowzee|C
+052/127|Hypno|U
+053/127|Shuppet|C
+054/127|Banette ex|RR
+055/127|Spiritomb|R
+056/127|Flabébé|C
+057/127|Floette|C
+058/127|Florges|U
+059/127|Dedenne|C
+060/127|Klefki|R
+061/127|Fidough|C
+062/127|Dachsbun|U
+063/127|Flittle|C
+064/127|Espathra|U
+065/127|Tinkatink|C
+066/127|Tinkatuff|U
+067/127|Tinkaton|R
+068/127|Tinkaton ex|RR
+069/127|Mankey|C
+070/127|Primeape|C
+071/127|Annihilape|R
+072/127|Meditite|C
+073/127|Medicham|U
+074/127|Riolu|C
+075/127|Lucario ex|RR
+076/127|Sandile|C
+077/127|Krokorok|C
+078/127|Krookodile|U
+079/127|Hawlucha|R
+080/127|Silicobra|C
+081/127|Sandaconda|U
+082/127|Stonjourner|U
+083/127|Great Tusk ex|RR
+084/127|Koraidon ex|RR
+085/127|Seviper|C
+086/127|Absol ex|RR
+087/127|Croagunk|C
+088/127|Toxicroak ex|RR
+089/127|Pawniard|C
+090/127|Bisharp|C
+091/127|Kingambit|R
+092/127|Shroodle|C
+093/127|Grafaiai|U
+094/127|Bombirdier|U
+095/127|Forretress|U
+096/127|Varoom|C
+097/127|Revavroom|R
+098/127|Iron Treads ex|RR
+099/127|Skwovet|C
+100/127|Greedent|U
+101/127|Indeedee|R
+102/127|Tandemaus|C
+103/127|Maushold|U
+104/127|Squawkabilly|C
+105/127|Cyclizar|U
+106/127|Cyclizar ex|RR
+107/127|Electric Generator|U
+108/127|Crushing Hammer|C
+109/127|Super Rod|C
+110/127|Grabber|U
+111/127|Pal Pad|C
+112/127|Ultra Ball|U
+113/127|Switch|C
+114/127|Rock Chestplate|U
+115/127|Exp. Share|U
+116/127|Choice Belt|U
+117/127|Defiance Band|U
+118/127|Bravery Charm|U
+119/127|Giovanni's Charisma|U
+120/127|Jacq|U
+121/127|Professor's Research|R
+122/127|Professor's Research|R
+123/127|Arven|U
+124/127|Penny|U
+125/127|Miriam|U
+126/127|Mesagoza|U
+127/127|Luminous Energy|U
+128/127|Tarountula|AR
+129/127|Dolliv|AR
+130/127|Wiglett|AR
+131/127|Wugtrio|AR
+132/127|Dondozo|AR
+133/127|Tinkatink|AR
+134/127|Tinkatuff|AR
+135/127|Grafaiai|AR
+136/127|Spidops ex|SR
+137/127|Magnezone ex|SR
+138/127|Miraidon ex|SR
+139/127|Banette ex|SR
+140/127|Tinkaton ex|SR
+141/127|Great Tusk ex|SR
+142/127|Koraidon ex|SR
+143/127|Absol ex|SR
+144/127|Toxicroak ex|SR
+145/127|Iron Treads ex|SR
+146/127|Giovanni's Charisma|SR
+147/127|Jacq|SR
+148/127|Professor's Research|SR
+149/127|Professor's Research|SR
+150/127|Arven|SR
+151/127|Penny|SR
+152/127|Miriam|SR
+153/127|Spidops ex|SAR
+154/127|Miraidon ex|SAR
+155/127|Tinkaton ex|SAR
+156/127|Great Tusk ex|SAR
+157/127|Koraidon ex|SAR
+158/127|Iron Treads ex|SAR
+159/127|Giovanni's Charisma|SAR
+160/127|Jacq|SAR
+161/127|Arven|SAR
+162/127|Penny|SAR
+163/127|Miriam|SAR
+164/127|Miraidon ex|UR
+165/127|Koraidon ex|UR
+166/127|Super Rod|UR
+167/127|Switch|UR
