@@ -1,0 +1,223 @@
+# set: CS1DC Dynamax Clash V Starter Deck
+001/207|Venusaur V|
+002/207|Butterfree V|
+003/207|Butterfree VMAX|
+004/207|Weedle|
+005/207|Kakuna|
+006/207|Beedrill|
+007/207|Heracross|
+008/207|Celebi V|
+009/207|Roselia|
+010/207|Roserade|
+011/207|Snover|
+012/207|Abomasnow|
+013/207|Cottonee|
+014/207|Whimsicott|
+015/207|Durant|
+016/207|Phantump|
+017/207|Trevenant|
+018/207|Grookey|
+019/207|Thwackey|
+020/207|Rillaboom|
+021/207|Blipbug|
+022/207|Gossifleur|
+023/207|Eldegoss|
+024/207|Vulpix|
+025/207|Ninetales|
+026/207|Heatran|
+027/207|Victini V|
+028/207|Heatmor|
+029/207|Larvesta|
+030/207|Volcarona|
+031/207|Fletchinder|
+032/207|Talonflame|
+033/207|Incineroar V|
+034/207|Salandit|
+035/207|Salazzle|
+036/207|Turtonator|
+037/207|Scorbunny|
+038/207|Raboot|
+039/207|Cinderace|
+040/207|Sizzlipede|
+041/207|Centiskorch|
+042/207|Shellder|
+043/207|Cloyster|
+044/207|Magikarp|
+045/207|Gyarados|
+046/207|Lapras|
+047/207|Suicune|
+048/207|Wingull|
+049/207|Pelipper|
+050/207|Wailord V|
+051/207|Tympole|
+052/207|Palpitoad|
+053/207|Seismitoad|
+054/207|Cubchoo|
+055/207|Beartic|
+056/207|Keldeo V|
+057/207|Sobble|
+058/207|Drizzile|
+059/207|Inteleon|
+060/207|Cramorant|
+061/207|Pikachu|
+062/207|Raichu|
+063/207|Pikachu V|
+064/207|Electabuzz|
+065/207|Electivire|
+066/207|Voltorb|
+067/207|Electrode|
+068/207|Mareep|
+069/207|Flaaffy|
+070/207|Ampharos|
+071/207|Joltik|
+072/207|Galvantula|
+073/207|Helioptile|
+074/207|Heliolisk|
+075/207|Tapu Koko V|
+076/207|Yamper|
+077/207|Boltund|
+078/207|Pincurchin|
+079/207|Pincurchin|
+080/207|Morpeko|
+081/207|Morpeko|
+082/207|Galarian Ponyta|
+083/207|Galarian Rapidash|
+084/207|Mew V|
+085/207|Natu|
+086/207|Xatu|
+087/207|Snubbull|
+088/207|Granbull|
+089/207|Gardevoir V|
+090/207|Sigilyph|
+091/207|Hatenna|
+092/207|Hattrem|
+093/207|Hatterene|
+094/207|Milcery|
+095/207|Alcremie|
+096/207|Indeedee|
+097/207|Diglett|
+098/207|Dugtrio|
+099/207|Rhyhorn|
+100/207|Rhyhorn|
+101/207|Rhydon|
+102/207|Rhyperior|
+103/207|Sudowoodo|
+104/207|Regirock V|
+105/207|Lucario V|
+106/207|Binacle|
+107/207|Barbaracle|
+108/207|Zygarde|
+109/207|Mudbray|
+110/207|Mudsdale|
+111/207|Silicobra|
+112/207|Sandaconda|
+113/207|Stonjourner|
+114/207|Ekans|
+115/207|Arbok|
+116/207|Galarian Slowbro V|
+117/207|Absol|
+118/207|Stunky|
+119/207|Skuntank|
+120/207|Spiritomb|
+121/207|Skorupi|
+122/207|Drapion|
+123/207|Deino|
+124/207|Zweilous|
+125/207|Hydreigon|
+126/207|Nickit|
+127/207|Thievul|
+128/207|Grimmsnarl V|
+129/207|Grimmsnarl VMAX|
+130/207|Galarian Meowth|
+131/207|Galarian Perrserker|
+132/207|Mawile|
+133/207|Aron|
+134/207|Lairon|
+135/207|Aggron|
+136/207|Bronzor|
+137/207|Bronzong|
+138/207|Ferroseed|
+139/207|Ferrothorn|
+140/207|Durant|
+141/207|Meltan|
+142/207|Melmetal|
+143/207|Copperajah V|
+144/207|Duraludon|
+145/207|Duraludon|
+146/207|Duraludon V|
+147/207|Zacian|
+148/207|Zamazenta|
+149/207|Tauros|
+150/207|Eevee V|
+151/207|Eevee VMAX|
+152/207|Snorlax|
+153/207|Sentret|
+154/207|Furret|
+155/207|Lugia|
+156/207|Rayquaza|
+157/207|Minccino|
+158/207|Fletchling|
+159/207|Hawlucha|
+160/207|Drampa|
+161/207|Wooloo|
+162/207|Dubwool|
+163/207|Indeedee|
+164/207|Energy Retrieval|
+165/207|Energy Switch|
+166/207|Energy Search|
+167/207|Potion|
+168/207|Quick Ball|
+169/207|Crushing Hammer|
+170/207|Evolution Incense|
+171/207|Great Ball|
+172/207|Hyper Potion|
+173/207|Rotom Phone|
+174/207|Pal Pad|
+175/207|Full Heal|
+176/207|Rare Candy|
+177/207|Ordinary Rod|
+178/207|Pokégear 3.0|
+179/207|Switch|
+180/207|Pokémon Catcher|
+181/207|Old PC|
+182/207|Metal Saucer|
+183/207|Poké Ball|
+184/207|Rotom Bike|
+185/207|Big Charm|
+186/207|Sitrus Berry|
+187/207|Vitality Band|
+188/207|Lucky Egg|
+189/207|Air Balloon|
+190/207|Burning Scarf|
+191/207|Lum Berry|
+192/207|Team Yell Grunt|
+193/207|Gym Trainer|
+194/207|Sonia|
+195/207|Dan|
+196/207|Professor's Research|
+197/207|Bede|
+198/207|Skyla|
+199/207|Pokémon Center Lady|
+200/207|Boss's Orders|
+201/207|Hop|
+202/207|Marnie|
+203/207|Milo|
+204/207|Turffield Stadium|
+205/207|Training Court|
+206/207|Glimwood Tangle|
+207/207|Aurora Energy|
+208/207|Gossifleur|
+209/207|Eldegoss|
+210/207|Yamper|
+211/207|Boltund|
+212/207|Milcery|
+213/207|Alcremie|
+214/207|Silicobra|
+215/207|Sandaconda|
+216/207|Nickit|
+217/207|Thievul|
+218/207|Butterfree V|
+219/207|Sonia|
+220/207|Pokémon Center Lady|
+221/207|Butterfree VMAX|
+222/207|Sonia|
