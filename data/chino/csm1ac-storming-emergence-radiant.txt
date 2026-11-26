@@ -1,0 +1,212 @@
+# set: CSM1aC Storming Emergence (Radiant)
+001/151|Scyther|C
+002/151|Charmander|C
+003/151|Charmeleon|U
+004/151|Charizard-GX|RR
+005/151|Alolan Marowak|U
+006/151|Moltres|U
+007/151|Cyndaquil|C
+008/151|Quilava|C
+009/151|Typhlosion|R
+010/151|Slugma|C
+011/151|Magcargo|U
+012/151|Magcargo-GX|RR
+013/151|Entei-GX|RR
+014/151|Ho-Oh-GX|RR
+015/151|Torchic|C
+016/151|Combusken|C
+017/151|Blaziken-GX|RR
+018/151|Chimchar|C
+019/151|Monferno|C
+020/151|Infernape|R
+021/151|Heat Rotom|U
+022/151|Victini|R
+023/151|Victini Prism Star|PR
+024/151|Reshiram-GX|RR
+025/151|Fennekin|C
+026/151|Braixen|C
+027/151|Delphox|R
+028/151|Litleo|C
+029/151|Pyroar|R
+030/151|Turtonator-GX|RR
+031/151|Mewtwo-GX|RR
+032/151|Natu|C
+033/151|Xatu|C
+034/151|Espeon-GX|RR
+035/151|Unown|U
+036/151|Unown|U
+037/151|Unown|U
+038/151|Seviper|U
+039/151|Shuppet|C
+040/151|Banette|U
+041/151|Banette-GX|RR
+042/151|Rotom|U
+043/151|Giratina Prism Star|PR
+044/151|Yamask|C
+045/151|Cofagrigus|U
+046/151|Trubbish|C
+047/151|Garbodor|U
+048/151|Inkay|C
+049/151|Malamar|U
+050/151|Pumpkaboo|C
+051/151|Gourgeist|U
+052/151|Hoopa|C
+053/151|Oricorio|U
+054/151|Tapu Lele-GX|RR
+055/151|Cosmog|C
+056/151|Cosmoem|C
+057/151|Lunala-GX|RR
+058/151|Nihilego-GX|RR
+059/151|Necrozma-GX|RR
+060/151|Marshadow|R
+061/151|Poipole|C
+062/151|Naganadel|R
+063/151|Naganadel-GX|RR
+064/151|Cubone|C
+065/151|Alolan Diglett|C
+066/151|Alolan Dugtrio|R
+067/151|Magnemite|C
+068/151|Magneton|C
+069/151|Magnezone|R
+070/151|Scizor-GX|RR
+071/151|Skarmory|C
+072/151|Mawile|C
+073/151|Beldum|C
+074/151|Metang|C
+075/151|Metagross|R
+076/151|Metagross-GX|RR
+077/151|Jirachi|R
+078/151|Jirachi Prism Star|PR
+079/151|Bronzor|C
+080/151|Bronzong|U
+081/151|Dialga-GX|RR
+082/151|Ferroseed|C
+083/151|Ferrothorn|U
+084/151|Durant|C
+085/151|Cobalion-GX|RR
+086/151|Genesect-GX|RR
+087/151|Honedge|C
+088/151|Doublade|C
+089/151|Aegislash|R
+090/151|Solgaleo-GX|RR
+091/151|Celesteela|R
+092/151|Kartana|U
+093/151|Kartana-GX|RR
+094/151|Magearna|U
+095/151|Stakataka-GX|RR
+096/151|Bagon|C
+097/151|Shelgon|U
+098/151|Salamence|R
+099/151|Salamence-GX|RR
+100/151|Goomy|C
+101/151|Sliggoo|C
+102/151|Goodra|R
+103/151|Jangmo-o|C
+104/151|Hakamo-o|C
+105/151|Kommo-o|R
+106/151|Ultra Necrozma-GX|RR
+107/151|Chansey|C
+108/151|Blissey|R
+109/151|Eevee|C
+110/151|Porygon|C
+111/151|Porygon2|C
+112/151|Porygon-Z|R
+113/151|Ho-Oh|U
+114/151|Fan Rotom|U
+115/151|Fletchling|C
+116/151|Fletchinder|C
+117/151|Talonflame|U
+118/151|Oranguru|R
+119/151|Beast Ball|C
+120/151|Energy Retrieval|U
+121/151|Order Pad|C
+122/151|Enhanced Hammer|U
+123/151|Nest Ball|U
+124/151|Fiery Flint|U
+125/151|Beast Ring|U
+126/151|Field Blower|U
+127/151|Multi Switch|U
+128/151|Max Potion|U
+129/151|Escape Board|U
+130/151|Exp. Share|U
+131/151|Metal Frying Pan|U
+132/151|Choice Helmet|U
+133/151|Spell Tag|U
+134/151|Hustle Belt|U
+135/151|Metal Goggles|U
+136/151|Lady|U
+137/151|Kiawe|U
+138/151|Guzma|U
+139/151|Faba|U
+140/151|Steven's Resolve|R
+141/151|Ingo & Emmet|U
+142/151|Tate & Liza|U
+143/151|Plumeria|U
+144/151|Jasmine|U
+145/151|Lusamine Prism Star|PR
+146/151|Altar of the Moone|U
+147/151|Altar of the Sunne|U
+148/151|Heat Factory Prism Star|PR
+149/151|Lysandre Labs|U
+150/151|Beast Energy Prism Star|PR
+151/151|Rainbow Energy|U
+152/151|Scyther|S
+153/151|Charmander|S
+154/151|Charmeleon|S
+155/151|Seviper|S
+156/151|Shuppet|S
+157/151|Inkay|S
+158/151|Malamar|S
+159/151|Poipole|S
+160/151|Magnemite|S
+161/151|Magneton|S
+162/151|Magnezone|S
+163/151|Beldum|S
+164/151|Metang|S
+165/151|Celesteela|S
+166/151|Kartana|S
+167/151|Oranguru|S
+168/151|Charizard-GX|SR
+169/151|Ho-Oh-GX|SR
+170/151|Reshiram-GX|SR
+171/151|Mewtwo-GX|SR
+172/151|Espeon-GX|SR
+173/151|Banette-GX|SR
+174/151|Tapu Lele-GX|SR
+175/151|Lunala-GX|SR
+176/151|Naganadel-GX|SR
+177/151|Metagross-GX|SR
+178/151|Solgaleo-GX|SR
+179/151|Kartana-GX|SR
+180/151|Stakataka-GX|SR
+181/151|Ultra Necrozma-GX|SR
+182/151|Lady|SR
+183/151|Kiawe|SR
+184/151|Guzma|SR
+185/151|Steven's Resolve|SR
+186/151|Ingo & Emmet|SR
+187/151|Tate & Liza|SR
+188/151|Plumeria|SR
+189/151|Jasmine|SR
+190/151|Charizard-GX|SSR
+191/151|Ho-Oh-GX|SSR
+192/151|Reshiram-GX|SSR
+193/151|Turtonator-GX|SSR
+194/151|Mewtwo-GX|SSR
+195/151|Espeon-GX|SSR
+196/151|Banette-GX|SSR
+197/151|Naganadel-GX|SSR
+198/151|Scizor-GX|SSR
+199/151|Metagross-GX|SSR
+200/151|Kartana-GX|SSR
+201/151|Stakataka-GX|SSR
+202/151|Tapu Lele-GX|UR
+203/151|Lunala-GX|UR
+204/151|Solgaleo-GX|UR
+205/151|Ultra Necrozma-GX|UR
+206/151|Nest Ball|UR
+207/151|Field Blower|UR
+208/151|Beast Ring|UR
+209/151|Escape Board|UR
+210/151|Metal Frying Pan|UR
+211/151|Rainbow Energy|UR

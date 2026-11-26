@@ -105,7 +105,7 @@ let base = {};   // set -> {numero: [nombre, rareza]}
 // encabezado copiado de la página del set: "Storming Emergence (Radiant)Storming Emergence (Radiant)CSM1aC"
 function detectaSet(texto) {
   for (const l of texto.split(/\r?\n/).slice(0, 6).map(x => x.trim())) {
-    const m = l.match(/^(.+?)\1\s*([A-Za-z]{1,4}\d[A-Za-z0-9.]*)$/) || l.match(/^(.+?)\s+([A-Z]{2,4}\d+[a-z]?C)$/);
+    const m = l.match(/^(.+?)\1\s*([A-Z][A-Za-z0-9.-]{0,7})$/) || l.match(/^(.+?)\s+([A-Z]{2,4}\d+[a-z]?C)$/);
     if (m) return (m[2] + " " + m[1].trim()).replace(/\s+/g, " ");
   }
   const L = texto.split(/\r?\n/).map(x => x.trim()).filter(Boolean);     // "Sun & Moon Promos" + "SMP" en dos líneas

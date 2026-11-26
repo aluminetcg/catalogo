@@ -1,0 +1,221 @@
+# set: SP Sword & Shield Promos
+001/S-P|Roselia|
+002/S-P|Flareon|
+003/S-P|Vaporeon|
+004/S-P|Eiscue V|
+005/S-P|Pikachu|
+006/S-P|Jolteon|
+007/S-P|Luxio|
+008/S-P|Sandaconda|
+009/S-P|Trubbish|
+010/S-P|Eevee|
+011/S-P|Noctowl|
+012/S-P|Hop|
+013/S-P|Scorbunny|
+014/S-P|Grookey|
+015/S-P|Sobble|
+016/S-P|Gossifleur|
+017/S-P|Vulpix|
+018/S-P|Snom|
+019/S-P|Morpeko|
+020/S-P|Hatenna|
+021/S-P|Clobbopus|
+022/S-P|Nickit|
+023/S-P|Eevee|
+024/S-P|Wooloo|
+025/S-P|Victini V|
+026/S-P|Cinderace|
+027/S-P|Eevee|
+028/S-P|Pikachu|
+029/S-P|Raichu-GX|
+030/S-P|Magnemite|
+031/S-P|Magneton|
+032/S-P|Electabuzz|
+033/S-P|Electivire|
+034/S-P|Zapdos|
+035/S-P|Mareep|
+036/S-P|Flaaffy|
+037/S-P|Xurkitree|
+038/S-P|Lightning Energy|
+039/S-P|Orbeetle V|
+040/S-P|Charmander|
+041/S-P|Mantine|
+042/S-P|Galarian Mr. Rime|
+043/S-P|Chinchou|
+044/S-P|Pincurchin|
+045/S-P|Dedenne|
+046/S-P|Polteageist|
+047/S-P|Rockruff|
+048/S-P|Lycanroc|
+049/S-P|Spinarak|
+050/S-P|Bunnelby|
+051/S-P|Applin|
+052/S-P|Victini|
+053/S-P|Scorbunny|
+054/S-P|Krabby|
+055/S-P|Milotic|
+056/S-P|Morpeko|
+057/S-P|Phanpy|
+058/S-P|Trapinch|
+059/S-P|Koffing|
+060/S-P|Cufant|
+061/S-P|Snorlax|
+062/S-P|Lugia|
+063/S-P|Sobble|
+064/S-P|Indeedee V|
+065/S-P|Galarian Zigzagoon|
+066/S-P|Pikachu|
+067/S-P|Pikachu V|
+068/S-P|Chinchou|
+069/S-P|Lanturn|
+070/S-P|Blitzle|
+071/S-P|Helioptile|
+072/S-P|Heliolisk|
+073/S-P|Dedenne|
+074/S-P|Togedemaru|
+075/S-P|Zeraora|
+076/S-P|Lightning Energy|
+077/S-P|Marnie|
+078/S-P|Marnie|
+079/S-P|Charizard VMAX|
+080/S-P|Charizard VMAX|
+081/S-P|Friends in Alola|
+082/S-P|Friends in Galar|
+083/S-P|Zacian V|
+084/S-P|Zamazenta V|
+085/S-P|Zacian V|
+086/S-P|Zamazenta V|
+087/S-P|Eternatus V|
+088/S-P|Eternatus VMAX|
+089/S-P|Eternatus V|
+090/S-P|Eternatus VMAX|
+091/S-P|Breloom V|
+092/S-P|Cherubi|
+093/S-P|Leafeon|
+094/S-P|Dartrix|
+095/S-P|Tepig|
+096/S-P|Galarian Mr. Mime|
+097/S-P|Blitzle|
+098/S-P|Espeon|
+099/S-P|Koffing|
+100/S-P|Dodrio V|
+101/S-P|Eevee|
+102/S-P|Spicy Seasoned Curry|
+103/S-P|Cherubi|
+104/S-P|Snorunt|
+105/S-P|Galarian Slowpoke|
+106/S-P|Hatterene V|
+107/S-P|Krokorok|
+108/S-P|Honey|
+109/S-P|Pikachu V-UNION|
+110/S-P|Pikachu V-UNION|
+111/S-P|Pikachu V-UNION|
+112/S-P|Pikachu V-UNION|
+113/S-P|Grubbin|
+114/S-P|Snorunt|
+115/S-P|Glaceon|
+116/S-P|Galarian Mr. Rime V|
+117/S-P|Toxel|
+118/S-P|Oricorio|
+119/S-P|Graveler|
+120/S-P|Croagunk|
+121/S-P|Flapple|
+122/S-P|Dracovish V|
+123/S-P|Eevee|
+124/S-P|Blunder Policy|
+125/S-P|Scorbunny|
+126/S-P|Piplup|
+127/S-P|Eevee|
+128/S-P|Sylveon|
+129/S-P|Umbreon|
+130/S-P|Rayquaza V|
+131/S-P|Duraludon V|
+132/S-P|Olivia|
+133/S-P|Olivia|
+134/S-P|Kahili|
+135/S-P|Kahili|
+136/S-P|Mina|
+137/S-P|Mina|
+138/S-P|Morpeko|
+139/S-P|Irida|
+140/S-P|Adaman|
+141/S-P|Irida|
+142/S-P|Adaman|
+143/S-P|Charizard VSTAR|
+144/S-P|Mewtwo VSTAR|
+145/S-P|Infernape V|
+146/S-P|Manaphy|
+147/S-P|Pincurchin|
+148/S-P|Gengar|
+149/S-P|Togetic|
+150/S-P|Lucario|
+151/S-P|Ursaluna V|
+152/S-P|Weavile|
+153/S-P|Inkay|
+154/S-P|Pawniard|
+155/S-P|Starly|
+156/S-P|Professor Laventon|
+157/S-P|Rowlet|
+158/S-P|Cyndaquil|
+159/S-P|Oshawott|
+160/S-P|Hisuian Samurott V|
+161/S-P|Bibarel|
+162/S-P|Riley|
+163/S-P|Charizard|
+164/S-P|Lance's Charizard V|
+165/S-P|Cubchoo|
+166/S-P|Beartic|
+167/S-P|Makuhita|
+168/S-P|Hariyama|
+169/S-P|Crobat V|
+170/S-P|Seviper|
+171/S-P|Teddiursa|
+172/S-P|Ursaring|
+173/S-P|Ultra Ball|
+174/S-P|Rescue Carrier|
+175/S-P|Charizard V|
+176/S-P|Sunkern|
+177/S-P|Golduck|
+178/S-P|Kyogre V|
+179/S-P|Hisuian Basculin|
+180/S-P|Rotom V|
+181/S-P|Eelektrik|
+182/S-P|Enamorus|
+183/S-P|Landorus|
+184/S-P|Absol|
+185/S-P|Metang|
+186/S-P|Aerodactyl|
+187/S-P|Peaceful Park|
+188/S-P|Ponyta|
+189/S-P|Psyduck|
+190/S-P|Clefairy|
+191/S-P|Hisuian Typhlosion V|
+192/S-P|Liepard|
+193/S-P|Digging Duo|
+194/S-P|Hisuian Voltorb|
+195/S-P|Hisuian Heavy Ball|
+196/S-P|Feather Ball|
+197/S-P|Arceus V|
+198/S-P|Arceus V|
+199/S-P|Corphish|
+200/S-P|Crawdaunt|
+201/S-P|Lumineon V|
+202/S-P|Swanna|
+203/S-P|Eiscue|
+204/S-P|Gengar|
+205/S-P|Dark Sylveon V|
+206/S-P|Glameow|
+207/S-P|Purugly|
+208/S-P|Lickilicky|
+209/S-P|Trekking Shoes|
+210/S-P|Lost Vacuum|
+211/S-P|Gengar VMAX|
+212/S-P|Tyranitar V|
+213/S-P|Friends in Sinnoh|
+214/S-P|Friends in Hisui|
+215/S-P|Friends in Sinnoh|
+216/S-P|Friends in Hisui|
+217/S-P|Lugia V|
+218/S-P|Zeraora V|
+219/S-P|Zeraora VMAX|
+220/S-P|Zeraora VSTAR|
