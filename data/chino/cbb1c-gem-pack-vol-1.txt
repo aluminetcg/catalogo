@@ -1,0 +1,116 @@
+# set: CBB1C Gem Pack Vol. 1
+0101/09|Sprigatito|C
+0102/09|Sprigatito|C
+0103/09|Sprigatito|U
+0104/09|Sprigatito|U
+0105/09|Sprigatito|R
+0106/09|Sprigatito|R
+0107/09|Sprigatito|RR
+0108/09|Sprigatito|RRR
+0109/09|Sprigatito|RRR
+0201/08|Floragato|C
+0202/08|Floragato|C
+0203/08|Floragato|U
+0204/08|Floragato|U
+0205/08|Floragato|R
+0206/08|Floragato|R
+0207/08|Floragato|RR
+0208/08|Floragato|RRR
+0301/09|Fuecoco|C
+0302/09|Fuecoco|C
+0303/09|Fuecoco|U
+0304/09|Fuecoco|U
+0305/09|Fuecoco|R
+0306/09|Fuecoco|R
+0307/09|Fuecoco|RR
+0308/09|Fuecoco|RRR
+0309/09|Fuecoco|RRR
+0401/08|Crocalor|C
+0402/08|Crocalor|C
+0403/08|Crocalor|U
+0404/08|Crocalor|U
+0405/08|Crocalor|R
+0406/08|Crocalor|R
+0407/08|Crocalor|RR
+0408/08|Crocalor|RRR
+0501/09|Quaxly|C
+0502/09|Quaxly|C
+0503/09|Quaxly|U
+0504/09|Quaxly|U
+0505/09|Quaxly|R
+0506/09|Quaxly|R
+0507/09|Quaxly|RR
+0508/09|Quaxly|RRR
+0509/09|Quaxly|RRR
+0601/08|Quaxwell|C
+0602/08|Quaxwell|C
+0603/08|Quaxwell|U
+0604/08|Quaxwell|U
+0605/08|Quaxwell|R
+0606/08|Quaxwell|R
+0607/08|Quaxwell|RR
+0608/08|Quaxwell|RRR
+0701/09|Captain Pikachu|C
+0702/09|Captain Pikachu|C
+0703/09|Captain Pikachu|U
+0704/09|Captain Pikachu|U
+0705/09|Captain Pikachu|R
+0706/09|Pikachu|R
+0707/09|Captain Pikachu|RR
+0708/09|Pikachu|RRR
+0709/09|Captain Pikachu|RRR
+0801/05|Vulpix|C
+0802/05|Vulpix|C
+0803/05|Vulpix|U
+0804/05|Vulpix|R
+0805/05|Vulpix|RR
+0901/05|Pawmo|C
+0902/05|Pawmo|C
+0903/05|Pawmo|U
+0904/05|Pawmo|R
+0905/05|Pawmo|RR
+1001/05|Fidough|C
+1002/05|Fidough|C
+1003/05|Fidough|U
+1004/05|Fidough|R
+1005/05|Fidough|RR
+1101/05|Sudowoodo|C
+1102/05|Sudowoodo|C
+1103/05|Sudowoodo|U
+1104/05|Sudowoodo|R
+1105/05|Sudowoodo|RR
+1201/05|Rockruff|C
+1202/05|Rockruff|C
+1203/05|Rockruff|U
+1204/05|Rockruff|R
+1205/05|Rockruff|RR
+1301/05|Paldean Wooper|C
+1302/05|Paldean Wooper|C
+1303/05|Paldean Wooper|U
+1304/05|Paldean Wooper|R
+1305/05|Paldean Wooper|RR
+1401/05|Maschiff|C
+1402/05|Maschiff|C
+1403/05|Maschiff|U
+1404/05|Maschiff|R
+1405/05|Maschiff|RR
+1501/05|Chansey|C
+1502/05|Chansey|C
+1503/05|Chansey|U
+1504/05|Chansey|R
+1505/05|Chansey|RR
+1601/05|Lechonk|C
+1602/05|Lechonk|C
+1603/05|Lechonk|U
+1604/05|Lechonk|R
+1605/05|Lechonk|RR
+1701/04|Poké Ball|RR
+1702/04|Great Ball|RR
+1703/04|Ultra Ball|RR
+1704/04|Nemona|RRR
+1801/06|Basic Grass Energy|RRR
+1802/06|Basic Fire Energy|RRR
+1803/06|Basic Water Energy|RRR
+1804/06|Basic Grass Energy|RRR
+1805/06|Basic Fire Energy|RRR
+1806/06|Basic Water Energy|RRR
