@@ -19,7 +19,7 @@ on:
         default: 100
   push:
     branches: [main]
-    paths: ["index.html", "precios.html", "rarezas.html", "tienda.js", "carga.js", "carga.html", "crawl.py", "precios.py", "singles.py", "data/manual/**", ".github/workflows/actualizar.yml"]
+    paths: ["index.html", "precios.html", "rarezas.html", "tienda.js", "carga.js", "carga.html", "crawl.py", "precios.py", "singles.py", "data/manual/**", "data/chino/**", "chino.html", ".github/workflows/actualizar.yml"]
 
 permissions:
   contents: write
@@ -80,7 +80,7 @@ jobs:
       - name: Armar sitio
         run: |
           mkdir -p _site/data
-          cp index.html precios.html rarezas.html carga.html tienda.js carga.js _site/
+          cp index.html precios.html rarezas.html carga.html chino.html tienda.js carga.js _site/
           cp data/cards.json _site/data/
           echo "{\"v\": \"$(sha1sum data/cards.json | cut -c1-12)\"}" > _site/data/version.json
           if [ -f data/precios.bin ]; then cp data/precios.bin _site/data/; fi

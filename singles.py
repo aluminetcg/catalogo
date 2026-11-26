@@ -19,6 +19,30 @@ OUT = HERE / "_site" / "data" / "singles"
 CATS = {"en": 3, "jp": 85}          # Pokémon inglés y japonés en TCGplayer
 
 
+def chino():
+    """Base china armada a mano con chino.html: data/chino/*.txt ('# set: Nombre' + líneas 'número|nombre|rareza').
+    Si el mismo número de un set aparece en varios archivos, gana el más nuevo (por nombre de archivo)."""
+    porset = {}
+    for f in sorted((HERE / "data" / "chino").glob("*.txt")):
+        s = None
+        for line in f.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line.lower().startswith("# set:"):
+                s = line.split(":", 1)[1].strip()
+            elif line and not line.startswith("#") and s and "|" in line:
+                num, name, rz = (line.split("|") + ["", ""])[:3]
+                if num.strip() and name.strip():
+                    porset.setdefault(s, {})[num.strip().upper()] = (num.strip(), name.strip(), rz.strip())
+    sets, cards = [], []
+    for gi, s in enumerate(sorted(porset)):
+        sets.append([s, ""])
+        for k, (num, name, rz) in sorted(porset[s].items()):
+            cards.append([f"cn|{gi}|{k}", name, num, gi, rz, {}])
+    (OUT / "cn.json").write_text(json.dumps({"stamp": "", "sets": sets, "cards": cards}, ensure_ascii=False, separators=(",", ":")))
+    print(f"Base china: {len(cards)} cartas en {len(sets)} sets")
+    return len(cards)
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     meta = {"files": {}}
@@ -43,6 +67,7 @@ def main():
         f.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
         meta["files"][key] = len(cards)
         print(f"Índice de carga rápida {key}: {len(cards)} cartas en {len(sets)} sets ({f.stat().st_size // 1024} KB)")
+    meta["files"]["cn"] = chino()
     (OUT / "meta.json").write_text(json.dumps(meta, ensure_ascii=False))
 
 

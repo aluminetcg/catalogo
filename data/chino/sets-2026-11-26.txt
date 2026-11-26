@@ -1,0 +1,1728 @@
+# set: CSM1.5C Battle Elite
+001/060|Litten|C
+002/060|Torracat|C
+003/060|Blacephalon-GX|RR
+004/060|Horsea|C
+005/060|Seadra|C
+006/060|Kingdra-GX|RR
+007/060|Pachirisu|C
+008/060|Emolga|C
+009/060|Tapu Koko Prism Star|PR
+010/060|Zeraora-GX|RR
+011/060|Alolan Grimer|C
+012/060|Alolan Muk|R
+013/060|Giratina|R
+014/060|Mimikyu|R
+015/060|Dhelmise|R
+016/060|Tapu Lele|R
+017/060|Cosmog|C
+018/060|Cosmoem|C
+019/060|Lunala Prism Star|PR
+020/060|Dawn Wings Necrozma|R
+021/060|Dawn Wings Necrozma-GX|RR
+022/060|Rockruff|C
+023/060|Lycanroc-GX|RR
+024/060|Passimian|C
+025/060|Sneasel|C
+026/060|Weavile|R
+027/060|Absol|R
+028/060|Hoopa|R
+029/060|Incineroar-GX|RR
+030/060|Alolan Diglett|C
+031/060|Alolan Dugtrio|C
+032/060|Solgaleo-GX|RR
+033/060|Solgaleo Prism Star|PR
+034/060|Dusk Mane Necrozma|R
+035/060|Dusk Mane Necrozma-GX|RR
+036/060|Latias Prism Star|PR
+037/060|Ditto Prism Star|PR
+038/060|Lugia-GX|RR
+039/060|Electropower|U
+040/060|Mysterious Treasure|U
+041/060|Missing Clover|C
+042/060|Fairy Charm UB|U
+043/060|Fairy Charm Fighting|U
+044/060|Professor Elm's Lecture|U
+045/060|Volkner|U
+046/060|Lysandre Prism Star|PR
+047/060|Apricorn Maker|U
+048/060|Lisia|U
+049/060|Lance Prism Star|PR
+050/060|Morgan|U
+051/060|Dana|U
+052/060|Evelyn|U
+053/060|Nita|U
+054/060|Shrine of Punishment|U
+055/060|Devoured Field|U
+056/060|Mt. Coronet|U
+057/060|Wondrous Labyrinth Prism Star|PR
+058/060|Unit Energy GFW|U
+059/060|Unit Energy LPM|U
+060/060|Unit Energy FDF|U
+061/060|Blacephalon-GX|SR
+062/060|Kingdra-GX|SR
+063/060|Zeraora-GX|SR
+064/060|Dawn Wings Necrozma-GX|SR
+065/060|Incineroar-GX|SR
+066/060|Dusk Mane Necrozma-GX|SR
+067/060|Lugia-GX|SR
+068/060|Volkner|SR
+069/060|Lisia|SR
+070/060|Morgan|SR
+071/060|Dana|SR
+072/060|Evelyn|SR
+073/060|Nita|SR
+074/060|Blacephalon-GX|HR
+075/060|Kingdra-GX|HR
+076/060|Zeraora-GX|HR
+077/060|Dawn Wings Necrozma-GX|HR
+078/060|Incineroar-GX|HR
+079/060|Dusk Mane Necrozma-GX|HR
+080/060|Lugia-GX|HR
+081/060|Solgaleo-GX|UR
+082/060|Electropower|UR
+083/060|Mysterious Treasure|UR
+084/060|Missing Clover|UR
+085/060|Shrine of Punishment|UR
+086/060|Unit Energy GFW|UR
+087/060|Unit Energy LPM|UR
+088/060|Unit Energy FDF|UR
+
+# set: CSM1aC Storming Emergence (Radiant)
+001/151|Scyther|C
+002/151|Charmander|C
+003/151|Charmeleon|U
+004/151|Charizard-GX|RR
+005/151|Alolan Marowak|U
+006/151|Moltres|U
+007/151|Cyndaquil|C
+008/151|Quilava|C
+009/151|Typhlosion|R
+010/151|Slugma|C
+011/151|Magcargo|U
+012/151|Magcargo-GX|RR
+013/151|Entei-GX|RR
+014/151|Ho-Oh-GX|RR
+015/151|Torchic|C
+016/151|Combusken|C
+017/151|Blaziken-GX|RR
+018/151|Chimchar|C
+019/151|Monferno|C
+020/151|Infernape|R
+021/151|Heat Rotom|U
+022/151|Victini|R
+023/151|Victini Prism Star|PR
+024/151|Reshiram-GX|RR
+025/151|Fennekin|C
+026/151|Braixen|C
+027/151|Delphox|R
+028/151|Litleo|C
+029/151|Pyroar|R
+030/151|Turtonator-GX|RR
+031/151|Mewtwo-GX|RR
+032/151|Natu|C
+033/151|Xatu|C
+034/151|Espeon-GX|RR
+035/151|Unown|U
+036/151|Unown|U
+037/151|Unown|U
+038/151|Seviper|U
+039/151|Shuppet|C
+040/151|Banette|U
+041/151|Banette-GX|RR
+042/151|Rotom|U
+043/151|Giratina Prism Star|PR
+044/151|Yamask|C
+045/151|Cofagrigus|U
+046/151|Trubbish|C
+047/151|Garbodor|U
+048/151|Inkay|C
+049/151|Malamar|U
+050/151|Pumpkaboo|C
+051/151|Gourgeist|U
+052/151|Hoopa|C
+053/151|Oricorio|U
+054/151|Tapu Lele-GX|RR
+055/151|Cosmog|C
+056/151|Cosmoem|C
+057/151|Lunala-GX|RR
+058/151|Nihilego-GX|RR
+059/151|Necrozma-GX|RR
+060/151|Marshadow|R
+061/151|Poipole|C
+062/151|Naganadel|R
+063/151|Naganadel-GX|RR
+064/151|Cubone|C
+065/151|Alolan Diglett|C
+066/151|Alolan Dugtrio|R
+067/151|Magnemite|C
+068/151|Magneton|C
+069/151|Magnezone|R
+070/151|Scizor-GX|RR
+071/151|Skarmory|C
+072/151|Mawile|C
+073/151|Beldum|C
+074/151|Metang|C
+075/151|Metagross|R
+076/151|Metagross-GX|RR
+077/151|Jirachi|R
+078/151|Jirachi Prism Star|PR
+079/151|Bronzor|C
+080/151|Bronzong|U
+081/151|Dialga-GX|RR
+082/151|Ferroseed|C
+083/151|Ferrothorn|U
+084/151|Durant|C
+085/151|Cobalion-GX|RR
+086/151|Genesect-GX|RR
+087/151|Honedge|C
+088/151|Doublade|C
+089/151|Aegislash|R
+090/151|Solgaleo-GX|RR
+091/151|Celesteela|R
+092/151|Kartana|U
+093/151|Kartana-GX|RR
+094/151|Magearna|U
+095/151|Stakataka-GX|RR
+096/151|Bagon|C
+097/151|Shelgon|U
+098/151|Salamence|R
+099/151|Salamence-GX|RR
+100/151|Goomy|C
+101/151|Sliggoo|C
+102/151|Goodra|R
+103/151|Jangmo-o|C
+104/151|Hakamo-o|C
+105/151|Kommo-o|R
+106/151|Ultra Necrozma-GX|RR
+107/151|Chansey|C
+108/151|Blissey|R
+109/151|Eevee|C
+110/151|Porygon|C
+111/151|Porygon2|C
+112/151|Porygon-Z|R
+113/151|Ho-Oh|U
+114/151|Fan Rotom|U
+115/151|Fletchling|C
+116/151|Fletchinder|C
+117/151|Talonflame|U
+118/151|Oranguru|R
+119/151|Beast Ball|C
+120/151|Energy Retrieval|U
+121/151|Order Pad|C
+122/151|Enhanced Hammer|U
+123/151|Nest Ball|U
+124/151|Fiery Flint|U
+125/151|Beast Ring|U
+126/151|Field Blower|U
+127/151|Multi Switch|U
+128/151|Max Potion|U
+129/151|Escape Board|U
+130/151|Exp. Share|U
+131/151|Metal Frying Pan|U
+132/151|Choice Helmet|U
+133/151|Spell Tag|U
+134/151|Hustle Belt|U
+135/151|Metal Goggles|U
+136/151|Lady|U
+137/151|Kiawe|U
+138/151|Guzma|U
+139/151|Faba|U
+140/151|Steven's Resolve|R
+141/151|Ingo & Emmet|U
+142/151|Tate & Liza|U
+143/151|Plumeria|U
+144/151|Jasmine|U
+145/151|Lusamine Prism Star|PR
+146/151|Altar of the Moone|U
+147/151|Altar of the Sunne|U
+148/151|Heat Factory Prism Star|PR
+149/151|Lysandre Labs|U
+150/151|Beast Energy Prism Star|PR
+151/151|Rainbow Energy|U
+152/151|Scyther|S
+153/151|Charmander|S
+154/151|Charmeleon|S
+155/151|Seviper|S
+156/151|Shuppet|S
+157/151|Inkay|S
+158/151|Malamar|S
+159/151|Poipole|S
+160/151|Magnemite|S
+161/151|Magneton|S
+162/151|Magnezone|S
+163/151|Beldum|S
+164/151|Metang|S
+165/151|Celesteela|S
+166/151|Kartana|S
+167/151|Oranguru|S
+168/151|Charizard-GX|SR
+169/151|Ho-Oh-GX|SR
+170/151|Reshiram-GX|SR
+171/151|Mewtwo-GX|SR
+172/151|Espeon-GX|SR
+173/151|Banette-GX|SR
+174/151|Tapu Lele-GX|SR
+175/151|Lunala-GX|SR
+176/151|Naganadel-GX|SR
+177/151|Metagross-GX|SR
+178/151|Solgaleo-GX|SR
+179/151|Kartana-GX|SR
+180/151|Stakataka-GX|SR
+181/151|Ultra Necrozma-GX|SR
+182/151|Lady|SR
+183/151|Kiawe|SR
+184/151|Guzma|SR
+185/151|Steven's Resolve|SR
+186/151|Ingo & Emmet|SR
+187/151|Tate & Liza|SR
+188/151|Plumeria|SR
+189/151|Jasmine|SR
+190/151|Charizard-GX|SSR
+191/151|Ho-Oh-GX|SSR
+192/151|Reshiram-GX|SSR
+193/151|Turtonator-GX|SSR
+194/151|Mewtwo-GX|SSR
+195/151|Espeon-GX|SSR
+196/151|Banette-GX|SSR
+197/151|Naganadel-GX|SSR
+198/151|Scizor-GX|SSR
+199/151|Metagross-GX|SSR
+200/151|Kartana-GX|SSR
+201/151|Stakataka-GX|SSR
+202/151|Tapu Lele-GX|UR
+203/151|Lunala-GX|UR
+204/151|Solgaleo-GX|UR
+205/151|Ultra Necrozma-GX|UR
+206/151|Nest Ball|UR
+207/151|Field Blower|UR
+208/151|Beast Ring|UR
+209/151|Escape Board|UR
+210/151|Metal Frying Pan|UR
+211/151|Rainbow Energy|UR
+
+# set: CSM1bC Storming Emergence (Verdant)
+001/151|Oddish|C
+002/151|Gloom|C
+003/151|Vileplume|R
+004/151|Exeggcute|C
+005/151|Alolan Exeggutor|R
+006/151|Pinsir|C
+007/151|Chikorita|C
+008/151|Bayleef|C
+009/151|Meganium|R
+010/151|Hoppip|C
+011/151|Skiploom|C
+012/151|Jumpluff|R
+013/151|Shuckle|U
+014/151|Shuckle-GX|RR
+015/151|Treecko|C
+016/151|Grovyle|U
+017/151|Sceptile|R
+018/151|Sceptile-GX|RR
+019/151|Nincada|C
+020/151|Ninjask|C
+021/151|Combee|C
+022/151|Vespiquen|C
+023/151|Cherubi|C
+024/151|Cherrim|U
+025/151|Leafeon-GX|RR
+026/151|Mow Rotom|U
+027/151|Shaymin Prism Star|PR
+028/151|Rowlet|C
+029/151|Dartrix|C
+030/151|Decidueye-GX|RR
+031/151|Grubbin|C
+032/151|Fomantis|C
+033/151|Lurantis|R
+034/151|Lurantis-GX|RR
+035/151|Bounsweet|C
+036/151|Steenee|U
+037/151|Tsareena|R
+038/151|Wimpod|C
+039/151|Golisopod|R
+040/151|Golisopod-GX|RR
+041/151|Tapu Bulu-GX|RR
+042/151|Pheromosa|R
+043/151|Pheromosa-GX|RR
+044/151|Pikachu|C
+045/151|Raichu|R
+046/151|Alolan Geodude|C
+047/151|Alolan Graveler|U
+048/151|Alolan Golem|R
+049/151|Voltorb|C
+050/151|Electrode-GX|RR
+051/151|Zapdos|R
+052/151|Mareep|C
+053/151|Flaaffy|C
+054/151|Ampharos|R
+055/151|Ampharos-GX|RR
+056/151|Raikou|R
+057/151|Electrike|C
+058/151|Manectric|U
+059/151|Pachirisu|C
+060/151|Rotom|U
+061/151|Blitzle|C
+062/151|Zebstrika|U
+063/151|Zekrom-GX|RR
+064/151|Charjabug|U
+065/151|Vikavolt|R
+066/151|Vikavolt-GX|RR
+067/151|Oricorio|C
+068/151|Togedemaru|C
+069/151|Tapu Koko|R
+070/151|Tapu Koko-GX|RR
+071/151|Xurkitree|U
+072/151|Xurkitree-GX|RR
+073/151|Shedinja|U
+074/151|Alolan Rattata|C
+075/151|Alolan Raticate|U
+076/151|Alolan Raticate-GX|RR
+077/151|Alolan Meowth|C
+078/151|Alolan Persian|U
+079/151|Alolan Grimer|C
+080/151|Alolan Muk|U
+081/151|Alolan Muk-GX|RR
+082/151|Umbreon|U
+083/151|Umbreon-GX|RR
+084/151|Sableye|C
+085/151|Spiritomb|U
+086/151|Darkrai-GX|RR
+087/151|Darkrai Prism Star|PR
+088/151|Purrloin|C
+089/151|Liepard|U
+090/151|Zorua|C
+091/151|Zoroark-GX|RR
+092/151|Vullaby|C
+093/151|Mandibuzz|U
+094/151|Deino|C
+095/151|Zweilous|U
+096/151|Hydreigon|R
+097/151|Yveltal|R
+098/151|Hoopa-GX|RR
+099/151|Guzzlord|R
+100/151|Guzzlord-GX|RR
+101/151|Dratini|C
+102/151|Dragonair|U
+103/151|Dragonite-GX|RR
+104/151|Rayquaza-GX|RR
+105/151|Noivern-GX|RR
+106/151|Spearow|C
+107/151|Fearow|C
+108/151|Eevee|C
+109/151|Miltank|U
+110/151|Skitty|C
+111/151|Delcatty|R
+112/151|Castform|C
+113/151|Arceus Prism Star|PR
+114/151|Noibat|C
+115/151|Oranguru|C
+116/151|Komala|U
+117/151|Drampa-GX|RR
+118/151|Wait and See Hammer|U
+119/151|Energy Spinner|U
+120/151|Custom Catcher|C
+121/151|Pal Pad|C
+122/151|Net Ball|U
+123/151|Rare Candy|U
+124/151|Adventure Bag|C
+125/151|Moomoo Milk|U
+126/151|Rescue Stretcher|U
+127/151|Lost Blender|U
+128/151|Counter Gain|U
+129/151|Weakness Policy|U
+130/151|Dashing Pouch|U
+131/151|Wishful Baton|U
+132/151|Bodybuilding Dumbbells|U
+133/151|Dragon Talon|C
+134/151|Whitney|U
+135/151|Nanu|U
+136/151|Gardenia|U
+137/151|Pokémon Breeder|U
+138/151|Mallow|U
+139/151|Mars|U
+140/151|Sophocles|U
+141/151|Copycat|U
+142/151|Olivia|U
+143/151|Lillie|U
+144/151|Lusamine|U
+145/151|Ultra Space|U
+146/151|Aether Paradise Conservation Area|U
+147/151|Thunder Mountain Prism Star|PR
+148/151|Black Market Prism Star|PR
+149/151|Life Forest Prism Star|PR
+150/151|Counter Energy|U
+151/151|Warp Energy|U
+152/151|Rowlet|S
+153/151|Dartrix|S
+154/151|Wimpod|S
+155/151|Pheromosa|S
+156/151|Voltorb|S
+157/151|Xurkitree|S
+158/151|Zorua|S
+159/151|Guzzlord|S
+160/151|Noibat|S
+161/151|Leafeon-GX|SR
+162/151|Decidueye-GX|SR
+163/151|Golisopod-GX|SR
+164/151|Tapu Bulu-GX|SR
+165/151|Electrode-GX|SR
+166/151|Tapu Koko-GX|SR
+167/151|Xurkitree-GX|SR
+168/151|Umbreon-GX|SR
+169/151|Darkrai-GX|SR
+170/151|Zoroark-GX|SR
+171/151|Guzzlord-GX|SR
+172/151|Rayquaza-GX|SR
+173/151|Noivern-GX|SR
+174/151|Drampa-GX|SR
+175/151|Whitney|SR
+176/151|Gardenia|SR
+177/151|Pokémon Breeder|SR
+178/151|Mallow|SR
+179/151|Mars|SR
+180/151|Copycat|SR
+181/151|Lillie|SR
+182/151|Lusamine|SR
+183/151|Leafeon-GX|SSR
+184/151|Decidueye-GX|SSR
+185/151|Golisopod-GX|SSR
+186/151|Electrode-GX|SSR
+187/151|Xurkitree-GX|SSR
+188/151|Umbreon-GX|SSR
+189/151|Darkrai-GX|SSR
+190/151|Zoroark-GX|SSR
+191/151|Guzzlord-GX|SSR
+192/151|Rayquaza-GX|SSR
+193/151|Noivern-GX|SSR
+194/151|Drampa-GX|SSR
+195/151|Tapu Bulu-GX|UR
+196/151|Tapu Koko-GX|UR
+197/151|Net Ball|UR
+198/151|Rare Candy|UR
+199/151|Adventure Bag|UR
+200/151|Switch|UR
+201/151|Rescue Stretcher|UR
+202/151|Wishful Baton|UR
+203/151|Aether Paradise Conservation Area|UR
+204/151|Counter Energy|UR
+
+# set: CSM1cC Storming Emergence (Abundant)
+001/151|Alolan Sandshrew|C
+002/151|Alolan Sandslash|U
+003/151|Alolan Vulpix|C
+004/151|Alolan Ninetales|R
+005/151|Alolan Ninetales-GX|RR
+006/151|Poliwag|C
+007/151|Poliwhirl|C
+008/151|Poliwrath|R
+009/151|Politoed|R
+010/151|Slowpoke|C
+011/151|Slowking|U
+012/151|Magikarp|C
+013/151|Gyarados|R
+014/151|Lapras|U
+015/151|Lapras-GX|RR
+016/151|Articuno-GX|RR
+017/151|Wooper|C
+018/151|Quagsire|U
+019/151|Corsola|C
+020/151|Suicune|R
+021/151|Suicune-GX|RR
+022/151|Mudkip|C
+023/151|Marshtomp|C
+024/151|Swampert|R
+025/151|Shellos|C
+026/151|Glaceon-GX|RR
+027/151|Wash Rotom|U
+028/151|Frost Rotom|U
+029/151|Palkia-GX|RR
+030/151|Froakie|C
+031/151|Frogadier|C
+032/151|Greninja-GX|RR
+033/151|Volcanion Prism Star|PR
+034/151|Wishiwashi|C
+035/151|Wishiwashi-GX|RR
+036/151|Tapu Fini-GX|RR
+037/151|Sudowoodo|U
+038/151|Phanpy|C
+039/151|Donphan|U
+040/151|Baltoy|C
+041/151|Claydol|U
+042/151|Cranidos|U
+043/151|Rampardos|R
+044/151|Gastrodon|C
+045/151|Gible|C
+046/151|Gabite|C
+047/151|Garchomp|R
+048/151|Riolu|C
+049/151|Lucario|R
+050/151|Lucario-GX|RR
+051/151|Tyrunt|U
+052/151|Tyrantrum|R
+053/151|Zygarde|C
+054/151|Zygarde-GX|RR
+055/151|Diancie Prism Star|PR
+056/151|Crabrawler|C
+057/151|Crabominable|U
+058/151|Rockruff|C
+059/151|Lycanroc|R
+060/151|Lycanroc-GX|RR
+061/151|Passimian|C
+062/151|Minior|C
+063/151|Buzzwole|R
+064/151|Buzzwole-GX|RR
+065/151|Marshadow-GX|RR
+066/151|Clefairy|C
+067/151|Clefable|C
+068/151|Alolan Ninetales-GX|RR
+069/151|Jigglypuff|C
+070/151|Wigglytuff|U
+071/151|Snubbull|C
+072/151|Granbull|U
+073/151|Ralts|C
+074/151|Kirlia|C
+075/151|Gardevoir|R
+076/151|Gardevoir-GX|RR
+077/151|Cottonee|C
+078/151|Whimsicott|U
+079/151|Flabébé|C
+080/151|Floette|C
+081/151|Florges|U
+082/151|Sylveon|U
+083/151|Sylveon-GX|RR
+084/151|Xerneas-GX|RR
+085/151|Xerneas Prism Star|PR
+086/151|Diancie|R
+087/151|Cutiefly|C
+088/151|Ribombee|U
+089/151|Morelull|C
+090/151|Shiinotic|R
+091/151|Comfey|R
+092/151|Mimikyu|U
+093/151|Mimikyu-GX|RR
+094/151|Tapu Lele|R
+095/151|Altaria|R
+096/151|Altaria-GX|RR
+097/151|Latios Prism Star|PR
+098/151|Druddigon|U
+099/151|White Kyurem-GX|RR
+100/151|Tauros-GX|RR
+101/151|Eevee|C
+102/151|Snorlax-GX|RR
+103/151|Whismur|C
+104/151|Loudred|C
+105/151|Exploud|U
+106/151|Swablu|C
+107/151|Bunnelby|C
+108/151|Diggersby|C
+109/151|Pikipek|C
+110/151|Trumbeak|C
+111/151|Toucannon|U
+112/151|Yungoos|C
+113/151|Gumshoos|C
+114/151|Stufful|C
+115/151|Bewear-GX|RR
+116/151|Type: Null|R
+117/151|Silvally-GX|RR
+118/151|Aqua Patch|U
+119/151|Escape Rope|U
+120/151|Energy Loto|U
+121/151|Energy Recycler|U
+122/151|Counter Catcher|U
+123/151|Last Chance Potion|U
+124/151|Acro Bike|U
+125/151|Unidentified Fossil|C
+126/151|Ultra Ball|U
+127/151|PokéNav|U
+128/151|Water Memory|U
+129/151|Choice Band|U
+130/151|Psychic Memory|U
+131/151|Fighting Memory|U
+132/151|Fire Memory|U
+133/151|Fairy Charm Grass|U
+134/151|Fairy Charm Psychic|U
+135/151|Fairy Charm Dragon|U
+136/151|Cyrus Prism Star|PR
+137/151|Acerola|U
+138/151|Sightseer|C
+139/151|Professor Kukui|U
+140/151|Gladion|U
+141/151|Cynthia|R
+142/151|Lana|U
+143/151|Pokémon Fan Club|U
+144/151|Mina|U
+145/151|Bonnie|U
+146/151|Brooklet Hill|U
+147/151|Sky Pillar|U
+148/151|Po Town|U
+149/151|Double Colorless Energy|U
+150/151|Super Boost Energy Prism Star|PR
+151/151|Memory Energy|C
+152/151|Alolan Vulpix|S
+153/151|Wooper|S
+154/151|Quagsire|S
+155/151|Froakie|S
+156/151|Frogadier|S
+157/151|Sudowoodo|S
+158/151|Riolu|S
+159/151|Lucario|S
+160/151|Rockruff|S
+161/151|Buzzwole|S
+162/151|Ralts|S
+163/151|Kirlia|S
+164/151|Diancie|S
+165/151|Altaria|S
+166/151|Eevee|S
+167/151|Swablu|S
+168/151|Type: Null|S
+169/151|Alolan Ninetales-GX|SR
+170/151|Articuno-GX|SR
+171/151|Glaceon-GX|SR
+172/151|Greninja-GX|SR
+173/151|Tapu Fini-GX|SR
+174/151|Lucario-GX|SR
+175/151|Zygarde-GX|SR
+176/151|Lycanroc-GX|SR
+177/151|Buzzwole-GX|SR
+178/151|Gardevoir-GX|SR
+179/151|Sylveon-GX|SR
+180/151|Altaria-GX|SR
+181/151|Silvally-GX|SR
+182/151|Acerola|SR
+183/151|Sightseer|SR
+184/151|Professor Kukui|SR
+185/151|Gladion|SR
+186/151|Cynthia|SR
+187/151|Lana|SR
+188/151|Pokémon Fan Club|SR
+189/151|Mina|SR
+190/151|Bonnie|SR
+191/151|Alolan Ninetales-GX|SSR
+192/151|Articuno-GX|SSR
+193/151|Glaceon-GX|SSR
+194/151|Greninja-GX|SSR
+195/151|Lucario-GX|SSR
+196/151|Zygarde-GX|SSR
+197/151|Lycanroc-GX|SSR
+198/151|Buzzwole-GX|SSR
+199/151|Gardevoir-GX|SSR
+200/151|Sylveon-GX|SSR
+201/151|Altaria-GX|SSR
+202/151|Silvally-GX|SSR
+203/151|Tapu Fini-GX|UR
+204/151|Aqua Patch|UR
+205/151|Escape Rope|UR
+206/151|Energy Recycler|UR
+207/151|Counter Catcher|UR
+208/151|Acro Bike|UR
+209/151|Ultra Ball|UR
+210/151|Choice Band|UR
+211/151|Brooklet Hill|UR
+212/151|Double Colorless Energy|UR
+
+# set: CSM1DC Storming Emergence GX Starter Deck
+001/324|Bulbasaur|
+002/324|Ivysaur|
+003/324|Venusaur|
+004/324|Paras|
+005/324|Parasect|
+006/324|Exeggcute|
+007/324|Tangela|
+008/324|Tangrowth|
+009/324|Scyther|
+010/324|Pinsir|
+011/324|Cacnea|
+012/324|Cacturne|
+013/324|Tropius|
+014/324|Snover|
+015/324|Abomasnow|
+016/324|Shaymin|
+017/324|Virizion-GX|
+018/324|Skiddo|
+019/324|Gogoat|
+020/324|Phantump|
+021/324|Trevenant|
+022/324|Rowlet|
+023/324|Dartrix|
+024/324|Decidueye|
+025/324|Decidueye-GX|
+026/324|Dhelmise|
+027/324|Tapu Bulu|
+028/324|Charmander|
+029/324|Charmeleon|
+030/324|Charizard|
+031/324|Growlithe|
+032/324|Arcanine|
+033/324|Houndour|
+034/324|Houndoom|
+035/324|Entei|
+036/324|Torkoal|
+037/324|Heatran|
+038/324|Darumaka|
+039/324|Darmanitan|
+040/324|Larvesta|
+041/324|Volcarona|
+042/324|Reshiram|
+043/324|Litten|
+044/324|Torracat|
+045/324|Incineroar|
+046/324|Incineroar-GX|
+047/324|Oricorio|
+048/324|Salandit|
+049/324|Salazzle-GX|
+050/324|Turtonator|
+051/324|Alolan Sandshrew|
+052/324|Alolan Sandslash|
+053/324|Alolan Vulpix|
+054/324|Tentacool|
+055/324|Tentacruel|
+056/324|Corsola|
+057/324|Mantine|
+058/324|Suicune|
+059/324|Feebas|
+060/324|Milotic|
+061/324|Luvdisc|
+062/324|Kyogre|
+063/324|Piplup|
+064/324|Prinplup|
+065/324|Empoleon|
+066/324|Shellos|
+067/324|Palkia|
+068/324|Cubchoo|
+069/324|Beartic|
+070/324|Keldeo|
+071/324|Froakie|
+072/324|Frogadier|
+073/324|Greninja-GX|
+074/324|Popplio|
+075/324|Brionne|
+076/324|Primarina|
+077/324|Primarina-GX|
+078/324|Pikachu|
+079/324|Raichu-GX|
+080/324|Voltorb|
+081/324|Electrode|
+082/324|Electabuzz|
+083/324|Electivire|
+084/324|Raikou|
+085/324|Raikou-GX|
+086/324|Plusle|
+087/324|Minun|
+088/324|Shinx|
+089/324|Luxio|
+090/324|Luxray|
+091/324|Blitzle|
+092/324|Zebstrika|
+093/324|Joltik|
+094/324|Galvantula|
+095/324|Helioptile|
+096/324|Heliolisk|
+097/324|Tapu Koko|
+098/324|Ekans|
+099/324|Arbok|
+100/324|Drowzee|
+101/324|Hypno|
+102/324|Sableye|
+103/324|Gulpin|
+104/324|Swalot|
+105/324|Latios|
+106/324|Deoxys|
+107/324|Drifloon|
+108/324|Drifblim|
+109/324|Cresselia|
+110/324|Litwick|
+111/324|Lampent|
+112/324|Chandelure|
+113/324|Golett|
+114/324|Golurk|
+115/324|Hoopa|
+116/324|Oricorio|
+117/324|Mareanie|
+118/324|Toxapex-GX|
+119/324|Sandygast|
+120/324|Palossand|
+121/324|Tapu Lele-GX|
+122/324|Machop|
+123/324|Machoke|
+124/324|Machamp|
+125/324|Machamp-GX|
+126/324|Onix|
+127/324|Gligar|
+128/324|Gliscor|
+129/324|Larvitar|
+130/324|Pupitar|
+131/324|Makuhita|
+132/324|Hariyama|
+133/324|Nosepass|
+134/324|Solrock|
+135/324|Groudon|
+136/324|Gastrodon|
+137/324|Sawk|
+138/324|Binacle|
+139/324|Barbaracle|
+140/324|Carbink|
+141/324|Zygarde|
+142/324|Rockruff|
+143/324|Lycanroc-GX|
+144/324|Stufful|
+145/324|Bewear|
+146/324|Murkrow|
+147/324|Honchkrow|
+148/324|Houndour|
+149/324|Houndoom|
+150/324|Tyranitar|
+151/324|Poochyena|
+152/324|Mightyena|
+153/324|Spiritomb|
+154/324|Darkrai|
+155/324|Scraggy|
+156/324|Scrafty|
+157/324|Zorua|
+158/324|Zoroark-GX|
+159/324|Vullaby|
+160/324|Mandibuzz|
+161/324|Yveltal|
+162/324|Yveltal-GX|
+163/324|Alolan Diglett|
+164/324|Alolan Dugtrio|
+165/324|Steelix|
+166/324|Scizor-GX|
+167/324|Mawile|
+168/324|Aron|
+169/324|Lairon|
+170/324|Aggron|
+171/324|Bronzor|
+172/324|Bronzong|
+173/324|Probopass|
+174/324|Dialga|
+175/324|Heatran|
+176/324|Pawniard|
+177/324|Bisharp|
+178/324|Cobalion|
+179/324|Celesteela-GX|
+180/324|Magearna|
+181/324|Clefairy|
+182/324|Clefable|
+183/324|Alolan Ninetales-GX|
+184/324|Marill|
+185/324|Azumarill|
+186/324|Snubbull|
+187/324|Granbull|
+188/324|Ralts|
+189/324|Kirlia|
+190/324|Gardevoir|
+191/324|Dedenne|
+192/324|Carbink|
+193/324|Klefki|
+194/324|Xerneas|
+195/324|Xerneas-GX|
+196/324|Morelull|
+197/324|Shiinotic|
+198/324|Tapu Lele|
+199/324|Tapu Fini|
+200/324|Alolan Exeggutor-GX|
+201/324|Zekrom|
+202/324|Kyurem|
+203/324|Zygarde|
+204/324|Drampa|
+205/324|Lickitung|
+206/324|Kangaskhan|
+207/324|Dunsparce|
+208/324|Smeargle|
+209/324|Miltank|
+210/324|Lugia|
+211/324|Spinda|
+212/324|Zangoose|
+213/324|Rayquaza|
+214/324|Shaymin|
+215/324|Bouffalant|
+216/324|Furfrou|
+217/324|Noibat|
+218/324|Noivern|
+219/324|Yungoos|
+220/324|Gumshoos-GX|
+221/324|Type: Null|
+222/324|Drampa|
+223/324|Aqua Patch|
+224/324|Wait and See Hammer|
+225/324|Escape Rope|
+226/324|Tormenting Spray|
+227/324|Switch Raft|
+228/324|Energy Loto|
+229/324|Eneporter|
+230/324|Energy Retrieval|
+231/324|Energy Recycle System|
+232/324|Energy Switch|
+233/324|Energy Recycler|
+234/324|Big Malasada|
+235/324|Order Pad|
+236/324|Counter Catcher|
+237/324|Potion|
+238/324|Last Chance Potion|
+239/324|Crushing Hammer|
+240/324|Great Ball|
+241/324|Super Scoop Up|
+242/324|Acro Bike|
+243/324|Timer Ball|
+244/324|Damage Mover|
+245/324|Dangerous Drill|
+246/324|Pal Pad|
+247/324|Nest Ball|
+248/324|Peeking Red Card|
+249/324|Ultra Ball|
+250/324|Looker Whistle|
+251/324|Fiery Flint|
+252/324|Field Blower|
+253/324|Rare Candy|
+254/324|Life Herb|
+255/324|Friend Ball|
+256/324|PokéNav|
+257/324|Switch|
+258/324|Pokémon Catcher|
+259/324|Mixed Herbs|
+260/324|Repel|
+261/324|Poké Ball|
+262/324|Lure Ball|
+263/324|Rainbow Brush|
+264/324|Rescue Stretcher|
+265/324|Rotom Dex|
+266/324|Rotom Dex Poké Finder Mode|
+267/324|Counter Gain|
+268/324|Exp. Share|
+269/324|Choice Band|
+270/324|Choice Helmet|
+271/324|Dashing Pouch|
+272/324|Poison Barb|
+273/324|Wishful Baton|
+274/324|Ilima|
+275/324|Kiawe|
+276/324|Blaine's Last Stand|
+277/324|Kahili|
+278/324|Diantha|
+279/324|Sightseer|
+280/324|Professor Kukui|
+281/324|Guzma|
+282/324|Nanu|
+283/324|Gladion|
+284/324|Judge|
+285/324|Cynthia|
+286/324|Lana|
+287/324|Team Skull Grunt|
+288/324|Steven's Resolve|
+289/324|Underground Expedition|
+290/324|Fisherman|
+291/324|TV Reporter|
+292/324|Gardenia|
+293/324|Samson Oak|
+294/324|Ingo & Emmet|
+295/324|Hau|
+296/324|Hala|
+297/324|Looker|
+298/324|Zinnia|
+299/324|Wicke|
+300/324|Tate & Liza|
+301/324|Pokémon Fan Club|
+302/324|Pokémon Breeder|
+303/324|Mars|
+304/324|Sophocles|
+305/324|Mallow|
+306/324|Crasher Wake|
+307/324|Bill's Maintenance|
+308/324|Morty|
+309/324|Mina|
+310/324|Jasmine|
+311/324|Copycat|
+312/324|Hiker|
+313/324|Lillie|
+314/324|Lusamine|
+315/324|Wela Volcano Park|
+316/324|Sea of Nothingness|
+317/324|Aether Paradise Conservation Area|
+318/324|Altar of the Moone|
+319/324|Brooklet Hill|
+320/324|Sky Pillar|
+321/324|Altar of the Sunne|
+322/324|Po Town|
+323/324|Mount Lanakila|
+324/324|Double Colorless Energy|
+325/324|Raichu-GX|
+326/324|Alolan Ninetales-GX|
+327/324|Diantha|
+328/324|Underground Expedition|
+329/324|Wicke|
+330/324|Morty|
+331/324|Raichu-GX|
+332/324|Alolan Ninetales-GX|
+333/324|Switch Raft|
+334/324|Crushing Hammer|
+335/324|Super Scoop Up|
+336/324|Rotom Dex|
+
+# set: CSM2aC Shining Synergy (Shower)
+001/150|Karrablast|C
+002/150|Grubbin|C
+003/150|Blastoise & Piplup-GX|RR
+004/150|Slowpoke & Psyduck-GX|RR
+005/150|Magikarp & Wailord-GX|RR
+006/150|Squirtle|C
+007/150|Wartortle|C
+008/150|Blastoise|R
+009/150|Blastoise-GX|RR
+010/150|Alolan Sandslash-GX|RR
+011/150|Psyduck|C
+012/150|Golduck|C
+013/150|Poliwag|C
+014/150|Poliwhirl|C
+015/150|Poliwrath|U
+016/150|Tentacool|C
+017/150|Tentacruel|C
+018/150|Slowpoke|C
+019/150|Slowbro|R
+020/150|Seel|C
+021/150|Dewgong|U
+022/150|Goldeen|C
+023/150|Seaking|U
+024/150|Magikarp|C
+025/150|Gyarados|R
+026/150|Lapras|U
+027/150|Articuno|R
+028/150|Wailmer|C
+029/150|Wailord|U
+030/150|Snorunt|C
+031/150|Glalie|U
+032/150|Froslass|R
+033/150|Spheal|C
+034/150|Sealeo|C
+035/150|Walrein|U
+036/150|Kyogre|R
+037/150|Piplup|C
+038/150|Prinplup|C
+039/150|Empoleon|U
+040/150|Phione|U
+041/150|Basculin|C
+042/150|Cryogonal|C
+043/150|Kyurem|R
+044/150|Black Kyurem|R
+045/150|Keldeo-GX|RR
+046/150|Wishiwashi|R
+047/150|Wishiwashi-GX|RR
+048/150|Dewpider|C
+049/150|Araquanid|U
+050/150|Wimpod|C
+051/150|Golisopod|R
+052/150|Pyukumuku|C
+053/150|Tapu Fini|U
+054/150|Pikachu & Zekrom-GX|RR
+055/150|Raichu & Alolan Raichu-GX|RR
+056/150|Pikachu|C
+057/150|Raichu|U
+058/150|Alolan Geodude|C
+059/150|Alolan Graveler|C
+060/150|Alolan Golem|U
+061/150|Magnemite|C
+062/150|Magneton|R
+063/150|Magnezone|R
+064/150|Voltorb|C
+065/150|Electrode|R
+066/150|Chinchou|C
+067/150|Lanturn|U
+068/150|Joltik|C
+069/150|Galvantula|U
+070/150|Tynamo|C
+071/150|Eelektrik|C
+072/150|Eelektross|R
+073/150|Stunfisk|U
+074/150|Thundurus|C
+075/150|Dedenne-GX|RR
+076/150|Charjabug|C
+077/150|Vikavolt|R
+078/150|Togedemaru|C
+079/150|Tapu Koko|R
+080/150|Xurkitree|U
+081/150|Zeraora|R
+082/150|Cosmog|C
+083/150|Cosmoem|C
+084/150|Lunala|R
+085/150|Onix|C
+086/150|Wooper|C
+087/150|Quagsire|U
+088/150|Nosepass|C
+089/150|Riolu|C
+090/150|Lucario & Melmetal-GX|RR
+091/150|Alolan Sandshrew|C
+092/150|Alolan Sandslash|U
+093/150|Alolan Diglett|C
+094/150|Alolan Dugtrio|U
+095/150|Steelix|R
+096/150|Mawile|U
+097/150|Aron|C
+098/150|Lairon|C
+099/150|Aggron|U
+100/150|Lucario|R
+101/150|Probopass|U
+102/150|Escavalier|U
+103/150|Genesect|U
+104/150|Solgaleo|R
+105/150|Meltan|C
+106/150|Melmetal|R
+107/150|Melmetal-GX|RR
+108/150|Latias & Latios-GX|RR
+109/150|Dratini|C
+110/150|Dragonair|C
+111/150|Dragonite|R
+112/150|Dragonite-GX|RR
+113/150|Jangmo-o|C
+114/150|Hakamo-o|C
+115/150|Kommo-o|R
+116/150|Pidgey|C
+117/150|Pidgeotto|C
+118/150|Pidgeot|U
+119/150|Farfetch'd|C
+120/150|Eevee-GX|RR
+121/150|Aipom|C
+122/150|Ambipom|U
+123/150|Bidoof|C
+124/150|Bibarel|C
+125/150|Tornadus|C
+126/150|Yungoos|C
+127/150|Gumshoos|U
+128/150|Oranguru|C
+129/150|Komala|U
+130/150|Celesteela-GX|RR
+131/150|Great Potion|U
+132/150|Tag Switch|U
+133/150|Pokégear 3.0|U
+134/150|Pokémon Communication|U
+135/150|Dragonium Z: Dragon Claw|U
+136/150|Beastite|U
+137/150|Buff Padding|U
+138/150|Metal Core Barrier|U
+139/150|U-Turn Board|U
+140/150|Will|U
+141/150|Ultra Forest Kartenvoy|U
+142/150|Misty's Favor|U
+143/150|Grimsley|U
+144/150|Coach Trainer|U
+145/150|Green's Exploration|U
+146/150|Molayne|U
+147/150|Mallow & Lana|U
+148/150|Lt. Surge's Strategy|U
+149/150|Viridian Forest|U
+150/150|Recycle Energy|U
+151/150|Piplup|CHR
+152/150|Wishiwashi|CHR
+153/150|Pikachu|CHR
+154/150|Magnemite|CHR
+155/150|Steelix|CHR
+156/150|Blastoise & Piplup-GX|SR
+157/150|Blastoise & Piplup-GX|SR
+158/150|Slowpoke & Psyduck-GX|SR
+159/150|Slowpoke & Psyduck-GX|SR
+160/150|Magikarp & Wailord-GX|SR
+161/150|Magikarp & Wailord-GX|SR
+162/150|Blastoise-GX|SR
+163/150|Keldeo-GX|SR
+164/150|Wishiwashi-GX|SR
+165/150|Pikachu & Zekrom-GX|SR
+166/150|Pikachu & Zekrom-GX|SR
+167/150|Raichu & Alolan Raichu-GX|SR
+168/150|Raichu & Alolan Raichu-GX|SR
+169/150|Dedenne-GX|SR
+170/150|Dedenne-GX|SR
+171/150|Lucario & Melmetal-GX|SR
+172/150|Lucario & Melmetal-GX|SR
+173/150|Melmetal-GX|SR
+174/150|Latias & Latios-GX|SR
+175/150|Latias & Latios-GX|SR
+176/150|Dragonite-GX|SR
+177/150|Eevee-GX|SR
+178/150|Celesteela-GX|SR
+179/150|Will|SR
+180/150|Misty's Favor|SR
+181/150|Grimsley|SR
+182/150|Coach Trainer|SR
+183/150|Green's Exploration|SR
+184/150|Molayne|SR
+185/150|Mallow & Lana|SR
+186/150|Pikachu & Zekrom-GX|UR
+187/150|Lucario & Melmetal-GX|UR
+188/150|Tag Switch|UR
+189/150|Pokégear 3.0|UR
+190/150|Pokémon Communication|UR
+191/150|Metal Core Barrier|UR
+192/150|U-Turn Board|UR
+193/150|Viridian Forest|UR
+194/150|Recycle Energy|UR
+
+# set: CSMLC Lillie's Support Box
+001/005|Cosmog|
+002/005|Cosmoem|
+003/005|Lunala-GX|
+004/005|Solgaleo-GX|
+005/005|Lillie|
+
+# set: CSMYC Eevee-GX Box Set
+001/008|Leafeon-GX|
+002/008|Glaceon-GX|
+003/008|Espeon-GX|
+004/008|Umbreon-GX|
+005/008|Sylveon-GX|
+006/008|Eevee-GX|
+007/008|Eevee-GX|
+008/008|Eevee-GX|
+
+# set: SMP Sun & Moon Promos
+001/SM-P|Shaymin|
+002/SM-P|Salazzle|
+003/SM-P|Alolan Vulpix|
+004/SM-P|Kingdra|
+005/SM-P|Plusle|
+006/SM-P|Wobbuffet|
+007/SM-P|Lycanroc-GX|
+008/SM-P|Weavile|
+009/SM-P|Empoleon|
+010/SM-P|Dedenne|
+011/SM-P|Turtonator|
+012/SM-P|Return Label|
+013/SM-P|Litten|
+014/SM-P|Chespin|
+015/SM-P|Inkay|
+016/SM-P|Celebi Prism Star|
+017/SM-P|Magnezone|
+018/SM-P|Mimikyu|
+019/SM-P|Sunkern|
+020/SM-P|Sunflora|
+021/SM-P|Leafeon|
+022/SM-P|Weavile|
+023/SM-P|Stunfisk|
+024/SM-P|Mewtwo-GX|
+025/SM-P|Misdreavus|
+026/SM-P|Mismagius|
+027/SM-P|Uxie|
+028/SM-P|Marshadow|
+029/SM-P|Munchlax|
+030/SM-P|Regigigas|
+031/SM-P|Chikorita|
+032/SM-P|Litten|
+033/SM-P|Meowth|
+034/SM-P|Victini|
+035/SM-P|Weezing|
+036/SM-P|Sabrina & Brycen|
+037/SM-P|Pikachu|
+038/SM-P|Alolan Geodude|
+039/SM-P|Alolan Graveler|
+040/SM-P|Alolan Golem-GX|
+041/SM-P|Emolga|
+042/SM-P|Tynamo|
+043/SM-P|Eelektrik|
+044/SM-P|Eelektross|
+045/SM-P|Zekrom|
+046/SM-P|Oricorio|
+047/SM-P|Lightning Energy|
+048/SM-P|The Masked Royal|
+049/SM-P|The Masked Royal|
+050/SM-P|Rowlet|
+051|Rare Candy|
+052|Rare Candy|
+053|Rare Candy|
+054|Rare Candy|
+055|Rare Candy|
+056|Rare Candy|
+057|Victory Decoration|
+058|Victory Decoration|
+059|Victory Decoration|
+060|Great Ball|
+061|Great Ball|
+062|Great Ball|
+063|Great Ball|
+
+
+# set: CSM2cC Shining Synergy (Summon)
+001/150|Reshiram & Charizard-GX|RR
+002/150|Charmander|C
+003/150|Charmeleon|C
+004/150|Charizard|R
+005/150|Charizard-GX|RR
+006/150|Vulpix|C
+007/150|Ninetales|U
+008/150|Growlithe|C
+009/150|Arcanine|R
+010/150|Ponyta|C
+011/150|Rapidash|C
+012/150|Magmar|C
+013/150|Magmortar|U
+014/150|Moltres|R
+015/150|Slugma|C
+016/150|Magcargo|U
+017/150|Entei|U
+018/150|Numel|C
+019/150|Camerupt|U
+020/150|Torkoal|U
+021/150|Heatran-GX|RR
+022/150|Victini|R
+023/150|Tepig|C
+024/150|Pignite|C
+025/150|Emboar|U
+026/150|Darumaka|C
+027/150|Darmanitan|U
+028/150|Litwick|C
+029/150|Lampent|C
+030/150|Chandelure|R
+031/150|Larvesta|C
+032/150|Volcarona-GX|RR
+033/150|Fletchinder|C
+034/150|Talonflame|U
+035/150|Litleo|C
+036/150|Pyroar|U
+037/150|Litten|C
+038/150|Torracat|C
+039/150|Incineroar|U
+040/150|Salandit|C
+041/150|Salazzle|U
+042/150|Alolan Vulpix|C
+043/150|Skorupi|C
+044/150|Umbreon & Darkrai-GX|RR
+045/150|Mega Sableye & Tyranitar-GX|RR
+046/150|Greninja & Zoroark-GX|RR
+047/150|Alolan Grimer|C
+048/150|Alolan Muk|U
+049/150|Murkrow|C
+050/150|Honchkrow-GX|RR
+051/150|Sableye|U
+052/150|Carvanha|C
+053/150|Sharpedo|U
+054/150|Absol|C
+055/150|Spiritomb|R
+056/150|Drapion|U
+057/150|Purrloin|C
+058/150|Liepard|U
+059/150|Sandile|C
+060/150|Krokorok|C
+061/150|Krookodile|U
+062/150|Scraggy|C
+063/150|Scrafty|U
+064/150|Pawniard|C
+065/150|Bisharp|C
+066/150|Inkay|C
+067/150|Malamar|R
+068/150|Yveltal|R
+069/150|Hoopa|R
+070/150|Guzzlord|R
+071/150|Togepi & Cleffa & Igglybuff-GX|RR
+072/150|Gardevoir & Sylveon-GX|RR
+073/150|Cleffa|C
+074/150|Clefairy|U
+075/150|Clefable|U
+076/150|Alolan Ninetales|R
+077/150|Jigglypuff|C
+078/150|Wigglytuff|U
+079/150|Togepi|C
+080/150|Togetic|C
+081/150|Togekiss|R
+082/150|Azurill|C
+083/150|Cottonee|C
+084/150|Whimsicott|U
+085/150|Whimsicott-GX|RR
+086/150|Flabébé|C
+087/150|Floette|C
+088/150|Florges|R
+089/150|Spritzee|C
+090/150|Aromatisse|U
+091/150|Swirlix|C
+092/150|Slurpuff|U
+093/150|Dedenne|C
+094/150|Reshiram & Zekrom-GX|RR
+095/150|Dratini|C
+096/150|Dragonair|C
+097/150|Dragonite|R
+098/150|Latias|U
+099/150|Druddigon|C
+100/150|Noibat|C
+101/150|Noivern|U
+102/150|Ultra Necrozma|R
+103/150|Eevee & Snorlax-GX|RR
+104/150|Moltres & Zapdos & Articuno-GX|RR
+105/150|Spearow|C
+106/150|Fearow|C
+107/150|Doduo|C
+108/150|Dodrio|C
+109/150|Lickitung|C
+110/150|Lickilicky|U
+111/150|Kangaskhan-GX|RR
+112/150|Slakoth|C
+113/150|Vigoroth|C
+114/150|Slaking|R
+115/150|Lillipup|C
+116/150|Herdier|C
+117/150|Stoutland|R
+118/150|Pidove|C
+119/150|Tranquill|C
+120/150|Unfezant|U
+121/150|Fletchling|C
+122/150|Stufful|C
+123/150|Bewear|U
+124/150|Type: Null|C
+125/150|Silvally|R
+126/150|Silvally-GX|RR
+127/150|Chip-Chip Ice Axe|U
+128/150|Lana's Fishing Rod|U
+129/150|Tag Call|U
+130/150|Dusk Stone|U
+131/150|Lillie's Poké Doll|U
+132/150|Reset Stamp|U
+133/150|Giant Bomb|U
+134/150|Rainbow Flower|U
+135/150|Flyinium Z: Air Slash|U
+136/150|Fairy Charm Ability|U
+137/150|N's Resolve|U
+138/150|Erika's Hospitality|R
+139/150|Poké Maniac|U
+140/150|Blaine's Quiz Show|U
+141/150|Cynthia & Caitlin|U
+142/150|Brock's Grit|U
+143/150|Sabrina's Suggestion|U
+144/150|Bill's Analysis|R
+145/150|Welder|U
+146/150|Red's Challenge|R
+147/150|Giant Hearth|U
+148/150|Dark City|U
+149/150|Slumbering Forest|U
+150/150|Triple Acceleration Energy|U
+151/150|Torkoal|CHR
+152/150|Stoutland|CHR
+153/150|Reshiram & Charizard-GX|SR
+154/150|Reshiram & Charizard-GX|SR
+155/150|Heatran-GX|SR
+156/150|Volcarona-GX|SR
+157/150|Umbreon & Darkrai-GX|SR
+158/150|Umbreon & Darkrai-GX|SR
+159/150|Mega Sableye & Tyranitar-GX|SR
+160/150|Mega Sableye & Tyranitar-GX|SR
+161/150|Greninja & Zoroark-GX|SR
+162/150|Greninja & Zoroark-GX|SR
+163/150|Honchkrow-GX|SR
+164/150|Togepi & Cleffa & Igglybuff-GX|SR
+165/150|Togepi & Cleffa & Igglybuff-GX|RR
+166/150|Gardevoir & Sylveon-GX|SR
+167/150|Gardevoir & Sylveon-GX|SR
+168/150|Whimsicott-GX|SR
+169/150|Reshiram & Zekrom-GX|SR
+170/150|Eevee & Snorlax-GX|SR
+171/150|Eevee & Snorlax-GX|SR
+172/150|Moltres & Zapdos & Articuno-GX|SR
+173/150|Moltres & Zapdos & Articuno-GX|SR
+174/150|Silvally-GX|SR
+175/150|N's Resolve|SR
+176/150|Erika's Hospitality|SR
+177/150|Poké Maniac|SR
+178/150|Brock's Grit|SR
+179/150|Sabrina's Suggestion|SR
+180/150|Welder|SR
+181/150|Red's Challenge|SR
+182/150|Cynthia & Caitlin|SR
+183/150|Reshiram & Charizard-GX|UR
+184/150|Greninja & Zoroark-GX|UR
+185/150|Moltres & Zapdos & Articuno-GX|UR
+186/150|Lana's Fishing Rod|UR
+187/150|Tag Call|UR
+188/150|Lillie's Poké Doll|UR
+189/150|Reset Stamp|UR
+190/150|Giant Bomb|UR
+191/150|Giant Hearth|UR
+192/150|Triple Acceleration Energy|UR
+
+# set: CSM2bC Shining Synergy (Supreme)
+001/150|Celebi & Venusaur-GX|RR
+002/150|Rowlet & Alolan Exeggutor-GX|RR
+003/150|Pheromosa & Buzzwole-GX|RR
+004/150|Caterpie|C
+005/150|Metapod|C
+006/150|Butterfree|U
+007/150|Weedle|C
+008/150|Kakuna|C
+009/150|Beedrill|U
+010/150|Paras|C
+011/150|Parasect|U
+012/150|Venonat|C
+013/150|Venomoth|U
+014/150|Venomoth-GX|RR
+015/150|Pinsir|U
+016/150|Celebi|R
+017/150|Shroomish|C
+018/150|Lileep|C
+019/150|Cradily|U
+020/150|Sewaddle|C
+021/150|Swadloon|C
+022/150|Leavanny|U
+023/150|Foongus|C
+024/150|Amoonguss|U
+025/150|Rowlet|C
+026/150|Dartrix|C
+027/150|Decidueye|R
+028/150|Buzzwole|R
+029/150|Kartana|R
+030/150|Tirtouga|C
+031/150|Carracosta|U
+032/150|Muk & Alolan Muk-GX|RR
+033/150|Gengar & Mimikyu-GX|RR
+034/150|Mewtwo & Mew-GX|RR
+035/150|Espeon & Deoxys-GX|RR
+036/150|Solgaleo & Lunala-GX|RR
+037/150|Ekans|C
+038/150|Arbok|U
+039/150|Nidoran ♀|C
+040/150|Nidorina|C
+041/150|Nidoqueen|U
+042/150|Nidoran ♂|C
+043/150|Nidorino|C
+044/150|Nidoking|U
+045/150|Gastly|C
+046/150|Haunter|C
+047/150|Gengar|U
+048/150|Drowzee|C
+049/150|Hypno|U
+050/150|Exeggcute|C
+051/150|Exeggutor|U
+052/150|Koffing|C
+053/150|Weezing|U
+054/150|Mr. Mime|U
+055/150|Mewtwo|R
+056/150|Mew|R
+057/150|Natu|C
+058/150|Xatu|U
+059/150|Duskull|C
+060/150|Dusclops|C
+061/150|Dusknoir|R
+062/150|Latios-GX|RR
+063/150|Drifloon|C
+064/150|Drifblim|U
+065/150|Rotom|C
+066/150|Giratina|R
+067/150|Elgyem|C
+068/150|Beheeyem|U
+069/150|Golett|C
+070/150|Golurk|U
+071/150|Espurr|C
+072/150|Meowstic|U
+073/150|Honedge|C
+074/150|Doublade|C
+075/150|Aegislash|R
+076/150|Mimikyu|C
+077/150|Necrozma|R
+078/150|Poipole|C
+079/150|Blacephalon|R
+080/150|Marshadow & Machamp-GX|RR
+081/150|Diglett|C
+082/150|Dugtrio|U
+083/150|Tyrogue|C
+084/150|Hitmonlee|C
+085/150|Hitmonchan|C
+086/150|Hitmontop|C
+087/150|Rhyhorn|C
+088/150|Rhydon|C
+089/150|Rhyperior|U
+090/150|Omanyte|U
+091/150|Omastar|R
+092/150|Kabuto|U
+093/150|Kabutops|U
+094/150|Aerodactyl-GX|RR
+095/150|Gligar|C
+096/150|Gliscor|C
+097/150|Breloom|U
+098/150|Meditite|C
+099/150|Medicham|U
+100/150|Anorith|C
+101/150|Armaldo|U
+102/150|Groudon|R
+103/150|Riolu|C
+104/150|Lucario|U
+105/150|Drilbur|C
+106/150|Excadrill|R
+107/150|Carracosta-GX|RR
+108/150|Terrakion|R
+109/150|Meloetta|U
+110/150|Zygarde|U
+111/150|Stakataka|R
+112/150|Garchomp & Giratina-GX|RR
+113/150|Axew|C
+114/150|Fraxure|C
+115/150|Haxorus|R
+116/150|Drampa|U
+117/150|Naganadel-GX|RR
+118/150|Meowth|C
+119/150|Persian|U
+120/150|Persian-GX|RR
+121/150|Kangaskhan|R
+122/150|Tauros|U
+123/150|Aerodactyl|U
+124/150|Snorlax|R
+125/150|Glameow|C
+126/150|Purugly|U
+127/150|Happiny|C
+128/150|Stadium Nav|U
+129/150|Unidentified Fossil|C
+130/150|Surprise Box|C
+131/150|Cherish Ball|U
+132/150|Stealthy Hood|U
+133/150|Karate Belt|U
+134/150|Normalium Z: Tackle|U
+135/150|Beast Bringer|U
+136/150|Janine|U
+137/150|Koga's Trap|U
+138/150|Guzma & Hala|U
+139/150|Blue's Tactics|U
+140/150|Giovanni's Exile|U
+141/150|Hapu|U
+142/150|Jessie & James|R
+143/150|Clay|U
+144/150|Lillie's Full Force|U
+145/150|Red & Blue|U
+146/150|Roller Skater|C
+147/150|Martial Arts Dojo|U
+148/150|Lavender Town|U
+149/150|Pokémon Research Lab|U
+150/150|Draw Energy|C
+151/150|Mimikyu|CHR
+152/150|Excadrill|CHR
+153/150|Celebi & Venusaur-GX|SR
+154/150|Celebi & Venusaur-GX|SR
+155/150|Rowlet & Alolan Exeggutor-GX|SR
+156/150|Rowlet & Alolan Exeggutor-GX|SR
+157/150|Pheromosa & Buzzwole-GX|SR
+158/150|Pheromosa & Buzzwole-GX|SR
+159/150|Venomoth-GX|SR
+160/150|Muk & Alolan Muk-GX|SR
+161/150|Muk & Alolan Muk-GX|SR
+162/150|Gengar & Mimikyu-GX|SR
+163/150|Gengar & Mimikyu-GX|SR
+164/150|Mewtwo & Mew-GX|SR
+165/150|Mewtwo & Mew-GX|SR
+166/150|Espeon & Deoxys-GX|SR
+167/150|Espeon & Deoxys-GX|SR
+168/150|Solgaleo & Lunala-GX|SR
+169/150|Latios-GX|SR
+170/150|Marshadow & Machamp-GX|SR
+171/150|Marshadow & Machamp-GX|SR
+172/150|Aerodactyl-GX|SR
+173/150|Garchomp & Giratina-GX|SR
+174/150|Garchomp & Giratina-GX|SR
+175/150|Naganadel-GX|SR
+176/150|Persian-GX|SR
+177/150|Janine|SR
+178/150|Koga's Trap|SR
+179/150|Guzma & Hala|SR
+180/150|Blue's Tactics|SR
+181/150|Giovanni's Exile|SR
+182/150|Hapu|SR
+183/150|Jessie & James|SR
+184/150|Clay|SR
+185/150|Lillie's Full Force|SR
+186/150|Red & Blue|SR
+187/150|Roller Skater|SR
+188/150|Mewtwo & Mew-GX|UR
+189/150|Garchomp & Giratina-GX|UR
+190/150|Cherish Ball|UR
+191/150|Karate Belt|UR
+192/150|Martial Arts Dojo|UR
+193/150|Draw Energy|UR

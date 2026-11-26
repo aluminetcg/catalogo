@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Base china · ALUMINETCG</title>
+<style>
+:root{
+  --bg:#f6f4ef; --panel:#fffdf8; --ink:#1d2330; --muted:#6a7080; --line:#e3dfd3;
+  --accent:#c2410c; --accent-ink:#fff; --ok:#15803d; --ok-bg:#dcfce7; --warn:#92400e; --warn-bg:#fef3c7; --chip:#efe9da;
+  --shadow:0 1px 2px rgba(29,35,48,.06),0 6px 18px rgba(29,35,48,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#12151c; --panel:#1a1f2a; --ink:#e9e6dd; --muted:#9097a7; --line:#2b3242;
+  --accent:#fb923c; --accent-ink:#1a1206; --ok:#86efac; --ok-bg:#14301f; --warn:#fcd34d; --warn-bg:#3a2c0c; --chip:#252c3b;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.3);}
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:24px max(16px,env(safe-area-inset-right,0px)) 60px max(16px,env(safe-area-inset-left,0px))}
+main{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+h1{font-size:26px;margin:0;text-wrap:balance}
+h1 span{color:var(--accent)}
+.lead{color:var(--muted);margin:4px 0 0}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px 18px;min-width:0}
+.box h2{font-size:16px;margin:0 0 10px}
+label{display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:600;color:var(--muted)}
+input,textarea{font:inherit;font-size:15px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+textarea{min-height:220px;font-family:ui-monospace,Consolas,monospace;font-size:13px;resize:vertical}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:16px}
+@media (max-width:860px){.cols{grid-template-columns:1fr}}
+.stats{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}
+.pill{background:var(--chip);border-radius:999px;padding:3px 10px;font-size:13px}
+.pill.w{background:var(--warn-bg);color:var(--warn)}
+.tbl{max-height:460px;overflow:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{position:sticky;top:0;background:var(--panel);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+td.n{font-variant-numeric:tabular-nums;color:var(--muted)}
+td.r{font-weight:700}
+tr.nuevo td.n::after{content:" nueva";color:var(--ok);font-weight:700;font-size:11px}
+.acts{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.go{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:11px 18px;font:inherit;font-weight:800;cursor:pointer}
+.go:disabled{opacity:.45;cursor:default}
+.go.done{background:var(--ok-bg);color:var(--ok)}
+.hint{color:var(--muted);font-size:13px}
+.ok{background:var(--ok-bg);color:var(--ok);border-radius:10px;padding:10px 12px;font-size:14px}
+.sets{display:flex;flex-wrap:wrap;gap:6px}
+ol{margin:0;padding-left:20px}li{margin:3px 0}
+</style>
+</head>
+<body>
+<main>
+  <div>
+    <h1>ALUMINE<span>TCG</span> · base de cartas chinas</h1>
+    <p class="lead">Pegás la lista de un set y queda guardada. Después, en la carga rápida (modo chino), con solo poner el número te aparece el nombre y la rareza.</p>
+  </div>
+
+  <div class="box">
+    <h2>Cómo se usa</h2>
+    <ol>
+      <li>Abrí la lista del set, seleccioná todas las cartas y copiá (Ctrl+C).</li>
+      <li>Pegá la lista. Si copiaste también el título de arriba de la página, el set se completa solo; si no, escribilo (podés elegir uno de los que ya tenés en la tienda).</li>
+      <li>Revisá la vista previa y tocá <b>Guardar</b>: se abre GitHub, tocás «Commit changes…» y otra vez «Commit changes».</li>
+      <li>En 2–3 minutos ya aparece en la carga rápida.</li>
+    </ol>
+  </div>
+
+  <div class="cols">
+    <div class="box" style="display:flex;flex-direction:column;gap:12px">
+      <label>Set (tal cual querés que figure en el título)
+        <input id="set" list="sets" placeholder="Ej.: CSV9C Stellar Crystal" autocomplete="off"></label>
+      <datalist id="sets"></datalist>
+      <label>Lista pegada
+        <textarea id="txt" placeholder="Pegá acá la lista del set…" spellcheck="false"></textarea></label>
+      <div class="hint">Entiende listas donde cada carta tiene el nombre, el número (001/151) y la rareza con la sigla entre paréntesis, por ejemplo «Super Rare (SR)». También líneas sueltas como <b>210/208 Zeraora AR</b>.</div>
+    </div>
+    <div class="box">
+      <h2>Vista previa</h2>
+      <div class="stats" id="stats"><span class="pill">Todavía no pegaste nada.</span></div>
+      <div class="tbl" id="tbl" hidden><table><thead><tr><th>Número</th><th>Nombre</th><th>Rareza</th></tr></thead><tbody id="rows"></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="acts" id="acts"><button class="go" disabled>Guardar</button><span class="hint">Escribí el set y pegá la lista.</span></div>
+    <div id="msg"></div>
+  </div>
+
+  <div class="box">
+    <h2>Sets que ya están en la base</h2>
+    <div class="sets" id="base"><span class="hint">Cargando…</span></div>
+  </div>
+</main>
+
+<script>
+const REPO = "aluminetcg/catalogo", POR_ARCHIVO = 150;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const NUM = /^(?:[A-Za-z]{0,6}\d{1,4}[A-Za-z]?)(?:\/[A-Za-z0-9-]{1,8})?$/;
+const SIGLA = /\(([A-Za-z+]{1,5})\)\s*$/;
+let base = {};   // set -> {numero: [nombre, rareza]}
+
+// encabezado copiado de la página del set: "Storming Emergence (Radiant)Storming Emergence (Radiant)CSM1aC"
+function detectaSet(texto) {
+  for (const l of texto.split(/\r?\n/).slice(0, 6).map(x => x.trim())) {
+    const m = l.match(/^(.+?)\1\s*([A-Za-z]{1,4}\d[A-Za-z0-9.]*)$/) || l.match(/^(.+?)\s+([A-Z]{2,4}\d+[a-z]?C)$/);
+    if (m) return (m[2] + " " + m[1].trim()).replace(/\s+/g, " ");
+  }
+  const L = texto.split(/\r?\n/).map(x => x.trim()).filter(Boolean);     // "Sun & Moon Promos" + "SMP" en dos líneas
+  if (L.length > 1 && /[a-z]/.test(L[0]) && /^[A-Z][A-Za-z0-9-]{1,7}$/.test(L[1]) && /\d|[A-Z]{2}/.test(L[1])) return L[1] + " " + L[0];
+  return "";
+}
+function limpiaNombre(n) { return n.replace(/\s*◇\s*/g, " Prism Star ").replace(/\s+/g, " ").trim(); }
+function parse(texto) {
+  const lineas = texto.split(/\r?\n/).map(l => l.trim().replace(/^\[(.+?)\]\(.*\)$/, "$1").replace(/^No\.\s*(\d{1,4})$/, "$1/PROMO")).filter(Boolean), out = [], malas = [];
+  for (let i = 0; i < lineas.length; i++) {
+    const l = lineas[i];
+    if (l.includes("\t")) {                                   // tabla copiada con columnas
+      const cel = l.split("\t").map(x => x.trim()).filter(Boolean), k = cel.findIndex(x => NUM.test(x) && /\d/.test(x));
+      if (k < 0) continue;
+      const nombre = cel.slice(0, k).filter(x => !/^\d+$/.test(x)).pop() || cel.slice(k + 1).find(x => /[a-z]/i.test(x) && !SIGLA.test(x)) || "";
+      const r = (cel.find(x => SIGLA.test(x)) || "").match(SIGLA);
+      if (nombre) out.push([cel[k], limpiaNombre(nombre), r ? r[1].toUpperCase() : ""]); else malas.push(l);
+      continue;
+    }
+    let m = l.match(/^([A-Za-z]{0,6}\d{1,4}[A-Za-z]?\/[A-Za-z]{0,6}\d{1,4})\s+(.+?)(?:\s+\(?([A-Z]{1,4})\)?)?$/);   // "210/208 Zeraora AR"
+    if (m && !NUM.test(l)) { out.push([m[1], limpiaNombre(m[2]), m[3] || ""]); continue; }
+    if (!NUM.test(l) || !/\d/.test(l) || /^\d+$/.test(l) || /^0+\//.test(l)) continue;   // "0/211" = contador de colección, no es carta
+    const nombre = lineas[i - 1];                               // bloque: nombre, número, … , "Rareza (SIGLA)"
+    if (!nombre || /^\d+$/.test(nombre) || NUM.test(nombre)) { malas.push(l); continue; }
+    let rz = "";
+    for (let j = i + 1; j < Math.min(i + 6, lineas.length) && !NUM.test(lineas[j]); j++) { const s = lineas[j].match(SIGLA); if (s) { rz = s[1].toUpperCase(); break; } }
+    out.push([l, limpiaNombre(nombre), rz]);
+  }
+  const vistos = {}, unicas = [];                             // un número = una carta (la última gana)
+  for (const c of out) { c[0] = c[0].replace(/\/PROMO$/, ""); vistos[c[0].toUpperCase()] = c; }
+  for (const k in vistos) unicas.push(vistos[k]);
+  return { cartas: unicas, malas };
+}
+
+let actual = { cartas: [], malas: [] };
+let setAuto = "";
+function pintar() {
+  const det = detectaSet($("#txt").value);
+  if (det && (!$("#set").value.trim() || $("#set").value === setAuto)) { $("#set").value = det; setAuto = det; }
+  actual = parse($("#txt").value);
+  const set = $("#set").value.trim(), ya = base[set] || {};
+  const nuevas = actual.cartas.filter(c => !ya[c[0].toUpperCase()]).length;
+  const sinRz = actual.cartas.filter(c => !c[2]).length;
+  $("#stats").innerHTML = actual.cartas.length
+    ? `<span class="pill"><b>${actual.cartas.length}</b> cartas</span>` + (set && base[set] ? `<span class="pill">${nuevas} nuevas para ese set</span>` : "") +
+      (sinRz ? `<span class="pill w">${sinRz} sin rareza</span>` : "") + (actual.malas.length ? `<span class="pill w">${actual.malas.length} líneas que no entendí</span>` : "")
+    : `<span class="pill">${$("#txt").value.trim() ? "No encontré cartas en lo que pegaste." : "Todavía no pegaste nada."}</span>`;
+  $("#tbl").hidden = !actual.cartas.length;
+  $("#rows").innerHTML = actual.cartas.map(c => `<tr${set && base[set] && !ya[c[0].toUpperCase()] ? ' class="nuevo"' : ""}><td class="n">${esc(c[0])}</td><td>${esc(c[1])}</td><td class="r">${esc(c[2] || "—")}</td></tr>`).join("");
+  armarBotones(set);
+}
+
+function slug(s) { return s.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40) || "set"; }
+function armarBotones(set) {
+  const n = actual.cartas.length;
+  if (!n || !set) { $("#acts").innerHTML = `<button class="go" disabled>Guardar</button><span class="hint">${!set ? "Escribí el set." : "Pegá la lista."}</span>`; return; }
+  const partes = Math.ceil(n / POR_ARCHIVO), d = new Date(), p = x => String(x).padStart(2, "0");
+  const stamp = `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}`;
+  $("#acts").innerHTML = Array.from({ length: partes }, (_, k) => `<button class="go" data-k="${k}">${partes > 1 ? `Guardar parte ${k + 1} de ${partes}` : `Guardar ${n} cartas`}</button>`).join("") +
+    (partes > 1 ? `<span class="hint">Son ${n} cartas: se guardan en ${partes} partes (tocá cada botón y hacé el commit de cada una).</span>` : "");
+  $("#acts").querySelectorAll("[data-k]").forEach(b => b.onclick = () => {
+    const k = +b.dataset.k, lote = actual.cartas.slice(k * POR_ARCHIVO, (k + 1) * POR_ARCHIVO);
+    const txt = `# set: ${set}\n` + lote.map(c => c.map(x => x.replace(/\|/g, "/")).join("|")).join("\n") + "\n";
+    const nombre = `${slug(set)}-${stamp}${partes > 1 ? "-" + (k + 1) : ""}.txt`;
+    window.open(`https://github.com/${REPO}/new/main/data/chino?filename=${encodeURIComponent(nombre)}&value=${encodeURIComponent(txt)}`, "_blank", "noopener");
+    b.classList.add("done"); b.textContent = "✓ " + b.textContent;
+    $("#msg").innerHTML = `<div class="ok" style="margin-top:12px">Se abrió GitHub en otra pestaña: tocá «Commit changes…» y de nuevo «Commit changes».${partes > 1 ? " Después guardá la otra parte." : ""} En 2–3 minutos está en la carga rápida.</div>`;
+  });
+}
+
+// sets de la tienda (sugerencias) y lo que ya hay en la base
+fetch("data/cards.json?t=" + Date.now(), { cache: "no-cache" }).then(r => r.json()).then(d => {
+  const n = {};
+  for (const c of (d.cards || d)) if (/pokemon-cartas-chino/.test(c.url) && c.set && !/^POKEMON CARTAS/i.test(c.set)) n[c.set] = (n[c.set] || 0) + 1;
+  $("#sets").innerHTML = Object.keys(n).sort().map(s => `<option value="${esc(s)}">`).join("");
+}).catch(() => {});
+fetch("data/singles/cn.json?t=" + Date.now(), { cache: "no-cache" }).then(r => r.ok ? r.json() : { sets: [], cards: [] }).then(d => {
+  const cuenta = {};
+  for (const c of d.cards) { const s = d.sets[c[3]][0]; (base[s] = base[s] || {})[String(c[2]).toUpperCase()] = 1; cuenta[s] = (cuenta[s] || 0) + 1; }
+  $("#base").innerHTML = Object.keys(cuenta).length ? Object.keys(cuenta).sort().map(s => `<span class="pill">${esc(s)} · ${cuenta[s]}</span>`).join("") : '<span class="hint">Todavía no hay ningún set. Pegá el primero.</span>';
+  pintar();
+}).catch(() => { $("#base").innerHTML = '<span class="hint">Todavía no hay ningún set.</span>'; });
+
+$("#txt").addEventListener("input", pintar);
+$("#set").addEventListener("input", pintar);
+</script>
+</body>
+</html>

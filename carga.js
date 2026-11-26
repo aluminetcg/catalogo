@@ -10,7 +10,7 @@
   var API = "https://api.empretienda.com";
   var AUTH = "https://auth0.empretienda.com", CID = "Kzsbi2SzTmTYF5tZnKOPN63wYpaDACMV";
   var IMG = function (pid, size) { return "https://tcgplayer-cdn.tcgplayer.com/product/" + pid + "_in_" + size + "x" + size + ".jpg"; };
-  var BASICAS = { "": 1, "Common": 1, "Uncommon": 1, "Rare": 1 };
+  var BASICAS = { "": 1, "Common": 1, "Uncommon": 1, "Rare": 1, "C": 1, "U": 1, "R": 1 };
   var ROOTS = { en: /ingl/i, jp: /jap/i, cn: /chin/i };
   var RZ = ["", "AR", "SAR", "SR", "UR", "CHR", "CSR", "HR", "RR", "RRR", "Holo", "Reverse", "Masterball Reverse", "Pokeball Reverse", "Promo"];
   var CDN = "https://d22fxaf9t8d39k.cloudfront.net/";
@@ -140,7 +140,7 @@
   async function loadIndex(lang) {
     if (S.idx[lang]) return S.idx[lang];
     $("#res").innerHTML = '<div class="msg">Cargando la base de cartas\u2026</div>';
-    var d = await fetch(PAGES + "data/singles/" + lang + ".json?t=" + Math.floor(Date.now() / 36e5)).then(function (r) { if (!r.ok) throw new Error("No encontr\u00e9 la base de cartas (" + r.status + ")"); return r.json(); });
+    var d = await fetch(PAGES + "data/singles/" + lang + ".json?t=" + Math.floor(Date.now() / 36e5)).then(function (r) { if (!r.ok && lang === "cn") return { sets: [], cards: [] }; if (!r.ok) throw new Error("No encontr\u00e9 la base de cartas (" + r.status + ")"); return r.json(); });
     d.cards.forEach(function (c) { c.L = lang; c.n = nnum(c[2]); c.w = norm(cardName(c[1])); c.s = norm(d.sets[c[3]][0]); });
     S.idx[lang] = d; return d;
   }
@@ -152,7 +152,8 @@
     });
     return out;
   }
-  function langs() { return S.lang === "all" ? ["en", "jp"] : S.lang === "cn" ? ["en"] : [S.lang]; }
+  function langs() { return S.lang === "all" ? ["en", "jp", "cn"] : S.lang === "cn" ? ["en", "cn"] : [S.lang]; }
+  function searchLangs() { return S.lang === "all" ? ["en", "jp", "cn"] : [S.lang]; }
   async function loadAll() { for (var i = 0, l = langs(); i < l.length; i++) await loadIndex(l[i]); }
   function setOf(c) { return S.idx[c.L].sets[c[3]][0]; }
   function guessCat(setFull, L) {
@@ -226,8 +227,7 @@
     $("#res").innerHTML = html;
   }
   function search() {
-    if (S.lang === "cn") return searchCn();
-    var L = langs().filter(function (l) { return S.idx[l]; }); if (!L.length) return;
+    var L = searchLangs().filter(function (l) { return S.idx[l]; }); if (!L.length) return;
     var toks = norm($("#q").value).split(" ").filter(Boolean);
     if (!toks.length) { $("#res").innerHTML = '<div class="msg">Escrib\u00ed el n\u00famero de la carta (por ejemplo 143/128) o parte del nombre.</div>'; return; }
     var nums = toks.filter(function (t) { return /\d/.test(t); }), names = toks.filter(function (t) { return !/\d/.test(t); });
@@ -244,12 +244,13 @@
       if (ok) out.push(c);
     }
     }
-    var cnHtml = S.lang === "all" ? searchCn(true) || "" : "";
-    if (cnHtml) cnHtml = '<div class="msg" style="padding:8px 0 0;text-align:left">Chino (a mano, sin foto ni precio):</div>' + cnHtml;
+    if (S.lang === "cn" && !out.length) return searchCn();
+    var cnHtml = S.lang === "all" || S.lang === "cn" ? searchCn(true) || "" : "";
+    if (cnHtml) cnHtml = '<div class="msg" style="padding:8px 0 0;text-align:left">Chino a mano (si no est\u00e1 en la base):</div>' + cnHtml;
     $("#res").innerHTML = out.length || cnHtml ? out.map(function (c) {
       var p = bestPrice(c[5]);
-      return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + c[0] + '" data-l="' + c.L + '"><img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">' +
-        '<b>' + (L.length > 1 ? '<span class="lg">' + (c.L === "jp" ? "JAP" : "ING") + "</span> " : "") + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(setOf(c))) + "</small>" +
+      return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + esc(c[0]) + '" data-l="' + c.L + '">' + (c.L === "cn" ? '<div class="ph">\u4e2d</div>' : '<img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">') +
+        '<b>' + (L.length > 1 || c.L === "cn" ? '<span class="lg">' + (c.L === "jp" ? "JAP" : c.L === "cn" ? "CHI" : "ING") + "</span> " : "") + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(setOf(c))) + "</small>" +
         "<small>" + esc(c[4] || "") + (p ? " \u00b7 US$" + p[1] : "") + "</small></div>";
     }).join("") + cnHtml : '<div class="msg">No encontr\u00e9 cartas con eso. Prob\u00e1 solo con el n\u00famero (143/128) o con otra parte del nombre.</div>';
   }
@@ -276,11 +277,14 @@
   function showDetailCn(c) {
     S.sel = c; S.own = null;
     root.querySelectorAll(".t").forEach(function (t) { t.classList.toggle("on", t.dataset.l === "cn" && S.cnRes[+t.dataset.i] === c); });
-    var cat = S.catMap[cnKey(c)] || S.catMap["cn|last"] || "";
+    var setFull = c.L === "cn" && typeof c[0] === "string" && c[0].indexOf("cn|") === 0 ? setOf(c) : "";
+    var cat = (setFull && (S.catMap["cn|" + setFull] || guessCat(setFull, "cn"))) || S.catMap[cnKey(c)] || S.catMap["cn|last"] || "";
+    var rzs = RZ.indexOf(c[4]) >= 0 ? RZ : RZ.concat([c[4]]);
     $("#det").innerHTML = '<img class="big" id="big" alt="" hidden><div class="nof" id="nof">Sin foto (es opcional).<br>Peg\u00e1 (Ctrl+V), arrastr\u00e1 o eleg\u00ed una foto si quer\u00e9s ponerle.</div>' +
       '<div class="foto"><label class="sec">Elegir foto<input id="own" type="file" accept="image/*" hidden></label>' +
       '<button class="sec" id="rmown" hidden>Sacar la foto</button><span id="fotoinfo"></span></div>' +
-      '<div class="row"><label>Nombre<input id="nm"></label><label>Rareza<select id="rz">' + RZ.map(function (r) { return '<option value="' + r + '"' + (r === c[4] ? " selected" : "") + ">" + (r || "(ninguna)") + "</option>"; }).join("") + "</select></label></div>" +
+      '<div class="row"><label>Nombre<input id="nm"></label><label>Rareza<select id="rz">' + rzs.map(function (r) { return '<option value="' + esc(r) + '"' + (r === c[4] ? " selected" : "") + ">" + esc(r || "(ninguna)") + "</option>"; }).join("") + "</select></label></div>" +
+      (setFull ? '<div class="hint">De tu base china: ' + esc(setFull) + "</div>" : "") +
       '<label>T\u00edtulo del producto<input id="ti" maxlength="80"></label>' +
       '<label>Categor\u00eda<select id="ca">' + catOptions(cat, "cn") + "</select></label>" +
       '<div class="row"><label>Precio $<input id="pr" type="number" min="1" step="1" placeholder="a mano"></label><label>Stock<input id="st" type="number" min="1" step="1" value="1"></label></div>' +
@@ -452,7 +456,7 @@
         nota = " Empretienda no acept\u00f3 la foto vieja, as\u00ed que puse la de stock.";
       }
       if (vieja.length && !nota) nota = " Con la foto de la publicaci\u00f3n vieja.";
-      if (c.L === "cn") { S.catMap[cnKey(c)] = +cat; S.catMap["cn|last"] = +cat; } else S.catMap[c.L + "|" + setOf(c)] = +cat;
+      if (c.L === "cn") { S.catMap[cnKey(c)] = +cat; S.catMap["cn|last"] = +cat; if (typeof c[0] === "string" && c[0].indexOf("cn|") === 0) S.catMap["cn|" + setOf(c)] = +cat; } else S.catMap[c.L + "|" + setOf(c)] = +cat;
       ls.set("cats", S.catMap);
       var id = prod && (prod.idProductos || (prod.producto && prod.producto.idProductos));
       S.log.unshift({ t: title, s: stock, p: price, id: id, nuevo: true, re: !!reemplaza });
@@ -508,7 +512,7 @@
   });
   $("#res").addEventListener("click", function (e) {
     var t = e.target.closest(".t"); if (!t) return;
-    if (t.dataset.l === "cn") { if (S.cnRes[+t.dataset.i]) showDetail(S.cnRes[+t.dataset.i]); return; }
+    if (t.dataset.l === "cn" && t.dataset.i !== undefined) { if (S.cnRes[+t.dataset.i]) showDetail(S.cnRes[+t.dataset.i]); return; }
     var c = S.idx[t.dataset.l].cards.filter(function (x) { return x[0] == t.dataset.pid; })[0]; if (c) showDetail(c);
   });
   $("#lang").onchange = async function () { S.lang = this.value; ls.set("lang", S.lang); S.sel = null; try { await loadAll(); search(); } catch (e) { $("#res").innerHTML = '<div class="msg err">' + esc(e.message) + "</div>"; } };
