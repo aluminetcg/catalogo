@@ -1,0 +1,24 @@
+# set: CS5.1C Radiant Energy Vol. 2
+001/004|Sobble|
+002/004|Pikachu|
+003/004|Eevee|
+004/004|Celebratory Fanfare|
+005/004|Fire Energy|
+006/004|Fighting Energy|
+007/004|Darkness Energy|
+008/004|Cara Liss|
+009/004|Elesa's Sparkle|
+010/004|Gym Trainer|
+011/004|Single Strike Style Mustard|
+012/004|Rapid Strike Style Mustard|
+013/004|Serperior V|
+014/004|Boltund V|
+015/004|Gallade V|
+016/004|Crobat V|
+017/004|Hoopa V|
+018/004|Ice Rider Calyrex VMAX|
+019/004|Mew VMAX|
+020/004|Shadow Rider Calyrex VMAX|
+021/004|Single Strike Urshifu VMAX|
+022/004|Rapid Strike Urshifu VMAX|
+023/004|Battle VIP Pass|
