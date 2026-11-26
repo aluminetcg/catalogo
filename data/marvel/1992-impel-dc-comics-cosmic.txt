@@ -1,0 +1,182 @@
+# set: 1992 Impel DC Comics Cosmic
+1|Blue Beetle GA|
+2|Blue Beetle SA|
+3|Blue Beetle MA|
+4|Flash GA|
+5|Flash SA|
+6|Flash MA|
+7|Green Lantern GA|
+8|Green Lantern SA|
+9|Green Lantern MA|
+10|Hawkman GA|
+11|Hawkman SA|
+12|Hawkman MA|
+13|Shazam! GA|
+14|Shazam! SA|
+15|Shazam! MA|
+16|Superman GA|
+17|Superman SA|
+18|Superman MA|
+19|Wonder Woman GA|
+20|Wonder Woman SA|
+21|Wonder Woman MA|
+22|Cheetah GA|
+23|Cheetah SA|
+24|Cheetah MA|
+25|Lex Luthor GA|
+26|Lex Luthor SA|
+27|Lex Luthor MA|
+28|Mr. Mxyztplk GA|
+29|Mr. Mxyztplk SA|
+30|Mr. Mxyztplk MA|
+31|Animal Man|
+32|Aqualad|
+33|Aquaman|
+34|Black Condor|
+35|Black Lightning|
+36|Blackhawk|
+37|Blue Devil|
+38|Booster Gold|
+39|Bronze Tiger|
+40|Changeling|
+41|The Creeper|
+42|Crimson Fox|
+43|Cyborg|
+44a|Deathstroke the Terminator ERR|
+44b|Deathstroke the Terminator COR|
+45|Dr. Light|
+46|Dove|
+47|Elongated Man|
+48|Fire|
+49|Firehawk|
+50|Firestorm|
+51|Gangbuster|
+52|Geo-Force|
+53|The Guardian|
+54|Guy Gardner|
+55|Hawk|
+56|Hawkwoman|
+57|Hourman|
+58|Ice|
+59|Jade|
+60|John Stewart|
+61|Katana|
+62|Metamorpho|
+63|Mr. Bones|
+64|Nightshade|
+65|Nightwing|
+66|Northwind|
+67|Nuklon|
+68|Pantha|
+69|Peacemaker|
+70|Phantom Lady|
+71|Power Girl|
+72|Ragman|
+73|Raven|
+74|Rocket Red|
+75|Speedy|
+76|Troia|
+77|Vixen|
+78|Wildcat|
+79|Amazo|
+80|Big Sir|
+81|Black Manta|
+82|Blockbuster|
+83|Bolt|
+84|Brainiac|
+85|Captain Boomerang|
+86|Chemo|
+87|Chronos|
+88|Copperhead|
+89|Count Vertigo|
+90|Deadline|
+91|Deadshot|
+92|Dr. Light|
+93|Dr. Polaris|
+94|Eclipso|
+95|Goldface|
+96|Gorilla Grodd|
+97|Houngan|
+98|Jericho|
+99|Kestrel|
+100|Monarch|
+101|Ocean Master|
+102|Parasite|
+103|Phobia|
+104|Plasmus|
+105|Psycho-Pirate|
+106|Shadow Thief|
+107|Silver Swan|
+108|Sonar|
+109|Toyman|
+110|Vandal Savage|
+111|Warp|
+112|Adam Strange|
+113|Arisia|
+114|Big Barda|
+115|Black Racer|
+116|Fastbak|
+117|G'nort|
+118|Kilowog|
+119|Lightray|
+120|Lobo|
+121|Martian Manhunter|
+122|Metron|
+123|Mr. Miracle|
+124|Orion|
+125|Starfire|
+126|Ares|
+127|Blackfire|
+128|Darkseid|
+129|Desaad|
+130|Despero|
+131|Glorious Godfrey|
+132|Granny Goodness|
+133|Kalibak|
+134|Kanjar Ro|
+135|Manga Khan|
+136|Maxima|
+137|Mr. Nebula|
+138|Sinestro|
+139|Starro the Conquerer|
+140|Steppenwolf|
+141|Yuga Khan|
+142|Crisis on Earths One & Two|
+143|Crisis on Earths One & Two|
+144|Crisis on Earths One & Two|
+145|Crisis on Infinite Earths|
+146|Crisis on Infinite Earths|
+147|Crisis on Infinite Earths|
+148|Legends|
+149|Legends|
+150|Legends|
+151|Millennium|
+152|Millennium|
+153|Millennium|
+154|Invasion!|
+155|Invasion!|
+156|Invasion!|
+157|Cosmic Odyssey|
+158|Cosmic Odyssey|
+159|Cosmic Odyssey|
+160|The Great Darkness Saga|
+161|The Great Darkness Saga|
+162|The Great Darkness Saga|
+163|Armageddon 2001|
+164|Armageddon 2001|
+165|Armageddon 2001|
+166|War of the Gods|
+167|War of the Gods|
+168|War of the Gods|
+169|Action Comics #1|
+170|All-American Comics #16|
+171|All Star Comics #3|
+172|The Brave and the Bold #34|
+173|New Gods #1|
+174|Sensation Comics #1|
+175|Showcase #22|
+176|Showcase #34|
+177|Superman #1|
+178|Wonder Woman #1|
+179|Checklist CL|
+180|Checklist CL|
