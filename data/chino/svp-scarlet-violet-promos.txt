@@ -1,0 +1,583 @@
+# set: SVP Scarlet & Violet Promos
+500|Paradise Resort|
+501|Great Ball|
+502|Great Ball|
+503|Great Ball|
+504|Great Ball|
+505|Rare Candy|
+506|Rare Candy|
+507|Rare Candy|
+508|Rare Candy|
+509|Rare Candy|
+510|Rare Candy|
+511|Victory Symbol|
+512|Victory Symbol|
+513|Victory Symbol|
+514|Basic Grass Energy|
+515|Basic Fire Energy|
+516|Basic Water Energy|
+517|Basic Lightning Energy|
+518|Basic Psychic Energy|
+519|Basic Fighting Energy|
+520|Basic Darkness Energy|
+521|Basic Metal Energy|
+522|Poké Ball|
+523|Poké Ball|
+524|Poké Ball|
+525|Pal Pad|
+526|Pal Pad|
+527|Pal Pad|
+528|Rare Candy|
+529|Rare Candy|
+530|Rare Candy|
+531|Rare Candy|
+532|Rare Candy|
+533|Rare Candy|
+534|Victory Symbol|
+535|Victory Symbol|
+536|Victory Symbol|
+537|Basic Grass Energy|
+538|Basic Fire Energy|
+539|Basic Water Energy|
+540|Basic Lightning Energy|
+541|Basic Psychic Energy|
+542|Basic Fighting Energy|
+543|Basic Darkness Energy|
+544|Basic Metal Energy|
+545|Paradise Resort|
+546|Rare Candy|
+547|Rare Candy|
+548|Rare Candy|
+549|Rare Candy|
+550|Rare Candy|
+551|Rare Candy|
+552|Victory Symbol|
+553|Victory Symbol|
+554|Victory Symbol|
+555|Basic Grass Energy|
+556|Basic Fire Energy|
+557|Basic Water Energy|
+558|Basic Lightning Energy|
+559|Basic Psychic Energy|
+560|Basic Fighting Energy|
+561|Basic Darkness Energy|
+562|Basic Metal Energy|
+563|Rare Candy|
+564|Rare Candy|
+565|Rare Candy|
+566|Rare Candy|
+567|Rare Candy|
+568|Rare Candy|
+569|Victory Symbol|
+570|Victory Symbol|
+571|Victory Symbol|
+572|Basic Grass Energy|
+573|Basic Fire Energy|
+574|Basic Water Energy|
+575|Basic Lightning Energy|
+576|Basic Psychic Energy|
+577|Basic Fighting Energy|
+578|Basic Darkness Energy|
+579|Basic Metal Energy|
+580|Ultra Ball|
+581|Ultra Ball|
+582|Ultra Ball|
+583|Ultra Ball|
+584|Ultra Ball|
+585|Ultra Ball|
+586|Victory Symbol|
+587|Victory Symbol|
+588|Victory Symbol|
+589|Basic Grass Energy|
+590|Basic Fire Energy|
+591|Basic Water Energy|
+592|Basic Lightning Energy|
+593|Basic Psychic Energy|
+594|Basic Fighting Energy|
+595|Basic Darkness Energy|
+596|Basic Metal Energy|
+001/SV-P|Pikachu|
+002/SV-P|Pikachu|
+003/SV-P|Mew ex|
+004/SV-P|Pikachu|
+005/SV-P|Toedscool|
+006/SV-P|Growlithe|
+007/SV-P|Wiglett|
+008/SV-P|Pawmi|
+009/SV-P|Wattrel|
+010/SV-P|Kilowattrel|
+011/SV-P|Miraidon ex|
+012/SV-P|Gimmighoul|
+013/SV-P|Antique Helix Fossil|
+014/SV-P|Antique Dome Fossil|
+015/SV-P|Antique Old Amber|
+016/SV-P|Wattrel|
+017/SV-P|Kilowattrel|
+018/SV-P|Zapdos ex|
+019/SV-P|Heracross|
+020/SV-P|Scovillain|
+021/SV-P|Ninetales|
+022/SV-P|Fletchinder|
+023/SV-P|Armarouge|
+024/SV-P|Magikarp|
+025/SV-P|Eiscue|
+026/SV-P|Cleffa|
+027/SV-P|Tyranitar|
+028/SV-P|Kingambit|
+029/SV-P|Scizor|
+030/SV-P|Maushold|
+031/SV-P|Miraidon|
+032/SV-P|Koraidon|
+033/SV-P|Sprigatito|
+034/SV-P|Fuecoco|
+035/SV-P|Sprigatito|
+036/SV-P|Fuecoco|
+037/SV-P|Quaxly|
+038/SV-P|Meowscarada ex|
+039/SV-P|Tarountula|
+040/SV-P|Charcadet|
+041/SV-P|Finizen|
+042/SV-P|Sinistea|
+043/SV-P|Tinkatink|
+044/SV-P|Barboach|
+045/SV-P|Murkrow|
+046/SV-P|Varoom|
+047/SV-P|Revavroom|
+048/SV-P|Tandemaus|
+049/SV-P|Varoom|
+050/SV-P|Revavroom|
+051/SV-P|Smoliv|
+052/SV-P|Growlithe|
+053/SV-P|Wiglett|
+054/SV-P|Wugtrio|
+055/SV-P|Frigibax|
+056/SV-P|Arctibax|
+057/SV-P|Pawmi|
+058/SV-P|Pawmot|
+059/SV-P|Flittle|
+060/SV-P|Kangaskhan ex|
+061/SV-P|Eevee|
+062/SV-P|Wiglett|
+063/SV-P|Wugtrio|
+064/SV-P|Chien-Pao ex|
+065/SV-P|Goldeen|
+066/SV-P|Bulbasaur|
+067/SV-P|Charmander|
+068/SV-P|Squirtle|
+069/SV-P|Bulbasaur|
+070/SV-P|Charmander|
+071/SV-P|Squirtle|
+072/SV-P|Machoke|
+073/SV-P|Tarountula|
+074/SV-P|Shinx|
+075/SV-P|Toxel|
+076/SV-P|Tadbulb|
+077/SV-P|Natu|
+078/SV-P|Xatu|
+079/SV-P|Hawlucha|
+080/SV-P|Nacli|
+081/SV-P|Houndoom ex|
+082/SV-P|Lechonk|
+083/SV-P|Tandemaus|
+084/SV-P|Natu|
+085/SV-P|Xatu|
+086/SV-P|Onix|
+087/SV-P|Iono|
+088/SV-P|Rika|
+089/SV-P|Charizard ex|
+090/SV-P|Pikachu|
+091/SV-P|Raichu|
+092/SV-P|Plusle|
+093/SV-P|Minun|
+094/SV-P|Pachirisu|
+095/SV-P|Pawmot|
+096/SV-P|Pawmi|
+097/SV-P|Bulbasaur|
+098/SV-P|Charmander|
+099/SV-P|Squirtle|
+100/SV-P|Charmeleon|
+101/SV-P|Garchomp ex|
+102/SV-P|Magnemite|
+103/SV-P|Greavard|
+104/SV-P|Houndstone|
+105/SV-P|Gimmighoul|
+106/SV-P|Glimmet|
+107/SV-P|Paldean Wooper|
+108/SV-P|Shroodle|
+109/SV-P|Grafaiai|
+110/SV-P|Lechonk|
+111/SV-P|Shroodle|
+112/SV-P|Grafaiai|
+113/SV-P|Victini ex|
+114/SV-P|Victini ex|
+115/SV-P|Veluza|
+116/SV-P|Fletchinder|
+117/SV-P|Roaring Moon ex|
+118/SV-P|Sprigatito|
+119/SV-P|Fuecoco|
+120/SV-P|Quaxly|
+121/SV-P|Eiscue|
+122/SV-P|Scovillain|
+123/SV-P|Miraidon|
+124/SV-P|Koraidon|
+126/SV-P|Pinsir|
+127/SV-P|Zarude|
+128/SV-P|Toedscruel ex|
+129/SV-P|Ponyta|
+130/SV-P|Rapidash|
+131/SV-P|Darumaka|
+132/SV-P|Darmanitan|
+133/SV-P|Remoraid|
+134/SV-P|Octillery|
+135/SV-P|Regice|
+136/SV-P|Wiglett|
+137/SV-P|Wugtrio|
+138/SV-P|Pachirisu|
+139/SV-P|Zebstrika|
+140/SV-P|Mime Jr.|
+141/SV-P|Impidimp|
+142/SV-P|Morgrem|
+143/SV-P|Grimmsnarl|
+144/SV-P|Toedscool|
+145/SV-P|Toedscruel|
+146/SV-P|Great Tusk ex|
+147/SV-P|Absol ex|
+148/SV-P|Scizor ex|
+149/SV-P|Iron Treads ex|
+150/SV-P|Kangaskhan|
+151/SV-P|Super Rod|
+152/SV-P|Earthen Vessel|
+153/SV-P|TM Machine|
+154/SV-P|Iono|
+155/SV-P|Eri|
+156/SV-P|Pineco|
+157/SV-P|Charcadet|
+158/SV-P|Flaaffy|
+159/SV-P|Tinkatink|
+160/SV-P|Tinkaton|
+161/SV-P|Iron Valiant ex|
+162/SV-P|Nacli|
+163/SV-P|Varoom|
+164/SV-P|Skwovet|
+165/SV-P|Greedent|
+166/SV-P|Tandemaus|
+167/SV-P|Skwovet|
+168/SV-P|Greedent|
+169/SV-P|Charjabug|
+170/SV-P|Cramorant|
+171/SV-P|Pineco|
+172/SV-P|Turtwig|
+173/SV-P|Grotle|
+174/SV-P|Torterra ex|
+175/SV-P|Litten|
+176/SV-P|Torracat|
+177/SV-P|Incineroar ex|
+178/SV-P|Poliwag|
+179/SV-P|Poliwhirl|
+180/SV-P|Poliwrath|
+181/SV-P|Walking Wake ex|
+182/SV-P|Miraidon ex|
+183/SV-P|Bronzor|
+184/SV-P|Bronzong|
+185/SV-P|Flabébé|
+186/SV-P|Floette|
+187/SV-P|Florges|
+188/SV-P|Sandygast|
+189/SV-P|Palossand|
+190/SV-P|Hippopotas|
+191/SV-P|Hippowdon|
+192/SV-P|Iron Boulder ex|
+193/SV-P|Forretress|
+194/SV-P|Skwovet|
+195/SV-P|Greedent|
+196/SV-P|Buddy-Buddy Poffin|
+197/SV-P|Rescue Board|
+198/SV-P|Ciphermaniac's Codebreaking|
+199/SV-P|Ciphermaniac's Codebreaking|
+200/SV-P|Academy at Night|
+201/SV-P|Larry|
+202/SV-P|Grusha|
+203/SV-P|Brassius|
+204/SV-P|Rika|
+205/SV-P|Iono|
+206/SV-P|Nemona|
+207/SV-P|Arven|
+208/SV-P|Penny|
+209/SV-P|Paldean Student|
+210/SV-P|Paldean Student|
+211/SV-P|Cleffa|
+212/SV-P|Gastly|
+213/SV-P|Haunter|
+214/SV-P|Gengar ex|
+215/SV-P|Jirachi|
+216/SV-P|Nest Ball|
+217/SV-P|Ultra Ball|
+218/SV-P|Arven|
+219/SV-P|Boss's Orders|
+220/SV-P|Bounsweet|
+221/SV-P|Steenee|
+222/SV-P|Tapu Bulu|
+223/SV-P|Iron Leaves ex|
+224/SV-P|Tsareena ex|
+225/SV-P|Iron Bundle|
+226/SV-P|Chimecho|
+227/SV-P|Drilbur|
+228/SV-P|Excadrill|
+229/SV-P|Miraidon|
+230/SV-P|Nest Ball|
+231/SV-P|Rare Candy|
+232/SV-P|Iron Bundle|
+233/SV-P|Wattrel|
+234/SV-P|Kilowattrel ex|
+235/SV-P|Energy Retrieval|
+236/SV-P|Superior Energy Retrieval|
+237/SV-P|Pokémon Catcher|
+238/SV-P|Professor Sada's Vitality|
+239/SV-P|Carmine|
+240/SV-P|Professor Turo's Scenario|
+241/SV-P|Wailord|
+242/SV-P|Larvitar|
+243/SV-P|Spinda|
+244/SV-P|Uxie|
+245/SV-P|Spritzee|
+246/SV-P|Heatmor|
+247/SV-P|Froakie|
+248/SV-P|Frogadier|
+249/SV-P|Iron Thorns|
+250/SV-P|Iron Thorns ex|
+251/SV-P|Iron Valiant|
+252/SV-P|Greninja ex|
+253/SV-P|Great Tusk|
+254/SV-P|Iron Treads|
+255/SV-P|Koraidon|
+256/SV-P|Ancient Booster Energy Capsule|
+257/SV-P|Future Booster Energy Capsule|
+258/SV-P|Horsea|
+259/SV-P|Seadra|
+260/SV-P|Kingdra ex|
+261/SV-P|Black Kyurem ex|
+262/SV-P|Togedemaru|
+263/SV-P|Dhelmise|
+264/SV-P|Flittle|
+265/SV-P|Espathra|
+266/SV-P|Meditite|
+267/SV-P|Medicham ex|
+268/SV-P|Trapinch|
+269/SV-P|Vibrava|
+270/SV-P|Flygon ex|
+271/SV-P|Passimian|
+272/SV-P|Scraggy|
+273/SV-P|Scrafty|
+274/SV-P|Inkay|
+275/SV-P|Malamar|
+276/SV-P|Yveltal|
+277/SV-P|Snorlax|
+278/SV-P|Kecleon|
+279/SV-P|Audino|
+280/SV-P|Helioptile|
+281/SV-P|Heliolisk|
+282/SV-P|Cyclizar ex|
+283/SV-P|Glass Trumpet|
+284/SV-P|Night Stretcher|
+285/SV-P|Tyme|
+286/SV-P|Billy & O'Nare|
+287/SV-P|Jamming Tower|
+288/SV-P|Veluza ex|
+289/SV-P|Hawlucha|
+290/SV-P|Kyurem|
+291/SV-P|Noctowl|
+292/SV-P|Fan Rotom|
+293/SV-P|Energy Switch|
+294/SV-P|Switch|
+295/SV-P|Bravery Charm|
+296/SV-P|Jacq|
+297/SV-P|Espeon ex|
+298/SV-P|Umbreon ex|
+299/SV-P|Eevee|
+300/SV-P|Bronzong|
+301/SV-P|Lotad|
+302/SV-P|Lombre|
+303/SV-P|Ludicolo|
+304/SV-P|Feebas|
+305/SV-P|Milotic ex|
+306/SV-P|Zorua|
+307/SV-P|Zoroark|
+308/SV-P|Meowth|
+309/SV-P|Persian|
+310/SV-P|Chansey|
+311/SV-P|Blissey ex|
+312/SV-P|Gravity Gemstone|
+313/SV-P|Yanma|
+314/SV-P|Yanmega|
+315/SV-P|Yanmega ex|
+316/SV-P|Mow Rotom|
+317/SV-P|Cottonee|
+318/SV-P|Whimsicott|
+319/SV-P|Teal Mask Ogerpon|
+320/SV-P|Heat Rotom|
+321/SV-P|Volcanion ex|
+322/SV-P|Hearthflame Mask Ogerpon|
+323/SV-P|Wooper|
+324/SV-P|Quagsire|
+325/SV-P|Wash Rotom|
+326/SV-P|Dondozo ex|
+327/SV-P|Wellspring Mask Ogerpon|
+328/SV-P|Mudbray|
+329/SV-P|Mudsdale|
+330/SV-P|Klawf|
+331/SV-P|Cornerstone Mask Ogerpon|
+332/SV-P|Koffing|
+333/SV-P|Weezing|
+334/SV-P|Okidogi ex|
+335/SV-P|Sentret|
+336/SV-P|Furret|
+337/SV-P|Dudunsparce ex|
+338/SV-P|Roto-Stick|
+339/SV-P|Crispin|
+340/SV-P|Briar|
+341/SV-P|Pokémon Center Lady|
+342/SV-P|Area Zero Underdepths|
+343/SV-P|Shaymin|
+344/SV-P|Rellor|
+345/SV-P|Rabsca ex|
+346/SV-P|Duskull|
+347/SV-P|Dusclops|
+348/SV-P|Dusknoir|
+349/SV-P|Pal Pad|
+350/SV-P|Technical Machine: Evolution|
+351/SV-P|Brock's Scouting|
+352/SV-P|Lisia's Appeal|
+353/SV-P|Charizard ex|
+354/SV-P|Team Rocket's Mewtwo ex|
+355/SV-P|Energy Search|
+356/SV-P|Potion|
+357/SV-P|Crushing Hammer|
+358/SV-P|Ultra Ball|
+359/SV-P|Switch|
+360/SV-P|Pokémon Catcher|
+361/SV-P|Boss's Orders|
+362/SV-P|Cheren|
+363/SV-P|N's Plan|
+364/SV-P|Hilda|
+365/SV-P|Klang|
+366/SV-P|Shellder|
+367/SV-P|Togekiss|
+368/SV-P|Mienfoo|
+369/SV-P|Applin|
+370/SV-P|Dipplin|
+371/SV-P|Hydrapple|
+372/SV-P|Flareon ex|
+373/SV-P|Zeraora|
+374/SV-P|Swinub|
+375/SV-P|Piloswine|
+376/SV-P|Mamoswine ex|
+377/SV-P|Trubbish|
+378/SV-P|Garbodor|
+379/SV-P|Rock Chestplate|
+380/SV-P|Pokémon League Headquarters|
+381/SV-P|Ethan's Ho-Oh ex|
+382/SV-P|Totodile|
+383/SV-P|Croconaw|
+384/SV-P|Feraligatr|
+385/SV-P|Chien-Pao|
+386/SV-P|Pikachu|
+387/SV-P|Raichu|
+388/SV-P|Magneton|
+389/SV-P|Iono's Tadbulb|
+390/SV-P|Iono's Bellibolt ex|
+391/SV-P|Drifloon|
+392/SV-P|Drifblim|
+393/SV-P|Nosepass|
+394/SV-P|Probopass|
+395/SV-P|Marnie's Impidimp|
+396/SV-P|Marnie's Morgrem|
+397/SV-P|Marnie's Grimmsnarl ex|
+398/SV-P|Steven's Beldum|
+399/SV-P|Steven's Metang|
+400/SV-P|Steven's Metagross ex|
+401/SV-P|Honedge|
+402/SV-P|Doublade|
+403/SV-P|Aegislash|
+404/SV-P|Hop's Zacian ex|
+405/SV-P|Druddigon|
+406/SV-P|Counter Catcher|
+407/SV-P|Tera Orb|
+408/SV-P|Colress's Tenacity|
+409/SV-P|Kieran|
+410/SV-P|Festival Grounds|
+411/SV-P|Budew|
+412/SV-P|Froslass|
+413/SV-P|Hop's Pincurchin ex|
+414/SV-P|Munkidori|
+415/SV-P|Genesect|
+416/SV-P|Energy Search|
+417/SV-P|Defiance Band|
+418/SV-P|Judge|
+419/SV-P|Luminous Energy|
+420/SV-P|Gastly|
+421/SV-P|Gengar ex|
+422/SV-P|Lilligant|
+423/SV-P|Beldum|
+424/SV-P|Staryu|
+425/SV-P|Volcarona|
+426/SV-P|Poliwhirl|
+427/SV-P|Surskit|
+428/SV-P|Nosepass|
+429/SV-P|Slakoth|
+430/SV-P|Chatot|
+433/SV-P|Articuno|
+434/SV-P|Solrock|
+436/SV-P|Blitzle|
+437/SV-P|Clamperl|
+438/SV-P|Huntail|
+439/SV-P|Gorebyss|
+440/SV-P|N's Joltik|
+441/SV-P|N's Zorua|
+442/SV-P|N's Zoroark ex|
+443/SV-P|Zamazenta|
+444/SV-P|Team Rocket's Meowth|
+445/SV-P|Bloodmoon Ursaluna ex|
+446/SV-P|Kangaskhan|
+447/SV-P|Team Rocket's Bother-Bot|
+448/SV-P|Team Rocket's Transceiver|
+449/SV-P|Shelmet|
+450/SV-P|Accelgor|
+451/SV-P|Growlithe|
+452/SV-P|Arcanine|
+453/SV-P|Magmar|
+454/SV-P|Magmortar|
+455/SV-P|Hearthflame Mask Ogerpon ex|
+456/SV-P|Torchic|
+457/SV-P|Combusken|
+458/SV-P|Blaziken|
+459/SV-P|Wailmer|
+460/SV-P|Wailord|
+461/SV-P|Cetoddle|
+462/SV-P|Wellspring Mask Ogerpon ex|
+463/SV-P|Team Rocket's Mimikyu|
+464/SV-P|Regirock ex|
+465/SV-P|Team Rocket's Nidoran ♂|
+466/SV-P|Team Rocket's Nidorino|
+467/SV-P|Team Rocket's Nidoking ex|
+468/SV-P|Team Rocket's Zubat|
+469/SV-P|Team Rocket's Golbat|
+470/SV-P|Team Rocket's Murkrow|
+471/SV-P|Farigiraf ex|
+472/SV-P|Team Rocket's Rattata|
+473/SV-P|Team Rocket's Raticate|
+474/SV-P|Sacred Ash|
+475/SV-P|Team Rocket's Hypnotizer|
+476/SV-P|Emcee's Hype|
+477/SV-P|Team Rocket's Petrel|
+478/SV-P|Team Rocket's Watchtower|
+479/SV-P|Psyduck|
+480/SV-P|Golduck|
+481/SV-P|Togekiss|
+482/SV-P|Team Rocket's Kangaskhan ex|
+483/SV-P|Tool Scrapper|
+484/SV-P|Pokégear 3.0|
+485/SV-P|Air Balloon|
+486/SV-P|Hilda|
+487/SV-P|Prism Energy|
+488/SV-P|Mawile|
+496/SV-P|Victini|
