@@ -1,0 +1,200 @@
+# set: CS1bC Dynamax Clash (Flame)
+001/136|Caterpie|C
+002/136|Metapod|U
+003/136|Butterfree|U
+004/136|Butterfree V|RR
+005/136|Butterfree VMAX|RRR
+006/136|Scyther|C
+007/136|Shuckle|U
+008/136|Heracross|U
+009/136|Lotad|C
+010/136|Lombre|U
+011/136|Ludicolo|U
+012/136|Surskit|C
+013/136|Masquerain|U
+014/136|Roselia|C
+015/136|Roserade|U
+016/136|Maractus|C
+017/136|Karrablast|C
+018/136|Shelmet|C
+019/136|Accelgor|U
+020/136|Phantump|C
+021/136|Trevenant|U
+022/136|Bounsweet|C
+023/136|Steenee|U
+024/136|Tsareena|U
+025/136|Wimpod|C
+026/136|Golisopod|R
+027/136|Grookey|C
+028/136|Thwackey|U
+029/136|Rillaboom|R
+030/136|Rillaboom V|RR
+031/136|Rillaboom VMAX|RRR
+032/136|Vulpix|C
+033/136|Ninetales|U
+034/136|Ninetales V|RR
+035/136|Growlithe|C
+036/136|Arcanine|U
+037/136|Magmar|C
+038/136|Magmortar|U
+039/136|Torkoal V|RR
+040/136|Heatran|R
+041/136|Litwick|C
+042/136|Lampent|U
+043/136|Chandelure|R
+044/136|Heatmor|U
+045/136|Fletchinder|U
+046/136|Talonflame|U
+047/136|Scorbunny|C
+048/136|Raboot|U
+049/136|Cinderace|R
+050/136|Cinderace V|RR
+051/136|Cinderace VMAX|RRR
+052/136|Sizzlipede|C
+053/136|Centiskorch|U
+054/136|Centiskorch V|RR
+055/136|Centiskorch VMAX|RRR
+056/136|Nosepass|C
+057/136|Grimer|C
+058/136|Muk|U
+059/136|Galarian Zigzagoon|C
+060/136|Galarian Linoone|U
+061/136|Galarian Obstagoon|R
+062/136|Sableye V|RR
+063/136|Spiritomb|U
+064/136|Skorupi|C
+065/136|Drapion|U
+066/136|Croagunk|C
+067/136|Toxicroak|R
+068/136|Darkrai|R
+069/136|Trubbish|C
+070/136|Garbodor|U
+071/136|Vullaby|C
+072/136|Mandibuzz|U
+073/136|Deino|C
+074/136|Zweilous|U
+075/136|Hydreigon|U
+076/136|Malamar V|RR
+077/136|Malamar VMAX|RRR
+078/136|Impidimp|C
+079/136|Morgrem|U
+080/136|Grimmsnarl|R
+081/136|Grimmsnarl V|RR
+082/136|Grimmsnarl VMAX|RRR
+083/136|Scizor|U
+084/136|Mawile|C
+085/136|Aron|C
+086/136|Lairon|U
+087/136|Aggron|R
+088/136|Probopass|U
+089/136|Escavalier|U
+090/136|Galarian Stunfisk|U
+091/136|Pawniard|C
+092/136|Bisharp|U
+093/136|Honedge|C
+094/136|Doublade|U
+095/136|Aegislash|U
+096/136|Corviknight|U
+097/136|Cufant|C
+098/136|Copperajah|R
+099/136|Copperajah V|RR
+100/136|Copperajah VMAX|RRR
+101/136|Duraludon|R
+102/136|Zacian|R
+103/136|Zacian V|RR
+104/136|Zamazenta|R
+105/136|Zamazenta V|RR
+106/136|Swablu|C
+107/136|Altaria|U
+108/136|Pidove|C
+109/136|Tranquill|U
+110/136|Unfezant|U
+111/136|Minccino|C
+112/136|Cinccino|U
+113/136|Fletchling|C
+114/136|Skwovet|C
+115/136|Greedent|U
+116/136|Rookidee|C
+117/136|Corvisquire|U
+118/136|Wooloo|C
+119/136|Dubwool|U
+120/136|Dubwool V|RR
+121/136|Nugget|U
+122/136|Quick Ball|U
+123/136|Rotom Phone|U
+124/136|Rare Candy|U
+125/136|Metal Saucer|U
+126/136|Vitality Band|U
+127/136|Big Parasol|U
+128/136|Air Balloon|U
+129/136|Burning Scarf|U
+130/136|Lum Berry|U
+131/136|Sonia|U
+132/136|Professor's Research|R
+133/136|Skyla|U
+134/136|Milo|U
+135/136|Turffield Stadium|U
+136/136|Twin Energy|U
+137/136|Grookey|S
+138/136|Thwackey|S
+139/136|Rillaboom|S
+140/136|Scorbunny|S
+141/136|Raboot|S
+142/136|Cinderace|S
+143/136|Sizzlipede|S
+144/136|Centiskorch|S
+145/136|Galarian Zigzagoon|S
+146/136|Galarian Linoone|S
+147/136|Galarian Obstagoon|S
+148/136|Impidimp|S
+149/136|Morgrem|S
+150/136|Grimmsnarl|S
+151/136|Galarian Stunfisk|S
+152/136|Corviknight|S
+153/136|Duraludon|S
+154/136|Minccino|S
+155/136|Cinccino|S
+156/136|Skwovet|S
+157/136|Greedent|S
+158/136|Rookidee|S
+159/136|Corvisquire|S
+160/136|Wooloo|S
+161/136|Dubwool|S
+162/136|Rillaboom V|SR
+163/136|Ninetales V|SR
+164/136|Torkoal V|SR
+165/136|Cinderace V|SR
+166/136|Centiskorch V|SR
+167/136|Sableye V|SR
+168/136|Malamar V|SR
+169/136|Copperajah V|SR
+170/136|Zacian V|SR
+171/136|Zamazenta V|SR
+172/136|Dubwool V|SR
+173/136|Professor's Research|SR
+174/136|Skyla|SR
+175/136|Milo|SR
+176/136|Rillaboom V|SSR
+177/136|Rillaboom VMAX|SSR
+178/136|Centiskorch V|SSR
+179/136|Centiskorch VMAX|SSR
+180/136|Grimmsnarl V|SSR
+181/136|Grimmsnarl VMAX|SSR
+182/136|Dubwool V|SSR
+183/136|Rillaboom VMAX|HR
+184/136|Cinderace VMAX|HR
+185/136|Centiskorch VMAX|HR
+186/136|Malamar VMAX|HR
+187/136|Copperajah VMAX|HR
+188/136|Professor's Research|HR
+189/136|Milo|HR
+190/136|Rillaboom|UR
+191/136|Galarian Obstagoon|UR
+192/136|Zacian V|UR
+193/136|Zamazenta V|UR
+194/136|Quick Ball|UR
+195/136|Metal Saucer|UR
+196/136|Big Parasol|UR
+197/136|Air Balloon|UR
+198/136|Turffield Stadium|UR
+199/136|Twin Energy|UR

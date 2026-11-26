@@ -1,0 +1,55 @@
+# set: CSM2.1C Golden Energy
+001/045|Aqua Patch|
+002/045|Escape Rope|
+003/045|Electropower|
+004/045|Enhanced Hammer|
+005/045|Acro Bike|
+006/045|Pal Pad|
+007/045|Nest Ball|
+008/045|Net Ball|
+009/045|Ultra Ball|
+010/045|Fiery Flint|
+011/045|Beast Ring|
+012/045|Field Blower|
+013/045|Cherish Ball|
+014/045|Adventure Bag|
+015/045|Pokégear 3.0|
+016/045|Pokémon Communication|
+017/045|Max Potion|
+018/045|Mysterious Treasure|
+019/045|Rescue Stretcher|
+020/045|Rotom Dex|
+021/045|Escape Board|
+022/045|Metal Frying Pan|
+023/045|Choice Band|
+024/045|Acerola|
+025/045|Professor Elm's Lecture|
+026/045|Lady|
+027/045|Kiawe|
+028/045|Sightseer|
+029/045|Guzma|
+030/045|Gladion|
+031/045|Cynthia|
+032/045|Volkner|
+033/045|Tate & Liza|
+034/045|Welder|
+035/045|Lillie|
+036/045|Lusamine|
+037/045|Grass Energy|
+038/045|Fire Energy|
+039/045|Water Energy|
+040/045|Lightning Energy|
+041/045|Psychic Energy|
+042/045|Fighting Energy|
+043/045|Darkness Energy|
+044/045|Metal Energy|
+045/045|Fairy Energy|
+046/045|Tapu Bulu-GX|
+047/045|Charizard-GX|
+048/045|Slowpoke & Psyduck-GX|
+049/045|Tapu Fini-GX|
+050/045|Tapu Koko-GX|
+051/045|Gengar & Mimikyu-GX|
+052/045|Tapu Lele-GX|
+053/045|Rayquaza-GX|
+054/045|Eevee & Snorlax-GX|
