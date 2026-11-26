@@ -1,0 +1,175 @@
+# set: CSV10.5C Black Bolt
+001/086|Snivy|C
+002/086|Servine|C
+003/086|Serperior ex|RR
+004/086|Pansage|C
+005/086|Simisage|U
+006/086|Petilil|C
+007/086|Lilligant|U
+008/086|Maractus|C
+009/086|Karrablast|C
+010/086|Foongus|C
+011/086|Amoonguss|U
+012/086|Victini|R
+013/086|Darumaka|C
+014/086|Darmanitan|U
+015/086|Litwick|C
+016/086|Lampent|C
+017/086|Chandelure|R
+018/086|Larvesta|C
+019/086|Volcarona|R
+020/086|Panpour|C
+021/086|Simipour|U
+022/086|Tympole|C
+023/086|Palpitoad|C
+024/086|Seismitoad|U
+025/086|Tirtouga|U
+026/086|Carracosta|R
+027/086|Alomomola|U
+028/086|Cubchoo|C
+029/086|Beartic|R
+030/086|Cryogonal|U
+031/086|Kyurem ex|RR
+032/086|Emolga|C
+033/086|Tynamo|C
+034/086|Eelektrik|U
+035/086|Eelektross|U
+036/086|Thundurus|R
+037/086|Zekrom ex|RR
+038/086|Munna|C
+039/086|Musharna|U
+040/086|Solosis|C
+041/086|Duosion|C
+042/086|Reuniclus|U
+043/086|Elgyem|C
+044/086|Beheeyem|U
+045/086|Golett|C
+046/086|Golurk|U
+047/086|Meloetta ex|RR
+048/086|Drilbur|C
+049/086|Excadrill ex|RR
+050/086|Timburr|C
+051/086|Gurdurr|C
+052/086|Conkeldurr|R
+053/086|Throh|U
+054/086|Dwebble|C
+055/086|Crustle|U
+056/086|Landorus|R
+057/086|Venipede|C
+058/086|Whirlipede|C
+059/086|Scolipede|U
+060/086|Sandile|C
+061/086|Krokorok|C
+062/086|Krookodile|U
+063/086|Vullaby|C
+064/086|Mandibuzz|U
+065/086|Escavalier|U
+066/086|Pawniard|C
+067/086|Bisharp|U
+068/086|Cobalion|R
+069/086|Genesect ex|RR
+070/086|Axew|C
+071/086|Fraxure|C
+072/086|Haxorus|R
+073/086|Pidove|C
+074/086|Tranquill|C
+075/086|Unfezant|U
+076/086|Audino|C
+077/086|Minccino|C
+078/086|Cinccino|U
+079/086|Energy Coin|U
+080/086|Antique Cover Fossil|C
+081/086|Pokégear 3.0|U
+082/086|Air Balloon|U
+083/086|N's Plan|U
+084/086|Professor's Research|U
+085/086|Fennel|U
+086/086|Prism Energy|U
+087/086|Snivy|AR
+088/086|Servine|AR
+089/086|Pansage|AR
+090/086|Simisage|AR
+091/086|Petilil|AR
+092/086|Lilligant|AR
+093/086|Maractus|AR
+094/086|Karrablast|AR
+095/086|Foongus|AR
+096/086|Amoonguss|AR
+097/086|Victini|AR
+098/086|Darumaka|AR
+099/086|Darmanitan|AR
+100/086|Litwick|AR
+101/086|Lampent|AR
+102/086|Chandelure|AR
+103/086|Larvesta|AR
+104/086|Volcarona|AR
+105/086|Panpour|AR
+106/086|Simipour|AR
+107/086|Tympole|AR
+108/086|Palpitoad|AR
+109/086|Seismitoad|AR
+110/086|Tirtouga|AR
+111/086|Carracosta|AR
+112/086|Alomomola|AR
+113/086|Cubchoo|AR
+114/086|Beartic|AR
+115/086|Cryogonal|AR
+116/086|Emolga|AR
+117/086|Tynamo|AR
+118/086|Eelektrik|AR
+119/086|Eelektross|AR
+120/086|Thundurus|AR
+121/086|Munna|AR
+122/086|Musharna|AR
+123/086|Solosis|AR
+124/086|Duosion|AR
+125/086|Reuniclus|AR
+126/086|Elgyem|AR
+127/086|Beheeyem|AR
+128/086|Golett|AR
+129/086|Golurk|AR
+130/086|Drilbur|AR
+131/086|Timburr|AR
+132/086|Gurdurr|AR
+133/086|Conkeldurr|AR
+134/086|Throh|AR
+135/086|Dwebble|AR
+136/086|Crustle|AR
+137/086|Landorus|AR
+138/086|Venipede|AR
+139/086|Whirlipede|AR
+140/086|Scolipede|AR
+141/086|Sandile|AR
+142/086|Krokorok|AR
+143/086|Krookodile|AR
+144/086|Vullaby|AR
+145/086|Mandibuzz|AR
+146/086|Escavalier|AR
+147/086|Pawniard|AR
+148/086|Bisharp|AR
+149/086|Cobalion|AR
+150/086|Axew|AR
+151/086|Fraxure|AR
+152/086|Haxorus|AR
+153/086|Pidove|AR
+154/086|Tranquill|AR
+155/086|Unfezant|AR
+156/086|Audino|AR
+157/086|Minccino|AR
+158/086|Cinccino|AR
+159/086|Serperior ex|SR
+160/086|Kyurem ex|SR
+161/086|Zekrom ex|SR
+162/086|Meloetta ex|SR
+163/086|Excadrill ex|SR
+164/086|Genesect ex|SR
+165/086|N's Plan|SR
+166/086|Fennel|SR
+167/086|Serperior ex|SAR
+168/086|Kyurem ex|SAR
+169/086|Zekrom ex|SAR
+170/086|Meloetta ex|SAR
+171/086|Excadrill ex|SAR
+172/086|Genesect ex|SAR
+173/086|N's Plan|SAR
+174/086|Zekrom ex|BWR
