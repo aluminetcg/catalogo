@@ -1,0 +1,101 @@
+# set: 1990 Impel Marvel Universe
+1|Captain America|
+2|Spider-Man|
+3|The Hulk|
+4|Daredevil|
+5|Nick Fury|
+6|The Thing|
+7|Professor X|
+8|Cyclops|
+9|Marvel Girl|
+10|Wolverine|
+11|Phoenix|
+12|Power Man|
+13|Dazzler|
+14|Dagger|
+15|Quasar|
+16|Sub-Mariner|
+17|Hulk (gray)|
+18|Thor|
+19|Mister Fantastic|
+20|Black Panther|
+21|Archangel|
+22|Iceman|
+23|Wolverine|
+24|Storm|
+25|Shadowcat|
+26|Moon Knight|
+27|Lockheed|
+28|Aunt May|
+29|Spider-Man|
+30|Cosmic Spider-Man|
+31|Captain America|
+32|Silver Surfer|
+33|Human Torch|
+34|Doctor Strange|
+35|Havok|
+36|Colossus|
+37|Wolverine|
+38|Nightcrawler|
+39|She-Hulk|
+40|Captain Britain|
+41|Rogue|
+42|Iron Man|
+43|Invisible Woman|
+44|Punisher|
+45|Longshot|
+46|The Beast|
+47|Punisher|
+48|Storm|
+49|Elektra|
+50|Cloak|
+51|Wasp|
+52|Kingpin|
+53|Baron Zemo|
+54|Loki|
+55|Juggernaut|
+56|Nightmare|
+57|Sabretooth|
+58|Electro|
+59|Doctor Octopus|
+60|Doctor Doom|
+61|Ultron|
+62|Enchantress|
+63|Magneto|
+64|Bullseye|
+65|Mr. Sinister|
+66|Sandman|
+67|Lizard|
+68|Mole Man|
+69|Dormammu|
+70|The Leader|
+71|The Blob|
+72|Black Cat|
+73|Venom|
+74|Green Goblin|
+75|Galactus|
+76|Mandarin|
+77|High Evolutionary|
+78|Mephisto|
+79|Thanos|
+80|Apocalypse|
+81|Red Skull|
+82|Ghost Rider ROO|
+83|Deathlok ROO|
+84|Guardians of the Galaxy ROO|
+85|New Warriors ROO|
+86|Nomad ROO|
+87|Foolkiller ROO|
+88|Thing vs. Hulk FB|
+89|Fantastic Four vs. Galactus FB|
+90|Fantastic Four vs. Doctor Doom FB|
+91|Thor vs. Surtur FB|
+92|Spider-Man vs. Kraven FB|
+93|Spider-Man / Dr. Octopus FB|
+94|Daredevil vs. Bullseye FB|
+95|Daredevil vs. Kingpin FB|
+96|Silver Surfer vs. Mephisto FB|
+97|Captain America vs. The Red Skull FB|
+98|The Dark Phoenix Saga FB|
+99|X-Men / The Avengers FB|
+100|X-Men vs. Magneto FB|

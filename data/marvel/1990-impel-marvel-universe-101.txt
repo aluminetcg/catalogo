@@ -1,0 +1,63 @@
+# set: 1990 Impel Marvel Universe
+101|Fantastic Four vs. X-Men FB|
+102|Fall of the Mutants FB|
+103|The Evolutionary War FB|
+104|Atlantis Attacks FB|
+105|Acts of Vengeance FB|
+106|Spider-Man vs. Venom FB|
+107|Nick Fury vs. Hydra FB|
+108|The Armor Wars FB|
+109|Daredevil vs. Wolverine FB|
+110|Daredevil vs. Punisher FB|
+111|Spider-Man / Green Goblin FB|
+112|Spider-Man vs. Hobgoblin FB|
+113|Hulk vs. Wolverine FB|
+114|Hulk vs. Spider-Man FB|
+115|Captain America vs. Wolverine FB|
+116|Silver Surfer vs. Thanos FB|
+117|X-Factor vs. Apocalypse FB|
+118|X-Men vs Freedom Force FB|
+119|Wolverine / Sabretooth FB|
+120|X-Men in The Savage Land FB|
+121|Iron Man vs. Titanium Man FB|
+122|Thor / Loki FB|
+123|The Kree-Skrull War FB|
+124|Fantastic Four #1 MVC|
+125|X-Men #1 MVC|
+126|Amazing Fantasy #15 MVC|
+127|Punisher Series II #1 MVC|
+128|Journey into Mystery #83 MVC|
+129|Amazing Spider-Man #129 MVC|
+130|Avengers #1 MVC|
+131|Amazing Spider-Man #1 MVC|
+132|Giant-Size X-Men #1 MVC|
+133|Wolverine Mini-Series #1 MVC|
+134|Incredible Hulk #181 MVC|
+135|Tales of Suspense #39 MVC|
+136|Avengers #4 MVC|
+137|Fantastic Four TP|
+138|The Avengers TP|
+139|X-Men TP|
+140|X-Men TP|
+141|Cloak and Dagger TP|
+142|New Mutants TP|
+143|X-Factor TP|
+144|Excalibur TP|
+145|Brotherhood of Evil Mutants TP|
+146|Sinister Six TP|
+147|Hellfire Club TP|
+148|Alpha Flight TP|
+149|Spider-Man Presents: Spider-Man|
+150|Spider-Man Presents: Doctor Doom|
+151|Spider-Man Presents: Doctor Octopus|
+152|Spider-Man Presents: The Hulk|
+153|Spider-Man Presents: Silver Surfer|
+154|Spider-Man Presents: Thor|
+155|Spider-Man Presents: Punisher|
+156|Spider-Man Presents: Magneto|
+157|Spider-Man Presents: Captain America|
+158|Spider-Man Presents: Doctor Strange|
+159|Spider-Man Presents: Iron Man|
+160|Spider-Man Presents: Wolverine|
+161|Stan Lee|
+162|Checklist CL|
