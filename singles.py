@@ -59,6 +59,9 @@ def manual(carpeta="chino", key="cn", titulo="Base china"):
         sets.append([s, ""])
         for k, (num, name, rz) in sorted(porset[s].items()):
             foto = fotos.get((norm_set(s), num.lower()))
+            if not foto and fotos:      # títulos viejos con el set abreviado ("1994 SkyBox Batman #54" -> Saga of the Dark Knight)
+                ws = set(norm_set(s).split())
+                foto = next((v for (ks, kn), v in fotos.items() if kn == num.lower() and set(ks.split()) <= ws), None)
             cards.append([f"{key}|{gi}|{k}", name, num, gi, rz, {}] + ([foto] if foto else []))
     (OUT / f"{key}.json").write_text(json.dumps({"stamp": "", "sets": sets, "cards": cards}, ensure_ascii=False, separators=(",", ":")))
     print(f"{titulo}: {len(cards)} cartas en {len(sets)} sets")

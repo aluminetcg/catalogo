@@ -1,0 +1,101 @@
+# set: 1994 SkyBox Batman: Saga of the Dark Knight
+1|Saga of the Dark Knight|
+2|Year One, The Cave|
+3|Year One, The Permanent Nightmare|
+4|Year One, Training Abroad|
+5|Year One, Shaman|
+6|Year One, Crime Alley|
+7|Year One, The Omen|
+8|Year One, Two Sides of the Same Coin|
+9|Year One, Face to Face|
+10|Year One, Falsely Accused|
+11|Year One, Feline Fatale|
+12|Year One, Finding a Friend|
+13|Year One, Birth of the Joker|
+14|Year One, First Impressions|
+15|Year One, Partners in Crime|
+16|Year One, Not… Strong… Enough…|
+17|Year One, The Power of Venom|
+18|Year One, Withdrawal|
+19|Robin, Dick Grayson|
+20|Robin, Robin Retires|
+21|Robin, Nightwing|
+22|Robin, Jason Todd|
+23|Robin, Out of Line|
+24|Robin, A Death in the Family|
+25|Robin, Tim Drake|
+26|Robin, Uneasy Alliance|
+27|Robin, Severed Ties|
+28|Dynamic Duo, A Sacred Trust|
+29|Dynamic Duo, Partners|
+30|Dynamic Duo, Demon's Head|
+31|Dynamic Duo, My Father's Killer|
+32|Dynamic Duo, Equal Justice|
+33|Dynamic Duo, The Cult|
+34|Dynamic Duo, Proving Ground|
+35|Dynamic Duo, Rite of Passage|
+36|Dynamic Duo, Seduction of the Gun|
+37|A Death In the Family, "That's It!..."|
+38|A Death In the Family, Freedom of Madness|
+39|A Death In the Family, The Search|
+40|A Death In the Family, Missile Deal|
+41|A Death In the Family, Reunion|
+42|A Death In the Family, Betrayal|
+43|A Death In the Family, Mourning Time|
+44|A Death In the Family, Ultimate Joke|
+45|A Death In the Family, Two-Minute Warning|
+46|Nemesis, The Joker|
+47|Nemesis, Catwoman|
+48|Nemesis, Two-Face|
+49|Nemesis, The Penguin|
+50|Nemesis, Ra's al Ghul|
+51|Nemesis, The Scarecrow|
+52|Nemesis, The Mudpack|
+53|Nemesis, The Riddler / Poison Ivy|
+54|Nemesis, Killer Croc / Scarface|
+55|A Lonely Place of Dying, Consumed by Guilt|
+56|A Lonely Place of Dying, "Am I Mad?"|
+57|A Lonely Place of Dying, Homecoming|
+58|A Lonely Place of Dying, Confrontation|
+59|A Lonely Place of Dying, Double Jeopardy|
+60|A Lonely Place of Dying, Reunited|
+61|A Lonely Place of Dying, Only a Boy|
+62|A Lonely Place of Dying, Never Again|
+63|A Lonely Place of Dying, Initiation|
+64|Sword of Azrael, Inheritance|
+65|Sword of Azrael, Lehah|
+66|Sword of Azrael, Knight of St. Dumas|
+67|Sword of Azrael, Hostage|
+68|Sword of Azrael, Savior|
+69|Sword of Azrael, Trial by Fire|
+70|Vengeance of Bane, Birth|
+71|Vengeance of Bane, Transfusion|
+72|Vengeance of Bane, Hunt|
+73|Knightfall, Arkham Breakout|
+74|Knightfall, One Down…|
+75|Knightfall, Behemoth|
+76|Knightfall, Meet Mr. Zsasz|
+77|Knightfall, Tipping the Scale|
+78|Knightfall, Bloodlust|
+79|Knightfall, Inferno|
+80|Knightfall, The Vixen of Vines|
+81|Knightfall, Clueless|
+82|Knightfall, Fear Equals Rage|
+83|Knightfall, Face Me!|
+84|Knightfall, The Broken Bat|
+85|Knightfall, Accept the Cowl|
+86|Knightfall, Bad Blood|
+87|Knightfall, Anarchy/Law|
+88|Knightfall, Claws for Bane|
+89|Knightfall, The Vision|
+90|Knightfall, King of Gotham|
+91|Knightquest, The Crusade|
+92|Knightquest, Back Off!|
+93|Knightquest, Charades|
+94|Knightquest, Prince of Fools|
+95|Knightquest, Corrosion|
+96|Knightquest, No Deals!|
+97|Knightquest, Off the Deep End|
+98|Knightquest, Dehumanized|
+99|Knightquest, Knightsend|
+100|Checklist CL|
