@@ -1,0 +1,181 @@
+# set: 1993 SkyBox Marvel Universe
+1|Hulk|
+2|Moon Knight|
+3|Siege|
+4|Deadzone|
+5|Wild Pack|
+6|Silver Sable|
+7|Doc Samson|
+8|Deathlok|
+9|Moses Magnum|
+10|Warlock|
+11|Silver Surfer|
+12|Quasar|
+13|Starhawk|
+14|Galactus|
+15|Goddess|
+16|Thanos|
+17|Morg|
+18|Drax|
+19|Nova|
+20|Firestar|
+21|Cardinal|
+22|Namorita|
+23|Speedball|
+24|Turbo|
+25|Rage|
+26|Night Thrasher|
+27|Darkhawk|
+28|Deadpool|
+29|Cannonball|
+30|Slayback|
+31|Sabretooth|
+32|Shatterstar|
+33|Apocalypse|
+34|Mr. Sinister|
+35|Cable|
+36|Stryfe|
+37|Guardian|
+38|Micromax|
+39|Wildheart|
+40|Captain Britain|
+41|Phoenix|
+42|Nightcrawler|
+43|Havok|
+44|Psylocke|
+45|Strong Guy|
+46|Dr. Strange|
+47|Dormammu|
+48|Beta Ray Bill|
+49|Loki|
+50|Cobweb|
+51|Blackheart|
+52|Sleepwalker|
+53|Thor|
+54|Hellstorm|
+55|Venom|
+56|Demogoblin|
+57|Carnage|
+58|Hobgoblin|
+59|Spider-Man|
+60|Cardiac|
+61|Rhino|
+62|Shock|
+63|Daredevil|
+64|Scarlet Witch|
+65|Spider-Woman|
+66|Splice|
+67|Iron Man|
+68|Wonder Man|
+69|War Machine|
+70|Namor|
+71|Tiger Shark|
+72|U.S. Agent|
+73|Mr. Fantastic|
+74|Invisible Woman|
+75|Human Torch|
+76|Lyja|
+77|Occulus|
+78|Molecule Man|
+79|Dr. Doom|
+80|Thing|
+81|Klaw|
+82|She-Hulk|
+83|Punisher|
+84|Falcon|
+85|Hardcore|
+86|Nomad|
+87|Terror, Inc.|
+88|Iron Fist|
+89|Cage|
+90|Scarecrow|
+91|Black Knight|
+92|Crystal|
+93|Sersi|
+94|Thunderstrike|
+95|Captain America|
+96|Hercules|
+97|Bloodaxe|
+98|Red Skull|
+99|Proctor|
+100|Deathwatch|
+101|Lilith|
+102|Heart Attack|
+103|Blaze|
+104|Basilisk|
+105|Ghost Rider|
+106|Darkhold Redeemers|
+107|Morbius|
+108|Nightstalkers|
+109|Storm|
+110|Archangel|
+111|Beast|
+112|Rogue|
+113|Magneto|
+114|Gambit|
+115|Cyclops|
+116|Wolverine|
+117|Bishop|
+118|Ovoids|
+119|Brood|
+120|Titans|
+121|Badoon|
+122|Asgardians|
+123|Skrulls|
+124|Shi'ar|
+125|Kree|
+126|Rigellians|
+127|Black Axe|
+128|Techno Wizards|
+129|Motormouth|
+130|Bloodseed|
+131|Dark Angel|
+132|Wild Thing|
+133|Die-Cut|
+134|Death's Head II|
+135|Death Metal|
+136|The Origin of Wolverine|
+137|The Origin of Cable|
+138|The Face of Darkhawk|
+139|The Origin of Ghost Rider|
+140|The Fate of the X-Men|
+141|The Face of Doctor Doom|
+142|The Sixth Member of the Infinity Watch|
+143|The Secret of Spider-Man's Parents|
+144|The Origin of Nightcrawler|
+145|Spider-Man / Carnage FB|
+146|Cable / Stryfe FB|
+147|Ghost Rider / Lilith FB|
+148|Silver Surfer / Morg FB|
+149|Wolverine / Sabretooth FB|
+150|Thor / Loki FB|
+151|War Machine / Iron Man FB|
+152|Spider-Man / Venom FB|
+153|Punisher / Thorn FB|
+154|X-Cutioner's Song FB|
+155|Spider-Man / Sinister Six FB|
+156|Infinity War FB|
+157|Spirits of Venom FB|
+158|Hulk / Leader FB|
+159|Ghost Rider / Blackout FB|
+160|Dr. Strange vs Dormammu FB|
+161|Wolverine / Cyber FB|
+162|Captain America / Crossbones FB|
+163|Punisher / Jigsaw FB|
+164|Wolverine / Venom FB|
+165|Spider-Man / Juggernaut FB|
+166|Darkhawk / Evilhawk FB|
+167|X-Force vs Brotherhood of Evil Mutants FB|
+168|Daredevil / Typhoid Mary FB|
+169|Spider-Man / Kingpin FB|
+170|Thor / Bloodaxe FB|
+171|Warlock / Man-Beast FB|
+172|Ghost Rider / Blaze FB|
+173|Hulk vs Hulk FB|
+174|Fantastic Four / Secret Defenders FB|
+175|Spider-Man / Cardiac FB|
+176|Punisher / Ghost Rider FB|
+177|Wolverine / Omega Red FB|
+178|Cable / Deadpool FB|
+179|Hulk vs X-Factor FB|
+180|Checklist CL|
