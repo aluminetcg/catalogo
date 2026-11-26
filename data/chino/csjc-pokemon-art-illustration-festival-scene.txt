@@ -1,0 +1,17 @@
+# set: CSJC Pokémon Art Illustration Festival: Scene
+001/011|Oricorio|
+002/011|Toxtricity|
+003/011|Galarian Articuno|
+004/011|Mew|
+005/011|Deoxys|
+006/011|Galarian Zapdos|
+007/011|Galarian Moltres|
+008/011|Altaria|
+009/011|Latias|
+010/011|Ultra Ball|
+011/011|Poké Ball|
+012/011|Kabu|
+013/011|Bea|
+014/011|Gordie|
+015/011|Milo|
+016/011|Nessa|
