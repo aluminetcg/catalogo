@@ -398,13 +398,14 @@ def set_icons(rows):
         poke = []
         if (DB / "_sets.json").exists():
             poke = [[s["name"], (s.get("images") or {}).get("symbol")] for s in json.loads((DB / "_sets.json").read_text())]
-        fuentes = {"Magic": [(norm(n), u) for n, u in mtg if u], "Pokémon": [(norm(n), u) for n, u in poke if u]}
+        key = lambda n: norm((n or "").replace("&", " and ").replace("Mistery", "Mystery"))
+        fuentes = {"Magic": [(key(n), u) for n, u in mtg if u], "Pokémon": [(key(n), u) for n, u in poke if u]}
         out = {}
         for r in rows:
             s, lista = r.get("set"), fuentes.get(r["game"])
             if not s or not lista or s in out:
                 continue
-            ns = norm(s)
+            ns = key(s)
             u = next((u for n, u in lista if n == ns), None)
             if not u:      # "Commander Masters" / "Scarlet & Violet 151": el nombre más largo que esté contenido
                 cand = [(len(n), u) for n, u in lista if len(n) > 3 and (f" {n} " in f" {ns} " or f" {ns} " in f" {n} ")]
@@ -412,7 +413,8 @@ def set_icons(rows):
             if u:
                 out[s] = u
         (HERE / "data" / "set_icons.json").write_text(json.dumps(out, ensure_ascii=False))
-        print(f"Íconos de expansión: {len(out)}", flush=True)
+        falta = sorted({r["set"] for r in rows if r.get("set") and r["game"] in fuentes and r["set"] not in out})
+        print(f"Íconos de expansión: {len(out)} (sin ícono: {len(falta)}: {', '.join(falta[:40])})", flush=True)
     except Exception as e:      # nunca frenar el catálogo por esto
         print(f"AVISO: sin íconos de expansión ({e})")
 
