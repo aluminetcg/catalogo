@@ -1,0 +1,75 @@
+# set: CSVSC Battle Academy
+001/066|Celebi|
+002/066|Sprigatito ex|
+003/066|Nymble|
+004/066|Lokix|
+005/066|Toedscool|
+006/066|Toedscruel|
+007/066|Ponyta|
+008/066|Rapidash|
+009/066|Reshiram|
+010/066|Charcadet|
+011/066|Armarouge ex|
+012/066|Lapras|
+013/066|Marill|
+014/066|Azumarill|
+015/066|Froakie|
+016/066|Frogadier|
+017/066|Greninja ex|
+018/066|Pikachu ex|
+019/066|Mareep|
+020/066|Flaaffy|
+021/066|Ampharos|
+022/066|Pawmi|
+023/066|Miraidon|
+024/066|Mewtwo|
+025/066|Flittle|
+026/066|Espathra|
+027/066|Greavard|
+028/066|Houndstone ex|
+029/066|Meditite|
+030/066|Medicham|
+031/066|Riolu|
+032/066|Lucario ex|
+033/066|Koraidon|
+034/066|Darkrai ex|
+035/066|Pawniard|
+036/066|Bisharp|
+037/066|Kingambit|
+038/066|Bombirdier|
+039/066|Jirachi|
+040/066|Meltan|
+041/066|Melmetal ex|
+042/066|Varoom|
+043/066|Revavroom|
+044/066|Tauros|
+045/066|Eevee|
+046/066|Snorlax|
+047/066|Lechonk|
+048/066|Cyclizar|
+049/066|Energy Retrieval|
+050/066|Potion|
+051/066|Crushing Hammer|
+052/066|Great Ball|
+053/066|Rare Candy|
+054/066|Switch|
+055/066|Pokémon Catcher|
+056/066|Poké Ball|
+057/066|Vitality Band|
+058/066|Cook|
+059/066|Judge|
+060/066|Youngster|
+061/066|Nemona|
+062/066|Nemona|
+063/066|Professor's Research|
+064/066|Professor's Research|
+065/066|Picnicker|
+066/066|Boss's Orders|
+067/066|Basic Grass Energy|
+068/066|Basic Fire Energy|
+069/066|Basic Water Energy|
+070/066|Basic Lightning Energy|
+071/066|Basic Psychic Energy|
+072/066|Basic Fighting Energy|
+073/066|Basic Darkness Energy|
+074/066|Basic Metal Energy|
