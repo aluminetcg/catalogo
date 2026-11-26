@@ -122,7 +122,10 @@
   // ------------------------------------------------------------------ datos
   function load() {
     if (ALL) return Promise.resolve();
-    if (!loading) loading = fetch(DATA_URL + "?t=" + Math.floor(Date.now() / 6e5)).then(function (r) {
+    // version.json (chiquito, siempre fresco) dice qu\u00e9 versi\u00f3n del cat\u00e1logo pedir: as\u00ed se ve apenas se publica
+    if (!loading) loading = fetch(DATA_URL.replace(/cards\.json$/, "version.json") + "?t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : {}; })["catch"](function () { return {}; })
+      .then(function (v) { return fetch(DATA_URL + "?v=" + encodeURIComponent(v.v || Math.floor(Date.now() / 6e5))); }).then(function (r) {
       if (!r.ok) throw new Error(r.status); return r.json();
     }).then(function (data) {
       ALL = Array.isArray(data) ? data : data.cards;
