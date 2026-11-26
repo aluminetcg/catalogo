@@ -11,7 +11,7 @@
   var AUTH = "https://auth0.empretienda.com", CID = "Kzsbi2SzTmTYF5tZnKOPN63wYpaDACMV";
   var IMG = function (pid, size) { return "https://tcgplayer-cdn.tcgplayer.com/product/" + pid + "_in_" + size + "x" + size + ".jpg"; };
   var BASICAS = { "": 1, "Common": 1, "Uncommon": 1, "Rare": 1, "C": 1, "U": 1, "R": 1 };
-  var ROOTS = { en: /ingl/i, jp: /jap/i, cn: /chin/i };
+  var ROOTS = { en: /ingl/i, jp: /jap/i, cn: /chin/i, mtg: /mtg|magic/i };
   var RZ = ["", "AR", "SAR", "SR", "UR", "CHR", "CSR", "HR", "RR", "RRR", "Holo", "Reverse", "Masterball Reverse", "Pokeball Reverse", "Promo"];
   var CDN = "https://d22fxaf9t8d39k.cloudfront.net/";
 
@@ -125,7 +125,7 @@
     '</style>' +
     '<div class="wrap"><header>' +
     '<b>ALUMINE<span>TCG</span> \u00b7 carga r\u00e1pida</b>' +
-    '<select id="lang"><option value="all">Pok\u00e9mon Ingl\u00e9s + Japon\u00e9s + Chino</option><option value="en">Pok\u00e9mon Ingl\u00e9s</option><option value="jp">Pok\u00e9mon Japon\u00e9s</option><option value="cn">Pok\u00e9mon Chino (a mano)</option></select>' +
+    '<select id="lang"><option value="all">Pok\u00e9mon Ingl\u00e9s + Japon\u00e9s + Chino</option><option value="en">Pok\u00e9mon Ingl\u00e9s</option><option value="jp">Pok\u00e9mon Japon\u00e9s</option><option value="cn">Pok\u00e9mon Chino (a mano)</option><option value="mtg">Magic</option></select>' +
     '<input id="q" type="search" placeholder="N\u00famero y/o nombre: 143/128, kommo-o 143, charizard 151\u2026" autocomplete="off">' +
     '<label>Precio = TCG \u00d7 d\u00f3lar \u00d7 <input id="mult" type="number" step="0.05" min="0.1"></label>' +
     '<label id="dolar"></label>' +
@@ -153,6 +153,9 @@
     return out;
   }
   function langs() { return S.lang === "all" ? ["en", "jp", "cn"] : S.lang === "cn" ? ["en", "cn"] : [S.lang]; }
+  // Magic: "Nombre (Borderless)" de TCGplayer -> nombre y variante por separado
+  function mtgName(n) { return cardName(n).replace(/\s*\(.*?\)\s*/g, " ").replace(/\s+/g, " ").trim(); }
+  function mtgVar(n) { return (cardName(n).match(/\(([^)]*)\)/g) || []).map(function (v) { return v.slice(1, -1); }).join(" "); }
   function searchLangs() { return S.lang === "all" ? ["en", "jp", "cn"] : [S.lang]; }
   async function loadAll() { for (var i = 0, l = langs(); i < l.length; i++) await loadIndex(l[i]); }
   function setOf(c) { return S.idx[c.L].sets[c[3]][0]; }
@@ -250,7 +253,7 @@
     $("#res").innerHTML = out.length || cnHtml ? out.map(function (c) {
       var p = bestPrice(c[5]);
       return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + esc(c[0]) + '" data-l="' + c.L + '">' + (c.L === "cn" ? '<div class="ph">\u4e2d</div>' : '<img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">') +
-        '<b>' + (L.length > 1 || c.L === "cn" ? '<span class="lg">' + (c.L === "jp" ? "JAP" : c.L === "cn" ? "CHI" : "ING") + "</span> " : "") + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(setOf(c))) + "</small>" +
+        '<b>' + (L.length > 1 || c.L === "cn" ? '<span class="lg">' + (c.L === "jp" ? "JAP" : c.L === "cn" ? "CHI" : c.L === "mtg" ? "MTG" : "ING") + "</span> " : "") + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(setOf(c))) + "</small>" +
         "<small>" + esc(c[4] || "") + (p ? " \u00b7 US$" + p[1] : "") + "</small></div>";
     }).join("") + cnHtml : '<div class="msg">No encontr\u00e9 cartas con eso. Prob\u00e1 solo con el n\u00famero (143/128) o con otra parte del nombre.</div>';
   }
@@ -265,6 +268,10 @@
   function titleFor(c, catId) {
     var cat = S.cats.filter(function (x) { return x.id == catId; })[0];
     var set = cat ? cat.name : c.L === "cn" ? "" : setName(setOf(c));
+    if (c.L === "mtg") {     // como ya est\u00e1n en la tienda: "Saruman of Many Colors #35 Borderless Foil The Hobbit"
+      var foil = $("#pk") && /foil/i.test($("#pk").value) ? "Foil" : "";
+      return [mtgName(c[1]), "#" + c[2], mtgVar(c[1]), foil, set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
+    }
     return [cardName(c[1]), BASICAS[c[4]] ? "" : c[4], c[2], set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
   }
   function catOptions(sel, L) {
@@ -321,7 +328,7 @@
       '<div id="out"></div><div id="ex" class="hint">Buscando si ya la ten\u00e9s cargada\u2026</div>' +
       '<div class="log" id="log"></div>';
     $("#ti").value = titleFor(c, cat);
-    var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k]) || "" : ""; };
+    var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k]) || "" : ""; if (c.L === "mtg") $("#ti").value = titleFor(c, $("#ca").value); };
     setPrice();
     $("#pk").onchange = setPrice;
     $("#ca").onchange = function () { $("#ti").value = titleFor(c, $("#ca").value); };

@@ -63,19 +63,25 @@ def get_json(url):
 def load_tcg(cat, only=None):
     """Devuelve la lista de grupos (sets) de una categoría, con productos y precios. Usa caché diaria."""
     CACHE.mkdir(parents=True, exist_ok=True)
-    f = CACHE / f"{cat}.v2.json"
+    full = CACHE / f"{cat}.v2.json"                 # categoría completa (la usa singles.py)
+    f = full if only is None else CACHE / f"{cat}.part.v2.json"   # solo los sets que tiene la tienda (crawl.py)
     stamp = session.get(f"{TCG}/last-updated.txt", timeout=30).text.strip()
-    if f.exists():
-        old = json.loads(f.read_text())
-        if old.get("stamp") == stamp:
-            return old["groups"], stamp
+
+    def needed(g):
+        gw = words(g["name"].split(": ", 1)[-1])
+        ws = set(gw.split())
+        return any(gw == o or (len(gw) > 3 and len(o) > 3 and (gw in o or o in gw)) or
+                   len(ws & set(o.split())) >= 0.6 * len(ws | set(o.split())) for o in only)
+    for cand in ([f] if only is None else [full, f]):
+        if cand.exists():
+            old = json.loads(cand.read_text())
+            if old.get("stamp") == stamp:
+                gs = old["groups"]
+                if only is not None and cand == full:
+                    gs = [g for g in gs if needed(g)]
+                return gs, stamp
     groups = get_json(f"{TCG}/tcgplayer/{cat}/groups")["results"]
     if only is not None:        # otros juegos: bajar solo los sets que la tienda tiene
-        def needed(g):
-            gw = words(g["name"].split(": ", 1)[-1])
-            ws = set(gw.split())
-            return any(gw == o or (len(gw) > 3 and len(o) > 3 and (gw in o or o in gw)) or
-                       len(ws & set(o.split())) >= 0.6 * len(ws | set(o.split())) for o in only)
         groups = [g for g in groups if needed(g)]
 
     def one(g):

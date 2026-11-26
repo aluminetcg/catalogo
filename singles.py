@@ -16,7 +16,7 @@ from precios import load_tcg, dolar_oficial
 
 HERE = Path(__file__).parent
 OUT = HERE / "_site" / "data" / "singles"
-CATS = {"en": 3, "jp": 85}          # Pokémon inglés y japonés en TCGplayer
+CATS = {"en": 3, "jp": 85, "mtg": 1}   # Pokémon inglés y japonés, y Magic, en TCGplayer
 
 
 def chino():
@@ -51,7 +51,11 @@ def main():
     except Exception as e:
         print(f"AVISO: sin dólar oficial ({e})")
     for key, cat in CATS.items():
-        groups, stamp = load_tcg(cat)
+        try:
+            groups, stamp = load_tcg(cat)
+        except Exception as e:      # si falla un juego, que los otros igual se armen
+            print(f"AVISO: no pude bajar la categoría {cat} ({e})")
+            continue
         sets, cards = [], []
         for g in sorted(groups, key=lambda g: g["year"] or "0000", reverse=True):
             if not g["products"]:
@@ -59,7 +63,7 @@ def main():
             gi = len(sets)
             sets.append([g["name"], g["year"]])
             for pid, name, number, prices, rarity in g["products"]:
-                rar = unify(rarity, "Pokémon", "")[0] if rarity else ""
+                rar = unify(rarity, "Magic" if key == "mtg" else "Pokémon", "")[0] if rarity else ""
                 p = {k: round(v, 2) for k, v in (prices or {}).items() if v}
                 cards.append([pid, name, number, gi, rar, p])
         data = {"stamp": stamp, "sets": sets, "cards": cards}
