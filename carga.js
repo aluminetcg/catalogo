@@ -315,7 +315,7 @@
   function bestPrice(prices, prefer) {
     var ks = Object.keys(prices || {}); if (!ks.length) return null;
     if (prefer && prices[prefer]) return [prefer, prices[prefer]];
-    var k = ks.filter(function (k) { return !/reverse/i.test(k); })[0] || ks[0];
+    var k = prices.Normal ? "Normal" : ks.filter(function (k) { return !/reverse|foil/i.test(k); })[0] || ks.filter(function (k) { return !/reverse/i.test(k); })[0] || ks[0];   // por defecto la versi\u00f3n normal, no la foil
     return [k, prices[k]];
   }
 
