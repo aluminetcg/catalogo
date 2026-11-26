@@ -1,0 +1,265 @@
+# set: CSV8C Brilliant Illusions
+001/207|Exeggcute|C
+002/207|Exeggutor|U
+003/207|Ledyba|C
+004/207|Ledian|R
+005/207|Volbeat|C
+006/207|Illumise|C
+007/207|Foongus|C
+008/207|Amoonguss ex|RR
+009/207|Joltik|C
+010/207|Galvantula|U
+011/207|Scatterbug|C
+012/207|Spewpa|C
+013/207|Vivillon|U
+014/207|Rowlet|C
+015/207|Dartrix|C
+016/207|Decidueye|U
+017/207|Morelull|C
+018/207|Shiinotic|U
+019/207|Tapu Bulu|R
+020/207|Grookey|C
+021/207|Thwackey|C
+022/207|Rillaboom|U
+023/207|Applin|C
+024/207|Dipplin|U
+025/207|Poltchageist|C
+026/207|Sinistcha|R
+027/207|Teal Mask Ogerpon|R
+028/207|Teal Mask Ogerpon ex|RR
+029/207|Slugma|C
+030/207|Magcargo|R
+031/207|Houndour|C
+032/207|Houndoom|C
+033/207|Litwick|C
+034/207|Lampent|C
+035/207|Chandelure|R
+036/207|Larvesta|C
+037/207|Volcarona|C
+038/207|Reshiram ex|RR
+039/207|Charcadet|C
+040/207|Armarouge|U
+041/207|Ceruledge|U
+042/207|Iron Moth|U
+043/207|Hearthflame Mask Ogerpon ex|RR
+044/207|Poliwag|C
+045/207|Poliwhirl|C
+046/207|Poliwrath|U
+047/207|Horsea|C
+048/207|Seadra|C
+049/207|Kingdra ex|RR
+050/207|Goldeen|C
+051/207|Seaking|C
+052/207|Sneasel|C
+053/207|Weavile|U
+054/207|Corphish|C
+055/207|Crawdaunt|C
+056/207|Feebas|C
+057/207|Milotic ex|RR
+058/207|Black Kyurem ex|RR
+059/207|Crabominable|U
+060/207|Chewtle|C
+061/207|Drednaw|R
+062/207|Finizen|C
+063/207|Palafin|U
+064/207|Palafin ex|RR
+065/207|Cetoddle|C
+066/207|Cetitan|C
+067/207|Wellspring Mask Ogerpon ex|RR
+068/207|Tadbulb|C
+069/207|Bellibolt|U
+070/207|Wattrel|C
+071/207|Kilowattrel|U
+072/207|Revavroom ex|RR
+073/207|Abra|C
+074/207|Kadabra|C
+075/207|Alakazam|R
+076/207|Drowzee|C
+077/207|Hypno|U
+078/207|Girafarig|C
+079/207|Farigiraf|U
+080/207|Smoochum|C
+081/207|Duskull|C
+082/207|Dusclops|C
+083/207|Dusknoir|R
+084/207|Chimecho|C
+085/207|Swirlix|C
+086/207|Slurpuff|U
+087/207|Sylveon|U
+088/207|Xerneas ex|RR
+089/207|Tapu Lele|R
+090/207|Milcery|C
+091/207|Alcremie|U
+092/207|Flittle|C
+093/207|Espathra|U
+094/207|Munkidori|R
+095/207|Fezandipiti|R
+096/207|Iron Boulder|R
+097/207|Hisuian Growlithe|C
+098/207|Hisuian Arcanine|R
+099/207|Cubone|C
+100/207|Marowak|U
+101/207|Rhyhorn|C
+102/207|Rhydon|C
+103/207|Rhyperior|R
+104/207|Phanpy|C
+105/207|Donphan|C
+106/207|Meditite|C
+107/207|Medicham ex|RR
+108/207|Croagunk|C
+109/207|Toxicroak|C
+110/207|Timburr|C
+111/207|Gurdurr|C
+112/207|Conkeldurr|U
+113/207|Mienfoo|C
+114/207|Mienshao|U
+115/207|Crabrawler|C
+116/207|Bloodmoon Ursaluna|R
+117/207|Glimmet|C
+118/207|Glimmora|U
+119/207|Slither Wing|U
+120/207|Okidogi|R
+121/207|Cornerstone Mask Ogerpon ex|RR
+122/207|Zubat|C
+123/207|Golbat|C
+124/207|Crobat|U
+125/207|Poochyena|C
+126/207|Mightyena|U
+127/207|Absol|C
+128/207|Venipede|C
+129/207|Whirlipede|C
+130/207|Scolipede|U
+131/207|Inkay|C
+132/207|Malamar|U
+133/207|Okidogi ex|RR
+134/207|Munkidori ex|RR
+135/207|Fezandipiti ex|RR
+136/207|Pecharunt ex|RR
+137/207|Skarmory|C
+138/207|Aron|C
+139/207|Lairon|C
+140/207|Aggron|U
+141/207|Dialga ex|RR
+142/207|Heatran|R
+143/207|Klink|C
+144/207|Klang|C
+145/207|Klinklang|R
+146/207|Klefki|C
+147/207|Cufant|C
+148/207|Copperajah|R
+149/207|Varoom|C
+150/207|Orthworm ex|RR
+151/207|Axew|C
+152/207|Fraxure|C
+153/207|Haxorus|R
+154/207|Turtonator|U
+155/207|Applin|C
+156/207|Dipplin|U
+157/207|Dreepy|C
+158/207|Drakloak|C
+159/207|Dragapult ex|RR
+160/207|Tatsugiri|U
+161/207|Raging Bolt|R
+162/207|Meowth|C
+163/207|Persian|C
+164/207|Chansey|C
+165/207|Blissey ex|RR
+166/207|Eevee|C
+167/207|Ducklett|C
+168/207|Swanna|U
+169/207|Bouffalant|C
+170/207|Stufful|C
+171/207|Bewear|C
+172/207|Bloodmoon Ursaluna ex|RR
+173/207|Unfair Stamp|ACE
+174/207|Ogre's Mask|U
+175/207|Accompanying Flute|U
+176/207|Secret Box|ACE
+177/207|Dusk Ball|U
+178/207|Dangerous Laser|ACE
+179/207|Meddling Memo|U
+180/207|Poké Vital A|ACE
+181/207|Scoop Up Cyclone|ACE
+182/207|Bug Catching Set|U
+183/207|Night Stretcher|U
+184/207|Payapa Berry|U
+185/207|Occa Berry|U
+186/207|Sparkling Crystal|ACE
+187/207|Binding Mochi|U
+188/207|Powerglass|U
+189/207|Deluxe Bomb|ACE
+190/207|Handheld Fan|U
+191/207|Colress's Tenacity|U
+192/207|Janine's Secret Art|U
+193/207|Cassiopeia|U
+194/207|Caretaker|C
+195/207|Xerosic's Machinations|U
+196/207|Surfer|U
+197/207|Perrin|U
+198/207|Kieran|U
+199/207|Carmine|U
+200/207|Kofu|U
+201/207|Festival Grounds|U
+202/207|Community Center|U
+203/207|Jamming Tower|U
+204/207|Neutralization Zone|ACE
+205/207|Academy at Night|U
+206/207|Boomerang Energy|U
+207/207|Legacy Energy|ACE
+208/207|Larvesta|AR
+209/207|Feebas|AR
+210/207|Duskull|AR
+211/207|Dusclops|AR
+212/207|Dusknoir|AR
+213/207|Fraxure|AR
+214/207|Teal Mask Ogerpon ex|SR
+215/207|Hearthflame Mask Ogerpon ex|SR
+216/207|Kingdra ex|SR
+217/207|Milotic ex|SR
+218/207|Black Kyurem ex|SR
+219/207|Palafin ex|SR
+220/207|Wellspring Mask Ogerpon ex|SR
+221/207|Revavroom ex|SR
+222/207|Medicham ex|SR
+223/207|Cornerstone Mask Ogerpon ex|SR
+224/207|Okidogi ex|SR
+225/207|Munkidori ex|SR
+226/207|Fezandipiti ex|SR
+227/207|Pecharunt ex|SR
+228/207|Orthworm ex|SR
+229/207|Dragapult ex|SR
+230/207|Blissey ex|SR
+231/207|Bloodmoon Ursaluna ex|SR
+232/207|Colress's Tenacity|SR
+233/207|Janine's Secret Art|SR
+234/207|Cassiopeia|SR
+235/207|Caretaker|SR
+236/207|Xerosic's Machinations|SR
+237/207|Surfer|SR
+238/207|Perrin|SR
+239/207|Kieran|SR
+240/207|Carmine|SR
+241/207|Kofu|SR
+242/207|Teal Mask Ogerpon ex|SAR
+243/207|Hearthflame Mask Ogerpon ex|SAR
+244/207|Milotic ex|SAR
+245/207|Wellspring Mask Ogerpon ex|SAR
+246/207|Cornerstone Mask Ogerpon ex|SAR
+247/207|Okidogi ex|SAR
+248/207|Munkidori ex|SAR
+249/207|Fezandipiti ex|SAR
+250/207|Pecharunt ex|SAR
+251/207|Bloodmoon Ursaluna ex|SAR
+252/207|Cassiopeia|SAR
+253/207|Perrin|SAR
+254/207|Kieran|SAR
+255/207|Carmine|SAR
+256/207|Teal Mask Ogerpon ex|UR
+257/207|Pecharunt ex|UR
+258/207|Bloodmoon Ursaluna ex|UR
+259/207|Enhanced Hammer|UR
+260/207|Bravery Charm|UR
+261/207|Gravity Mountain|UR
+262/207|Jamming Tower|UR
+263/207|Jet Energy|UR
+264/207|Luminous Energy|UR
