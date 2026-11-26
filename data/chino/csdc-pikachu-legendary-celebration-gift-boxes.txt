@@ -1,0 +1,26 @@
+# set: CSDC Pikachu Legendary Celebration Gift Boxes
+001/024|Pikachu|
+002/024|Mew|
+003/024|Ho-Oh|
+004/024|Lugia|
+005/024|Groudon|
+006/024|Kyogre|
+007/024|Dialga|
+008/024|Palkia|
+009/024|Reshiram|
+010/024|Zekrom|
+011/024|Xerneas|
+012/024|Yveltal|
+013/024|Cosmog|
+014/024|Cosmoem|
+015/024|Solgaleo|
+016/024|Lunala|
+017/024|Zacian V|
+018/024|Zamazenta V|
+019/024|Pikachu V|
+020/024|Pikachu VMAX|
+021/024|Surfing Pikachu V|
+022/024|Surfing Pikachu VMAX|
+023/024|Flying Pikachu V|
+024/024|Flying Pikachu VMAX|
+025/024|Mew|
