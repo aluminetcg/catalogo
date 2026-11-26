@@ -1,0 +1,64 @@
+# set: CSVH5C Happy Set: Dragonite & Mewtwo & Camerupt & Sinistcha
+001/058|Poltchageist|
+002/058|Sinistcha|
+003/058|Teal Mask Ogerpon|
+004/058|Entei|
+005/058|Numel|
+006/058|Camerupt|
+007/058|Charcadet|
+008/058|Armarouge|
+009/058|Chi-Yu|
+010/058|Paldean Tauros|
+011/058|Delibird|
+012/058|Mewtwo ex|
+013/058|Zeraora|
+014/058|Natu|
+015/058|Xatu|
+016/058|Espeon|
+017/058|Mawile|
+018/058|Latios|
+019/058|Xerneas|
+020/058|Oricorio|
+021/058|Dratini|
+022/058|Dragonair|
+023/058|Dragonite ex|
+024/058|Tatsugiri|
+025/058|Eevee|
+026/058|Porygon|
+027/058|Porygon2|
+028/058|Porygon-Z|
+029/058|Zangoose|
+030/058|Tropius|
+031/058|Chatot|
+032/058|Squawkabilly|
+033/058|Flamigo|
+034/058|Energy Retrieval|
+035/058|Energy Switch|
+036/058|Energy Search|
+037/058|Potion|
+038/058|Great Ball|
+039/058|Deduction Kit|
+040/058|Super Rod|
+041/058|Nest Ball|
+042/058|Ultra Ball|
+043/058|Rare Candy|
+044/058|Switch|
+045/058|Pokémon Catcher|
+046/058|Exp. Share|
+047/058|Cook|
+048/058|Surfer|
+049/058|Judge|
+050/058|Team Star Grunt|
+051/058|Lacey|
+052/058|Youngster|
+053/058|Nemona|
+054/058|Professor's Research|
+055/058|Roark|
+056/058|Miriam|
+057/058|Mela|
+058/058|Tulip|
+059/058|Basic Grass Energy|
+060/058|Basic Fire Energy|
+061/058|Basic Water Energy|
+062/058|Basic Lightning Energy|
+063/058|Basic Psychic Energy|
