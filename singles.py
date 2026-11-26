@@ -19,11 +19,11 @@ OUT = HERE / "_site" / "data" / "singles"
 CATS = {"en": 3, "jp": 85, "mtg": 1}   # Pokémon inglés y japonés, y Magic, en TCGplayer
 
 
-def chino():
-    """Base china armada a mano con chino.html: data/chino/*.txt ('# set: Nombre' + líneas 'número|nombre|rareza').
+def manual(carpeta="chino", key="cn", titulo="Base china"):
+    """Bases armadas a mano (chino, Marvel y DC): data/<carpeta>/*.txt ('# set: Nombre' + líneas 'número|nombre|rareza').
     Si el mismo número de un set aparece en varios archivos, gana el más nuevo (por nombre de archivo)."""
     porset = {}
-    for f in sorted((HERE / "data" / "chino").glob("*.txt")):
+    for f in sorted((HERE / "data" / carpeta).glob("*.txt")):
         s = None
         for line in f.read_text(encoding="utf-8").splitlines():
             line = line.strip()
@@ -37,9 +37,9 @@ def chino():
     for gi, s in enumerate(sorted(porset)):
         sets.append([s, ""])
         for k, (num, name, rz) in sorted(porset[s].items()):
-            cards.append([f"cn|{gi}|{k}", name, num, gi, rz, {}])
-    (OUT / "cn.json").write_text(json.dumps({"stamp": "", "sets": sets, "cards": cards}, ensure_ascii=False, separators=(",", ":")))
-    print(f"Base china: {len(cards)} cartas en {len(sets)} sets")
+            cards.append([f"{key}|{gi}|{k}", name, num, gi, rz, {}])
+    (OUT / f"{key}.json").write_text(json.dumps({"stamp": "", "sets": sets, "cards": cards}, ensure_ascii=False, separators=(",", ":")))
+    print(f"{titulo}: {len(cards)} cartas en {len(sets)} sets")
     return len(cards)
 
 
@@ -71,7 +71,8 @@ def main():
         f.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
         meta["files"][key] = len(cards)
         print(f"Índice de carga rápida {key}: {len(cards)} cartas en {len(sets)} sets ({f.stat().st_size // 1024} KB)")
-    meta["files"]["cn"] = chino()
+    meta["files"]["cn"] = manual()
+    meta["files"]["mv"] = manual("marvel", "mv", "Base Marvel y DC")
     (OUT / "meta.json").write_text(json.dumps(meta, ensure_ascii=False))
 
 

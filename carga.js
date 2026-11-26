@@ -11,7 +11,8 @@
   var AUTH = "https://auth0.empretienda.com", CID = "Kzsbi2SzTmTYF5tZnKOPN63wYpaDACMV";
   var IMG = function (pid, size) { return "https://tcgplayer-cdn.tcgplayer.com/product/" + pid + "_in_" + size + "x" + size + ".jpg"; };
   var BASICAS = { "": 1, "Common": 1, "Uncommon": 1, "Rare": 1, "C": 1, "U": 1, "R": 1 };
-  var ROOTS = { en: /ingl/i, jp: /jap/i, cn: /chin/i, mtg: /mtg|magic/i };
+  var ROOTS = { en: /ingl/i, jp: /jap/i, cn: /chin/i, mtg: /mtg|magic/i, mv: /marvel|\bdc\b/i };
+  var MAN = { cn: 1, mv: 1 };          // bases armadas a mano: sin foto ni precio de referencia
   var RZ = ["", "AR", "SAR", "SR", "UR", "CHR", "CSR", "HR", "RR", "RRR", "Holo", "Reverse", "Masterball Reverse", "Pokeball Reverse", "Promo"];
   var CDN = "https://d22fxaf9t8d39k.cloudfront.net/";
 
@@ -159,7 +160,7 @@
     '</style>' +
     '<div class="wrap"><header>' +
     '<b>ALUMINE<span>TCG</span> \u00b7 carga r\u00e1pida</b>' +
-    '<select id="lang"><option value="all">Pok\u00e9mon Ingl\u00e9s + Japon\u00e9s + Chino</option><option value="en">Pok\u00e9mon Ingl\u00e9s</option><option value="jp">Pok\u00e9mon Japon\u00e9s</option><option value="cn">Pok\u00e9mon Chino (a mano)</option><option value="mtg">Magic</option></select>' +
+    '<select id="lang"><option value="all">Pok\u00e9mon Ingl\u00e9s + Japon\u00e9s + Chino</option><option value="en">Pok\u00e9mon Ingl\u00e9s</option><option value="jp">Pok\u00e9mon Japon\u00e9s</option><option value="cn">Pok\u00e9mon Chino (a mano)</option><option value="mtg">Magic</option><option value="mv">Marvel y DC vintage (a mano)</option></select>' +
     '<input id="q" type="search" placeholder="N\u00famero y/o nombre: 143/128, kommo-o 143, charizard 151\u2026" autocomplete="off">' +
     '<label>Precio = TCG \u00d7 d\u00f3lar \u00d7 <input id="mult" type="number" step="0.05" min="0.1"></label>' +
     '<label id="dolar"></label>' +
@@ -174,7 +175,7 @@
   async function loadIndex(lang) {
     if (S.idx[lang]) return S.idx[lang];
     $("#res").innerHTML = '<div class="msg">Cargando la base de cartas\u2026</div>';
-    var d = await fetch(PAGES + "data/singles/" + lang + ".json?t=" + Math.floor(Date.now() / 36e5)).then(function (r) { if (!r.ok && lang === "cn") return { sets: [], cards: [] }; if (!r.ok) throw new Error("No encontr\u00e9 la base de cartas (" + r.status + ")"); return r.json(); });
+    var d = await fetch(PAGES + "data/singles/" + lang + ".json?t=" + Math.floor(Date.now() / 36e5)).then(function (r) { if (!r.ok && MAN[lang]) return { sets: [], cards: [] }; if (!r.ok) throw new Error("No encontr\u00e9 la base de cartas (" + r.status + ")"); return r.json(); });
     d.cards.forEach(function (c) { c.L = lang; c.n = nnum(c[2]); c.w = norm(cardName(c[1])); c.s = norm(d.sets[c[3]][0]); });
     S.idx[lang] = d; return d;
   }
@@ -282,12 +283,13 @@
     }
     }
     if (S.lang === "cn" && !out.length) return searchCn();
+    if (S.lang === "mv" && !out.length) { $("#res").innerHTML = '<div class="msg">No est\u00e1 en la base de Marvel y DC. Si es de un set que todav\u00eda no cargamos, pasame la lista del set.</div>'; return; }
     var cnHtml = S.lang === "all" || S.lang === "cn" ? searchCn(true) || "" : "";
     if (cnHtml) cnHtml = '<div class="msg" style="padding:8px 0 0;text-align:left">Chino a mano (si no est\u00e1 en la base):</div>' + cnHtml;
     $("#res").innerHTML = out.length || cnHtml ? out.map(function (c) {
       var p = bestPrice(c[5]);
-      return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + esc(c[0]) + '" data-l="' + c.L + '">' + (c.L === "cn" ? '<div class="ph">\u4e2d</div>' : '<img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">') +
-        '<b>' + (L.length > 1 || c.L === "cn" ? '<span class="lg">' + (c.L === "jp" ? "JAP" : c.L === "cn" ? "CHI" : c.L === "mtg" ? "MTG" : "ING") + "</span> " : "") + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(setOf(c))) + "</small>" +
+      return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + esc(c[0]) + '" data-l="' + c.L + '">' + (MAN[c.L] ? '<div class="ph">' + (c.L === "cn" ? "\u4e2d" : "\u2605") + '</div>' : '<img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">') +
+        '<b>' + (L.length > 1 || MAN[c.L] ? '<span class="lg">' + (c.L === "jp" ? "JAP" : c.L === "cn" ? "CHI" : c.L === "mtg" ? "MTG" : c.L === "mv" ? "M/DC" : "ING") + "</span> " : "") + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(setOf(c))) + "</small>" +
         "<small>" + esc(c[4] || "") + (p ? " \u00b7 US$" + p[1] : "") + "</small></div>";
     }).join("") + cnHtml : '<div class="msg">No encontr\u00e9 cartas con eso. Prob\u00e1 solo con el n\u00famero (143/128) o con otra parte del nombre.</div>';
   }
@@ -301,6 +303,7 @@
   // ------------------------------------------------------------------ detalle
   function titleFor(c, catId) {
     var cat = S.cats.filter(function (x) { return x.id == catId; })[0];
+    if (c.L === "mv") return [setOf(c) + " #" + c[2], "-", c[1]].join(" ").replace(/\s+/g, " ").slice(0, 80);   // "1990 Impel Marvel Universe #19 - Mister Fantastic"
     var set = cat ? cat.name : c.L === "cn" ? "" : setName(setOf(c));
     if (c.L === "mtg") {     // como ya est\u00e1n en la tienda: "Saruman of Many Colors #35 Borderless Foil The Hobbit"
       var foil = $("#pk") && /foil/i.test($("#pk").value) ? "Foil" : "";
@@ -309,7 +312,7 @@
     return [cardName(c[1]), BASICAS[c[4]] ? "" : c[4], c[2], set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
   }
   function catOptions(sel, L) {
-    var rootRe = ROOTS[L], f = L === "cn" ? "path" : "root";
+    var rootRe = ROOTS[L], f = MAN[L] ? "path" : "root";
     var list = S.cats.filter(function (c) { return c.leaf && rootRe.test(c[f]); });
     var others = S.cats.filter(function (c) { return c.leaf && !rootRe.test(c[f]); });
     var opt = function (c) { return '<option value="' + c.id + '"' + (c.id == sel ? " selected" : "") + ">" + esc(c.path) + "</option>"; };
@@ -317,17 +320,17 @@
   }
   function showDetailCn(c) {
     S.sel = c; S.own = null;
-    root.querySelectorAll(".t").forEach(function (t) { t.classList.toggle("on", t.dataset.l === "cn" && S.cnRes[+t.dataset.i] === c); });
-    var setFull = c.L === "cn" && typeof c[0] === "string" && c[0].indexOf("cn|") === 0 ? setOf(c) : "";
-    var cat = (setFull && (S.catMap["cn|" + setFull] || guessCat(setFull, "cn"))) || S.catMap[cnKey(c)] || S.catMap["cn|last"] || "";
+    root.querySelectorAll(".t").forEach(function (t) { t.classList.toggle("on", (t.dataset.l === "cn" && S.cnRes[+t.dataset.i] === c) || (t.dataset.pid !== undefined && t.dataset.pid == c[0])); });
+    var L = c.L, setFull = typeof c[0] === "string" && c[0].indexOf(L + "|") === 0 ? setOf(c) : "";
+    var cat = (setFull && (S.catMap[L + "|" + setFull] || guessCat(setFull, L))) || (L === "cn" && S.catMap[cnKey(c)]) || S.catMap[L + "|last"] || "";
     var rzs = RZ.indexOf(c[4]) >= 0 ? RZ : RZ.concat([c[4]]);
     $("#det").innerHTML = '<img class="big" id="big" alt="" hidden><div class="nof" id="nof">Sin foto (es opcional).<br>Peg\u00e1 (Ctrl+V), arrastr\u00e1 o eleg\u00ed una foto si quer\u00e9s ponerle.</div>' +
       '<div class="foto"><label class="sec">Elegir foto<input id="own" type="file" accept="image/*" hidden></label>' +
       '<button class="sec" id="rmown" hidden>Sacar la foto</button><span id="fotoinfo"></span></div>' +
-      '<div class="row"><label>Nombre<input id="nm"></label><label>Rareza<select id="rz">' + rzs.map(function (r) { return '<option value="' + esc(r) + '"' + (r === c[4] ? " selected" : "") + ">" + esc(r || "(ninguna)") + "</option>"; }).join("") + "</select></label></div>" +
-      (setFull ? '<div class="hint">De tu base china: ' + esc(setFull) + "</div>" : "") +
+      '<div class="row"><label>Nombre<input id="nm"></label><label' + (L === "cn" ? "" : " hidden") + '>Rareza<select id="rz">' + rzs.map(function (r) { return '<option value="' + esc(r) + '"' + (r === c[4] ? " selected" : "") + ">" + esc(r || "(ninguna)") + "</option>"; }).join("") + "</select></label></div>" +
+      (setFull ? '<div class="hint">De tu base ' + (L === "cn" ? "china" : "Marvel y DC") + ": " + esc(setFull) + " #" + esc(c[2]) + "</div>" : "") +
       '<label>T\u00edtulo del producto<input id="ti" maxlength="80"></label>' +
-      '<label>Categor\u00eda<select id="ca">' + catOptions(cat, "cn") + "</select></label>" +
+      '<label>Categor\u00eda<select id="ca">' + catOptions(cat, L) + "</select></label>" +
       '<div class="row"><label>Precio $<input id="pr" type="number" min="1" step="1" placeholder="a mano"></label><label>Stock<input id="st" type="number" min="1" step="1" value="1"></label></div>' +
       '<button class="go" id="add">Cargar nueva</button>' +
       '<div id="out"></div><div id="ex" class="hint">Buscando si ya la ten\u00e9s cargada\u2026</div>' +
@@ -345,7 +348,7 @@
     existentes(c);
   }
   function showDetail(c) {
-    if (c.L === "cn") return showDetailCn(c);
+    if (MAN[c.L]) return showDetailCn(c);
     S.sel = c; S.own = null;
     root.querySelectorAll(".t").forEach(function (t) { t.classList.toggle("on", t.dataset.pid == c[0]); });
     var setFull = setOf(c), cat = guessCat(setFull, c.L);
@@ -417,7 +420,7 @@
     S.own = f || null;
     if (S.ownUrl) URL.revokeObjectURL(S.ownUrl);
     S.ownUrl = f ? URL.createObjectURL(f) : null;
-    var cn = S.sel && S.sel.L === "cn";
+    var cn = S.sel && MAN[S.sel.L];
     if ($("#big")) { $("#big").src = S.ownUrl || (cn ? "" : IMG(S.sel[0], 1000)); if (cn) $("#big").hidden = !f; }
     if (!f && !cn && $("#fx") && $("#fx").checked) foilPreview(S.sel);
     if ($("#nof")) $("#nof").hidden = !!f;
@@ -449,7 +452,7 @@
     var cat = $("#ca").value, title = $("#ti").value.trim(), price = Math.round(+$("#pr").value), stock = Math.round(+$("#st").value);
     if (!cat) return say("err", "Eleg\u00ed la categor\u00eda.");
     if (!title) return say("err", "Falta el t\u00edtulo.");
-    if (c.L === "cn" && !c[1]) return say("err", "Falta el nombre de la carta.");
+    if (MAN[c.L] && !c[1]) return say("err", "Falta el nombre de la carta.");
     if (!(price > 0) && !reemplaza) return say("err", "Pon\u00e9 un precio.");
     if (!(stock > 0) && !(reemplaza && stock === 0)) return say("err", "Pon\u00e9 el stock (1 o m\u00e1s).");
     lock(true);
@@ -466,7 +469,7 @@
       if (!(price > 0)) { lock(false); return say("err", "Pon\u00e9 un precio."); }
     }
     async function subirStock() {
-      if (c.L === "cn" && !S.own) return [];             // chino sin foto: el producto va sin imagen
+      if (MAN[c.L] && !S.own) return [];             // chino sin foto: el producto va sin imagen
       say("hint", "Subiendo la foto\u2026");
       var foil = !S.own && $("#fx") && $("#fx").checked;
       var blob = S.own || (foil && S.foilFor === c && S.foilBlob) || await stockBlob(c);
@@ -502,7 +505,7 @@
         nota = " Empretienda no acept\u00f3 la foto vieja, as\u00ed que puse la de stock.";
       }
       if (vieja.length && !nota) nota = " Con la foto de la publicaci\u00f3n vieja.";
-      if (c.L === "cn") { S.catMap[cnKey(c)] = +cat; S.catMap["cn|last"] = +cat; if (typeof c[0] === "string" && c[0].indexOf("cn|") === 0) S.catMap["cn|" + setOf(c)] = +cat; } else S.catMap[c.L + "|" + setOf(c)] = +cat;
+      if (MAN[c.L]) { if (c.L === "cn") S.catMap[cnKey(c)] = +cat; S.catMap[c.L + "|last"] = +cat; if (typeof c[0] === "string" && c[0].indexOf(c.L + "|") === 0) S.catMap[c.L + "|" + setOf(c)] = +cat; } else S.catMap[c.L + "|" + setOf(c)] = +cat;
       ls.set("cats", S.catMap);
       var id = prod && (prod.idProductos || (prod.producto && prod.producto.idProductos));
       S.log.unshift({ t: title, s: stock, p: price, id: id, nuevo: true, re: !!reemplaza });
@@ -512,7 +515,7 @@
     } catch (e) {
       var m = esc(e.message);
       if (reemplazada) m += ". <b>La publicaci\u00f3n vieja ya se borr\u00f3</b>: toc\u00e1 <b>Cargar nueva</b> para volver a intentar.";
-      else if (c.L === "cn" && !S.own && !vieja.length && /imag|foto/i.test(e.message)) m += ". Parece que Empretienda pide foto: agreg\u00e1 una (pegala o arrastrala) y prob\u00e1 de nuevo.";
+      else if (MAN[c.L] && !S.own && !vieja.length && /imag|foto/i.test(e.message)) m += ". Parece que Empretienda pide foto: agreg\u00e1 una (pegala o arrastrala) y prob\u00e1 de nuevo.";
       else if (/ya existe/i.test(e.message)) m += ". Ya hay un producto con ese t\u00edtulo: sumale stock, us\u00e1 <b>Borrar y publicar de nuevo</b> o cambi\u00e1 el t\u00edtulo.";
       say("err", "No se pudo cargar: " + m);
       if (reemplazada) existentes(c);
