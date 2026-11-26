@@ -1,0 +1,20 @@
+# set: CSBC Primordial Arts Deck Building Gift Box (Overgrow)
+001/019|Tapu Koko V|
+002/019|Shadow Rider Calyrex V|
+003/019|Single Strike Urshifu V|
+004/019|Galarian Slowking V|
+005/019|Tornadus V|
+006/019|Scoop Up Net|
+007/019|Urn of Vitality|
+008/019|Fog Crystal|
+009/019|Quick Ball|
+010/019|Evolution Incense|
+011/019|Rare Candy|
+012/019|Ordinary Rod|
+013/019|Exp. Share|
+014/019|Professor's Research|
+015/019|Boss's Orders|
+016/019|Marnie|
+017/019|Tower of Darkness|
+018/019|Single Strike Energy|
+019/019|Capture Energy|
