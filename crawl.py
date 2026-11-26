@@ -398,7 +398,7 @@ def load_mtg_colors():
         raise RuntimeError(f"Scryfall no listó oracle_cards: {str(lista)[:200]}")
     uri = meta.get("download_uri") or meta.get("uri")
     if not meta.get("download_uri"):
-        print(f"  bulk oracle_cards sin download_uri: {str(meta)[:400]}", flush=True)
+        print(f"  bulk oracle_cards sin download_uri, claves: {sorted(meta)} {[(k, v) for k, v in meta.items() if isinstance(v, str) and v.startswith('http')]}", flush=True)
         meta = requests.get(meta["uri"], headers=h, timeout=60).json()
         uri = meta.get("download_uri")
     cards = requests.get(uri, headers=h, timeout=600).json()
