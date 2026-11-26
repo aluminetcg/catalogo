@@ -7,10 +7,16 @@ Cada archivo trae, por carta: id de TCGplayer (sirve para la foto), nombre, núm
 unificada como en el catálogo y precio de mercado en USD por acabado. No se guarda en el repo:
 se arma en cada actualización y se publica junto con la web.
 """
+import csv
+import gzip
+import io
 import json
 import re
 import sys
+import time
 from pathlib import Path
+
+import requests
 
 from crawl import unify
 from precios import load_tcg, dolar_oficial
@@ -68,6 +74,54 @@ def manual(carpeta="chino", key="cn", titulo="Base china"):
     return len(cards)
 
 
+def ck_prices():
+    """Precios de venta de Card Kingdom (Magic), del archivo diario de MTGJSON, por id de producto de TCGplayer:
+    {productId: {"CK Normal": 0.35, "CK Foil": 1.2}}. Caché de un día en data/tcgcsv/ck.json."""
+    f = HERE / "data" / "tcgcsv" / "ck.json"
+    if f.exists() and time.time() - f.stat().st_mtime < 20 * 3600:
+        return {int(k): v for k, v in json.loads(f.read_text()).items()}
+    h = {"User-Agent": "AlumineTCG-catalogo/1.0"}
+    get = lambda u: gzip.decompress(requests.get(u, headers=h, timeout=600).content)
+    precios = json.loads(get("https://mtgjson.com/api/v5/AllPricesToday.json.gz"))["data"]
+    ck = {}
+    for uuid, fmts in precios.items():
+        r = ((fmts.get("paper") or {}).get("cardkingdom") or {}).get("retail") or {}
+        val = {}
+        for acab, key in (("normal", "CK Normal"), ("foil", "CK Foil"), ("etched", "CK Foil")):
+            serie = r.get(acab) or {}
+            if serie and key not in val:
+                v = serie[max(serie)]          # el día más reciente
+                if v:
+                    val[key] = round(float(v), 2)
+        if val:
+            ck[uuid] = val
+    del precios
+    ids = {}
+    try:                                       # CSV chico de identificadores (si no está, el JSON completo)
+        rows = csv.DictReader(io.StringIO(get("https://mtgjson.com/api/v5/csv/cardIdentifiers.csv.gz").decode("utf-8")))
+        for row in rows:
+            if row.get("uuid") in ck:
+                ids[row["uuid"]] = (row.get("tcgplayerProductId"), row.get("tcgplayerEtchedProductId"))
+    except Exception as e:
+        print(f"  sin CSV de identificadores ({e}); uso AllIdentifiers")
+        allid = json.loads(get("https://mtgjson.com/api/v5/AllIdentifiers.json.gz"))["data"]
+        for uuid, c in allid.items():
+            if uuid in ck:
+                i = c.get("identifiers") or {}
+                ids[uuid] = (i.get("tcgplayerProductId"), i.get("tcgplayerEtchedProductId"))
+    out = {}
+    for uuid, (tp, te) in ids.items():
+        v = ck[uuid]
+        if tp and str(tp).isdigit():
+            out.setdefault(int(tp), {}).update({k: x for k, x in v.items() if not (te and k == "CK Foil" and "etched" in k)})
+        if te and str(te).isdigit() and "CK Foil" in v:
+            out.setdefault(int(te), {})["CK Foil"] = v["CK Foil"]
+    f.parent.mkdir(parents=True, exist_ok=True)
+    f.write_text(json.dumps(out))
+    print(f"Card Kingdom: precios de {len(out)} productos")
+    return out
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     meta = {"files": {}}
@@ -81,6 +135,12 @@ def main():
         except Exception as e:      # si falla un juego, que los otros igual se armen
             print(f"AVISO: no pude bajar la categoría {cat} ({e})")
             continue
+        ck = {}
+        if key == "mtg":
+            try:
+                ck = ck_prices()
+            except Exception as e:
+                print(f"AVISO: sin precios de Card Kingdom ({e})")
         sets, cards = [], []
         for g in sorted(groups, key=lambda g: g["year"] or "0000", reverse=True):
             if not g["products"]:
@@ -90,6 +150,7 @@ def main():
             for pid, name, number, prices, rarity in g["products"]:
                 rar = unify(rarity, "Magic" if key == "mtg" else "Pokémon", "")[0] if rarity else ""
                 p = {k: round(v, 2) for k, v in (prices or {}).items() if v}
+                p.update(ck.get(pid, {}))
                 cards.append([pid, name, number, gi, rar, p])
         data = {"stamp": stamp, "sets": sets, "cards": cards}
         f = OUT / f"{key}.json"

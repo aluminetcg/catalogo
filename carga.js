@@ -388,7 +388,7 @@
       '<div><b>' + esc(cardName(c[1])) + "</b> \u00b7 " + esc(c[2]) + '<br><small class="hint">' + esc(setFull) + " \u00b7 " + esc(c[4] || "sin rareza") + "</small></div>" +
       '<label>T\u00edtulo del producto<input id="ti" maxlength="80"></label>' +
       '<label>Categor\u00eda<select id="ca">' + catOptions(cat, c.L) + "</select></label>" +
-      '<div class="row"><label>Precio TCGplayer<select id="pk">' + (keys.length ? keys.map(function (k) { return '<option value="' + esc(k) + '"' + (bp && bp[0] === k ? " selected" : "") + ">" + esc(k) + " \u00b7 US$" + c[5][k] + "</option>"; }).join("") : '<option value="">Sin precio</option>') + "</select></label>" +
+      '<div class="row"><label>' + (c.L === "mtg" ? "Precio de referencia" : "Precio TCGplayer") + '<select id="pk">' + (keys.length ? keys.map(function (k) { return '<option value="' + esc(k) + '"' + (bp && bp[0] === k ? " selected" : "") + ">" + esc(c.L === "mtg" ? (/^CK /.test(k) ? "Card Kingdom " + k.slice(3) : "TCGplayer " + k) : k) + " \u00b7 US$" + c[5][k] + "</option>"; }).join("") : '<option value="">Sin precio</option>') + "</select></label>" +
       '<label>Precio $<input id="pr" type="number" min="1" step="1"></label></div>' +
       '<div class="row"><label>Stock<input id="st" type="number" min="1" step="1" value="1"></label><label>&nbsp;<button class="go" id="add">Cargar nueva</button></label></div>' +
       '<div id="out"></div><div id="ex" class="hint">Buscando si ya la ten\u00e9s cargada\u2026</div>' +
