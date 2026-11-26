@@ -1,0 +1,24 @@
+# set: CSVH4aC Happy Set: Decidueye & Melmetal & Koraidon & Miraidon (Modification Pack)
+001/023|Chansey|
+002/023|Ditto|
+003/023|Snorlax|
+004/023|Spinda|
+005/023|Audino|
+006/023|Flamigo ex|
+007/023|Energy Sticker|
+008/023|Counter Catcher|
+009/023|Trekking Shoes|
+010/023|Letter of Encouragement|
+011/023|Picnic Basket|
+012/023|Night Stretcher|
+013/023|Rescue Board|
+014/023|Bravery Charm|
+015/023|Vengeful Punch|
+016/023|Technical Machine: Turbo Energize|
+017/023|Technical Machine: Blindside|
+018/023|Lucian|
+019/023|Giovanni's Charisma|
+020/023|Carmine|
+021/023|Iono|
+022/023|Boss's Orders|
+023/023|Bill's Transfer|
