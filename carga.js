@@ -135,8 +135,12 @@
       if (S.sel === c && $("#fx").checked && !S.own) $("#big").src = S.foilUrl;
     } catch (e) { $("#fx").checked = false; $("#fotoinfo").textContent = "No pude aplicar el efecto foil: " + e.message; }
   }
-  // precio m\u00ednimo: $649 normal, $739 foil de Magic, $1389 holo o reverse holo de Pok\u00e9mon
-  function minimo(c, k, foil) { return c.L === "mtg" ? (foil || /foil/i.test(k || "") ? 739 : 649) : /holo/i.test(k || "") ? 1389 : 649; }
+  // precio m\u00ednimo: $649 normal, $739 foil de Magic, $849 rare/mythic de Magic, $1389 holo o reverse holo de Pok\u00e9mon
+  function minimo(c, k, foil) {
+    if (c.L !== "mtg") return /holo/i.test(k || "") ? 1389 : 649;
+    var rare = /^(rare|mythic)/i.test(c[4] || "") ? 849 : 649;          // Rare y Mythic de Magic: $849
+    return Math.max(rare, foil || /foil/i.test(k || "") ? 739 : 649);
+  }
   function sugerido(usd, min) { if (!usd || !S.usd) return 0; var v = usd * S.usd * S.mult; return Math.max(min || 649, Math.ceil(v / 100) * 100 - 21); }
 
   // ------------------------------------------------------------------ interfaz
