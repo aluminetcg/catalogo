@@ -135,7 +135,7 @@
       if (S.sel === c && $("#fx").checked && !S.own) $("#big").src = S.foilUrl;
     } catch (e) { $("#fx").checked = false; $("#fotoinfo").textContent = "No pude aplicar el efecto foil: " + e.message; }
   }
-  function sugerido(usd) { if (!usd || !S.usd) return 0; var v = usd * S.usd * S.mult; return Math.max(100, Math.ceil(v / 100) * 100 - 21); }
+  function sugerido(usd) { if (!usd || !S.usd) return 0; var v = usd * S.usd * S.mult; return Math.max(649, Math.ceil(v / 100) * 100 - 21); }   // m\u00ednimo $649
 
   // ------------------------------------------------------------------ interfaz
   root.innerHTML = '<style>' +
