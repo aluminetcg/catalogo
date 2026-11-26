@@ -1,0 +1,69 @@
+# set: CSVH3C Happy Set: Altaria & Latios & Infernape & Maushold
+001/054|Entei|
+002/054|Chimchar|
+003/054|Monferno|
+004/054|Infernape|
+005/054|Heat Rotom|
+006/054|Chi-Yu|
+007/054|Cetoddle|
+008/054|Cetitan|
+009/054|Natu|
+010/054|Xatu|
+011/054|Lunatone|
+012/054|Latias|
+013/054|Latios|
+014/054|Deoxys|
+015/054|Cresselia|
+016/054|Dedenne|
+017/054|Greavard|
+018/054|Houndstone|
+019/054|Altaria ex|
+020/054|Drampa|
+021/054|Tatsugiri|
+022/054|Aipom|
+023/054|Ambipom|
+024/054|Stantler|
+025/054|Miltank|
+026/054|Swablu|
+027/054|Castform|
+028/054|Hawlucha|
+029/054|Skwovet|
+030/054|Greedent|
+031/054|Indeedee|
+032/054|Tandemaus|
+033/054|Maushold ex|
+034/054|Squawkabilly|
+035/054|Flamigo|
+036/054|Energy Loto|
+037/054|Energy Retrieval|
+038/054|Energy Search|
+039/054|Energy Recycler|
+040/054|Potion|
+041/054|Super Rod|
+042/054|Nest Ball|
+043/054|Nemona's Backpack|
+044/054|Ultra Ball|
+045/054|Rare Candy|
+046/054|Switch|
+047/054|Pokémon Catcher|
+048/054|Defiance Band|
+049/054|Bravery Charm|
+050/054|Caitlin|
+051/054|Klara|
+052/054|Cook|
+053/054|Judge|
+054/054|Youngster|
+055/054|Nemona|
+056/054|Professor's Research|
+057/054|Arven|
+058/054|Zisu|
+059/054|Poppy|
+060/054|Mela|
+061/054|Jet Energy|
+062/054|Double Turbo Energy|
+063/054|Treasure Energy|
+064/054|Lucky Energy|
+065/054|Basic Fire Energy|
+066/054|Basic Water Energy|
+067/054|Basic Psychic Energy|
+068/054|Basic Metal Energy|
