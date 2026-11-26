@@ -12,6 +12,7 @@
   var IMG = function (pid, size) { return "https://tcgplayer-cdn.tcgplayer.com/product/" + pid + "_in_" + size + "x" + size + ".jpg"; };
   var BASICAS = { "": 1, "Common": 1, "Uncommon": 1, "Rare": 1 };
   var ROOTS = { en: /ingl/i, jp: /jap/i };
+  var CDN = "https://d22fxaf9t8d39k.cloudfront.net/";
 
   var host = document.createElement("div");
   host.id = "alumine-carga";
@@ -32,7 +33,7 @@
   };
   var S = {
     lang: ls.get("lang", "all"), mult: ls.get("mult", 1), usd: 0,
-    idx: {}, cats: [], catMap: ls.get("cats", {}), sel: null, log: [], busy: false
+    idx: {}, cats: [], catMap: ls.get("cats", {}), sel: null, log: [], busy: false, oldImgs: {}
   };
 
   // ------------------------------------------------------------------ sesi\u00f3n del panel
@@ -243,10 +244,13 @@
       if (!hits.length) { box.innerHTML = "No hay ning\u00fan producto con ese nombre y n\u00famero en tu tienda."; return; }
       box.innerHTML = "<b>Ya ten\u00e9s cargada" + (hits.length > 1 ? "s estas" : " esta") + ":</b>" + hits.map(function (p) {
         var s = (p.stock || [])[0] || {};
-        return '<div class="ex"><div>' + esc(p.p_nombre) + "<br><small>Stock " + (s.s_ilimitado ? "ilimitado" : s.s_cantidad) + " \u00b7 " + money(p.p_precio) + (p.p_desactivado ? " \u00b7 desactivado" : "") + "</small></div>" +
+        S.oldImgs[p.idProductos] = (p.imagenes || []).map(function (i) { return i.i_link; }).filter(Boolean);
+        return '<div class="ex">' + (S.oldImgs[p.idProductos][0] ? '<img src="' + CDN + S.oldImgs[p.idProductos][0] + '" alt="" style="width:46px;height:64px;object-fit:contain;flex:none;border-radius:4px">' : "") + '<div>' + esc(p.p_nombre) + "<br><small>Stock " + (s.s_ilimitado ? "ilimitado" : s.s_cantidad) + " \u00b7 " + money(p.p_precio) + (p.p_desactivado ? " \u00b7 desactivado" : "") + "</small></div>" +
           '<div style="display:flex;flex-direction:column;gap:6px;flex:none"><button class="sec" data-id="' + p.idProductos + '">Sumar stock</button>' +
           ((p.stock || []).length === 1 && !s.s_ilimitado && !(+s.s_cantidad > 0) ? '<button class="sec" data-re="' + p.idProductos + '" title="Crea una publicaci\u00f3n nueva con los datos de arriba (queda primera como reci\u00e9n subida) y borra esta">Borrar y publicar de nuevo</button>' : "") + "</div></div>";
-      }).join("") + '<label style="flex-direction:row;align-items:center;gap:6px;margin-top:6px"><input id="np" type="checkbox" style="width:auto"> y ponerle el precio de arriba</label>';
+      }).join("") + '<label style="flex-direction:row;align-items:center;gap:6px;margin-top:6px"><input id="np" type="checkbox" style="width:auto"> y ponerle el precio de arriba</label>' +
+        (box.innerHTML.indexOf("data-re") >= 0 || hits.some(function (p) { var s = (p.stock || [])[0] || {}; return (p.stock || []).length === 1 && !s.s_ilimitado && !(+s.s_cantidad > 0); }) ?
+          '<label style="flex-direction:row;align-items:center;gap:6px"><input id="vf" type="checkbox" checked style="width:auto"> al republicar, usar la foto de la publicaci\u00f3n vieja</label>' : "");
       box.querySelectorAll("[data-id]").forEach(function (b) { b.onclick = function () { sumar(c, +b.dataset.id); }; });
       box.querySelectorAll("[data-re]").forEach(function (b) {
         b.onclick = function () {
@@ -269,14 +273,20 @@
     if (!title) return say("err", "Falta el t\u00edtulo.");
     if (!(price > 0)) return say("err", "Pon\u00e9 un precio.");
     if (!(stock > 0)) return say("err", "Pon\u00e9 el stock (1 o m\u00e1s).");
-    lock(true); say("hint", "Subiendo la foto\u2026");
-    var reemplazada = false;
-    try {
+    lock(true);
+    var reemplazada = false, nota = "";
+    var vieja = reemplaza && $("#vf") && $("#vf").checked ? (S.oldImgs[reemplaza] || []) : [];
+    async function subirStock() {
+      say("hint", "Subiendo la foto\u2026");
       var blob = await fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); });
       var fd = new FormData(); fd.append("max_width", "600"); fd.append("max_height", "1200");
       fd.append("images[]", new File([blob], "carta-" + c[0] + ".jpg", { type: blob.type || "image/jpeg" }));
-      var imgs = await api("/upload/products", { method: "POST", body: fd });
-      if (!imgs || !imgs.length) throw new Error("Empretienda no devolvi\u00f3 la foto subida");
+      var up = await api("/upload/products", { method: "POST", body: fd });
+      if (!up || !up.length) throw new Error("Empretienda no devolvi\u00f3 la foto subida");
+      return up.slice(0, 1);
+    }
+    try {
+      var imgs = vieja.length ? vieja : await subirStock();
       var borrada = "";
       if (reemplaza) {                 // Empretienda no deja dos productos con el mismo nombre: primero se borra la vieja (sin stock)
         say("hint", "Borrando la publicaci\u00f3n vieja\u2026");
@@ -285,17 +295,25 @@
         reemplazada = true;
       }
       say("hint", "Creando el producto\u2026");
-      var prod = await api("/producto", { method: "POST", json: {
-        atributos: [], imagenes: [imgs[0]], categorias_secundarias: [+cat], idCategorias: +cat,
+      var payload = function (fotos) { return {
+        atributos: [], imagenes: fotos, categorias_secundarias: [+cat], idCategorias: +cat,
         p_nombre: title, p_descripcion: "", p_tipo_venta: 0, p_producto_digital: 0, p_cantidad_minima: 1, p_atributos: 0,
         stock: [{ idStock: -1, s_alto: "1", s_ancho: "1", s_peso: "0.01", s_profundidad: "1", s_precio: String(price), s_precio_oferta: "",
           s_sku: "", s_precio_mayorista: "", s_cantidad: String(stock), s_cantidad_minima: "1", s_producto_digital_link: "",
           s_producto_digital_observacion: "", s_producto_digital_plazo: "", s_mostrar_precio: 1, s_imagen: 0 }]
-      } });
+      }; };
+      var prod;
+      try { prod = await api("/producto", { method: "POST", json: payload(imgs) }); }
+      catch (e1) {
+        if (!vieja.length || /ya existe/i.test(e1.message)) throw e1;
+        prod = await api("/producto", { method: "POST", json: payload(await subirStock()) });   // no acept\u00f3 la foto vieja: va la de stock
+        nota = " Empretienda no acept\u00f3 la foto vieja, as\u00ed que puse la de stock.";
+      }
+      if (vieja.length && !nota) nota = " Con la foto de la publicaci\u00f3n vieja.";
       S.catMap[c.L + "|" + setOf(c)] = +cat; ls.set("cats", S.catMap);
       var id = prod && (prod.idProductos || (prod.producto && prod.producto.idProductos));
       S.log.unshift({ t: title, s: stock, p: price, id: id, nuevo: true, re: !!reemplaza });
-      say("ok", "Listo: <b>" + esc(title) + "</b> " + (reemplaza ? "publicada de nuevo" : "cargada") + " con stock " + stock + " a " + money(price) + "." + borrada + (id ? ' <a target="_blank" href="/productos/editar/' + id + '">Ver en el panel</a>' : ""));
+      say("ok", "Listo: <b>" + esc(title) + "</b> " + (reemplaza ? "publicada de nuevo" : "cargada") + " con stock " + stock + " a " + money(price) + "." + borrada + nota + (id ? ' <a target="_blank" href="/productos/editar/' + id + '">Ver en el panel</a>' : ""));
       renderLog(); existentes(c);
       $("#q").focus(); $("#q").select();
     } catch (e) {
