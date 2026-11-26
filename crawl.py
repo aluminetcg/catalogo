@@ -392,7 +392,10 @@ def load_mtg_colors():
     if f.exists() and time.time() - f.stat().st_mtime < 7 * 86400:
         return json.loads(f.read_text())
     h = {"User-Agent": "AlumineTCG-catalogo/1.0", "Accept": "application/json"}
-    meta = requests.get("https://api.scryfall.com/bulk-data/oracle-cards", headers=h, timeout=60).json()
+    lista = requests.get("https://api.scryfall.com/bulk-data", headers=h, timeout=60).json()
+    meta = next((b for b in lista.get("data") or [] if b.get("type") == "oracle_cards"), None)
+    if not meta:
+        raise RuntimeError(f"Scryfall no listó oracle_cards: {str(lista)[:200]}")
     cards = requests.get(meta["download_uri"], headers=h, timeout=600).json()
     out = {}
     for c in cards:
