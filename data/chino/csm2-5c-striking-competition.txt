@@ -1,0 +1,100 @@
+# set: CSM2.5C Striking Competition
+001/061|Venusaur & Snivy-GX|RR
+002/061|Exeggcute|C
+003/061|Bounsweet|C
+004/061|Steenee|C
+005/061|Tsareena|R
+006/061|Charizard & Braixen-GX|RR
+007/061|Flareon|C
+008/061|Volcanion|R
+009/061|Blacephalon|U
+010/061|Vaporeon|C
+011/061|Froakie|C
+012/061|Frogadier|C
+013/061|Pikachu|C
+014/061|Alolan Raichu|R
+015/061|Jolteon|C
+016/061|Trevenant & Dusknoir-GX|RR
+017/061|Koffing|C
+018/061|Weezing|U
+019/061|Jynx|U
+020/061|Jirachi-GX|RR
+021/061|Oricorio-GX|RR
+022/061|Mimikyu|C
+023/061|Marshadow|R
+024/061|Landorus|R
+025/061|Rockruff|C
+026/061|Lycanroc|R
+027/061|Alolan Meowth|C
+028/061|Alolan Persian-GX|RR
+029/061|Sneasel|C
+030/061|Weavile-GX|RR
+031/061|Greninja|R
+032/061|Mawile-GX|RR
+033/061|Cottonee|C
+034/061|Whimsicott|U
+035/061|Sylveon|U
+036/061|Arceus & Dialga & Palkia-GX|RR
+037/061|Naganadel & Guzzlord-GX|RR
+038/061|Alolan Exeggutor|U
+039/061|Mega Lopunny & Jigglypuff-GX|RR
+040/061|Eevee|C
+041/061|Porygon|C
+042/061|Porygon2|C
+043/061|Porygon-Z|R
+044/061|Porygon-Z-GX|RR
+045/061|Great Catcher|U
+046/061|Devolution Spray Z|U
+047/061|Electromagnetic Radar|U
+048/061|Fire Crystal|U
+049/061|Island Challenge Amulet|U
+050/061|Fairy Charm Lightning|U
+051/061|Ear-Ringing Bell|C
+052/061|Professor Oak's Setup|U
+053/061|Misty & Lorelei|U
+054/061|Channeler|U
+055/061|Roxie|U
+056/061|Rosa|R
+057/061|Chaotic Swell|U
+058/061|Dust Island|U
+059/061|Blizzard Town|U
+060/061|Power Plant|U
+061/061|Weakness Guard Energy|U
+062/061|Venusaur & Snivy-GX|SR
+063/061|Venusaur & Snivy-GX|SR
+064/061|Charizard & Braixen-GX|SR
+065/061|Charizard & Braixen-GX|SR
+066/061|Trevenant & Dusknoir-GX|SR
+067/061|Trevenant & Dusknoir-GX|SR
+068/061|Oricorio-GX|SR
+069/061|Jirachi-GX|SR
+070/061|Alolan Persian-GX|SR
+071/061|Weavile-GX|SR
+072/061|Mawile-GX|SR
+073/061|Arceus & Dialga & Palkia-GX|SR
+074/061|Naganadel & Guzzlord-GX|SR
+075/061|Naganadel & Guzzlord-GX|SR
+076/061|Mega Lopunny & Jigglypuff-GX|SR
+077/061|Mega Lopunny & Jigglypuff-GX|SR
+078/061|Professor Oak's Setup|SR
+079/061|Misty & Lorelei|SR
+080/061|Channeler|SR
+081/061|Roxie|SR
+082/061|Rosa|SR
+083/061|Venusaur & Snivy-GX|HR
+084/061|Charizard & Braixen-GX|HR
+085/061|Trevenant & Dusknoir-GX|HR
+086/061|Oricorio-GX|HR
+087/061|Jirachi-GX|HR
+088/061|Alolan Persian-GX|HR
+089/061|Weavile-GX|HR
+090/061|Mawile-GX|HR
+091/061|Arceus & Dialga & Palkia-GX|HR
+092/061|Naganadel & Guzzlord-GX|HR
+093/061|Mega Lopunny & Jigglypuff-GX|HR
+094/061|Great Catcher|UR
+095/061|Electromagnetic Radar|UR
+096/061|Fire Crystal|UR
+097/061|Island Challenge Amulet|UR
+098/061|Power Plant|UR
+099/061|Draw Energy|UR
