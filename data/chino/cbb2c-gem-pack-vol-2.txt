@@ -1,0 +1,141 @@
+# set: CBB2C Gem Pack Vol. 2
+0101/15|Eevee|C
+0102/15|Eevee|C
+0103/15|Eevee|C
+0104/15|Eevee|C
+0105/15|Eevee|U
+0106/15|Eevee|U
+0107/15|Eevee|U
+0108/15|Eevee|U
+0109/15|Eevee|R
+0110/15|Eevee|R
+0111/15|Eevee|RR
+0112/15|Eevee|RR
+0113/15|Eevee V|R
+0114/15|Eevee VMAX|RRR
+0115/15|Eevee|RRR
+0201/14|Vaporeon|C
+0202/14|Vaporeon|C
+0203/14|Vaporeon|C
+0204/14|Vaporeon|C
+0205/14|Vaporeon|U
+0206/14|Vaporeon|U
+0207/14|Vaporeon|U
+0208/14|Vaporeon|U
+0209/14|Vaporeon|R
+0210/14|Vaporeon|R
+0211/14|Vaporeon|RR
+0212/14|Vaporeon|RR
+0213/14|Vaporeon V|R
+0214/14|Vaporeon VMAX|RRR
+0301/14|Jolteon|C
+0302/14|Jolteon|C
+0303/14|Jolteon|C
+0304/14|Jolteon|C
+0305/14|Jolteon|U
+0306/14|Jolteon|U
+0307/14|Jolteon|U
+0308/14|Jolteon|U
+0309/14|Jolteon|R
+0310/14|Jolteon|R
+0311/14|Jolteon|RR
+0312/14|Jolteon|RR
+0313/14|Jolteon V|R
+0314/14|Jolteon VMAX|RRR
+0401/14|Flareon|C
+0402/14|Flareon|C
+0403/14|Flareon|C
+0404/14|Flareon|C
+0405/14|Flareon|U
+0406/14|Flareon|U
+0407/14|Flareon|U
+0408/14|Flareon|U
+0409/14|Flareon|R
+0410/14|Flareon|R
+0411/14|Flareon|RR
+0412/14|Flareon|RR
+0413/14|Flareon V|R
+0414/14|Flareon VMAX|RRR
+0501/14|Espeon|C
+0502/14|Espeon|C
+0503/14|Espeon|C
+0504/14|Espeon|C
+0505/14|Espeon|U
+0506/14|Espeon|U
+0507/14|Espeon|U
+0508/14|Espeon|U
+0509/14|Espeon|R
+0510/14|Espeon|R
+0511/14|Espeon|RR
+0512/14|Espeon|RR
+0513/14|Espeon V|R
+0514/14|Espeon VMAX|RRR
+0601/15|Umbreon|C
+0602/15|Umbreon|C
+0603/15|Umbreon|C
+0604/15|Umbreon|C
+0605/15|Umbreon|U
+0606/15|Umbreon|U
+0607/15|Umbreon|U
+0608/15|Umbreon|U
+0609/15|Umbreon|R
+0610/15|Umbreon|R
+0611/15|Umbreon|RR
+0612/15|Umbreon|RR
+0613/15|Umbreon V|R
+0614/15|Umbreon VMAX|RRR
+0615/15|Umbreon|RRR
+0701/15|Leafeon|C
+0702/15|Leafeon|C
+0703/15|Leafeon|C
+0704/15|Leafeon|C
+0705/15|Leafeon|U
+0706/15|Leafeon|U
+0707/15|Leafeon|U
+0708/15|Leafeon|U
+0709/15|Leafeon|R
+0710/15|Leafeon|R
+0711/15|Leafeon|RR
+0712/15|Leafeon|RR
+0713/15|Leafeon V|R
+0714/15|Leafeon VMAX|RRR
+0715/15|Leafeon|RRR
+0801/14|Glaceon|C
+0802/14|Glaceon|C
+0803/14|Glaceon|C
+0804/14|Glaceon|C
+0805/14|Glaceon|U
+0806/14|Glaceon|U
+0807/14|Glaceon|U
+0808/14|Glaceon|U
+0809/14|Glaceon|R
+0810/14|Glaceon|R
+0811/14|Glaceon|RR
+0812/14|Glaceon|RR
+0813/14|Glaceon V|R
+0814/14|Glaceon VMAX|RRR
+0901/15|Sylveon|C
+0902/15|Sylveon|C
+0903/15|Sylveon|C
+0904/15|Sylveon|C
+0905/15|Sylveon|U
+0906/15|Sylveon|U
+0907/15|Sylveon|U
+0908/15|Sylveon|U
+0909/15|Sylveon|R
+0910/15|Sylveon|R
+0911/15|Sylveon|RR
+0912/15|Sylveon|RR
+0913/15|Sylveon V|R
+0914/15|Sylveon VMAX|RRR
+0915/15|Sylveon|RRR
+1001/04|Poké Ball|RR
+1002/04|Level Ball|RR
+1003/04|Quick Ball|RR
+1004/04|Penny|RRR
+1101/06|Basic Lightning Energy|RRR
+1102/06|Basic Psychic Energy|RRR
+1103/06|Basic Darkness Energy|RRR
+1104/06|Basic Lightning Energy|RRR
+1105/06|Basic Psychic Energy|RRR
+1106/06|Basic Darkness Energy|RRR

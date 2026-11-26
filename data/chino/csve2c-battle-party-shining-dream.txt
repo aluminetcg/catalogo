@@ -1,0 +1,209 @@
+# set: CSVE2C Battle Party: Shining Dream
+001/207|Bulbasaur|
+002/207|Ivysaur|
+003/207|Venusaur|
+004/207|Roselia|
+005/207|Roserade|
+006/207|Tropius|
+007/207|Hisuian Lilligant V|
+008/207|Hisuian Lilligant VSTAR|
+009/207|Virizion|
+010/207|Zarude|
+011/207|Ponyta|
+012/207|Rapidash|
+013/207|Paldean Tauros|
+014/207|Flareon V|
+015/207|Flareon VMAX|
+016/207|Moltres|
+017/207|Entei V|
+018/207|Ho-Oh|
+019/207|Numel|
+020/207|Camerupt|
+021/207|Heatmor|
+022/207|Volcanion|
+023/207|Squirtle|
+024/207|Wartortle|
+025/207|Blastoise|
+026/207|Horsea|
+027/207|Seadra|
+028/207|Kingdra|
+029/207|Starmie V|
+030/207|Paldean Tauros|
+031/207|Lapras|
+032/207|Lapras|
+033/207|Articuno|
+034/207|Kyogre|
+035/207|Palkia|
+036/207|Origin Forme Palkia V|
+037/207|Origin Forme Palkia VSTAR|
+038/207|Manaphy|
+039/207|Hisuian Basculin|
+040/207|Hisuian Basculegion|
+041/207|Keldeo|
+042/207|Eiscue|
+043/207|Glastrier|
+044/207|Frigibax|
+045/207|Arctibax|
+046/207|Baxcalibur|
+047/207|Pachirisu|
+048/207|Rotom|
+049/207|Thundurus|
+050/207|Zeraora|
+051/207|Pincurchin|
+052/207|Regieleki|
+053/207|Regieleki V|
+054/207|Regieleki VMAX|
+055/207|Wattrel|
+056/207|Kilowattrel|
+057/207|Miraidon|
+058/207|Wigglytuff|
+059/207|Abra|
+060/207|Kadabra|
+061/207|Alakazam ex|
+062/207|Cleffa|
+063/207|Misdreavus|
+064/207|Mismagius|
+065/207|Ralts|
+066/207|Kirlia|
+067/207|Diancie|
+068/207|Mimikyu|
+069/207|Milcery|
+070/207|Alcremie|
+071/207|Spectrier|
+072/207|Mankey|
+073/207|Primeape|
+074/207|Annihilape|
+075/207|Annihilape ex|
+076/207|Paldean Tauros|
+077/207|Hitmontop|
+078/207|Riolu|
+079/207|Lucario|
+080/207|Sawk|
+081/207|Terrakion|
+082/207|Hawlucha|
+083/207|Rockruff|
+084/207|Lycanroc|
+085/207|Passimian|
+086/207|Koffing|
+087/207|Weezing|
+088/207|Galarian Moltres|
+089/207|Murkrow|
+090/207|Seviper|
+091/207|Absol ex|
+092/207|Darkrai|
+093/207|Hisuian Samurott V|
+094/207|Hisuian Samurott VSTAR|
+095/207|Sandile|
+096/207|Krokorok|
+097/207|Krookodile|
+098/207|Bombirdier|
+099/207|Magnemite|
+100/207|Magneton|
+101/207|Magnezone|
+102/207|Origin Forme Dialga V|
+103/207|Origin Forme Dialga VSTAR|
+104/207|Ferroseed|
+105/207|Ferrothorn|
+106/207|Galarian Stunfisk|
+107/207|Durant|
+108/207|Cobalion|
+109/207|Klefki|
+110/207|Cufant|
+111/207|Copperajah ex|
+112/207|Zacian|
+113/207|Zacian|
+114/207|Zamazenta V|
+115/207|Kyurem|
+116/207|Jigglypuff|
+117/207|Wigglytuff ex|
+118/207|Farfetch'd|
+119/207|Farfetch'd|
+120/207|Tauros|
+121/207|Ditto|
+122/207|Snorlax|
+123/207|Smeargle|
+124/207|Lugia|
+125/207|Ho-Oh V|
+126/207|Castform|
+127/207|Chatot|
+128/207|Shaymin|
+129/207|Shaymin|
+130/207|Tornadus|
+131/207|Squawkabilly|
+132/207|Cyclizar|
+133/207|Cyclizar|
+134/207|Flamigo|
+135/207|Switch Cart|
+136/207|Energy Loto|
+137/207|Energy Retrieval|
+138/207|Energy Switch|
+139/207|Energy Search|
+140/207|Energy Recycler|
+141/207|Electric Generator|
+142/207|Gutsy Pickaxe|
+143/207|Fog Crystal|
+144/207|Crushing Hammer|
+145/207|Superior Energy Retrieval|
+146/207|Super Rod|
+147/207|Grabber|
+148/207|Switching Cups|
+149/207|Dark Patch|
+150/207|Damage Pump|
+151/207|Pal Pad|
+152/207|Trekking Shoes|
+153/207|Nest Ball|
+154/207|Ultra Ball|
+155/207|Letter of Encouragement|
+156/207|Battle VIP Pass|
+157/207|Hisuian Heavy Ball|
+158/207|Rare Candy|
+159/207|Pokégear 3.0|
+160/207|Switch|
+161/207|Rescue Carrier|
+162/207|Level Ball|
+163/207|Rugged Helmet|
+164/207|Elemental Badge|
+165/207|Exp. Share|
+166/207|Rigid Band|
+167/207|Rocky Helmet|
+168/207|Cursed Duster|
+169/207|Defiance Band|
+170/207|Bravery Charm|
+171/207|Vengeful Punch|
+172/207|Geeta|
+173/207|Irida|
+174/207|Agatha|
+175/207|Raihan|
+176/207|Kindler|
+177/207|Giovanni's Charisma|
+178/207|Grant|
+179/207|Judge|
+180/207|Cynthia's Ambition|
+181/207|Team Star Grunt|
+182/207|Adaman|
+183/207|Youngster|
+184/207|Cheren's Care|
+185/207|Roxanne|
+186/207|Kamado|
+187/207|Gardenia's Vigor|
+188/207|Iono|
+189/207|Thorton|
+190/207|Professor's Research|
+191/207|Arven|
+192/207|Boss's Orders|
+193/207|Café Master|
+194/207|Melony|
+195/207|Raifort|
+196/207|Stormy Mountains|
+197/207|Lake Acuity|
+198/207|Crystal Cave|
+199/207|Skaters' Park|
+200/207|Artazon|
+201/207|Magma Basin|
+202/207|Gift Energy|
+203/207|Jet Energy|
+204/207|Therapeutic Energy|
+205/207|Double Turbo Energy|
+206/207|Lucky Energy|
+207/207|Reversal Energy|
+208/207|Iono|

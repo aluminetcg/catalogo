@@ -1,0 +1,134 @@
+# set: CSVL1C Journey Theme Pack
+001/049|Venusaur ex|
+002/049|Hoppip|
+003/049|Skiploom|
+004/049|Jumpluff|
+005/049|Snover|
+006/049|Abomasnow|
+007/049|Meowscarada ex|
+008/049|Charizard ex|
+009/049|Paldean Tauros|
+010/049|Oricorio|
+011/049|Skeledirge ex|
+012/049|Blastoise ex|
+013/049|Slowpoke|
+014/049|Slowbro|
+015/049|Paldean Tauros|
+016/049|Quaquaval ex|
+017/049|Chien-Pao ex|
+018/049|Shinx|
+019/049|Luxio|
+020/049|Luxray|
+021/049|Pachirisu|
+022/049|Thundurus|
+023/049|Wigglytuff|
+024/049|Ralts|
+025/049|Kirlia|
+026/049|Gardevoir ex|
+027/049|Spiritomb|
+028/049|Klefki|
+029/049|Mankey|
+030/049|Primeape|
+031/049|Annihilape|
+032/049|Paldean Tauros|
+033/049|Riolu|
+034/049|Lucario|
+035/049|Hawlucha|
+036/049|Ting-Lu ex|
+037/049|Koraidon ex|
+038/049|Paldean Wooper|
+039/049|Paldean Clodsire ex|
+040/049|Murkrow|
+041/049|Sneasel|
+042/049|Weavile|
+043/049|Sableye|
+044/049|Noibat|
+045/049|Noivern ex|
+046/049|Wingull|
+047/049|Pelipper|
+048/049|Flamigo|
+049/049|Squawkabilly ex|
+050/049|Hoppip|
+051/049|Skiploom|
+052/049|Jumpluff|
+053/049|Snover|
+054/049|Abomasnow|
+055/049|Paldean Tauros|
+056/049|Oricorio|
+057/049|Slowpoke|
+058/049|Slowbro|
+059/049|Paldean Tauros|
+060/049|Shinx|
+061/049|Luxio|
+062/049|Luxray|
+063/049|Pachirisu|
+064/049|Thundurus|
+065/049|Wigglytuff|
+066/049|Ralts|
+067/049|Kirlia|
+068/049|Spiritomb|
+069/049|Klefki|
+070/049|Mankey|
+071/049|Primeape|
+072/049|Annihilape|
+073/049|Paldean Tauros|
+074/049|Riolu|
+075/049|Lucario|
+076/049|Hawlucha|
+077/049|Paldean Wooper|
+078/049|Murkrow|
+079/049|Sneasel|
+080/049|Weavile|
+081/049|Sableye|
+082/049|Noibat|
+083/049|Wingull|
+084/049|Pelipper|
+085/049|Flamigo|
+086/049|Bulbasaur|
+087/049|Ivysaur|
+088/049|Caterpie|
+089/049|Tangela|
+090/049|Charmander|
+091/049|Charmeleon|
+092/049|Squirtle|
+093/049|Wartortle|
+094/049|Poliwhirl|
+095/049|Slowpoke|
+096/049|Omanyte|
+097/049|Clauncher|
+098/049|Drowzee|
+099/049|Mr. Mime|
+100/049|Mewtwo|
+101/049|Gothorita|
+102/049|Fidough|
+103/049|Sudowoodo|
+104/049|Riolu|
+105/049|Sandile|
+106/049|Paldean Wooper|
+107/049|Bombirdier|
+108/049|Dragonair|
+109/049|Snorlax|
+110/049|Starly|
+111/049|Rookidee|
+112/049|Meowscarada ex|
+113/049|Skeledirge ex|
+114/049|Quaquaval ex|
+115/049|Gardevoir ex|
+116/049|Paldean Clodsire ex|
+117/049|Noivern ex|
+118/049|Squawkabilly ex|
+119/049|Venusaur ex|
+120/049|Charizard ex|
+121/049|Blastoise ex|
+122/049|Gardevoir ex|
+123/049|Chien-Pao ex|
+124/049|Ting-Lu ex|
+125/049|Koraidon ex|
+126/049|Basic Grass Energy|
+127/049|Basic Fire Energy|
+128/049|Basic Water Energy|
+129/049|Basic Lightning Energy|
+130/049|Basic Psychic Energy|
+131/049|Basic Fighting Energy|
+132/049|Basic Darkness Energy|
+133/049|Basic Metal Energy|
