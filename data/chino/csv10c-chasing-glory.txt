@@ -1,0 +1,288 @@
+# set: CSV10C Chasing Glory
+001/222|Ethan's Pinsir|U
+002/222|Yanma|C
+003/222|Yanmega ex|RR
+004/222|Cynthia's Roselia|C
+005/222|Cynthia's Roserade|R
+006/222|Mow Rotom|C
+007/222|Shaymin|U
+008/222|Maractus|U
+009/222|Dwebble|C
+010/222|Crustle|R
+011/222|Team Rocket's Blipbug|C
+012/222|Applin|C
+013/222|Dipplin|C
+014/222|Hydrapple|R
+015/222|Sprigatito|C
+016/222|Floragato|C
+017/222|Meowscarada|R
+018/222|Team Rocket's Tarountula|C
+019/222|Team Rocket's Spidops|R
+020/222|Smoliv|C
+021/222|Dolliv|C
+022/222|Arboliva ex|RR
+023/222|Ponyta|C
+024/222|Rapidash|U
+025/222|Magmar|C
+026/222|Magmortar|R
+027/222|Team Rocket's Moltres ex|RR
+028/222|Ethan's Cyndaquil|C
+029/222|Ethan's Quilava|C
+030/222|Ethan's Typhlosion|R
+031/222|Ethan's Slugma|C
+032/222|Ethan's Magcargo|R
+033/222|Team Rocket's Houndour|C
+034/222|Team Rocket's Houndoom|U
+035/222|Ethan's Ho-Oh ex|RR
+036/222|Torchic|C
+037/222|Combusken|C
+038/222|Blaziken|R
+039/222|Heat Rotom|C
+040/222|N's Darumaka|C
+041/222|N's Darmanitan|U
+042/222|Volcanion ex|RR
+043/222|Psyduck|C
+044/222|Golduck|U
+045/222|Misty's Psyduck|U
+046/222|Misty's Staryu|C
+047/222|Misty's Starmie|U
+048/222|Misty's Magikarp|C
+049/222|Misty's Gyarados|R
+050/222|Misty's Lapras|C
+051/222|Articuno|U
+052/222|Team Rocket's Articuno|R
+053/222|Wailmer|C
+054/222|Wailord|R
+055/222|Cynthia's Feebas|C
+056/222|Cynthia's Milotic|U
+057/222|Clamperl|C
+058/222|Huntail|U
+059/222|Gorebyss|R
+060/222|Wash Rotom|C
+061/222|Cetoddle|C
+062/222|Cetitan ex|RR
+063/222|Dondozo ex|RR
+064/222|Iono's Voltorb|C
+065/222|Iono's Electrode|U
+066/222|Electabuzz|C
+067/222|Electivire ex|RR
+068/222|Team Rocket's Zapdos|R
+069/222|Ethan's Pichu|C
+070/222|Team Rocket's Mareep|C
+071/222|Team Rocket's Flaaffy|C
+072/222|Team Rocket's Ampharos|U
+073/222|Electrike|C
+074/222|Manectric|C
+075/222|Rotom|C
+076/222|N's Joltik|C
+077/222|Zeraora|R
+078/222|Iono's Tadbulb|C
+079/222|Iono's Bellibolt ex|RR
+080/222|Iono's Wattrel|C
+081/222|Iono's Kilowattrel|R
+082/222|Lillie's Clefairy ex|RR
+083/222|Team Rocket's Drowzee|C
+084/222|Team Rocket's Hypno|U
+085/222|Team Rocket's Mewtwo ex|RR
+086/222|Team Rocket's Wobbuffet|R
+087/222|Steven's Baltoy|C
+088/222|Steven's Claydol|U
+089/222|Team Rocket's Chingling|C
+090/222|N's Sigilyph|C
+091/222|Steven's Carbink|C
+092/222|Lillie's Cutiefly|C
+093/222|Lillie's Ribombee|U
+094/222|Lillie's Comfey|C
+095/222|Team Rocket's Mimikyu|U
+096/222|Team Rocket's Dottler|C
+097/222|Team Rocket's Orbeetle|U
+098/222|Mankey|C
+099/222|Primeape|C
+100/222|Annihilape|R
+101/222|Ethan's Sudowoodo|C
+102/222|Swinub|C
+103/222|Piloswine|C
+104/222|Mamoswine ex|RR
+105/222|Larvitar|C
+106/222|Pupitar|C
+107/222|Team Rocket's Larvitar|C
+108/222|Team Rocket's Pupitar|U
+109/222|Team Rocket's Tyranitar|R
+110/222|Regirock ex|RR
+111/222|Cynthia's Gible|C
+112/222|Cynthia's Gabite|C
+113/222|Cynthia's Garchomp ex|RR
+114/222|Rockruff|C
+115/222|Lycanroc|R
+116/222|Hop's Silicobra|C
+117/222|Hop's Sandaconda|U
+118/222|Arven's Toedscool|C
+119/222|Arven's Toedscruel|U
+120/222|Team Rocket's Ekans|C
+121/222|Team Rocket's Arbok|U
+122/222|Team Rocket's Nidoran ♀|C
+123/222|Team Rocket's Nidorina|C
+124/222|Team Rocket's Nidoqueen|U
+125/222|Team Rocket's Nidoran ♂|C
+126/222|Team Rocket's Nidorino|C
+127/222|Team Rocket's Nidoking ex|RR
+128/222|Team Rocket's Zubat|C
+129/222|Team Rocket's Golbat|U
+130/222|Team Rocket's Crobat ex|RR
+131/222|Team Rocket's Grimer|C
+132/222|Team Rocket's Muk|U
+133/222|Team Rocket's Koffing|C
+134/222|Team Rocket's Weezing|U
+135/222|Team Rocket's Murkrow|U
+136/222|Team Rocket's Sneasel|R
+137/222|Tyranitar|R
+138/222|Cynthia's Spiritomb|U
+139/222|N's Purrloin|C
+140/222|Marnie's Purrloin|C
+141/222|Marnie's Liepard|U
+142/222|Marnie's Scraggy|C
+143/222|Marnie's Scrafty|U
+144/222|N's Zorua|C
+145/222|N's Zoroark ex|RR
+146/222|Marnie's Impidimp|C
+147/222|Marnie's Morgrem|U
+148/222|Marnie's Grimmsnarl ex|RR
+149/222|Marnie's Morpeko|R
+150/222|Arven's Maschiff|C
+151/222|Arven's Mabosstiff ex|RR
+152/222|Steven's Skarmory|C
+153/222|Steven's Beldum|C
+154/222|Steven's Metang|U
+155/222|Steven's Metagross ex|RR
+156/222|N's Klink|C
+157/222|N's Klang|C
+158/222|N's Klinklang|U
+159/222|Magearna|R
+160/222|Hop's Corviknight|U
+161/222|Hop's Zacian ex|RR
+162/222|Zamazenta|R
+163/222|Bagon|C
+164/222|Shelgon|C
+165/222|Salamence ex|RR
+166/222|N's Reshiram|R
+167/222|Team Rocket's Rattata|C
+168/222|Team Rocket's Raticate|C
+169/222|Team Rocket's Meowth|C
+170/222|Team Rocket's Persian ex|RR
+171/222|Kangaskhan|C
+172/222|Team Rocket's Porygon|C
+173/222|Team Rocket's Porygon2|C
+174/222|Team Rocket's Porygon-Z|U
+175/222|Hop's Snorlax|R
+176/222|Sentret|C
+177/222|Furret|C
+178/222|Dunsparce|C
+179/222|Dudunsparce ex|RR
+180/222|Noibat|C
+181/222|Noivern|U
+182/222|Arven's Skwovet|C
+183/222|Arven's Greedent|R
+184/222|Hop's Rookidee|C
+185/222|Hop's Corvisquire|C
+186/222|Hop's Wooloo|C
+187/222|Hop's Dubwool|R
+188/222|Hop's Cramorant|U
+189/222|Super Potion|U
+190/222|N's PP Up|U
+191/222|Energy Recycler|U
+192/222|Sacred Ash|U
+193/222|Redeemable Ticket|U
+194/222|Arven's Sandwich|U
+195/222|Hop's Bag|U
+196/222|Team Rocket's Bother-Bot|U
+197/222|Team Rocket's Great Ball|U
+198/222|Team Rocket's Venture Bomb|U
+199/222|Team Rocket's Transceiver|U
+200/222|Cynthia's Power Weight|U
+201/222|Hop's Choice Band|U
+202/222|Lillie's Pearl|U
+203/222|Iris's Fighting Spirit|U
+204/222|Emcee's Hype|C
+205/222|Ruffian|U
+206/222|Judge|U
+207/222|Brock's Scouting|U
+208/222|Ethan's Adventure|U
+209/222|Team Rocket's Ariana|U
+210/222|Team Rocket's Archer|U
+211/222|Team Rocket's Giovanni|U
+212/222|Team Rocket's Petrel|U
+213/222|Team Rocket's Proton|U
+214/222|Granite Cave|U
+215/222|N's Castle|U
+216/222|Spikemuth Gym|U
+217/222|Levincia|U
+218/222|Postwick|U
+219/222|Team Rocket's Watchtower|U
+220/222|Team Rocket's Factory|U
+221/222|Spiky Energy|U
+222/222|Team Rocket's Energy|U
+223/222|Yanma|AR
+224/222|Maractus|AR
+225/222|Misty's Psyduck|AR
+226/222|Rotom|AR
+227/222|Zamazenta|AR
+228/222|N's Reshiram|AR
+229/222|Yanmega ex|SR
+230/222|Arboliva ex|SR
+231/222|Team Rocket's Moltres ex|SR
+232/222|Ethan's Ho-Oh ex|SR
+233/222|Volcanion ex|SR
+234/222|Cetitan ex|SR
+235/222|Dondozo ex|SR
+236/222|Electivire ex|SR
+237/222|Iono's Bellibolt ex|SR
+238/222|Lillie's Clefairy ex|SR
+239/222|Team Rocket's Mewtwo ex|SR
+240/222|Regirock ex|SR
+241/222|Cynthia's Garchomp ex|SR
+242/222|Mamoswine ex|SR
+243/222|Team Rocket's Nidoking ex|SR
+244/222|Team Rocket's Crobat ex|SR
+245/222|N's Zoroark ex|SR
+246/222|Arven's Mabosstiff ex|SR
+247/222|Hop's Zacian ex|SR
+248/222|Salamence ex|SR
+249/222|Team Rocket's Persian ex|SR
+250/222|Dudunsparce ex|SR
+251/222|Iris's Fighting Spirit|SR
+252/222|Emcee's Hype|SR
+253/222|Ruffian|SR
+254/222|Judge|SR
+255/222|Brock's Scouting|SR
+256/222|Ethan's Adventure|SR
+257/222|Team Rocket's Ariana|SR
+258/222|Team Rocket's Archer|SR
+259/222|Team Rocket's Giovanni|SR
+260/222|Team Rocket's Petrel|SR
+261/222|Team Rocket's Proton|SR
+262/222|Yanmega ex|SAR
+263/222|Team Rocket's Moltres ex|SAR
+264/222|Ethan's Ho-Oh ex|SAR
+265/222|Volcanion ex|SAR
+266/222|Iono's Bellibolt ex|SAR
+267/222|Lillie's Clefairy ex|SAR
+268/222|Team Rocket's Mewtwo ex|SAR
+269/222|Cynthia's Garchomp ex|SAR
+270/222|Team Rocket's Nidoking ex|SAR
+271/222|Team Rocket's Crobat ex|SAR
+272/222|N's Zoroark ex|SAR
+273/222|Arven's Mabosstiff ex|SAR
+274/222|Hop's Zacian ex|SAR
+275/222|Salamence ex|SAR
+276/222|Brock's Scouting|SAR
+277/222|Ethan's Adventure|SAR
+278/222|Team Rocket's Ariana|SAR
+279/222|Team Rocket's Giovanni|SAR
+280/222|Ethan's Ho-Oh ex|UR
+281/222|Iono's Bellibolt ex|UR
+282/222|Team Rocket's Mewtwo ex|UR
+283/222|Cynthia's Garchomp ex|UR
+284/222|Team Rocket's Crobat ex|UR
+285/222|N's Zoroark ex|UR
+286/222|Levincia|UR
+287/222|Spiky Energy|UR
