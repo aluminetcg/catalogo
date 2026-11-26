@@ -1,0 +1,203 @@
+# set: 1992 Impel Marvel Universe
+1|Spider-Man|
+2|Quasar|
+3|Sleepwalker|
+4|Gambit|
+5|Cannonball|
+6|Beast|
+7|Quicksilver|
+8|Weapon Omega|
+9|Doctor Strange|
+10|Major Victory|
+11|Phoenix|
+12|Black Widow|
+13|Hulk|
+14|Sunfire|
+15|Silver Surfer|
+16|She-Hulk|
+17|Captain Britain|
+18|Cage|
+19|Domino|
+20|Daredevil|
+21|Morbius|
+22|Nightcrawler|
+23|Black Panther|
+24|Ant-Man|
+25|Ghost Rider|
+26|Darkhawk|
+27|Iceman|
+28|Punisher|
+29|Wolfsbane|
+30|Storm|
+31|Wonder Man|
+32|Moon Knight|
+33|Mr. Fantastic|
+34|Invisible Woman|
+35|Shadowcat|
+36|Warlock|
+37|Captain America|
+38|Wolverine|
+39|Namor|
+40|Nick Fury|
+41|Professor X|
+42|Shatterstar|
+43|Multiple Man|
+44|Blaze|
+45|Deathlok|
+46|Colossus|
+47|Meggan|
+48|Thor|
+49|Namorita|
+50|Cable|
+51|Psylocke|
+52|Warpath|
+53|Nomad|
+54|Polaris|
+55|Charlie-27|
+56|Thing|
+57|Longshot|
+58|Human Torch|
+59|Night Thrasher|
+60|Siryn|
+61|Nova|
+62|Iron Man|
+63|Archangel|
+64|Rogue|
+65|Silver Sable|
+66|Jean Grey|
+67|Feral|
+68|Cyclops|
+69|Starhawk|
+70|Havok|
+71|Spider-Man and Human Torch TU|
+72|Spider-Man and Ghost Rider TU|
+73|Spider-Man and Punisher TU|
+74|Spider-Man and Wolverine TU|
+75|Wolverine and Captain America TU|
+76|Wolverine and Hulk TU|
+77|Wolverine and Cable TU|
+78|Magneto and Dr. Doom TU|
+79|Ghost Rider and Blaze TU|
+80|Captain America and Nomad TU|
+81|Spider-Man and Darkhawk TU|
+82|Iceman and Human Torch TU|
+83|Captain America and U.S. Agent TU|
+84|Wolverine and Daredevil TU|
+85|Vision and Scarlet Witch TU|
+86|Punisher and Deathlok TU|
+87|Thor Corps TU|
+88|Wolverine, Ghost Rider and Punisher TU|
+89|Wonder Man and Beast TU|
+90|Ghost Rider and Daredevil TU|
+91|Wolverine and Havok TU|
+92|Punisher and Daredevil TU|
+93|Daredevil and Black Widow TU|
+94|Punisher and Captain America TU|
+95|Spider-Man and Sleepwalker TU|
+96|Power Man and Iron Fist TU|
+97|Spider-Man and Daredevil TU|
+98|Hulk and Thing TU|
+99|Red Skull and Baron Zemo TU|
+100|Juggernaut and Black Tom TU|
+101|Abomination|
+102|Zodiak|
+103|Apocalypse|
+104|Sphinx|
+105|Destroyer|
+106|Red Skull|
+107|Puppet Master|
+108|Venom|
+109|Diablo|
+110|The Rose|
+111|Doctor Doom|
+112|Magneto|
+113|Necrom|
+114|Green Goblin|
+115|Dracula|
+116|Sauron|
+117|Cyber|
+118|Mephisto|
+119|Mad Thinker|
+120|Carnage|
+121|Hobgoblin|
+122|Gideon|
+123|White Queen|
+124|Omega Red|
+125|Maelstrom|
+126|Thanos|
+127|Zarrko|
+128|Magus|
+129|Sabretooth|
+130|Kingpin|
+131|Silvermane|
+132|Cardiac|
+133|Blackheart|
+134|Terrax|
+135|Mr. Sinister|
+136|Slug|
+137|Hate-Monger|
+138|Crossbones|
+139|Shiva|
+140|Blackout|
+141|Pantheon ROO|
+142|Slapstick ROO|
+143|Cerise ROO|
+144|Darkhold Redeemers ROO|
+145|Strong Guy ROO|
+146|Bishop ROO|
+147|Silhouette ROO|
+148|Kylun ROO|
+149|Talon ROO|
+150|Collector|
+151|Galactus|
+152|Watcher|
+153|Living Tribunal|
+154|Ego|
+155|Eternity|
+156|Celestials|
+157|Death|
+158|Stranger|
+159|In-Betweener|
+160|Epoch|
+161|Hulk OR|
+162|Spider-Man OR|
+163|Silver Surfer OR|
+164|Wolverine OR|
+165|Iron Man OR|
+166|Captain America OR|
+167|Ghost Rider OR|
+168|Daredevil OR|
+169|Fantastic Four OR|
+170|Thor OR|
+171|The Avengers TM|
+172|X-Force TM|
+173|X-Factor TM|
+174|New Warriors TM|
+175|Alpha Flight TM|
+176|Avengers West Coast TM|
+177|Nightstalkers TM|
+178|Guardians of the Galaxy TM|
+179|X-Men (Gold) TM|
+180|Excalibur TM|
+181|Fantastic Four TM|
+182|X-Men (Blue) TM|
+183|Serpent Society TM|
+184|X-tinction Agenda WR|
+185|Evolutionary War WR|
+186|Operation Galactic Storm WR|
+187|Secret Wars WR|
+188|Inferno WR|
+189|Infinity Gauntlet WR|
+190|Kree vs. Skrull War WR|
+191|Atlantis Attacks WR|
+192|I Married a Skrull MS|
+193|Days of Future Past MS|
+194|All Hulks Unite MS|
+195|Dark Phoenix Saga MS|
+196|The Coming of Galactus MS|
+197a|Death of Gwen Stacy MS, VAR|
+197b|Death of Gwen Stacy MS, VAR|
+198|Fall of the Kingpin MS|
+199|Wedding of Spider-Man MS|
+200a|Checklist CL, VAR|
+200b|Checklist CL, VAR|
