@@ -1,0 +1,15 @@
+# set: CSVH6pC Happy Set: Trainer's Pokémon (Reward Pack)
+001/006|Lapras ex|
+002/006|Pikachu ex|
+003/006|Alcremie ex|
+004/006|Koraidon ex|
+005/006|Paldean Clodsire ex|
+006/006|Eevee ex|
+007/006|Basic Grass Energy|
+008/006|Basic Fire Energy|
+009/006|Basic Water Energy|
+010/006|Basic Lightning Energy|
+011/006|Basic Psychic Energy|
+012/006|Basic Fighting Energy|
+013/006|Basic Darkness Energy|
+014/006|Basic Metal Energy|
