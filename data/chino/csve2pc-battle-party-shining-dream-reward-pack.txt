@@ -1,0 +1,25 @@
+# set: CSVE2pC Battle Party: Shining Dream (Reward Pack)
+001/024|Victini ex|
+002/024|Baxcalibur|
+003/024|Chien-Pao ex|
+004/024|Radiant Alakazam|
+005/024|Hawlucha|
+006/024|Melmetal ex|
+007/024|Skwovet|
+008/024|Switch Cart|
+009/024|Dark Patch|
+010/024|Bravery Charm|
+011/024|Iono|
+012/024|Basic Fire Energy|
+013/024|Meowscarada ex|
+014/024|Skeledirge ex|
+015/024|Armarouge|
+016/024|Radiant Greninja|
+017/024|Quaquaval ex|
+018/024|Cresselia|
+019/024|Bibarel|
+020/024|Electric Generator|
+021/024|Superior Energy Retrieval|
+022/024|Ultra Ball|
+023/024|Arven|
+024/024|Basic Water Energy|
