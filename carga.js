@@ -101,9 +101,9 @@
     var n = y.getImageData(0, 0, w, h), d = n.data;               // textura granulada del foil
     for (var i = 0; i < d.length; i += 4) { var k = (Math.random() - 0.5) * 30; d[i] += k; d[i + 1] += k; d[i + 2] += k; }
     y.putImageData(n, 0, 0);
-    x.globalCompositeOperation = "overlay"; x.globalAlpha = 0.75; x.drawImage(L, 0, 0);
-    x.globalCompositeOperation = "soft-light"; x.globalAlpha = 0.5; x.drawImage(L, 0, 0);
-    x.globalCompositeOperation = "screen"; x.globalAlpha = 0.12; x.drawImage(L, 0, 0);
+    x.globalCompositeOperation = "overlay"; x.globalAlpha = 0.55; x.drawImage(L, 0, 0);
+    x.globalCompositeOperation = "soft-light"; x.globalAlpha = 0.35; x.drawImage(L, 0, 0);
+    x.globalCompositeOperation = "screen"; x.globalAlpha = 0.08; x.drawImage(L, 0, 0);
     return await new Promise(function (res) { cv.toBlob(res, "image/jpeg", 0.92); });
   }
   async function stockBlob(c) { return fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); }); }
