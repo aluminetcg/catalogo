@@ -53,7 +53,7 @@ def manual(carpeta="chino", key="cn", titulo="Base china"):
             elif line and not line.startswith("#") and s and "|" in line:
                 num, name, rz = (line.split("|") + ["", ""])[:3]
                 if num.strip() and name.strip():
-                    porset.setdefault(s, {})[num.strip().upper()] = (num.strip(), name.strip(), rz.strip())
+                    porset.setdefault(s, {})[num.strip().upper() + ("|" + name.strip().upper() if key == "mv" else "")] = (num.strip(), name.strip(), rz.strip())
     sets, cards = [], []
     for gi, s in enumerate(sorted(porset)):
         sets.append([s, ""])

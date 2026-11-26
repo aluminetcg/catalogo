@@ -1,0 +1,152 @@
+# set: 1994 Fleer Ultra X-Men
+1|Cyclops|
+2|Rogue|
+3|Beast|
+4|Gambit|
+5|Jubilee|
+6|Wolverine|
+7|Psylocke|
+8|Revanche|
+9|Banshee|
+10|Iceman|
+11|Bishop|
+12|Archangel|
+13|Storm|
+14|Jean Grey|
+15|Sabretooth|
+16|Professor X|
+17|Nightcrawler|
+18|Phoenix|
+19|Shadowcat|
+20|Domino|
+21|Cable|
+22|Shatterstar|
+23|Warpath|
+24|Boomer|
+25|Cannonball|
+26|Siryn|
+27|Sunspot|
+28|Rictor|
+29|Havok|
+30|Polaris|
+31|Forge|
+32|Strong Guy|
+33|Wolfsbane|
+34|Multiple Man|
+35|Random|
+36|Quicksilver|
+37|Lilandra|
+38|Askani|
+39|Tyler|
+40|Longshot|
+41|Feral|
+42|Dazzler|
+43|Weapon X(Wolverine)|
+44|Mirage|
+45|Magma|
+46|Sunfire|
+47|Weapon X|
+48|Grizzly|
+49|G.W. Bridge|
+50|Hammer|
+51|Maverick|
+52|X-Treme|
+53|Copycat|
+54|Colossus|
+55|Magneto|
+56|Mr. Sinister|
+57|Deadpool|
+58|Juggernaut|
+59|Cyber|
+60|Apocalypse|
+61|Omega Red|
+62|Mystique|
+63|Sauron|
+64|Stryfe|
+65|White Queen|
+66|Haven|
+67|Exodus|
+68|Ahab|
+69|X-Cutioner|
+70|Black Tom Cassidy|
+71|Pyro|
+72|Arcade|
+73|Matsu'o|
+74|Mojo|
+75|Spiral|
+76|Caliban|
+77|Wendigo|
+78|Nimrod|
+79|Silver Samurai|
+80|Sentinels|
+81|Brood|
+82|Gideon|
+83|Gamesmaster|
+84|Shinobi Shaw|
+85|Fitzroy|
+86|Siena Blaze|
+87|Graydon Creed|
+88|Slayback|
+89|Sinsear|
+90|Tempo|
+91|Wildside|
+92|Reaper|
+93|Forearm|
+94|Locus|
+95|Moonstar|
+96|Reignfire|
+97|Cyclops|
+98|Iceman COR|
+98|Iceman ERR|
+99|Angel|
+100|Beast|
+101|Marvel Girl|
+102|Professor X|
+103|Mutant Massacre XO|
+104|Fall of the Mutants XO|
+105|Inferno XO|
+106|X-Tinction Agenda XO|
+107|X-Cutioner's Song XO|
+108|Fatal Attractions XO|
+109|Iceman / Archangel|
+110|Storm, Professor X|
+111|Bishop / Jean Grey|
+112|Psylocke, Sabretooth|
+113|Beast, Gambit|
+114|Cyclops, Rogue|
+115|Warpath, Feral|
+116|Shatterstar, Boomer|
+117|Cannonball, Rictor, Siryn, Sunspot|
+118|Random, Strong Guy|
+119|Havok, Polaris|
+120|Wolfsbane / Multiple Man|
+121|Shadowcat|
+122|Nightcrawler|
+123|Phoenix|
+124|Wedding of Cyclops & Jean Grey|
+125|Cyclops / Jean Grey|
+126|Wedding of Cyclops & Jean Grey|
+127|Magik|
+128|Warlock|
+129|Cypher|
+130|Goblin Queen|
+131|Sebastian Shaw|
+132|Mesmero|
+133|Mimic|
+134|Dark Phoenix|
+135|Mastermind|
+136|Thunderbird|
+137|Wolverine vs. Sabretooth WGB|
+138|Wolverine vs. Cyber WGB|
+139|Wolverine vs. Omega Red WGB|
+140|Wolverine vs. Hulk WGB|
+141|Wolverine vs. The Thing WGB|
+142|Wolverine vs. Spider-Man WGB|
+143|Wolverine vs. Silver Samurai WGB|
+144|Wolverine vs. Hellfire Club WGB|
+145|Wolverine vs. Cable WGB|
+146|Wolverine vs. Sauron WGB|
+147|Wolverine vs. Punisher WGB|
+148|Wolverine vs. Lord Shingen WGB|
+149|Wolverine vs. Lady Deathstrike WGB|
+150|94 Fleer Ultra X-Men Checklist CL|
