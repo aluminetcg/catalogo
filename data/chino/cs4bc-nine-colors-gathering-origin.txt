@@ -1,0 +1,178 @@
+# set: CS4bC Nine Colors Gathering (Origin)
+001/132|Hoppip|C
+002/132|Skiploom|U
+003/132|Jumpluff|R
+004/132|Sewaddle|C
+005/132|Swadloon|U
+006/132|Leavanny|U
+007/132|Shelmet|C
+008/132|Accelgor|U
+009/132|Trevenant V|RR
+010/132|Trevenant VMAX|RRR
+011/132|Dewpider|C
+012/132|Araquanid|U
+013/132|Applin|C
+014/132|Growlithe|C
+015/132|Arcanine|U
+016/132|Slugma|C
+017/132|Magcargo|U
+018/132|Chandelure V|RR
+019/132|Chandelure VMAX|RRR
+020/132|Heatmor|U
+021/132|Shellder|C
+022/132|Cloyster|U
+023/132|Staryu|C
+024/132|Starmie|R
+025/132|Gyarados V|RR
+026/132|Gyarados VMAX|RRR
+027/132|Totodile|C
+028/132|Croconaw|U
+029/132|Feraligatr|R
+030/132|Clamperl|C
+031/132|Huntail|U
+032/132|Gorebyss|U
+033/132|Galarian Darumaka|C
+034/132|Galarian Darmanitan|U
+035/132|Snom|C
+036/132|Frosmoth|U
+037/132|Eiscue|U
+038/132|Mareep|C
+039/132|Flaaffy|U
+040/132|Ampharos|U
+041/132|Rotom|C
+042/132|Helioptile|C
+043/132|Heliolisk|U
+044/132|Boltund V|RR
+045/132|Boltund VMAX|RRR
+046/132|Toxel|C
+047/132|Toxtricity|R
+048/132|Mew V|RR
+049/132|Mew VMAX|RRR
+050/132|Galarian Corsola|C
+051/132|Galarian Cursola|U
+052/132|Munna|C
+053/132|Musharna|U
+054/132|Golurk V|RR
+055/132|Indeedee|C
+056/132|Dreepy|C
+057/132|Drakloak|U
+058/132|Dragapult|R
+059/132|Onix|C
+060/132|Steelix|R
+061/132|Hitmonchan|C
+062/132|Galarian Zapdos|R
+063/132|Makuhita|C
+064/132|Hariyama|U
+065/132|Drilbur|C
+066/132|Pancham|C
+067/132|Lycanroc V|RR
+068/132|Lycanroc VMAX|RRR
+069/132|Stufful|C
+070/132|Bewear|U
+071/132|Falinks|U
+072/132|Gengar V|RR
+073/132|Gengar VMAX|RRR
+074/132|Galarian Zigzagoon|C
+075/132|Galarian Linoone|U
+076/132|Galarian Obstagoon|R
+077/132|Absol|U
+078/132|Pangoro|U
+079/132|Hoopa V|RR
+080/132|Nickit|C
+081/132|Thievul|U
+082/132|Morpeko|C
+083/132|Excadrill|U
+084/132|Durant|C
+085/132|Genesect V|RR
+086/132|Meltan|C
+087/132|Melmetal|R
+088/132|Corviknight|U
+089/132|Cufant|C
+090/132|Copperajah|U
+091/132|Altaria|U
+092/132|Bagon|C
+093/132|Shelgon|U
+094/132|Salamence|R
+095/132|Latias|U
+096/132|Latios|U
+097/132|Rayquaza V|RR
+098/132|Rayquaza VMAX|RRR
+099/132|Druddigon|U
+100/132|Goomy|C
+101/132|Sliggoo|U
+102/132|Goodra|U
+103/132|Turtonator|U
+104/132|Flapple|U
+105/132|Appletun|U
+106/132|Smeargle|C
+107/132|Skitty|C
+108/132|Delcatty|U
+109/132|Swablu|C
+110/132|Bunnelby|C
+111/132|Diggersby|U
+112/132|Greedent V|RR
+113/132|Greedent VMAX|RRR
+114/132|Rookidee|C
+115/132|Corvisquire|U
+116/132|Lucky Ice Pop|U
+117/132|Crossceiver|U
+118/132|Power Tablet|U
+119/132|Cleansing Gloves|U
+120/132|Farewell Bell|U
+121/132|Hunting Gloves|U
+122/132|Rapid Strike Scroll of the Flying Dragon|U
+123/132|Sidney|U
+124/132|Elesa's Sparkle|U
+125/132|Schoolboy|U
+126/132|Dancer|U
+127/132|Professor Burnet|U
+128/132|Zinnia's Resolve|U
+129/132|Chili & Cilan & Cress|U
+130/132|Stormy Mountains|U
+131/132|Skaters' Park|U
+132/132|Fusion Strike Energy|U
+133/132|Trevenant V|SR
+134/132|Chandelure V|SR
+135/132|Gyarados V|SR
+136/132|Boltund V|SR
+137/132|Mew V|SR
+138/132|Mew V|SR
+139/132|Golurk V|SR
+140/132|Golurk V|SR
+141/132|Lycanroc V|SR
+142/132|Hoopa V|SR
+143/132|Genesect V|SR
+144/132|Genesect V|SR
+145/132|Rayquaza V|SR
+146/132|Rayquaza V|SR
+147/132|Greedent V|SR
+148/132|Greedent V|SR
+149/132|Sidney|SR
+150/132|Elesa's Sparkle|SR
+151/132|Schoolboy|SR
+152/132|Dancer|SR
+153/132|Professor Burnet|SR
+154/132|Zinnia's Resolve|SR
+155/132|Chili & Cilan & Cress|SR
+156/132|Rayquaza VMAX|CSR
+157/132|Trevenant VMAX|HR
+158/132|Chandelure VMAX|HR
+159/132|Gyarados VMAX|HR
+160/132|Boltund VMAX|HR
+161/132|Mew VMAX|HR
+162/132|Mew VMAX|HR
+163/132|Lycanroc VMAX|HR
+164/132|Rayquaza VMAX|HR
+165/132|Rayquaza VMAX|HR
+166/132|Greedent VMAX|HR
+167/132|Sidney|HR
+168/132|Elesa's Sparkle|HR
+169/132|Schoolboy|HR
+170/132|Dancer|HR
+171/132|Zinnia's Resolve|HR
+172/132|Chili & Cilan & Cress|HR
+173/132|Flaaffy|UR
+174/132|Power Tablet|UR
+175/132|Stormy Mountains|UR
+176/132|Lightning Energy|UR
+177/132|Psychic Energy|UR
