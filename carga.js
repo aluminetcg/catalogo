@@ -321,7 +321,8 @@
   function bestPrice(prices, prefer) {
     var ks = Object.keys(prices || {}); if (!ks.length) return null;
     if (prefer && prices[prefer]) return [prefer, prices[prefer]];
-    var k = prices.Normal ? "Normal" : ks.filter(function (k) { return !/reverse|foil/i.test(k); })[0] || ks.filter(function (k) { return !/reverse/i.test(k); })[0] || ks[0];   // por defecto la versi\u00f3n normal, no la foil
+    var k = prices["CK Normal"] ? "CK Normal" : prices.Normal ? "Normal" :   // Magic: por defecto Card Kingdom
+      ks.filter(function (k) { return !/reverse|foil/i.test(k); })[0] || ks.filter(function (k) { return !/reverse/i.test(k); })[0] || ks[0];   // por defecto la versi\u00f3n normal, no la foil
     return [k, prices[k]];
   }
 
@@ -399,7 +400,7 @@
     $("#pk").onchange = setPrice;
     if ($("#fx")) $("#fx").onchange = function () {     // tildar foil = pasar a la versi\u00f3n foil (precio y t\u00edtulo); destildar = volver a la normal
       var on = this.checked, ks = Object.keys(c[5] || {});
-      var k = on ? ks.filter(function (k) { return /foil/i.test(k); })[0] : (c[5].Normal ? "Normal" : ks.filter(function (k) { return !/foil/i.test(k); })[0]);
+      var k = on ? (c[5]["CK Foil"] ? "CK Foil" : ks.filter(function (k) { return /foil/i.test(k); })[0]) : (c[5]["CK Normal"] ? "CK Normal" : c[5].Normal ? "Normal" : ks.filter(function (k) { return !/foil/i.test(k); })[0]);
       if (k && k !== $("#pk").value) { $("#pk").value = k; setPrice(); }
       else if ($("#pk").value) $("#pr").value = sugerido(c[5][$("#pk").value], minimo(c, $("#pk").value, on)) || "";     // sin precio foil: igual el m\u00ednimo de foil
       $("#fx").checked = on; $("#ti").value = titleFor(c, $("#ca").value); foilPreview(c);
