@@ -82,6 +82,7 @@ jobs:
           mkdir -p _site/data
           cp index.html precios.html rarezas.html carga.html chino.html tienda.js carga.js _site/
           cp data/cards.json _site/data/
+          if [ -f data/set_icons.json ]; then cp data/set_icons.json _site/data/; fi
           echo "{\"v\": \"$(sha1sum data/cards.json | cut -c1-12)\"}" > _site/data/version.json
           if [ -f data/precios.bin ]; then cp data/precios.bin _site/data/; fi
       - name: Índice para la carga rápida

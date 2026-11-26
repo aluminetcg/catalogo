@@ -134,6 +134,9 @@
         c._hay = norm([c.title, c.card, c.set, c.number, c.rarity, c.finish, c.ptype, c.super, c.game, c.lang, c.year, (c.color || []).join(" ")].join(" "));
         c._num = c.number ? c.number.toLowerCase() : "";
       });
+      return fetch(DATA_URL.replace(/cards\.json$/, "set_icons.json") + "?v=" + Math.floor(Date.now() / 36e5)).then(function (r) { return r.ok ? r.json() : {}; })["catch"](function () { return {}; });
+    }).then(function (ic) {
+      ICONS = ic || {};
       buildFilters();
     }).catch(function (e) { loading = null; $("#msg").textContent = "No pude cargar el catálogo. Probá de nuevo en un momento."; throw e; });
     return loading;
@@ -244,6 +247,18 @@
     var bg = v === "Multicolor" ? "linear-gradient(135deg,#f8e7b9,#c9a54a)" : v === "Tierra" ? "#a5876a" : "";
     return bg ? '<span style="flex:none;width:18px;height:18px;border-radius:50%;background:' + bg + ';box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)"></span>' : "";
   }
+  // símbolo de la expansión (Scryfall / pokemontcg.io), si lo hay
+  var ICONS = {};
+  function setIcon(v) {
+    var u = ICONS[v];
+    return u ? '<img src="' + esc(u) + '" alt="" loading="lazy" width="18" height="18" style="flex:none;object-fit:contain' + (/scryfall/.test(u) ? ";opacity:.85" : "") + '" onerror="this.remove()">' : "";
+  }
+  // tipos de Pokémon: un círculo con el color de cada energía
+  var TIPO = { Planta: "#5fa83a", Fuego: "#e4572e", Agua: "#3d8fd6", "Eléctrico": "#f2c516", "Psíquico": "#9a5bb5", Lucha: "#b5652d",
+    Siniestro: "#3b3f4a", Metal: "#9aa3ad", Hada: "#e88fbf", "Dragón": "#b39436", Incoloro: "#e9e6dc" };
+  function tipo(v) {
+    return TIPO[v] ? '<span style="flex:none;width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.55),transparent 55%),' + TIPO[v] + ';box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)"></span>' : "";
+  }
   function subMulti() {      // debajo de Multicolor: elegir qué colores tiene que tener
     var cnt = {};
     ALL.forEach(function (c) {
@@ -274,7 +289,7 @@
       var ob = $("#opts-" + k), hd = ob.previousElementSibling && ob.previousElementSibling.previousElementSibling;
       if (hd && hd.tagName === "H3") hd.hidden = !items.length;     // sin opciones (p. ej. Color cuando no hay Magic): ocultar el t\u00edtulo
       $("#opts-" + k).innerHTML = items.slice(0, lim).map(function (x) {
-        return '<label class="opt' + (x[1] ? "" : " zero") + '"><input type="checkbox" data-k="' + k + '" data-v="' + esc(x[0]) + '"' + (state.f[k].has(x[0]) ? " checked" : "") + ">" + (k === "color" ? mana(x[0]) : "") + "<span>" + esc(x[0]) + '</span><span class="n">' + x[1].toLocaleString("es-AR") + "</span></label>" + (k === "color" && x[0] === "Multicolor" && state.f.color.has("Multicolor") ? subMulti() : "");
+        return '<label class="opt' + (x[1] ? "" : " zero") + '"><input type="checkbox" data-k="' + k + '" data-v="' + esc(x[0]) + '"' + (state.f[k].has(x[0]) ? " checked" : "") + ">" + (k === "color" ? mana(x[0]) : k === "set" ? setIcon(x[0]) : k === "ptype" ? tipo(x[0]) : "") + "<span>" + esc(x[0]) + '</span><span class="n">' + x[1].toLocaleString("es-AR") + "</span></label>" + (k === "color" && x[0] === "Multicolor" && state.f.color.has("Multicolor") ? subMulti() : "");
       }).join("") + btn;
     });
   }

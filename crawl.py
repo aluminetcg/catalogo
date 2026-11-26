@@ -379,6 +379,42 @@ def tcg_rarities(rows):
         if n:
             print(f"Rarezas cargadas a mano: {n}", flush=True)
         mtg_colors(rows)
+        set_icons(rows)
+
+
+# ------------------------------------- íconos de expansión (Magic: Scryfall, Pokémon: pokemontcg.io) para el buscador
+def set_icons(rows):
+    try:
+        import precios
+        cache = precios.CACHE / "scryfall_sets.json"
+        if cache.exists() and time.time() - cache.stat().st_mtime < 86400:
+            mtg = json.loads(cache.read_text())
+        else:
+            h = {"User-Agent": "AlumineTCG-catalogo/1.0", "Accept": "application/json"}
+            mtg = [[s["name"], s.get("icon_svg_uri")] for s in requests.get("https://api.scryfall.com/sets", headers=h, timeout=60).json()["data"]
+                   if s.get("icon_svg_uri") and not s.get("digital")]
+            precios.CACHE.mkdir(parents=True, exist_ok=True)
+            cache.write_text(json.dumps(mtg))
+        poke = []
+        if (DB / "_sets.json").exists():
+            poke = [[s["name"], (s.get("images") or {}).get("symbol")] for s in json.loads((DB / "_sets.json").read_text())]
+        fuentes = {"Magic": [(norm(n), u) for n, u in mtg if u], "Pokémon": [(norm(n), u) for n, u in poke if u]}
+        out = {}
+        for r in rows:
+            s, lista = r.get("set"), fuentes.get(r["game"])
+            if not s or not lista or s in out:
+                continue
+            ns = norm(s)
+            u = next((u for n, u in lista if n == ns), None)
+            if not u:      # "Commander Masters" / "Scarlet & Violet 151": el nombre más largo que esté contenido
+                cand = [(len(n), u) for n, u in lista if len(n) > 3 and (f" {n} " in f" {ns} " or f" {ns} " in f" {n} ")]
+                u = max(cand)[1] if cand else None
+            if u:
+                out[s] = u
+        (HERE / "data" / "set_icons.json").write_text(json.dumps(out, ensure_ascii=False))
+        print(f"Íconos de expansión: {len(out)}", flush=True)
+    except Exception as e:      # nunca frenar el catálogo por esto
+        print(f"AVISO: sin íconos de expansión ({e})")
 
 
 # ------------------------------------- colores de Magic (datos públicos de Scryfall, bulk "oracle-cards")
