@@ -1,0 +1,177 @@
+# set: CS5aC Brave Stars (Charm)
+001/127|Charmander|C
+002/127|Charmeleon|U
+003/127|Charizard|R
+004/127|Charizard V|RR
+005/127|Charizard VSTAR|RRR
+006/127|Moltres|R
+007/127|Cyndaquil|C
+008/127|Quilava|U
+009/127|Chimchar|C
+010/127|Monferno|U
+011/127|Infernape|R
+012/127|Heatran V|RR
+013/127|Heatran VMAX|RRR
+014/127|Radiant Heatran|K
+015/127|Oshawott|C
+016/127|Dewott|U
+017/127|Pikachu|C
+018/127|Raichu|U
+019/127|Raichu V|RR
+020/127|Electrike|C
+021/127|Manectric|U
+022/127|Shinx|C
+023/127|Luxio|U
+024/127|Luxray|U
+025/127|Pachirisu|U
+026/127|Rotom|C
+027/127|Zeraora V|RR
+028/127|Zeraora VMAX|RRR
+029/127|Clefairy|C
+030/127|Clefable|U
+031/127|Mr. Mime|U
+032/127|Jynx|C
+033/127|Mewtwo V|RR
+034/127|Mewtwo VSTAR|RRR
+035/127|Hisuian Typhlosion|R
+036/127|Hisuian Typhlosion V|RR
+037/127|Hisuian Typhlosion VSTAR|RRR
+038/127|Togepi|C
+039/127|Togetic|U
+040/127|Togekiss|R
+041/127|Misdreavus|C
+042/127|Mismagius|U
+043/127|Ralts|C
+044/127|Kirlia|U
+045/127|Gallade|R
+046/127|Radiant Gardevoir|K
+047/127|Mawile V|RR
+048/127|Mawile VSTAR|RRR
+049/127|Lunatone|U
+050/127|Baltoy|C
+051/127|Claydol|U
+052/127|Deoxys V|RR
+053/127|Deoxys VMAX|RRR
+054/127|Drifloon|C
+055/127|Drifblim|U
+056/127|Uxie|U
+057/127|Mesprit|R
+058/127|Azelf|U
+059/127|Inkay|C
+060/127|Malamar|U
+061/127|Wyrdeer|R
+062/127|Enamorus V|RR
+063/127|Solrock|U
+064/127|Alolan Rattata|C
+065/127|Alolan Raticate|C
+066/127|Zubat|C
+067/127|Golbat|U
+068/127|Crobat|R
+069/127|Grimer|C
+070/127|Muk|U
+071/127|Spinarak|C
+072/127|Ariados|U
+073/127|Hisuian Qwilfish|C
+074/127|Hisuian Overqwil|U
+075/127|Sneasel|C
+076/127|Weavile|U
+077/127|Hisuian Sneasel|C
+078/127|Hisuian Sneasler|R
+079/127|Radiant Hisuian Sneasler|K
+080/127|Poochyena|C
+081/127|Mightyena|U
+082/127|Honchkrow V|RR
+083/127|Spiritomb|U
+084/127|Hisuian Samurott|R
+085/127|Hisuian Samurott V|RR
+086/127|Hisuian Samurott VSTAR|RRR
+087/127|Flygon V|RR
+088/127|Gible|C
+089/127|Gabite|U
+090/127|Garchomp|R
+091/127|Garchomp V|RR
+092/127|Radiant Eevee|K
+093/127|Snorlax|R
+094/127|Hoothoot|C
+095/127|Noctowl|U
+096/127|Teddiursa|C
+097/127|Ursaring|U
+098/127|Ursaluna|U
+099/127|Stantler|C
+100/127|Castform|C
+101/127|Starly|C
+102/127|Staravia|U
+103/127|Staraptor|U
+104/127|Bidoof|C
+105/127|Bibarel|R
+106/127|Arceus V|RR
+107/127|Arceus VSTAR|RRR
+108/127|Tornadus|U
+109/127|Skwovet|C
+110/127|Greedent|U
+111/127|Wyrdeer V|RR
+112/127|Arc Phone|U
+113/127|Canceling Cologne|U
+114/127|Dark Patch|U
+115/127|Ultra Ball|U
+116/127|Feather Ball|U
+117/127|Pot Helmet|U
+118/127|Supereffective Glasses|U
+119/127|Kindler|U
+120/127|Cyllene|U
+121/127|Cynthia's Ambition|U
+122/127|Kamado|U
+123/127|Arezu|U
+124/127|Zisu|U
+125/127|Jubilife Village|U
+126/127|Magma Basin|U
+127/127|Double Turbo Energy|U
+128/127|Lunatone|AR
+129/127|Solrock|AR
+130/127|Bibarel|AR
+131/127|Charizard V|SR
+132/127|Charizard V|SR
+133/127|Heatran V|SR
+134/127|Raichu V|SR
+135/127|Mewtwo V|SR
+136/127|Hisuian Typhlosion V|SR
+137/127|Mawile V|SR
+138/127|Enamorus V|SR
+139/127|Honchkrow V|SR
+140/127|Honchkrow V|SR
+141/127|Hisuian Samurott V|SR
+142/127|Flygon V|SR
+143/127|Garchomp V|SR
+144/127|Arceus V|SR
+145/127|Arceus V|SR
+146/127|Wyrdeer V|SR
+147/127|Cyllene|SR
+148/127|Cynthia's Ambition|SR
+149/127|Kamado|SR
+150/127|Arezu|SR
+151/127|Zisu|SR
+152/127|Charizard V|SAR
+153/127|Zeraora VMAX|SAR
+154/127|Deoxys VMAX|SAR
+155/127|Hisuian Samurott V|SAR
+156/127|Hisuian Samurott VSTAR|SAR
+157/127|Cynthia's Ambition|SAR
+158/127|Charizard VSTAR|HR
+159/127|Heatran VMAX|HR
+160/127|Mewtwo VSTAR|HR
+161/127|Hisuian Typhlosion VSTAR|HR
+162/127|Mawile VSTAR|HR
+163/127|Hisuian Samurott VSTAR|HR
+164/127|Arceus VSTAR|HR
+165/127|Cyllene|HR
+166/127|Cynthia's Ambition|HR
+167/127|Kamado|HR
+168/127|Arezu|HR
+169/127|Zisu|HR
+170/127|Mewtwo VSTAR|UR
+171/127|Hisuian Samurott VSTAR|UR
+172/127|Arceus VSTAR|UR
+173/127|Dark Patch|UR
+174/127|Jubilife Village|UR
+175/127|Magma Basin|UR
+176/127|Double Turbo Energy|UR
