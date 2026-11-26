@@ -83,17 +83,26 @@
   function money(n) { return "$" + Math.round(n).toLocaleString("es-AR"); }
   // efecto foil simulado: brillo arco\u00edris + reflejo diagonal sobre la foto de stock (las bases solo tienen escaneos sin brillo)
   async function foilize(blob) {
+    // holo como el de las cartas foil: arco\u00edris suave de arriba hacia abajo, manchas difusas y textura fina
     var img = await createImageBitmap(blob), w = img.width, h = img.height;
     var cv = document.createElement("canvas"); cv.width = w; cv.height = h;
     var x = cv.getContext("2d"); x.drawImage(img, 0, 0);
-    var g = x.createLinearGradient(0, 0, w, h), N = 2.5, K = 24;     // arco\u00edris completo repetido en franjas diagonales
-    for (var i = 0; i <= K; i++) g.addColorStop(i / K, "hsl(" + Math.round(i / K * 360 * N) % 360 + ",100%,55%)");
-    x.globalCompositeOperation = "overlay"; x.globalAlpha = 0.6; x.fillStyle = g; x.fillRect(0, 0, w, h);
-    x.globalCompositeOperation = "soft-light"; x.globalAlpha = 0.35; x.fillRect(0, 0, w, h);
-    var s = x.createLinearGradient(w * 0.15, 0, w * 0.85, h);
-    s.addColorStop(0, "rgba(255,255,255,0)"); s.addColorStop(0.42, "rgba(255,255,255,0)"); s.addColorStop(0.5, "rgba(255,255,255,.55)");
-    s.addColorStop(0.58, "rgba(255,255,255,0)"); s.addColorStop(1, "rgba(255,255,255,0)");
-    x.globalCompositeOperation = "screen"; x.globalAlpha = 0.45; x.fillStyle = s; x.fillRect(0, 0, w, h);
+    var L = document.createElement("canvas"); L.width = w; L.height = h;
+    var y = L.getContext("2d");
+    var g = y.createLinearGradient(w * 0.2, 0, w * 0.8, h);
+    [[0, 25], [0.18, 345], [0.36, 315], [0.5, 55], [0.62, 140], [0.78, 185], [0.9, 230], [1, 290]].forEach(function (s) { g.addColorStop(s[0], "hsl(" + s[1] + ",100%,62%)"); });
+    y.fillStyle = g; y.fillRect(0, 0, w, h);
+    [[0.15, 0.2, 330], [0.8, 0.35, 40], [0.25, 0.7, 170], [0.85, 0.85, 270]].forEach(function (b) {
+      var r = y.createRadialGradient(w * b[0], h * b[1], 0, w * b[0], h * b[1], w * 0.55);
+      r.addColorStop(0, "hsla(" + b[2] + ",100%,65%,.55)"); r.addColorStop(1, "hsla(" + b[2] + ",100%,65%,0)");
+      y.fillStyle = r; y.fillRect(0, 0, w, h);
+    });
+    var n = y.getImageData(0, 0, w, h), d = n.data;               // textura granulada del foil
+    for (var i = 0; i < d.length; i += 4) { var k = (Math.random() - 0.5) * 30; d[i] += k; d[i + 1] += k; d[i + 2] += k; }
+    y.putImageData(n, 0, 0);
+    x.globalCompositeOperation = "overlay"; x.globalAlpha = 0.75; x.drawImage(L, 0, 0);
+    x.globalCompositeOperation = "soft-light"; x.globalAlpha = 0.5; x.drawImage(L, 0, 0);
+    x.globalCompositeOperation = "screen"; x.globalAlpha = 0.12; x.drawImage(L, 0, 0);
     return await new Promise(function (res) { cv.toBlob(res, "image/jpeg", 0.92); });
   }
   async function stockBlob(c) { return fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); }); }
