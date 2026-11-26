@@ -1,0 +1,25 @@
+# set: CS6.1C Radiant Energy Vol. 3
+001/004|Horsea|
+002/004|Rockruff|
+003/004|Eevee|
+004/004|Celebratory Fanfare|
+005/004|Grass Energy|
+006/004|Lightning Energy|
+007/004|Metal Energy|
+008/004|Lady|
+009/004|Kindler|
+010/004|Cook|
+011/004|Worker|
+012/004|Furisode Girl|
+013/004|Starmie V|
+014/004|Mawile V|
+015/004|Enamorus V|
+016/004|Garchomp V|
+017/004|Lady|
+018/004|Kindler|
+019/004|Worker|
+020/004|Furisode Girl|
+021/004|Origin Forme Palkia VSTAR|
+022/004|Origin Forme Dialga VSTAR|
+023/004|Giratina VSTAR|
+024/004|Arceus VSTAR|
