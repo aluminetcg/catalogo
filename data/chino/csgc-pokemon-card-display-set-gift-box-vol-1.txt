@@ -1,0 +1,9 @@
+# set: CSGC Pokémon Card Display Set Gift Box Vol. 1
+001/008|Flapple|
+002/008|Flareon|
+003/008|Vaporeon|
+004/008|Frosmoth|
+005/008|Jolteon|
+006/008|Dusknoir|
+007/008|Eevee|
+008/008|Oranguru|
