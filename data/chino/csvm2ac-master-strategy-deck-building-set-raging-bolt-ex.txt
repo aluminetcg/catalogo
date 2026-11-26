@@ -1,0 +1,32 @@
+# set: CSVM2aC Master Strategy Deck Building Set (Raging Bolt ex)
+001/031|Teal Mask Ogerpon ex|
+002/031|Iron Bundle|
+003/031|Chien-Pao|
+004/031|Slither Wing|
+005/031|Koraidon|
+006/031|Fezandipiti ex|
+007/031|Raging Bolt|
+008/031|Raging Bolt ex|
+009/031|Ditto|
+010/031|Hoothoot|
+011/031|Noctowl|
+012/031|Fan Rotom|
+013/031|Energy Retrieval|
+014/031|Energy Switch|
+015/031|Counter Catcher|
+016/031|Superior Energy Retrieval|
+017/031|Earthen Vessel|
+018/031|Nest Ball|
+019/031|Ultra Ball|
+020/031|Picnic Basket|
+021/031|Prime Catcher|
+022/031|Switch|
+023/031|Night Stretcher|
+024/031|Bravery Charm|
+025/031|Crispin|
+026/031|Professor Sada's Vitality|
+027/031|Judge|
+028/031|Iono|
+029/031|Boss's Orders|
+030/031|Jamming Tower|
+031/031|Area Zero Underdepths|
