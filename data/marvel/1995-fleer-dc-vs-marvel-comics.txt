@@ -1,0 +1,101 @@
+# set: 1995 Fleer DC vs. Marvel Comics
+1|Superman / Hulk RIV|
+2|Captain America|
+3|Elektra|
+4|Hulk|
+5|Jubilee|
+6|Namor|
+7|Quicksilver|
+8|Sabretooth|
+9|Silver Surfer|
+10|Silver Surfer / Green Lantern RIV|
+11|Spider-Man|
+12|Storm|
+13|Thor|
+14|Wolverine|
+15|Aquaman|
+16|Azrael|
+17|Batman|
+18|Captain Marvel|
+19|Captain Marvel / Thor RIV|
+20|Catwoman|
+21|Flash|
+22|Green Lantern|
+23|Lobo|
+24|Robin|
+25|Superboy|
+26|Superman|
+27|Wonder Woman|
+28|Quicksilver / Flash RIV|
+29|Abomination|
+30|Bullseye|
+31|Doctor Doom|
+32|Galactus|
+33|Green Goblin|
+34|Juggernaut|
+35|Kingpin|
+36|Lizard|
+37|Wonder Woman / Storm RIV|
+38|Magneto|
+39|Thanos|
+40|Bane|
+41|Black Adam|
+42|Circe|
+43|Darkseid|
+44|Doctor Polaris|
+45|Joker|
+46|Aquaman / Namor RIV|
+47|Kadabra|
+48|Killer Croc|
+49|Lex Luthor|
+50|Penguin|
+51|Archangel / Hawkman BTL|
+52|Azrael / Sabretooth BTL|
+53|Black Widow / Black Canary BTL|
+54|Blue Beetle / Spider-Woman BTL|
+55|Wolverine / Lobo RIV|
+56|Capt. Marvel / Capt. Marvel BTL|
+57|Cable / Captain Atom BTL|
+58|Deathstroke / Punisher BTL|
+59|Ghost Rider / Demon BTL|
+60|Nightwing / Gambit BTL|
+61|Human Torch / Firestorm BTL|
+62|Steel / Iron Man BTL|
+63|Hawkeye / Green Arrow BTL|
+64|Robin / Jubilee RIV|
+65|Venom / Lobo BTL|
+66|The Ray / Nova BTL|
+67|Thor / Wonder Woman BTL|
+68|Warrior / War Machine BTL|
+69|Captain America / Bane BTL|
+70|Batman / Bullseye BTL|
+71|Electro / Black Lightning BTL|
+72|Riddler / Daredevil BTL|
+73|Spider-Man / Superboy RIV|
+74|Green Lantern / Green Goblin BTL|
+75|Jigsaw / Deathstroke BTL|
+76|Killer Croc / Hulk BTL|
+77|Doctor Doom / Captain Marvel BTL|
+78|The Joker / Spider-Man BTL|
+79|Galactus / Spectre BTL|
+80|Superman / Juggernaut BTL|
+81|Absorbing Man / Steel BTL|
+82|Catwoman / Elektra RIV|
+83|Thing / Solomon Grundy BTL|
+84|Killer Croc / Abomination BTL|
+85|Arcade / Riddler BTL|
+86|Black Adam / Mandarin BTL|
+87|Bullseye / Deadshot BTL|
+88|Poison Ivy / Black Cat BTL|
+89|Enchantress / Circe BTL|
+90|Dr. Polaris / Magneto BTL|
+91|Captain America / Batman RIV|
+92|Darkseid / Thanos BTL|
+93|Doctor Doom / Cyborg BTL|
+94|Two-Face / Jigsaw BTL|
+95|Green Goblin / Joker BTL|
+96|Man-Bat / Lizard BTL|
+97|Kingpin / Lex Luthor BTL|
+98|Scarecrow / Scarecrow BTL|
+99|Mole Man / Penguin BTL|
+100|Checklist CL|
