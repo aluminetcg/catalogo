@@ -1,0 +1,13 @@
+# set: SP Sword & Shield Promos
+001/S-P|Roselia|
+002/S-P|Flareon|
+003/S-P|Vaporeon|
+004/S-P|Eiscue V|
+005/S-P|Pikachu|
+006/S-P|Jolteon|
+007/S-P|Luxio|
+008/S-P|Sandaconda|
+009/S-P|Trubbish|
+010/S-P|Eevee|
+011/S-P|Noctowl|
+012/S-P|Hop|
