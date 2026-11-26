@@ -1,0 +1,166 @@
+# set: CSV3C Fearless Terastal
+001/130|Hoppip|C
+002/130|Skiploom|U
+003/130|Jumpluff|R
+004/130|Pineco|C
+005/130|Forretress ex|RR
+006/130|Surskit|C
+007/130|Masquerain|U
+008/130|Snover|C
+009/130|Abomasnow|R
+010/130|Bounsweet|C
+011/130|Steenee|C
+012/130|Tsareena|U
+013/130|Tarountula|C
+014/130|Spidops|U
+015/130|Wo-Chien ex|RR
+016/130|Growlithe|C
+017/130|Arcanine|C
+018/130|Arcanine ex|RR
+019/130|Numel|C
+020/130|Camerupt|U
+021/130|Torkoal|U
+022/130|Litwick|C
+023/130|Lampent|C
+024/130|Chandelure|U
+025/130|Larvesta|C
+026/130|Volcarona|U
+027/130|Fletchinder|U
+028/130|Talonflame|U
+029/130|Charcadet|C
+030/130|Armarouge|U
+031/130|Chi-Yu ex|RR
+032/130|Magikarp|C
+033/130|Gyarados ex|RR
+034/130|Marill|C
+035/130|Azumarill|U
+036/130|Luvdisc|C
+037/130|Eiscue|U
+038/130|Cetoddle|C
+039/130|Cetitan|U
+040/130|Frigibax|C
+041/130|Arctibax|U
+042/130|Baxcalibur|R
+043/130|Chien-Pao ex|RR
+044/130|Pikachu|C
+045/130|Raichu|U
+046/130|Voltorb|C
+047/130|Electrode|U
+048/130|Mareep|C
+049/130|Flaaffy|U
+050/130|Ampharos ex|RR
+051/130|Pincurchin|U
+052/130|Tadbulb|C
+053/130|Bellibolt ex|RR
+054/130|Wattrel|C
+055/130|Kilowattrel|U
+056/130|Jigglypuff|C
+057/130|Wigglytuff|R
+058/130|Latios|R
+059/130|Oranguru|U
+060/130|Sandygast|C
+061/130|Palossand|U
+062/130|Mimikyu|R
+063/130|Mimikyu ex|RR
+064/130|Flittle|C
+065/130|Espathra|U
+066/130|Greavard|C
+067/130|Houndstone|R
+068/130|Sudowoodo|U
+069/130|Barboach|C
+070/130|Whiscash|U
+071/130|Croagunk|C
+072/130|Toxicroak|U
+073/130|Drilbur|C
+074/130|Crabrawler|C
+075/130|Crabominable|U
+076/130|Passimian|U
+077/130|Klawf ex|RR
+078/130|Glimmet|C
+079/130|Glimmora|R
+080/130|Ting-Lu ex|RR
+081/130|Sneasel|C
+082/130|Weavile|R
+083/130|Houndour|C
+084/130|Houndoom ex|RR
+085/130|Seviper|U
+086/130|Morpeko|R
+087/130|Maschiff|C
+088/130|Mabosstiff|U
+089/130|Bronzor|C
+090/130|Bronzong|U
+091/130|Excadrill|U
+092/130|Meltan|C
+093/130|Melmetal ex|RR
+094/130|Corviknight|U
+095/130|Orthworm|R
+096/130|Girafarig|C
+097/130|Farigiraf|U
+098/130|Dunsparce|C
+099/130|Dudunsparce|U
+100/130|Wingull|C
+101/130|Pelipper|U
+102/130|Slakoth|C
+103/130|Vigoroth|U
+104/130|Slaking|R
+105/130|Zangoose|U
+106/130|Fletchling|C
+107/130|Yungoos|C
+108/130|Gumshoos|U
+109/130|Rookidee|C
+110/130|Corvisquire|U
+111/130|Lechonk|C
+112/130|Oinkologne ex|RR
+113/130|Cyclizar|R
+114/130|Flamigo|U
+115/130|Superior Energy Retrieval|U
+116/130|Great Ball|C
+117/130|Picnic Basket|U
+118/130|Protective Goggles|U
+119/130|Big Air Balloon|U
+120/130|Vengeful Punch|U
+121/130|Grusha|U
+122/130|Brassius|U
+123/130|Iono|U
+124/130|Falkner|U
+125/130|Giacomo|U
+126/130|Bill's Transfer|U
+127/130|Ryme|C
+128/130|Calamitous Wasteland|U
+129/130|Calamitous Snowy Mountain|U
+130/130|Therapeutic Energy|U
+131/130|Frigibax|AR
+132/130|Arctibax|AR
+133/130|Baxcalibur|AR
+134/130|Sandygast|AR
+135/130|Mabosstiff|AR
+136/130|Orthworm|AR
+137/130|Farigiraf|AR
+138/130|Dudunsparce|AR
+139/130|Forretress ex|SR
+140/130|Wo-Chien ex|SR
+141/130|Arcanine ex|SR
+142/130|Chi-Yu ex|SR
+143/130|Gyarados ex|SR
+144/130|Chien-Pao ex|SR
+145/130|Bellibolt ex|SR
+146/130|Ting-Lu ex|SR
+147/130|Oinkologne ex|SR
+148/130|Grusha|SR
+149/130|Iono|SR
+150/130|Falkner|SR
+151/130|Giacomo|SR
+152/130|Bill's Transfer|SR
+153/130|Ryme|SR
+154/130|Wo-Chien ex|SAR
+155/130|Arcanine ex|SAR
+156/130|Chi-Yu ex|SAR
+157/130|Chien-Pao ex|SAR
+158/130|Ting-Lu ex|SAR
+159/130|Grusha|SAR
+160/130|Iono|SAR
+161/130|Giacomo|SAR
+162/130|Chien-Pao ex|UR
+163/130|Ting-Lu ex|UR
+164/130|Superior Energy Retrieval|UR
+165/130|Reversal Energy|UR
