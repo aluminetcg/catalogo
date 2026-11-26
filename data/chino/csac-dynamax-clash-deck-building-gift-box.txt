@@ -1,0 +1,25 @@
+# set: CSAC Dynamax Clash Deck Building Gift Box
+001/024|Rillaboom V|
+002/024|Centiskorch V|
+003/024|Lapras V|
+004/024|Toxtricity V|
+005/024|Wobbuffet V|
+006/024|Stonjourner V|
+007/024|Grimmsnarl V|
+008/024|Copperajah V|
+009/024|Snorlax V|
+010/024|Quick Ball|
+011/024|Evolution Incense|
+012/024|Great Ball|
+013/024|Rare Candy|
+014/024|Ordinary Rod|
+015/024|Pokégear 3.0|
+016/024|Big Charm|
+017/024|Air Balloon|
+018/024|Sonia|
+019/024|Professor's Research|
+020/024|Skyla|
+021/024|Boss's Orders|
+022/024|Marnie|
+023/024|Training Court|
+024/024|Aurora Energy|

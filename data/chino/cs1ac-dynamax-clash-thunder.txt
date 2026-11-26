@@ -1,0 +1,218 @@
+# set: CS1aC Dynamax Clash (Thunder)
+001/135|Grubbin|C
+002/135|Krabby|C
+003/135|Kingler|U
+004/135|Goldeen|C
+005/135|Seaking|U
+006/135|Galarian Mr. Mime|C
+007/135|Galarian Mr. Rime|U
+008/135|Lapras V|RR
+009/135|Lapras VMAX|RRR
+010/135|Qwilfish|U
+011/135|Mantine|U
+012/135|Galarian Darumaka|C
+013/135|Galarian Darmanitan|U
+014/135|Wishiwashi|C
+015/135|Sobble|C
+016/135|Drizzile|U
+017/135|Inteleon|R
+018/135|Inteleon V|RR
+019/135|Inteleon VMAX|RRR
+020/135|Chewtle|C
+021/135|Drednaw|U
+022/135|Cramorant|U
+023/135|Arrokuda|C
+024/135|Barraskewda|U
+025/135|Snom|C
+026/135|Frosmoth|R
+027/135|Eiscue|R
+028/135|Pikachu V|RR
+029/135|Pikachu VMAX|RRR
+030/135|Voltorb|C
+031/135|Electrode|R
+032/135|Shinx|C
+033/135|Luxio|U
+034/135|Luxray|R
+035/135|Charjabug|U
+036/135|Vikavolt|R
+037/135|Yamper|C
+038/135|Boltund|R
+039/135|Boltund V|RR
+040/135|Toxel|C
+041/135|Toxtricity|R
+042/135|Toxtricity V|RR
+043/135|Toxtricity V|RR
+044/135|Toxtricity VMAX|RRR
+045/135|Pincurchin|C
+046/135|Morpeko|U
+047/135|Morpeko V|RR
+048/135|Morpeko VMAX|RRR
+049/135|Galarian Ponyta|C
+050/135|Galarian Rapidash|U
+051/135|Gastly|C
+052/135|Haunter|U
+053/135|Gengar|R
+054/135|Natu|C
+055/135|Xatu|U
+056/135|Wobbuffet V|RR
+057/135|Galarian Corsola|C
+058/135|Galarian Cursola|R
+059/135|Gardevoir V|RR
+060/135|Gardevoir VMAX|RRR
+061/135|Lunatone|U
+062/135|Munna|C
+063/135|Musharna|U
+064/135|Sigilyph|U
+065/135|Morelull|C
+066/135|Shiinotic|U
+067/135|Sandygast|C
+068/135|Palossand|U
+069/135|Sinistea|C
+070/135|Polteageist|U
+071/135|Hatenna|C
+072/135|Hattrem|U
+073/135|Hatterene|R
+074/135|Indeedee|U
+075/135|Indeedee V|RR
+076/135|Dreepy|C
+077/135|Drakloak|U
+078/135|Dragapult|R
+079/135|Diglett|C
+080/135|Dugtrio|U
+081/135|Galarian Farfetch'd|C
+082/135|Galarian Sirfetch'd|R
+083/135|Hitmonlee|U
+084/135|Hitmonchan|U
+085/135|Larvitar|C
+086/135|Pupitar|U
+087/135|Tyranitar|R
+088/135|Meditite|C
+089/135|Medicham|U
+090/135|Solrock|U
+091/135|Barboach|C
+092/135|Whiscash|U
+093/135|Baltoy|C
+094/135|Claydol|U
+095/135|Galarian Yamask|C
+096/135|Galarian Runerigus|U
+097/135|Diggersby|U
+098/135|Rolycoly|C
+099/135|Carkol|U
+100/135|Coalossal|R
+101/135|Sandaconda V|RR
+102/135|Clobbopus|C
+103/135|Grapploct|U
+104/135|Grapploct V|RR
+105/135|Falinks|U
+106/135|Falinks V|RR
+107/135|Stonjourner|R
+108/135|Stonjourner V|RR
+109/135|Stonjourner VMAX|RRR
+110/135|Snorlax|U
+111/135|Snorlax V|RR
+112/135|Snorlax VMAX|RRR
+113/135|Sentret|C
+114/135|Furret|U
+115/135|Chatot|U
+116/135|Bunnelby|C
+117/135|Hawlucha|U
+118/135|Stufful|C
+119/135|Bewear|U
+120/135|Evolution Incense|U
+121/135|Hyper Potion|U
+122/135|Ordinary Rod|U
+123/135|Old PC|U
+124/135|Rotom Bike|U
+125/135|Big Charm|U
+126/135|Sitrus Berry|U
+127/135|Lucky Egg|U
+128/135|Cursed Shovel|U
+129/135|Team Yell Grunt|U
+130/135|Bede|U
+131/135|Boss's Orders|R
+132/135|Marnie|R
+133/135|Training Court|U
+134/135|Glimwood Tangle|U
+135/135|Aurora Energy|U
+136/135|Galarian Darumaka|S
+137/135|Galarian Darmanitan|S
+138/135|Sobble|S
+139/135|Drizzile|S
+140/135|Inteleon|S
+141/135|Chewtle|S
+142/135|Drednaw|S
+143/135|Cramorant|S
+144/135|Arrokuda|S
+145/135|Barraskewda|S
+146/135|Snom|S
+147/135|Frosmoth|S
+148/135|Eiscue|S
+149/135|Toxel|S
+150/135|Toxtricity|S
+151/135|Pincurchin|S
+152/135|Morpeko|S
+153/135|Galarian Ponyta|S
+154/135|Galarian Rapidash|S
+155/135|Galarian Corsola|S
+156/135|Galarian Cursola|S
+157/135|Hatenna|S
+158/135|Hattrem|S
+159/135|Hatterene|S
+160/135|Indeedee|S
+161/135|Dreepy|S
+162/135|Drakloak|S
+163/135|Dragapult|S
+164/135|Galarian Farfetch'd|S
+165/135|Galarian Sirfetch'd|S
+166/135|Galarian Yamask|S
+167/135|Galarian Runerigus|S
+168/135|Rolycoly|S
+169/135|Carkol|S
+170/135|Coalossal|S
+171/135|Clobbopus|S
+172/135|Grapploct|S
+173/135|Falinks|S
+174/135|Stonjourner|S
+175/135|Lapras V|SR
+176/135|Inteleon V|SR
+177/135|Pikachu V|SR
+178/135|Boltund V|SR
+179/135|Toxtricity V|SR
+180/135|Morpeko V|SR
+181/135|Wobbuffet V|SR
+182/135|Gardevoir V|SR
+183/135|Indeedee V|SR
+184/135|Sandaconda V|SR
+185/135|Grapploct V|SR
+186/135|Falinks V|SR
+187/135|Stonjourner V|SR
+188/135|Snorlax V|SR
+189/135|Team Yell Grunt|SR
+190/135|Bede|SR
+191/135|Boss's Orders|SR
+192/135|Marnie|SR
+193/135|Lapras V|SSR
+194/135|Lapras VMAX|SSR
+195/135|Boltund V|SSR
+196/135|Toxtricity V|SSR
+197/135|Toxtricity VMAX|SSR
+198/135|Indeedee V|SSR
+199/135|Falinks V|SSR
+200/135|Lapras VMAX|HR
+201/135|Inteleon VMAX|HR
+202/135|Pikachu VMAX|HR
+203/135|Toxtricity VMAX|HR
+204/135|Morpeko VMAX|HR
+205/135|Gardevoir VMAX|HR
+206/135|Stonjourner VMAX|HR
+207/135|Snorlax VMAX|HR
+208/135|Team Yell Grunt|HR
+209/135|Bede|HR
+210/135|Boss's Orders|HR
+211/135|Marnie|HR
+212/135|Frosmoth|UR
+213/135|Electrode|UR
+214/135|Coalossal|UR
+215/135|Ordinary Rod|UR
+216/135|Big Charm|UR
+217/135|Training Court|UR
