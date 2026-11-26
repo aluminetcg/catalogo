@@ -1,0 +1,137 @@
+# set: CBB3C Gem Pack Vol. 3
+0101/07|Clefable|C
+0102/07|Clefable|C
+0103/07|Clefable|U
+0104/07|Clefable|U
+0105/07|Clefable|R
+0106/07|Clefable|RR
+0107/07|Clefable ex|R
+0201/07|Meowth|C
+0202/07|Meowth|C
+0203/07|Meowth|U
+0204/07|Meowth|U
+0205/07|Meowth|R
+0206/07|Meowth|RR
+0207/07|Meowth|RRR
+0301/07|Gengar|C
+0302/07|Gengar|C
+0303/07|Gengar|U
+0304/07|Gengar|U
+0305/07|Gengar|R
+0306/07|Gengar|RR
+0307/07|Gengar|RRR
+0401/07|Cubone|C
+0402/07|Cubone|C
+0403/07|Cubone|U
+0404/07|Cubone|U
+0405/07|Cubone|R
+0406/07|Cubone|RR
+0407/07|Cubone|RRR
+0501/07|Houndoom|C
+0502/07|Houndoom|C
+0503/07|Houndoom|U
+0504/07|Houndoom|U
+0505/07|Houndoom|R
+0506/07|Houndoom|RR
+0507/07|Houndoom ex|R
+0601/07|Gardevoir|C
+0602/07|Gardevoir|C
+0603/07|Gardevoir|U
+0604/07|Gardevoir|U
+0605/07|Gardevoir|R
+0606/07|Gardevoir|RR
+0607/07|Gardevoir ex|R
+0701/07|Banette|C
+0702/07|Banette|C
+0703/07|Banette|U
+0704/07|Banette|U
+0705/07|Banette|R
+0706/07|Banette|RR
+0707/07|Banette ex|R
+0801/07|Absol|C
+0802/07|Absol|C
+0803/07|Absol|U
+0804/07|Absol|U
+0805/07|Absol|R
+0806/07|Absol|RR
+0807/07|Absol ex|R
+0901/07|Mismagius|C
+0902/07|Mismagius|C
+0903/07|Mismagius|U
+0904/07|Mismagius|U
+0905/07|Mismagius|R
+0906/07|Mismagius|RR
+0907/07|Mismagius|RRR
+1001/07|Darkrai|C
+1002/07|Darkrai|C
+1003/07|Darkrai|U
+1004/07|Darkrai|U
+1005/07|Darkrai|R
+1006/07|Darkrai|RR
+1007/07|Darkrai ex|R
+1101/07|Chandelure|C
+1102/07|Chandelure|C
+1103/07|Chandelure|U
+1104/07|Chandelure|U
+1105/07|Chandelure|R
+1106/07|Chandelure|RR
+1107/07|Chandelure|RRR
+1201/07|Lycanroc|C
+1202/07|Lycanroc|C
+1203/07|Lycanroc|U
+1204/07|Lycanroc|U
+1205/07|Lycanroc|R
+1206/07|Lycanroc|RR
+1207/07|Lycanroc ex|R
+1301/07|Mimikyu|C
+1302/07|Mimikyu|C
+1303/07|Mimikyu|U
+1304/07|Mimikyu|U
+1305/07|Mimikyu|R
+1306/07|Mimikyu|RR
+1307/07|Mimikyu|RRR
+1401/07|Morpeko|C
+1402/07|Morpeko|C
+1403/07|Morpeko|U
+1404/07|Morpeko|U
+1405/07|Morpeko|R
+1406/07|Morpeko|RR
+1407/07|Morpeko|RRR
+1501/07|Ceruledge|C
+1502/07|Ceruledge|C
+1503/07|Ceruledge|U
+1504/07|Ceruledge|U
+1505/07|Ceruledge|R
+1506/07|Ceruledge|RR
+1507/07|Ceruledge|RRR
+1601/07|Greavard|C
+1602/07|Greavard|C
+1603/07|Greavard|U
+1604/07|Greavard|U
+1605/07|Greavard|R
+1606/07|Greavard|RR
+1607/07|Greavard|RRR
+1701/07|Houndstone|C
+1702/07|Houndstone|C
+1703/07|Houndstone|U
+1704/07|Houndstone|U
+1705/07|Houndstone|R
+1706/07|Houndstone|RR
+1707/07|Houndstone ex|R
+1801/07|Annihilape|C
+1802/07|Annihilape|C
+1803/07|Annihilape|U
+1804/07|Annihilape|U
+1805/07|Annihilape|R
+1806/07|Annihilape|RR
+1807/07|Annihilape ex|R
+1901/04|Super Rod|RR
+1902/04|Nest Ball|RR
+1903/04|Switch|RR
+1904/04|Arven|RRR
+2001/06|Basic Fighting Energy|RRR
+2002/06|Basic Metal Energy|RRR
+2003/06|Luminous Energy|RRR
+2004/06|Basic Fighting Energy|RRR
+2005/06|Basic Metal Energy|RRR
+2006/06|Luminous Energy|RRR
