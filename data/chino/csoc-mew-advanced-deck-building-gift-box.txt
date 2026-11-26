@@ -1,0 +1,20 @@
+# set: CSOC Mew Advanced Deck Building Gift Box
+001/019|Oricorio|
+002/019|Mew V|
+003/019|Genesect V|
+004/019|Escape Rope|
+005/019|Switch Cart|
+006/019|Cram-o-matic|
+007/019|Quick Ball|
+008/019|Cross Switcher|
+009/019|Ultra Ball|
+010/019|Battle VIP Pass|
+011/019|Power Tablet|
+012/019|Choice Belt|
+013/019|Elesa's Sparkle|
+014/019|Judge|
+015/019|Professor's Research|
+016/019|Peony|
+017/019|Boss's Orders|
+018/019|Double Turbo Energy|
+019/019|Fusion Strike Energy|
