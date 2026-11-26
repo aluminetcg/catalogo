@@ -11,7 +11,8 @@
   var AUTH = "https://auth0.empretienda.com", CID = "Kzsbi2SzTmTYF5tZnKOPN63wYpaDACMV";
   var IMG = function (pid, size) { return "https://tcgplayer-cdn.tcgplayer.com/product/" + pid + "_in_" + size + "x" + size + ".jpg"; };
   var BASICAS = { "": 1, "Common": 1, "Uncommon": 1, "Rare": 1 };
-  var ROOTS = { en: /ingl/i, jp: /jap/i };
+  var ROOTS = { en: /ingl/i, jp: /jap/i, cn: /chin/i };
+  var RZ = ["", "AR", "SAR", "SR", "UR", "CHR", "CSR", "HR", "RR", "RRR", "Holo", "Reverse", "Masterball Reverse", "Pokeball Reverse", "Promo"];
   var CDN = "https://d22fxaf9t8d39k.cloudfront.net/";
 
   var host = document.createElement("div");
@@ -98,6 +99,8 @@
     '.t{background:#fff;border:2px solid transparent;border-radius:12px;padding:8px;cursor:pointer;display:flex;flex-direction:column;gap:4px;box-shadow:0 1px 3px rgba(0,0,0,.08)}' +
     '.t:hover{border-color:#fb923c}.t.on{border-color:#c2410c}' +
     '.t img{width:100%;aspect-ratio:1;object-fit:contain;background:#f4f2ec;border-radius:8px}' +
+    '.ph{width:100%;aspect-ratio:1;background:#f4f2ec;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:44px;color:#c9c3b3}' +
+    '.nof{border:2px dashed #e3dfd3;border-radius:12px;padding:26px 14px;text-align:center;color:#6a7080;font-size:13px}' +
     '.lg{display:inline-block;font-size:10px;font-weight:800;background:#1d2330;color:#fff;border-radius:5px;padding:1px 5px;vertical-align:1px}' +
     '.t b{font-size:13px;line-height:1.2}.t small{color:#6a7080;font-size:12px;line-height:1.25}' +
     '.msg{grid-column:1/-1;color:#6a7080;padding:30px;text-align:center}' +
@@ -122,7 +125,7 @@
     '</style>' +
     '<div class="wrap"><header>' +
     '<b>ALUMINE<span>TCG</span> \u00b7 carga r\u00e1pida</b>' +
-    '<select id="lang"><option value="all">Pok\u00e9mon Ingl\u00e9s + Japon\u00e9s</option><option value="en">Pok\u00e9mon Ingl\u00e9s</option><option value="jp">Pok\u00e9mon Japon\u00e9s</option></select>' +
+    '<select id="lang"><option value="all">Pok\u00e9mon Ingl\u00e9s + Japon\u00e9s</option><option value="en">Pok\u00e9mon Ingl\u00e9s</option><option value="jp">Pok\u00e9mon Japon\u00e9s</option><option value="cn">Pok\u00e9mon Chino (a mano)</option></select>' +
     '<input id="q" type="search" placeholder="N\u00famero y/o nombre: 143/128, kommo-o 143, charizard 151\u2026" autocomplete="off">' +
     '<label>Precio = TCG \u00d7 d\u00f3lar \u00d7 <input id="mult" type="number" step="0.05" min="0.1"></label>' +
     '<label id="dolar"></label>' +
@@ -149,7 +152,7 @@
     });
     return out;
   }
-  function langs() { return S.lang === "all" ? ["en", "jp"] : [S.lang]; }
+  function langs() { return S.lang === "all" ? ["en", "jp"] : S.lang === "cn" ? ["en"] : [S.lang]; }
   async function loadAll() { for (var i = 0, l = langs(); i < l.length; i++) await loadIndex(l[i]); }
   function setOf(c) { return S.idx[c.L].sets[c[3]][0]; }
   function guessCat(setFull, L) {
@@ -168,7 +171,35 @@
   }
 
   // ------------------------------------------------------------------ b\u00fasqueda
+  // chino: no hay base de cartas; se arma la carta con el nombre (en ingl\u00e9s) y el n\u00famero que escrib\u00eds
+  function nameList() {
+    if (S.names || !S.idx.en) return S.names || [];
+    var cnt = {};
+    S.idx.en.cards.forEach(function (c) { var n = cardName(c[1]).replace(/\(.*?\)/g, "").replace(/\s+/g, " ").trim(); if (n) cnt[n] = (cnt[n] || 0) + 1; });
+    S.names = Object.keys(cnt).map(function (n) { return { n: n, w: norm(n), k: cnt[n] }; });
+    return S.names;
+  }
+  function cnKey(c) { var t = String(c[2]).split("/")[1]; return "cn|" + (t ? "/" + nnum(t) : "promo"); }
+  function searchCn() {
+    var raw = $("#q").value, toks = norm(raw).split(" ").filter(Boolean);
+    var names = toks.filter(function (t) { return !/\d/.test(t); });
+    var num = (raw.split(/\s+/).filter(function (t) { return /\d/.test(t); })[0] || "").replace(/[^A-Za-z0-9\/]/g, "").toUpperCase();
+    S.cnRes = [];
+    if (!names.length || !num) { $("#res").innerHTML = '<div class="msg">Chino: escrib\u00ed el nombre en ingl\u00e9s y el n\u00famero, por ejemplo <b>zeraora 210/208</b>. No hay foto ni precio de referencia: la foto es opcional y el precio lo pon\u00e9s vos.</div>'; return; }
+    var typed = names.join(" ");
+    var found = nameList().filter(function (x) { var ws = x.w.split(" "); return names.every(function (t) { return ws.some(function (w) { return w.indexOf(t) === 0; }); }); });
+    found.sort(function (a, b) { return (b.w === typed) - (a.w === typed) || (b.w.indexOf(typed) === 0) - (a.w.indexOf(typed) === 0) || b.k - a.k || a.n.length - b.n.length; });
+    var opts = found.slice(0, 30).map(function (x) { return x.n; });
+    if (!found.some(function (x) { return x.w === typed; })) opts.push(typed.replace(/\b[a-z]/g, function (m) { return m.toUpperCase(); }));
+    var ab = num.split("/").map(function (p) { return +((p.match(/\d+/) || [0])[0]); });
+    var rz = ab.length === 2 && ab[1] && ab[0] > ab[1] ? "AR" : "";
+    S.cnRes = opts.map(function (n, i) { var c = ["cn" + i, n, num, 0, rz, {}]; c.L = "cn"; return c; });
+    $("#res").innerHTML = S.cnRes.map(function (c, i) {
+      return '<div class="t" data-i="' + i + '" data-l="cn"><div class="ph">\u4e2d</div><b><span class="lg">CHI</span> ' + esc(c[1]) + "</b><small>" + esc(num) + (i === S.cnRes.length - 1 && !found.some(function (x) { return x.w === typed; }) ? " \u00b7 tal cual lo escribiste" : "") + "</small></div>";
+    }).join("");
+  }
   function search() {
+    if (S.lang === "cn") return searchCn();
     var L = langs().filter(function (l) { return S.idx[l]; }); if (!L.length) return;
     var toks = norm($("#q").value).split(" ").filter(Boolean);
     if (!toks.length) { $("#res").innerHTML = '<div class="msg">Escrib\u00ed el n\u00famero de la carta (por ejemplo 143/128) o parte del nombre.</div>'; return; }
@@ -203,17 +234,44 @@
   // ------------------------------------------------------------------ detalle
   function titleFor(c, catId) {
     var cat = S.cats.filter(function (x) { return x.id == catId; })[0];
-    var set = cat ? cat.name : setName(setOf(c));
+    var set = cat ? cat.name : c.L === "cn" ? "" : setName(setOf(c));
     return [cardName(c[1]), BASICAS[c[4]] ? "" : c[4], c[2], set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
   }
   function catOptions(sel, L) {
-    var rootRe = ROOTS[L];
-    var list = S.cats.filter(function (c) { return c.leaf && rootRe.test(c.root); });
-    var others = S.cats.filter(function (c) { return c.leaf && !rootRe.test(c.root); });
+    var rootRe = ROOTS[L], f = L === "cn" ? "path" : "root";
+    var list = S.cats.filter(function (c) { return c.leaf && rootRe.test(c[f]); });
+    var others = S.cats.filter(function (c) { return c.leaf && !rootRe.test(c[f]); });
     var opt = function (c) { return '<option value="' + c.id + '"' + (c.id == sel ? " selected" : "") + ">" + esc(c.path) + "</option>"; };
     return '<option value="">\u2014 Eleg\u00ed la categor\u00eda \u2014</option>' + list.map(opt).join("") + (others.length ? '<optgroup label="Otras categor\u00edas">' + others.map(opt).join("") + "</optgroup>" : "");
   }
+  function showDetailCn(c) {
+    S.sel = c; S.own = null;
+    root.querySelectorAll(".t").forEach(function (t) { t.classList.toggle("on", t.dataset.l === "cn" && S.cnRes[+t.dataset.i] === c); });
+    var cat = S.catMap[cnKey(c)] || S.catMap["cn|last"] || "";
+    $("#det").innerHTML = '<img class="big" id="big" alt="" hidden><div class="nof" id="nof">Sin foto (es opcional).<br>Peg\u00e1 (Ctrl+V), arrastr\u00e1 o eleg\u00ed una foto si quer\u00e9s ponerle.</div>' +
+      '<div class="foto"><label class="sec">Elegir foto<input id="own" type="file" accept="image/*" hidden></label>' +
+      '<button class="sec" id="rmown" hidden>Sacar la foto</button><span id="fotoinfo"></span></div>' +
+      '<div class="row"><label>Nombre<input id="nm"></label><label>Rareza<select id="rz">' + RZ.map(function (r) { return '<option value="' + r + '"' + (r === c[4] ? " selected" : "") + ">" + (r || "(ninguna)") + "</option>"; }).join("") + "</select></label></div>" +
+      '<label>T\u00edtulo del producto<input id="ti" maxlength="80"></label>' +
+      '<label>Categor\u00eda<select id="ca">' + catOptions(cat, "cn") + "</select></label>" +
+      '<div class="row"><label>Precio $<input id="pr" type="number" min="1" step="1" placeholder="a mano"></label><label>Stock<input id="st" type="number" min="1" step="1" value="1"></label></div>' +
+      '<button class="go" id="add">Cargar nueva</button>' +
+      '<div id="out"></div><div id="ex" class="hint">Buscando si ya la ten\u00e9s cargada\u2026</div>' +
+      '<div class="log" id="log"></div>';
+    $("#nm").value = c[1];
+    $("#ti").value = titleFor(c, cat);
+    var te;
+    $("#nm").oninput = function () { c[1] = this.value.trim(); $("#ti").value = titleFor(c, $("#ca").value); clearTimeout(te); te = setTimeout(function () { $("#ex").innerHTML = "Buscando si ya la ten\u00e9s cargada\u2026"; existentes(c); }, 500); };
+    $("#rz").onchange = function () { c[4] = this.value; $("#ti").value = titleFor(c, $("#ca").value); };
+    $("#ca").onchange = function () { $("#ti").value = titleFor(c, $("#ca").value); };
+    $("#add").onclick = function () { crear(c); };
+    $("#own").onchange = function () { if (this.files && this.files[0]) setOwn(this.files[0]); this.value = ""; };
+    $("#rmown").onclick = function () { setOwn(null); };
+    renderLog();
+    existentes(c);
+  }
   function showDetail(c) {
+    if (c.L === "cn") return showDetailCn(c);
     S.sel = c; S.own = null;
     root.querySelectorAll(".t").forEach(function (t) { t.classList.toggle("on", t.dataset.pid == c[0]); });
     var setFull = setOf(c), cat = guessCat(setFull, c.L);
@@ -282,9 +340,11 @@
     S.own = f || null;
     if (S.ownUrl) URL.revokeObjectURL(S.ownUrl);
     S.ownUrl = f ? URL.createObjectURL(f) : null;
-    if ($("#big")) $("#big").src = S.ownUrl || IMG(S.sel[0], 1000);
+    var cn = S.sel && S.sel.L === "cn";
+    if ($("#big")) { $("#big").src = S.ownUrl || (cn ? "" : IMG(S.sel[0], 1000)); if (cn) $("#big").hidden = !f; }
+    if ($("#nof")) $("#nof").hidden = !!f;
     if ($("#rmown")) $("#rmown").hidden = !f;
-    if ($("#fotoinfo")) $("#fotoinfo").textContent = f ? "Se va a subir tu foto (" + Math.round(f.size / 1024) + " KB)." : "o peg\u00e1 (Ctrl+V) / arrastr\u00e1 una imagen ac\u00e1";
+    if ($("#fotoinfo")) $("#fotoinfo").textContent = f ? "Se va a subir tu foto (" + Math.round(f.size / 1024) + " KB)." : cn ? "" : "o peg\u00e1 (Ctrl+V) / arrastr\u00e1 una imagen ac\u00e1";
   }
   root.addEventListener("paste", function (e) {
     if (!S.sel || host.hidden) return;
@@ -311,7 +371,7 @@
     var cat = $("#ca").value, title = $("#ti").value.trim(), price = Math.round(+$("#pr").value), stock = Math.round(+$("#st").value);
     if (!cat) return say("err", "Eleg\u00ed la categor\u00eda.");
     if (!title) return say("err", "Falta el t\u00edtulo.");
-    if (!(price > 0)) return say("err", "Pon\u00e9 un precio.");
+    if (!(price > 0) && !reemplaza) return say("err", "Pon\u00e9 un precio.");
     if (!(stock > 0) && !(reemplaza && stock === 0)) return say("err", "Pon\u00e9 el stock (1 o m\u00e1s).");
     lock(true);
     var reemplazada = false, nota = "", vieja = [];
@@ -324,8 +384,10 @@
         if (!S.own && $("#vf") && $("#vf").checked) vieja = (vp.imagenes || []).map(function (i) { return i.i_link; }).filter(Boolean);
       } catch (e) { lock(false); return say("err", "No se pudo republicar: " + esc(e.message)); }
       if (!(stock > 0)) { lock(false); return say("err", "Pon\u00e9 el stock (1 o m\u00e1s)."); }
+      if (!(price > 0)) { lock(false); return say("err", "Pon\u00e9 un precio."); }
     }
     async function subirStock() {
+      if (c.L === "cn" && !S.own) return [];             // chino sin foto: el producto va sin imagen
       say("hint", "Subiendo la foto\u2026");
       var blob = S.own || await fetch(IMG(c[0], 1000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("No pude bajar la foto de la carta"); return r.blob(); });
       var fd = new FormData(); fd.append("max_width", "600"); fd.append("max_height", "1200");
@@ -359,7 +421,8 @@
         nota = " Empretienda no acept\u00f3 la foto vieja, as\u00ed que puse la de stock.";
       }
       if (vieja.length && !nota) nota = " Con la foto de la publicaci\u00f3n vieja.";
-      S.catMap[c.L + "|" + setOf(c)] = +cat; ls.set("cats", S.catMap);
+      if (c.L === "cn") { S.catMap[cnKey(c)] = +cat; S.catMap["cn|last"] = +cat; } else S.catMap[c.L + "|" + setOf(c)] = +cat;
+      ls.set("cats", S.catMap);
       var id = prod && (prod.idProductos || (prod.producto && prod.producto.idProductos));
       S.log.unshift({ t: title, s: stock, p: price, id: id, nuevo: true, re: !!reemplaza });
       say("ok", "Listo: <b>" + esc(title) + "</b> " + (reemplaza ? "publicada de nuevo" : "cargada") + " con stock " + stock + " a " + money(price) + "." + borrada + nota + (id ? ' <a target="_blank" href="/productos/editar/' + id + '">Ver en el panel</a>' : ""));
@@ -368,6 +431,7 @@
     } catch (e) {
       var m = esc(e.message);
       if (reemplazada) m += ". <b>La publicaci\u00f3n vieja ya se borr\u00f3</b>: toc\u00e1 <b>Cargar nueva</b> para volver a intentar.";
+      else if (c.L === "cn" && !S.own && !vieja.length && /imag|foto/i.test(e.message)) m += ". Parece que Empretienda pide foto: agreg\u00e1 una (pegala o arrastrala) y prob\u00e1 de nuevo.";
       else if (/ya existe/i.test(e.message)) m += ". Ya hay un producto con ese t\u00edtulo: sumale stock, us\u00e1 <b>Borrar y publicar de nuevo</b> o cambi\u00e1 el t\u00edtulo.";
       say("err", "No se pudo cargar: " + m);
       if (reemplazada) existentes(c);
@@ -413,10 +477,11 @@
   });
   $("#res").addEventListener("click", function (e) {
     var t = e.target.closest(".t"); if (!t) return;
+    if (t.dataset.l === "cn") { if (S.cnRes[+t.dataset.i]) showDetail(S.cnRes[+t.dataset.i]); return; }
     var c = S.idx[t.dataset.l].cards.filter(function (x) { return x[0] == t.dataset.pid; })[0]; if (c) showDetail(c);
   });
   $("#lang").onchange = async function () { S.lang = this.value; ls.set("lang", S.lang); S.sel = null; try { await loadAll(); search(); } catch (e) { $("#res").innerHTML = '<div class="msg err">' + esc(e.message) + "</div>"; } };
-  $("#mult").onchange = function () { S.mult = Math.max(0.1, +this.value || 1); ls.set("mult", S.mult); if (S.sel) $("#pk").onchange(); };
+  $("#mult").onchange = function () { S.mult = Math.max(0.1, +this.value || 1); ls.set("mult", S.mult); if (S.sel && $("#pk")) $("#pk").onchange(); };
 
   window.__alumineCarga = { open: function () { host.hidden = false; $("#q").focus(); } };
 
