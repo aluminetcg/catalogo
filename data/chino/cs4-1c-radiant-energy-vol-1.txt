@@ -1,0 +1,24 @@
+# set: CS4.1C Radiant Energy Vol. 1
+001/004|Ducklett|
+002/004|Galarian Slowpoke|
+003/004|Lickitung|
+004/004|Player's Ceremony|
+005/004|Water Energy|
+006/004|Psychic Energy|
+007/004|Gym Trainer|
+008/004|Sordward & Shielbert|
+009/004|Piers|
+010/004|Poké Kid|
+011/004|Rose|
+012/004|Orbeetle V|
+013/004|Orbeetle VMAX|
+014/004|Centiskorch V|
+015/004|Centiskorch VMAX|
+016/004|Pikachu V|
+017/004|Pikachu VMAX|
+018/004|Zacian V|
+019/004|Pikachu VMAX|
+020/004|Eternatus V|
+021/004|Eternatus VMAX|
+022/004|Zacian V|
+023/004|Zamazenta V|
