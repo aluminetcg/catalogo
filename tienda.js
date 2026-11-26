@@ -19,6 +19,7 @@
   var ALL = null, loading = null, view = [], shown = 0, root, facetSearch = {}, expanded = {};
   var state = { q: "", sort: "rel", stock: true, min: "", max: "", f: {} };
   FACETS.forEach(function (f) { state.f[f[0]] = new Set(); });
+  state.mc = new Set();     // sub-filtro de Multicolor: colores que tiene que incluir la carta
 
   var fmt = function (n) { return n == null ? "" : "$" + Math.round(n).toLocaleString("es-AR"); };
   var norm = function (s) { return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9/ ]+/g, " ").replace(/\s+/g, " ").trim(); };
@@ -149,6 +150,9 @@
       if (!state.f[k].size) continue;
       if (Array.isArray(c[k]) ? !c[k].some(function (v) { return state.f[k].has(v); }) : !state.f[k].has(c[k] || (k === "color" ? "" : "Sin dato"))) return false;
     }
+    if (skip !== "mc" && state.mc.size && state.f.color.has("Multicolor") && (c.color || []).indexOf("Multicolor") >= 0) {
+      for (var m of state.mc) if (c.color.indexOf(m) < 0) return false;     // multicolor: tiene que tener todos los colores elegidos
+    }
     return true;
   }
   function score(c, toks) {
@@ -218,7 +222,7 @@
     $("#pMin").oninput = $("#pMax").oninput = deb;
     root.querySelectorAll("input.mini").forEach(function (i) { i.oninput = function () { facetSearch[i.dataset.fs] = norm(i.value); facetCounts(); }; });
     $("#reset").onclick = function () {
-      state.stock = true; state.min = state.max = ""; FACETS.forEach(function (f) { state.f[f[0]].clear(); });
+      state.stock = true; state.min = state.max = ""; FACETS.forEach(function (f) { state.f[f[0]].clear(); }); state.mc.clear();
       $("#fStock").checked = true; $("#pMin").value = $("#pMax").value = ""; apply();
     };
     $("#filters").addEventListener("click", function (e) {
@@ -226,7 +230,10 @@
       expanded[b.dataset.more] = !expanded[b.dataset.more]; facetCounts();
     });
     $("#filters").addEventListener("change", function (e) {
+      var m = e.target.closest("input[data-mc]");
+      if (m) { if (m.checked) state.mc.add(m.dataset.mc); else state.mc["delete"](m.dataset.mc); apply(true); return; }
       var i = e.target.closest("input[data-k]"); if (!i) return;
+      if (i.dataset.k === "color" && i.dataset.v === "Multicolor" && !i.checked) state.mc.clear();
       var s = state.f[i.dataset.k]; if (i.checked) s.add(i.dataset.v); else s["delete"](i.dataset.v); apply(true);
     });
   }
@@ -236,6 +243,18 @@
     if (MANA[v]) return '<img src="https://svgs.scryfall.io/card-symbols/' + MANA[v] + '.svg" alt="" width="18" height="18" style="flex:none">';
     var bg = v === "Multicolor" ? "linear-gradient(135deg,#f8e7b9,#c9a54a)" : v === "Tierra" ? "#a5876a" : "";
     return bg ? '<span style="flex:none;width:18px;height:18px;border-radius:50%;background:' + bg + ';box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)"></span>' : "";
+  }
+  function subMulti() {      // debajo de Multicolor: elegir qué colores tiene que tener
+    var cnt = {};
+    ALL.forEach(function (c) {
+      if ((c.color || []).indexOf("Multicolor") < 0 || !matches(c, "mc")) return;
+      for (var m of state.mc) if (c.color.indexOf(m) < 0) return;
+      c.color.forEach(function (v) { cnt[v] = (cnt[v] || 0) + 1; });
+    });
+    return '<div style="margin:0 0 4px 26px;padding-left:8px;border-left:2px solid #e2e2dc">' + ["Blanco", "Azul", "Negro", "Rojo", "Verde"].map(function (v) {
+      var n = cnt[v] || 0;
+      return '<label class="opt' + (n ? "" : " zero") + '"><input type="checkbox" data-mc="' + v + '"' + (state.mc.has(v) ? " checked" : "") + ">" + mana(v) + "<span>" + v + '</span><span class="n">' + n.toLocaleString("es-AR") + "</span></label>";
+    }).join("") + "</div>";
   }
   function facetCounts() {
     FACETS.forEach(function (f) {
@@ -255,17 +274,22 @@
       var ob = $("#opts-" + k), hd = ob.previousElementSibling && ob.previousElementSibling.previousElementSibling;
       if (hd && hd.tagName === "H3") hd.hidden = !items.length;     // sin opciones (p. ej. Color cuando no hay Magic): ocultar el t\u00edtulo
       $("#opts-" + k).innerHTML = items.slice(0, lim).map(function (x) {
-        return '<label class="opt' + (x[1] ? "" : " zero") + '"><input type="checkbox" data-k="' + k + '" data-v="' + esc(x[0]) + '"' + (state.f[k].has(x[0]) ? " checked" : "") + ">" + (k === "color" ? mana(x[0]) : "") + "<span>" + esc(x[0]) + '</span><span class="n">' + x[1].toLocaleString("es-AR") + "</span></label>";
+        return '<label class="opt' + (x[1] ? "" : " zero") + '"><input type="checkbox" data-k="' + k + '" data-v="' + esc(x[0]) + '"' + (state.f[k].has(x[0]) ? " checked" : "") + ">" + (k === "color" ? mana(x[0]) : "") + "<span>" + esc(x[0]) + '</span><span class="n">' + x[1].toLocaleString("es-AR") + "</span></label>" + (k === "color" && x[0] === "Multicolor" && state.f.color.has("Multicolor") ? subMulti() : "");
       }).join("") + btn;
     });
   }
   function chips() {
     var box = $("#chips"); box.innerHTML = "";
+    state.mc.forEach(function (v) {
+      var d = document.createElement("span"); d.className = "chip"; d.textContent = "Multicolor con: " + v;
+      var b = document.createElement("button"); b.textContent = "×"; b.setAttribute("aria-label", "Quitar filtro");
+      b.onclick = function () { state.mc["delete"](v); apply(true); }; d.appendChild(b); box.appendChild(d);
+    });
     FACETS.forEach(function (f) {
       state.f[f[0]].forEach(function (v) {
         var d = document.createElement("span"); d.className = "chip"; d.textContent = f[1] + ": " + v;
         var b = document.createElement("button"); b.textContent = "×"; b.setAttribute("aria-label", "Quitar filtro");
-        b.onclick = function () { state.f[f[0]]["delete"](v); apply(true); }; d.appendChild(b); box.appendChild(d);
+        b.onclick = function () { state.f[f[0]]["delete"](v); if (f[0] === "color" && v === "Multicolor") state.mc.clear(); apply(true); }; d.appendChild(b); box.appendChild(d);
       });
     });
   }
