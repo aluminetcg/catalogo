@@ -1,0 +1,34 @@
+# set: CSVM1aC Master Strategy Deck Building Set (Charizard ex)
+001/033|Charmander|
+002/033|Charmeleon|
+003/033|Radiant Charizard|
+004/033|Manaphy|
+005/033|Rotom V|
+006/033|Charizard ex|
+007/033|Jirachi|
+008/033|Pidgey|
+009/033|Pidgeotto|
+010/033|Pidgeot ex|
+011/033|Counter Catcher|
+012/033|Super Rod|
+013/033|Buddy-Buddy Poffin|
+014/033|Nest Ball|
+015/033|Ultra Ball|
+016/033|Rare Candy|
+017/033|Switch|
+018/033|Lost Vacuum|
+019/033|Vitality Band|
+020/033|Choice Belt|
+021/033|Defiance Band|
+022/033|Forest Seal Stone|
+023/033|Vengeful Punch|
+024/033|Technical Machine: Devolution|
+025/033|Iono|
+026/033|Professor's Research|
+027/033|Professor Turo's Scenario|
+028/033|Arven|
+029/033|Boss's Orders|
+030/033|Collapsed Stadium|
+031/033|Town Store|
+032/033|Artazon|
+033/033|Mist Energy|
