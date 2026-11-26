@@ -144,7 +144,7 @@ const facetSearch = {}, expanded = {};   // texto del mini buscador de cada face
 
 // ---------- carga
 const ago = iso => { const m = Math.round((Date.now() - new Date(iso)) / 60000); return m < 2 ? "recién" : m < 90 ? `hace ${m} min` : m < 2880 ? `hace ${Math.round(m / 60)} h` : `hace ${Math.round(m / 1440)} días`; };
-(window.CARDS ? Promise.resolve(window.CARDS) : fetch("data/cards.json?t=" + Math.floor(Date.now() / 6e5), { cache: "no-cache" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })).then(data => {
+(window.CARDS ? Promise.resolve(window.CARDS) : fetch("data/version.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : {}).catch(() => ({})).then(v => fetch("data/cards.json?v=" + encodeURIComponent(v.v || Math.floor(Date.now() / 6e5)))).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })).then(data => {
   ALL = Array.isArray(data) ? data : data.cards;
   if (data.updated) $("#updated").textContent = "Precios y stock actualizados " + ago(data.updated) + ". ";
   for (const c of ALL) {
