@@ -1,0 +1,24 @@
+# set: CSVH5aC Happy Set: Dragonite & Mewtwo & Camerupt & Sinistcha (Modification Pack)
+001/023|Lugia ex|
+002/023|Kecleon|
+003/023|Regigigas|
+004/023|Audino|
+005/023|Bouffalant|
+006/023|Cramorant|
+007/023|Super Potion|
+008/023|Call Bell|
+009/023|Counter Catcher|
+010/023|Redeemable Ticket|
+011/023|Meddling Memo|
+012/023|Night Stretcher|
+013/023|Rescue Board|
+014/023|Powerglass|
+015/023|Cursed Duster|
+016/023|Bravery Charm|
+017/023|Lucky Helmet|
+018/023|Iris's Fighting Spirit|
+019/023|Drayton|
+020/023|Perrin|
+021/023|Iono|
+022/023|Boss's Orders|
+023/023|Lisia's Appeal|
