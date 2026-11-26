@@ -172,3 +172,6 @@
 163/103|Mew VMAX|
 164/103|Arceus VSTAR|
 165/103|Magikarp|
+R/RGB|Mew|
+G/RGB|Mew|
+B/RGB|Mew|

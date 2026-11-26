@@ -1,0 +1,60 @@
+# set: CSVH6C Happy Set: Trainer's Pokémon
+001/054|Ethan's Pinsir|
+002/054|Team Rocket's Tarountula|
+003/054|Team Rocket's Spidops|
+004/054|Ethan's Cyndaquil|
+005/054|Ethan's Quilava|
+006/054|Ethan's Typhlosion|
+007/054|Ethan's Slugma|
+008/054|Ethan's Magcargo|
+009/054|Misty's Psyduck|
+010/054|Misty's Staryu|
+011/054|Misty's Starmie|
+012/054|Misty's Magikarp|
+013/054|Misty's Gyarados|
+014/054|Misty's Lapras|
+015/054|Ethan's Pichu|
+016/054|Team Rocket's Mewtwo ex|
+017/054|Team Rocket's Wobbuffet|
+018/054|Cynthia's Gible|
+019/054|Cynthia's Gabite|
+020/054|Cynthia's Garchomp ex|
+021/054|Riolu|
+022/054|Lucario|
+023/054|Falinks|
+024/054|Cornerstone Mask Ogerpon|
+025/054|Team Rocket's Murkrow|
+026/054|Team Rocket's Sneasel|
+027/054|Cynthia's Spiritomb|
+028/054|Team Rocket's Rattata|
+029/054|Team Rocket's Raticate|
+030/054|Energy Sticker|
+031/054|Energy Switch|
+032/054|Super Rod|
+033/054|Sacred Ash|
+034/054|Nest Ball|
+035/054|Ultra Ball|
+036/054|Switch|
+037/054|Pokémon Catcher|
+038/054|Team Rocket's Great Ball|
+039/054|Team Rocket's Transceiver|
+040/054|Exp. Share|
+041/054|Cynthia's Power Weight|
+042/054|Judge|
+043/054|Lana's Aid|
+044/054|Youngster|
+045/054|Nemona|
+046/054|Professor's Research|
+047/054|Ethan's Adventure|
+048/054|Roark|
+049/054|Team Rocket's Ariana|
+050/054|Team Rocket's Archer|
+051/054|Team Rocket's Giovanni|
+052/054|Team Rocket's Petrel|
+053/054|Team Rocket's Proton|
+054/054|Team Rocket's Energy|
+055/054|Basic Grass Energy|
+056/054|Basic Fire Energy|
+057/054|Basic Water Energy|
+058/054|Basic Psychic Energy|
+059/054|Basic Fighting Energy|
