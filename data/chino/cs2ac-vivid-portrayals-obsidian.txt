@@ -1,0 +1,144 @@
+# set: CS2aC Vivid Portrayals (Obsidian)
+001/115|Weedle|C
+002/115|Kakuna|U
+003/115|Beedrill|U
+004/115|Paras|C
+005/115|Parasect|U
+006/115|Exeggcute|C
+007/115|Exeggutor|U
+008/115|Yanma|C
+009/115|Yanmega|U
+010/115|Pineco|C
+011/115|Nincada|C
+012/115|Ninjask|U
+013/115|Carnivine|U
+014/115|Shaymin|R
+015/115|Pansage|C
+016/115|Simisage|U
+017/115|Genesect|R
+018/115|Skiddo|C
+019/115|Gogoat|U
+020/115|Rowlet|C
+021/115|Dartrix|U
+022/115|Decidueye|R
+023/115|Dhelmise|U
+024/115|Orbeetle V|RR
+025/115|Orbeetle VMAX|RRR
+026/115|Zarude V|RR
+027/115|Charmander|C
+028/115|Charmeleon|U
+029/115|Charizard|U
+030/115|Charizard V|RR
+031/115|Charizard VMAX|RRR
+032/115|Slugma|C
+033/115|Magcargo|U
+034/115|Houndoom V|RR
+035/115|Pansear|C
+036/115|Simisear|U
+037/115|Reshiram|Amazing Rare
+038/115|Shedinja|U
+039/115|Wooper|C
+040/115|Quagsire|U
+041/115|Shuckle|U
+042/115|Phanpy|C
+043/115|Donphan|U
+044/115|Hitmontop|U
+045/115|Trapinch|C
+046/115|Vibrava|U
+047/115|Flygon|U
+048/115|Regirock|R
+049/115|Riolu|C
+050/115|Hippopotas|C
+051/115|Hippowdon|U
+052/115|Rhyperior V|RR
+053/115|Drilbur|C
+054/115|Terrakion|R
+055/115|Zygarde|R
+056/115|Rockruff|C
+057/115|Lycanroc|U
+058/115|Mudbray|C
+059/115|Mudsdale|U
+060/115|Passimian|C
+061/115|Coalossal V|RR
+062/115|Coalossal VMAX|RRR
+063/115|Clobbopus|C
+064/115|Grapploct|U
+065/115|Zamazenta|Amazing Rare
+066/115|Galarian Meowth|C
+067/115|Galarian Perrserker|U
+068/115|Forretress|U
+069/115|Steelix V|RR
+070/115|Scizor V|RR
+071/115|Scizor VMAX|RRR
+072/115|Skarmory|C
+073/115|Beldum|C
+074/115|Metang|U
+075/115|Metagross|U
+076/115|Lucario|U
+077/115|Dialga|R
+078/115|Excadrill|U
+079/115|Ferroseed|C
+080/115|Ferrothorn|U
+081/115|Galarian Stunfisk|U
+082/115|Magearna|R
+083/115|Duraludon|R
+084/115|Zacian|R
+085/115|Zamazenta|R
+086/115|Snorlax|R
+087/115|Teddiursa|C
+088/115|Ursaring|U
+089/115|Skitty|C
+090/115|Delcatty|U
+091/115|Salamence V|RR
+092/115|Salamence VMAX|RRR
+093/115|Rayquaza|Amazing Rare
+094/115|Starly|C
+095/115|Staravia|U
+096/115|Staraptor|U
+097/115|Ducklett|C
+098/115|Swanna|U
+099/115|Pikipek|C
+100/115|Trumbeak|U
+101/115|Toucannon|U
+102/115|Yell Horn|U
+103/115|Moomoo Cheese|U
+104/115|Struggle Gloves|U
+105/115|Cape of Toughness|U
+106/115|Billowing Smoke|U
+107/115|Allister|U
+108/115|Bea|U
+109/115|Leon|R
+110/115|Bird Keeper|U
+111/115|League Staff|U
+112/115|Circhester Bath|U
+113/115|Wyndon Stadium|U
+114/115|Stone Fighting Energy|U
+115/115|Powerful Colorless Energy|U
+116/115|Rowlet|S
+117/115|Dartrix|S
+118/115|Decidueye|S
+119/115|Ducklett|S
+120/115|Swanna|S
+121/115|Orbeetle V|SR
+122/115|Zarude V|SR
+123/115|Houndoom V|SR
+124/115|Rhyperior V|SR
+125/115|Coalossal V|SR
+126/115|Steelix V|SR
+127/115|Scizor V|SR
+128/115|Salamence V|SR
+129/115|Allister|SR
+130/115|Bea|SR
+131/115|Leon|SR
+132/115|Bird Keeper|SR
+133/115|Charizard V|SSR
+134/115|Charizard VMAX|SSR
+135/115|Orbeetle VMAX|HR
+136/115|Coalossal VMAX|HR
+137/115|Scizor VMAX|HR
+138/115|Salamence VMAX|HR
+139/115|Allister|HR
+140/115|Bea|HR
+141/115|Leon|HR
+142/115|Snorlax|UR
+143/115|Cape of Toughness|UR
