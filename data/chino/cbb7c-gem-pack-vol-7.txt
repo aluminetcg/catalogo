@@ -1,0 +1,197 @@
+# set: CBB7C Gem Pack Vol. 7
+0101/07|Team Rocket's Raticate|C
+0102/07|Team Rocket's Raticate|C
+0103/07|Team Rocket's Raticate|U
+0104/07|Team Rocket's Raticate|U
+0105/07|Team Rocket's Raticate|R
+0106/07|Team Rocket's Raticate|RR
+0107/07|Team Rocket's Raticate|RRR
+0201/07|Team Rocket's Meowth|C
+0202/07|Team Rocket's Meowth|C
+0203/07|Team Rocket's Meowth|U
+0204/07|Team Rocket's Meowth|U
+0205/07|Team Rocket's Meowth|R
+0206/07|Team Rocket's Meowth|RR
+0207/07|Team Rocket's Meowth|RRR
+0301/07|Misty's Psyduck|C
+0302/07|Misty's Psyduck|C
+0303/07|Misty's Psyduck|U
+0304/07|Misty's Psyduck|U
+0305/07|Misty's Psyduck|R
+0306/07|Misty's Psyduck|RR
+0307/07|Misty's Psyduck|RRR
+0401/07|Rapidash|C
+0402/07|Rapidash|C
+0403/07|Rapidash|U
+0404/07|Rapidash|U
+0405/07|Rapidash|R
+0406/07|Rapidash|RR
+0407/07|Rapidash|RRR
+0501/07|Team Rocket's Weezing|C
+0502/07|Team Rocket's Weezing|C
+0503/07|Team Rocket's Weezing|U
+0504/07|Team Rocket's Weezing|U
+0505/07|Team Rocket's Weezing|R
+0506/07|Team Rocket's Weezing|RR
+0507/07|Team Rocket's Weezing|RRR
+0601/07|Misty's Lapras|C
+0602/07|Misty's Lapras|C
+0603/07|Misty's Lapras|U
+0604/07|Misty's Lapras|U
+0605/07|Misty's Lapras|R
+0606/07|Misty's Lapras|RR
+0607/07|Misty's Lapras|RRR
+0701/07|Ethan's Typhlosion|C
+0702/07|Ethan's Typhlosion|C
+0703/07|Ethan's Typhlosion|U
+0704/07|Ethan's Typhlosion|U
+0705/07|Ethan's Typhlosion|R
+0706/07|Ethan's Typhlosion|RR
+0707/07|Ethan's Typhlosion|RRR
+0801/07|Furret|C
+0802/07|Furret|C
+0803/07|Furret|U
+0804/07|Furret|U
+0805/07|Furret|R
+0806/07|Furret|RR
+0807/07|Furret|RRR
+0901/07|Team Rocket's Murkrow|C
+0902/07|Team Rocket's Murkrow|C
+0903/07|Team Rocket's Murkrow|U
+0904/07|Team Rocket's Murkrow|U
+0905/07|Team Rocket's Murkrow|R
+0906/07|Team Rocket's Murkrow|RR
+0907/07|Team Rocket's Murkrow|RRR
+1001/07|Team Rocket's Wobbuffet|C
+1002/07|Team Rocket's Wobbuffet|C
+1003/07|Team Rocket's Wobbuffet|U
+1004/07|Team Rocket's Wobbuffet|U
+1005/07|Team Rocket's Wobbuffet|R
+1006/07|Team Rocket's Wobbuffet|RR
+1007/07|Team Rocket's Wobbuffet|RRR
+1101/07|Swinub|C
+1102/07|Swinub|C
+1103/07|Swinub|U
+1104/07|Swinub|U
+1105/07|Swinub|R
+1106/07|Swinub|RR
+1107/07|Swinub|RRR
+1201/07|Team Rocket's Houndoom|C
+1202/07|Team Rocket's Houndoom|C
+1203/07|Team Rocket's Houndoom|U
+1204/07|Team Rocket's Houndoom|U
+1205/07|Team Rocket's Houndoom|R
+1206/07|Team Rocket's Houndoom|RR
+1207/07|Team Rocket's Houndoom|RRR
+1301/07|Blaziken|C
+1302/07|Blaziken|C
+1303/07|Blaziken|U
+1304/07|Blaziken|U
+1305/07|Blaziken|R
+1306/07|Blaziken|RR
+1307/07|Blaziken|RRR
+1401/07|Clamperl|C
+1402/07|Clamperl|C
+1403/07|Clamperl|U
+1404/07|Clamperl|U
+1405/07|Clamperl|R
+1406/07|Clamperl|RR
+1407/07|Clamperl|RRR
+1501/07|Steven's Beldum|C
+1502/07|Steven's Beldum|C
+1503/07|Steven's Beldum|U
+1504/07|Steven's Beldum|U
+1505/07|Steven's Beldum|R
+1506/07|Steven's Beldum|RR
+1507/07|Steven's Beldum|RRR
+1601/07|Cynthia's Roserade|C
+1602/07|Cynthia's Roserade|C
+1603/07|Cynthia's Roserade|U
+1604/07|Cynthia's Roserade|U
+1605/07|Cynthia's Roserade|R
+1606/07|Cynthia's Roserade|RR
+1607/07|Cynthia's Roserade|RRR
+1701/07|Shaymin|C
+1702/07|Shaymin|C
+1703/07|Shaymin|U
+1704/07|Shaymin|U
+1705/07|Shaymin|R
+1706/07|Shaymin|RR
+1707/07|Shaymin|RRR
+1801/07|Crustle|C
+1802/07|Crustle|C
+1803/07|Crustle|U
+1804/07|Crustle|U
+1805/07|Crustle|R
+1806/07|Crustle|RR
+1807/07|Crustle|RRR
+1901/07|N's Zorua|C
+1902/07|N's Zorua|C
+1903/07|N's Zorua|U
+1904/07|N's Zorua|U
+1905/07|N's Zorua|R
+1906/07|N's Zorua|RR
+1907/07|N's Zorua|RRR
+2001/07|Lillie's Ribombee|C
+2002/07|Lillie's Ribombee|C
+2003/07|Lillie's Ribombee|U
+2004/07|Lillie's Ribombee|U
+2005/07|Lillie's Ribombee|R
+2006/07|Lillie's Ribombee|RR
+2007/07|Lillie's Ribombee|RRR
+2101/07|Lycanroc|C
+2102/07|Lycanroc|C
+2103/07|Lycanroc|U
+2104/07|Lycanroc|U
+2105/07|Lycanroc|R
+2106/07|Lycanroc|RR
+2107/07|Lycanroc|RRR
+2201/07|Arven's Greedent|C
+2202/07|Arven's Greedent|C
+2203/07|Arven's Greedent|U
+2204/07|Arven's Greedent|U
+2205/07|Arven's Greedent|R
+2206/07|Arven's Greedent|RR
+2207/07|Arven's Greedent|RRR
+2301/07|Team Rocket's Orbeetle|C
+2302/07|Team Rocket's Orbeetle|C
+2303/07|Team Rocket's Orbeetle|U
+2304/07|Team Rocket's Orbeetle|U
+2305/07|Team Rocket's Orbeetle|R
+2306/07|Team Rocket's Orbeetle|RR
+2307/07|Team Rocket's Orbeetle|RRR
+2401/07|Hop's Wooloo|C
+2402/07|Hop's Wooloo|C
+2403/07|Hop's Wooloo|U
+2404/07|Hop's Wooloo|U
+2405/07|Hop's Wooloo|R
+2406/07|Hop's Wooloo|RR
+2407/07|Hop's Wooloo|RRR
+2501/07|Marnie's Morpeko|C
+2502/07|Marnie's Morpeko|C
+2503/07|Marnie's Morpeko|U
+2504/07|Marnie's Morpeko|U
+2505/07|Marnie's Morpeko|R
+2506/07|Marnie's Morpeko|RR
+2507/07|Marnie's Morpeko|RRR
+2601/07|Team Rocket's Spidops|C
+2602/07|Team Rocket's Spidops|C
+2603/07|Team Rocket's Spidops|U
+2604/07|Team Rocket's Spidops|U
+2605/07|Team Rocket's Spidops|R
+2606/07|Team Rocket's Spidops|RR
+2607/07|Team Rocket's Spidops|RRR
+2701/07|Iono's Kilowattrel|C
+2702/07|Iono's Kilowattrel|C
+2703/07|Iono's Kilowattrel|U
+2704/07|Iono's Kilowattrel|U
+2705/07|Iono's Kilowattrel|R
+2706/07|Iono's Kilowattrel|RR
+2707/07|Iono's Kilowattrel|RRR
+2801/07|Hydrapple|C
+2802/07|Hydrapple|C
+2803/07|Hydrapple|U
+2804/07|Hydrapple|U
+2805/07|Hydrapple|R
+2806/07|Hydrapple|RR
+2807/07|Hydrapple|RRR
