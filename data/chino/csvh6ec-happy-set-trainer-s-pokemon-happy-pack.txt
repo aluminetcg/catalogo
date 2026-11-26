@@ -1,0 +1,50 @@
+# set: CSVH6eC Happy Set: Trainer's Pokémon (Happy Pack)
+001/049|Pineco|
+002/049|Shroomish|
+003/049|Breloom|
+004/049|Virizion|
+005/049|Fomantis|
+006/049|Lurantis|
+007/049|Nymble|
+008/049|Pansear|
+009/049|Simisear|
+010/049|Darumaka|
+011/049|Darmanitan|
+012/049|Turtonator|
+013/049|Jynx|
+014/049|Buizel|
+015/049|Floatzel|
+016/049|Arrokuda|
+017/049|Barraskewda|
+018/049|Emolga|
+019/049|Togedemaru|
+020/049|Clefairy|
+021/049|Clefable|
+022/049|Alolan Marowak|
+023/049|Sigilyph|
+024/049|Elgyem|
+025/049|Beheeyem|
+026/049|Sylveon|
+027/049|Milcery|
+028/049|Sandshrew|
+029/049|Sandslash|
+030/049|Cubone|
+031/049|Meditite|
+032/049|Medicham|
+033/049|Regirock|
+034/049|Paldean Wooper|
+035/049|Lokix|
+036/049|Forretress|
+037/049|Skarmory|
+038/049|Taillow|
+039/049|Swellow|
+040/049|Minccino|
+041/049|Cinccino|
+042/049|Komala|
+043/049|Squawkabilly|
+044/049|Black Belt's Training|
+045/049|Black Belt's Training|
+046/049|Black Belt's Training|
+047/049|Professor's Research|
+048/049|Professor's Research|
+049/049|Professor's Research|
