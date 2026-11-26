@@ -627,7 +627,7 @@
     try {
       var meta = await fetch(PAGES + "data/singles/meta.json?t=" + Math.floor(Date.now() / 36e5)).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
       S.usd = meta.usd || 0;
-      $("#dolar").textContent = S.usd ? "D\u00f3lar oficial " + money(S.usd) : "Sin d\u00f3lar: pon\u00e9 el precio a mano";
+      $("#dolar").textContent = S.usd ? "D\u00f3lar " + (meta.usd_kind || "oficial") + " " + money(S.usd) : "Sin d\u00f3lar: pon\u00e9 el precio a mano";
       await token();
       S.cats = flatCats(await api("/categoria"), [], []);
       await loadAll();

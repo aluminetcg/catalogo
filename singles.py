@@ -125,10 +125,17 @@ def ck_prices():
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     meta = {"files": {}}
-    try:
-        meta["usd"], meta["usd_source"] = dolar_oficial()
+    try:                            # la carga rápida usa el dólar cripto (venta); si no anda, el oficial
+        d = requests.get("https://dolarapi.com/v1/dolares/cripto", timeout=30).json()
+        meta["usd"], meta["usd_source"], meta["usd_kind"] = float(d["venta"]), "dolarapi.com", "cripto"
     except Exception as e:
-        print(f"AVISO: sin dólar oficial ({e})")
+        print(f"AVISO: sin dólar cripto ({e}), uso el oficial")
+        try:
+            meta["usd"], meta["usd_source"] = dolar_oficial()
+            meta["usd_kind"] = "oficial"
+        except Exception as e:
+            print(f"AVISO: sin dólar oficial ({e})")
+    print(f"Dólar {meta.get('usd_kind')}: {meta.get('usd')}")
     for key, cat in CATS.items():
         try:
             groups, stamp = load_tcg(cat)
