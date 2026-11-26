@@ -1,0 +1,60 @@
+# set: CS2DaC Family Pokémon Trading Card Game
+001/053|Phantump|
+002/053|Trevenant|
+003/053|Gossifleur|
+004/053|Eldegoss|
+005/053|Appletun V|
+006/053|Zarude|
+007/053|Vulpix|
+008/053|Ninetales|
+009/053|Victini|
+010/053|Cinderace V|
+011/053|Sizzlipede|
+012/053|Centiskorch|
+013/053|Qwilfish|
+014/053|Greninja V|
+015/053|Chewtle|
+016/053|Drednaw|
+017/053|Arrokuda|
+018/053|Barraskewda|
+019/053|Pikachu V|
+020/053|Shinx|
+021/053|Luxio|
+022/053|Luxray|
+023/053|Zeraora|
+024/053|Morpeko|
+025/053|Mankey|
+026/053|Primeape|
+027/053|Lucario V|
+028/053|Clobbopus|
+029/053|Grapploct|
+030/053|Falinks|
+031/053|Tyranitar V|
+032/053|Carvanha|
+033/053|Sharpedo|
+034/053|Darkrai|
+035/053|Zorua|
+036/053|Zoroark|
+037/053|Eevee|
+038/053|Snorlax|
+039/053|Wooloo|
+040/053|Potion|
+041/053|Crushing Hammer|
+042/053|Great Ball|
+043/053|Switch|
+044/053|Pokémon Catcher|
+045/053|Level Ball|
+046/053|Cook|
+047/053|Shauna|
+048/053|Judge|
+049/053|Leon|
+050/053|Professor's Research|
+051/053|Boss's Orders|
+052/053|Hop|
+053/053|Bug Catcher|
+054|Grass Energy|
+055|Fire Energy|
+056|Water Energy|
+057|Lightning Energy|
+058|Fighting Energy|
+059|Darkness Energy|
