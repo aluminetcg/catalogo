@@ -86,9 +86,10 @@
     var img = await createImageBitmap(blob), w = img.width, h = img.height;
     var cv = document.createElement("canvas"); cv.width = w; cv.height = h;
     var x = cv.getContext("2d"); x.drawImage(img, 0, 0);
-    var g = x.createLinearGradient(0, 0, w, h);
-    ["#ff4d6d", "#ffb84d", "#fff36b", "#5dff9e", "#4dd2ff", "#7a6bff", "#ff6bdc", "#ff4d6d"].forEach(function (col, i, a) { g.addColorStop(i / (a.length - 1), col); });
-    x.globalCompositeOperation = "overlay"; x.globalAlpha = 0.32; x.fillStyle = g; x.fillRect(0, 0, w, h);
+    var g = x.createLinearGradient(0, 0, w, h), N = 2.5, K = 24;     // arco\u00edris completo repetido en franjas diagonales
+    for (var i = 0; i <= K; i++) g.addColorStop(i / K, "hsl(" + Math.round(i / K * 360 * N) % 360 + ",100%,55%)");
+    x.globalCompositeOperation = "overlay"; x.globalAlpha = 0.6; x.fillStyle = g; x.fillRect(0, 0, w, h);
+    x.globalCompositeOperation = "soft-light"; x.globalAlpha = 0.35; x.fillRect(0, 0, w, h);
     var s = x.createLinearGradient(w * 0.15, 0, w * 0.85, h);
     s.addColorStop(0, "rgba(255,255,255,0)"); s.addColorStop(0.42, "rgba(255,255,255,0)"); s.addColorStop(0.5, "rgba(255,255,255,.55)");
     s.addColorStop(0.58, "rgba(255,255,255,0)"); s.addColorStop(1, "rgba(255,255,255,0)");
