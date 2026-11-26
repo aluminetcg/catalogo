@@ -1,0 +1,33 @@
+# set: CSVM2cC Master Strategy Deck Building Set (Gholdengo ex)
+001/032|Shaymin|
+002/032|Iron Bundle|
+003/032|Mew ex|
+004/032|Gimmighoul|
+005/032|Munkidori|
+006/032|Fezandipiti ex|
+007/032|Gholdengo ex|
+008/032|Dunsparce|
+009/032|Dudunsparce|
+010/032|Energy Retrieval|
+011/032|Counter Catcher|
+012/032|Superior Energy Retrieval|
+013/032|Earthen Vessel|
+014/032|Buddy-Buddy Poffin|
+015/032|Nest Ball|
+016/032|Ultra Ball|
+017/032|Picnic Basket|
+018/032|Prime Catcher|
+019/032|Pokégear 3.0|
+020/032|Switch|
+021/032|Night Stretcher|
+022/032|Rigid Band|
+023/032|Technical Machine: Evolution|
+024/032|Ciphermaniac's Codebreaking|
+025/032|Lana's Aid|
+026/032|Iono|
+027/032|Professor Turo's Scenario|
+028/032|Arven|
+029/032|Boss's Orders|
+030/032|Jamming Tower|
+031/032|Artazon|
+032/032|Calamitous Snowy Mountain|
