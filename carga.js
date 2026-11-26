@@ -417,8 +417,15 @@
         if (num.indexOf("/") > 0) return w.indexOf("/") > 0 && nnum(w) === num;
         var m = w.match(/^[a-z]*0*(\d+)[a-z]*$/); return !!dig && !!m && m[1] === dig;
       }); });
+      var viejas = false;
+      if (!hits.length && c.L === "mtg") {      // publicaciones de Magic de antes, sin n\u00famero en el t\u00edtulo: alcanza con el nombre exacto
+        var nm = norm(name);
+        hits = (list || []).filter(function (p) { var t = norm(p.p_nombre); return (t === nm || t.indexOf(nm + " ") === 0) && !/#\s*\d/.test(p.p_nombre); });
+        viejas = hits.length > 0;
+      }
       if (!hits.length) { box.innerHTML = "No hay ning\u00fan producto con ese nombre y n\u00famero en tu tienda."; return; }
-      box.innerHTML = "<b>Ya ten\u00e9s cargada" + (hits.length > 1 ? "s estas" : " esta") + ":</b>" + hits.map(function (p) {
+      box.innerHTML = (viejas ? "<b>Ten\u00e9s publicaciones con este nombre pero sin n\u00famero</b> (de antes). Fijate en la foto si es la misma versi\u00f3n:" :
+        "<b>Ya ten\u00e9s cargada" + (hits.length > 1 ? "s estas" : " esta") + ":</b>") + hits.map(function (p) {
         var s = (p.stock || [])[0] || {};
         S.oldImgs[p.idProductos] = (p.imagenes || []).map(function (i) { return i.i_link; }).filter(Boolean);
         return '<div class="ex">' + (S.oldImgs[p.idProductos][0] ? '<img src="' + CDN + S.oldImgs[p.idProductos][0] + '" alt="" style="width:46px;height:64px;object-fit:contain;flex:none;border-radius:4px">' : "") + '<div>' + esc(p.p_nombre) + "<br><small>Stock " + (s.s_ilimitado ? "ilimitado" : s.s_cantidad) + " \u00b7 " + money(p.p_precio) + (p.p_desactivado ? " \u00b7 desactivado" : "") + "</small></div>" +
