@@ -1,0 +1,45 @@
+# set: CSVNC Kitakami Special Pack
+001/040|Dipplin|
+002/040|Dipplin|
+003/040|Dipplin|
+004/040|Hydrapple ex|
+005/040|Poltchageist|
+006/040|Poltchageist|
+007/040|Sinistcha|
+008/040|Sinistcha ex|
+009/040|Teal Mask Ogerpon|
+010/040|Teal Mask Ogerpon|
+011/040|Teal Mask Ogerpon ex|
+012/040|Hearthflame Mask Ogerpon|
+013/040|Hearthflame Mask Ogerpon ex|
+014/040|Goldeen|
+015/040|Seaking|
+016/040|Wellspring Mask Ogerpon|
+017/040|Wellspring Mask Ogerpon ex|
+018/040|Swirlix|
+019/040|Munkidori|
+020/040|Fezandipiti|
+021/040|Bloodmoon Ursaluna|
+022/040|Okidogi|
+023/040|Cornerstone Mask Ogerpon|
+024/040|Cornerstone Mask Ogerpon ex|
+025/040|Okidogi ex|
+026/040|Munkidori ex|
+027/040|Fezandipiti ex|
+028/040|Pecharunt|
+029/040|Pecharunt ex|
+030/040|Dipplin|
+031/040|Bloodmoon Ursaluna ex|
+032/040|Ogre's Mask|
+033/040|Binding Mochi|
+034/040|Caretaker|
+035/040|Perrin|
+036/040|Kieran|
+037/040|Carmine|
+038/040|Briar|
+039/040|Festival Grounds|
+040/040|Community Center|
+041/040|Teal Mask Ogerpon|
+042/040|Pecharunt|
+043/040|Teal Mask Ogerpon ex|
+044/040|Carmine|
