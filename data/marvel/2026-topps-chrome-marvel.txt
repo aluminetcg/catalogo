@@ -1,0 +1,201 @@
+# set: 2026 Topps Chrome Marvel
+1|Abomination|
+2|Adam Warlock|
+3|Agatha Harkness|
+4|Amaranth|
+5|America Chavez|
+6|Ant-Man|
+7|Apocalypse|
+8|Ares|
+9|Baron Zemo|
+10|Beast|
+11|Beta Ray Bill|
+12|Black Bolt|
+13|Black Cat|
+14|Black Knight|
+15|Black Panther|
+16|Black Widow|
+17|Blade|
+18|Blink|
+19|Captain America|
+20|Captain Britain|
+21|Captain Marvel|
+22|Carnage|
+23|Colossus|
+24|Cyclops|
+25|Daredevil|
+26|Dazzler|
+27|Dark Gwenpool|
+28|Doctor Doom|
+29|Doctor Octopus|
+30|Domino|
+31|Doomasaur|
+32|Dormammu|
+33|Dragonfire|
+34|Emma Frost|
+35|Enchantress|
+36|Eternity|
+37|Forge|
+38|Galactus|
+39|Gambit|
+40|Gamora|
+41|Ghost Rider|
+42|Ghost-Spider|
+43|Glob|
+44|Goblin Queen|
+45|Green Goblin|
+46|Groot|
+47|Hawkeye|
+48|Hercules|
+49|Hope Summers|
+50|Hulk|
+51|Human Torch|
+52|Iceman|
+53|Ikaris|
+54|Infernal Hulk|
+55|Invisible Woman|
+56|Iron Fist|
+57|Iron Man|
+58|Ironheart|
+59|Jean Grey|
+60|Jeff the Land Shark|
+61|Jubilee|
+62|Juggernaut|
+63|Kate Bishop|
+64|Kid Juggernaut|
+65|Kingpin|
+66|Kitty Pryde|
+67|Kraven the Hunter|
+68|Leader|
+69|Lizard|
+70|Lockjaw|
+71|Longshot|
+72|Luke Cage|
+73|M.O.D.O.K.|
+74|Magneto|
+75|Man-Thing|
+76|Mantis|
+77|Mephisto|
+78|Miles Morales|
+79|Mister Fantastic|
+80|Mister Sinister|
+81|Moon Knight|
+82|Moonstar|
+83|Ms. Marvel|
+84|Mutina|
+85|Mysterio|
+86|Mystique|
+87|Nightcrawler|
+88|Nightdrifter|
+89|Nova|
+90|Omega Red|
+91|Professor X|
+92|Psylocke|
+93|Quicksilver|
+94|Rasputin IV|
+95|Rek-Rap|
+96|Revelation|
+97|Rhino|
+98|Rocket Raccoon|
+99|Rogue|
+100|Sleeper Agent|
+101|Angela|
+102|Anti-Venom|
+103|Arachnix|
+104|Arcade|
+105|Archangel|
+106|Chameleon|
+107|Clea|
+108|Cosmic Ghost Rider|
+109|Deathlok|
+110|Devil Dinosaur|
+111|Doctor Strange|
+112|Doom 2099|
+113|Doyle Dormammu|
+114|Elbecca Voss|
+115|Electro|
+116|Elektra|
+117|Evangeline Whedon|
+118|Exodus|
+119|Glitch|
+120|Grandmaster|
+121|Gwenpool|
+122|Hallows' Eve|
+123|Hellcat|
+124|Hellgate|
+125|Hellverine|
+126|Hobgoblin|
+127|Iron Cat|
+128|Kid Venom|
+129|Knull|
+130|Lady Henrietta|
+131|Loki|
+132|Luna Snow|
+133|Maestro|
+134|Magik|
+135|Mar-Vell|
+136|Mary Jane|
+137|Misery|
+138|Moon Girl|
+139|Nimrod|
+140|SP//dr|
+141|Rachel Summers|
+142|Raelith|
+143|Rapid|
+144|Sabretooth|
+145|Scarlet Witch|
+146|Scarlet Spider|
+147|Scorpion|
+148|Scream|
+149|Sentry|
+150|Shang-Chi|
+151|She-Hulk|
+152|She-Venom|
+153|Shocker|
+154|Shuri|
+155|Silence|
+156|Silk|
+157|Silver Surfer|
+158|Silver Sable|
+159|Sister Sorrow|
+160|Spider-Boy|
+161|Spider-Girl|
+162|Spider-Ham|
+163|Spider-Man|
+164|Spider-Man 2099|
+165|Spider-Man Noir|
+166|Spider-Punk|
+167|Spider-Woman|
+168|Star-Lord|
+169|Storm|
+170|Strong Guy|
+171|Stryfe|
+172|Sunspot|
+173|Taskmaster|
+174|Thanos|
+175|The Thing|
+176|Thena|
+177|Thor|
+178|Throg|
+179|Tigra|
+180|Tombstone|
+181|Toxin|
+182|U.S. Agent|
+183|Ultimate Daredevil|
+184|Ultimate Wolverine|
+185|Ultron|
+186|Valeria Richards|
+187|Venom|
+188|Venomizer|
+189|Venomouse|
+190|Vision|
+191|Vulcan|
+192|Vulture|
+193|War Machine|
+194|Wasp|
+195|Werewolf by Night|
+196|White Fox|
+197|White Tiger|
+198|Wiccan|
+199|Wolverine|
+200|X-23|
