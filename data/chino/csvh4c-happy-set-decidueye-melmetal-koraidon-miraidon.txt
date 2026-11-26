@@ -1,0 +1,66 @@
+# set: CSVH4C Happy Set: Decidueye & Melmetal & Koraidon & Miraidon
+001/059|Rowlet|
+002/059|Dartrix|
+003/059|Decidueye|
+004/059|Teal Mask Ogerpon|
+005/059|Gouging Fire|
+006/059|Iron Hands|
+007/059|Girafarig|
+008/059|Latias|
+009/059|Scream Tail|
+010/059|Iron Valiant|
+011/059|Iron Boulder|
+012/059|Sudowoodo|
+013/059|Great Tusk|
+014/059|Sandy Shocks|
+015/059|Mawile|
+016/059|Beldum|
+017/059|Metang|
+018/059|Togedemaru|
+019/059|Meltan|
+020/059|Melmetal ex|
+021/059|Zacian|
+022/059|Koraidon|
+023/059|Miraidon|
+024/059|Miraidon ex|
+025/059|Farfetch'd|
+026/059|Chatot|
+027/059|Audino|
+028/059|Hawlucha|
+029/059|Squawkabilly|
+030/059|Iron Jugulis|
+031/059|Energy Search|
+032/059|Great Ball|
+033/059|Super Rod|
+034/059|Earthen Vessel|
+035/059|Techno Radar|
+036/059|Nest Ball|
+037/059|Ultra Ball|
+038/059|Rare Candy|
+039/059|Switch|
+040/059|Pokémon Catcher|
+041/059|Bug Catching Set|
+042/059|Vitality Band|
+043/059|Ancient Booster Energy Capsule|
+044/059|Future Booster Energy Capsule|
+045/059|Defiance Band|
+046/059|Professor Sada's Vitality|
+047/059|Dendra|
+048/059|Judge|
+049/059|Lana's Aid|
+050/059|Youngster|
+051/059|Rika|
+052/059|Nemona|
+053/059|Nemona|
+054/059|Professor's Research|
+055/059|Professor's Research|
+056/059|Arezu|
+057/059|Professor Turo's Scenario|
+058/059|Bill's Transfer|
+059/059|Morty's Conviction|
+060/059|Basic Grass Energy|
+061/059|Basic Fire Energy|
+062/059|Basic Lightning Energy|
+063/059|Basic Psychic Energy|
+064/059|Basic Fighting Energy|
+065/059|Basic Metal Energy|
