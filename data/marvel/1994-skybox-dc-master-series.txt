@@ -1,0 +1,91 @@
+# set: 1994 SkyBox DC Master Series
+1|Superman|
+2|Supergirl|
+3|Superboy|
+4|Steel|
+5|Cyborg|
+6|Lex Luthor II|
+7|The Eradicator|
+8|Mongul|
+9|Doomsday|
+10|Glorith & Mordru|
+11|Valor|
+12|Emerald Dragon|
+13|Live Wire|
+14|Saturn Girl|
+15|Cosmic Boy|
+16|Virus & Pulse|
+17|Andromeda|
+18|Polestar|
+19|Vril Dox|
+20|Captain Atom|
+21|Mirage|
+22|Martian Manhunter|
+23|Nightwing|
+24|Geo-Force|
+25|Battalion|
+26|Arsenal|
+27|Ferrin Colos|
+28|Batman|
+29|Robin|
+30|Azrael - Batman|
+31|Bane|
+32|Oracle|
+33|The Joker|
+34|Ra's Al Ghul|
+35|Catwoman|
+36|Two-Face|
+37|Monarch|
+38|Vandal Savage|
+39|Raven|
+40|Poison Ivy|
+41|Black Adam|
+42|Darkseid|
+43|Brimstone|
+44|Doctor Polaris|
+45|Blaze|
+46|Green Lantern|
+47|Alan Scott|
+48|Guy Gardner: Warrior|
+49|Sinestro|
+50|Hal Jordan|
+51|Guardians of the Universe|
+52|Impulse|
+53|The Flash|
+54|Max Mercury|
+55|The Spectre|
+56|The Demon|
+57|Phantom Stranger|
+58|Deadman|
+59|Eclipso|
+60|Dr. Fate|
+61|Orion|
+62|Lobo|
+63|Deathstroke, The Terminator|
+64|Green Arrow|
+65|Gypsy|
+66|Changeling|
+67|Crimson Fox|
+68|Metamorpho|
+69|Maxima|
+70|Aquaman|
+71|Huntress|
+72|The Atom|
+73|Damage|
+74|Anima|
+75|Argus|
+76|Triumph|
+77|Technocrat & Wylde|
+78|The Ray|
+79|Starman|
+80|Gunfire|
+81|Faust|
+82|Hawkman|
+83|Hawkwoman|
+84|The Guardian|
+85|Wonder Woman|
+86|Blue Beetle / Booster Gold|
+87|Black Canary|
+88|Power Girl|
+89|Shazam!|
+90|Checklist CL|
