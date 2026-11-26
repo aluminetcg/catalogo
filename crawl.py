@@ -396,12 +396,13 @@ def load_mtg_colors():
     meta = next((b for b in lista.get("data") or [] if b.get("type") == "oracle_cards"), None)
     if not meta:
         raise RuntimeError(f"Scryfall no listó oracle_cards: {str(lista)[:200]}")
-    uri = meta.get("download_uri") or meta.get("uri")
-    if not meta.get("download_uri"):
-        print(f"  bulk oracle_cards sin download_uri, claves: {sorted(meta)} {[(k, v) for k, v in meta.items() if isinstance(v, str) and v.startswith('http')]}", flush=True)
-        meta = requests.get(meta["uri"], headers=h, timeout=60).json()
-        uri = meta.get("download_uri")
-    cards = requests.get(uri, headers=h, timeout=600).json()
+    import gzip
+    if meta.get("download_uri"):                                    # formato viejo: un JSON con la lista
+        cards = requests.get(meta["download_uri"], headers=h, timeout=600).json()
+    else:                                                           # formato actual: JSON Lines comprimido
+        raw = requests.get(meta["jsonl_download_uri"], headers=h, timeout=600).content
+        txt = gzip.decompress(raw) if raw[:2] == b"\x1f\x8b" else raw
+        cards = [json.loads(l) for l in txt.decode("utf-8").splitlines() if l.strip()]
     out = {}
     for c in cards:
         cols = c.get("colors")
