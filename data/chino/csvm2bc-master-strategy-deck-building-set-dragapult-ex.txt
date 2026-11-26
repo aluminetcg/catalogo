@@ -1,0 +1,35 @@
+# set: CSVM2bC Master Strategy Deck Building Set (Dragapult ex)
+001/034|Budew|
+002/034|Munkidori|
+003/034|Hawlucha|
+004/034|Fezandipiti ex|
+005/034|Dreepy|
+006/034|Drakloak|
+007/034|Dragapult ex|
+008/034|Tatsugiri|
+009/034|Bloodmoon Ursaluna ex|
+010/034|Unfair Stamp|
+011/034|Counter Catcher|
+012/034|Earthen Vessel|
+013/034|Buddy-Buddy Poffin|
+014/034|Nest Ball|
+015/034|Ultra Ball|
+016/034|Rare Candy|
+017/034|Switch|
+018/034|Night Stretcher|
+019/034|Exp. Share|
+020/034|Rescue Board|
+021/034|Defiance Band|
+022/034|Technical Machine: Evolution|
+023/034|Technical Machine: Devolution|
+024/034|Jacq|
+025/034|Brock's Scouting|
+026/034|Iono|
+027/034|Professor's Research|
+028/034|Professor Turo's Scenario|
+029/034|Arven|
+030/034|Boss's Orders|
+031/034|Artazon|
+032/034|Pokémon League Headquarters|
+033/034|Neo Upper Energy|
+034/034|Luminous Energy|
