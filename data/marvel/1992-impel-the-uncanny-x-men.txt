@@ -1,0 +1,101 @@
+# set: 1992 Impel The Uncanny X-Men
+1|Beast|
+2|Wolverine|
+3|Havok|
+4|Iceman|
+5|Phoenix|
+6|Nightcrawler|
+7|Cannonball|
+8|Wolfsbane|
+9|Siryn|
+10|Lockheed|
+11|Professor X|
+12|Psylocke|
+13|Domino|
+14|Storm|
+15|Meggan|
+16|Feral|
+17|Cyclops|
+18|Gambit|
+19|Cable|
+20|Archangel|
+21|Banshee|
+22|Shadowcat|
+23|Kylun|
+24|Jean Grey|
+25|Colossus|
+26|Warpath|
+27|Polaris|
+28|Boom Boom|
+29|Jubilee|
+30|Shatterstar|
+31|Strong Guy|
+32|Captain Britain|
+33|Forge|
+34|Multiple Man|
+35|Quicksilver|
+36|Rogue|
+37|Widget|
+38|Bishop|
+39|Maverick|
+40|Cerise|
+41|Magneto|
+42|Mr. Sinister|
+43|Deadpool|
+44|Proteus|
+45|Mojo II|
+46|Juggernaut|
+47|Sentinels|
+48|Gideon|
+49|Masque|
+50|Shiva|
+51|Apocalypse|
+52|Sabretooth|
+53|Mojo|
+54|Caliban|
+55|Gatecrasher|
+56|Brood|
+57|Blob|
+58|Stryfe|
+59|Warwolves|
+60|Omega Red|
+61|Black Tom|
+62|Mystique|
+63|Sauron|
+64|Saturnyne|
+65|Toad|
+66|Shadow King|
+67|White Queen|
+68|Mastermind|
+69|Deathbird|
+70|Lady Deathstrike|
+71|X-Men (Gold Strike Force) TM|
+72|X-Men (Blue Strike Force) TM|
+73|X-Factor TM|
+74|X-Force TM|
+75|Excalibur TM|
+76|Hellfire Club TM|
+77|Mutant Liberation Front TM|
+78|Brotherhood of Evil Mutants TM|
+79|Upstarts TM|
+80|Technet TM|
+81|Sunspot EX|
+82|Dark Phoenix EX|
+83|Longshot EX|
+84|Magik EX|
+85|Dazzler EX|
+86|Starjammers AL|
+87|Imperial Guard AL|
+88|Lilandra AL|
+89|W.H.O. AL|
+90|Roma AL|
+91|Nightcrawler DR, PUZ|
+92|Archangel DR, PUZ|
+93|Storm DR, PUZ|
+94|Gambit DR, PUZ|
+95|Wolverine DR, PUZ|
+96|Shatterstar DR, PUZ|
+97|Cyclops DR, PUZ|
+98|Cable DR, PUZ|
+99|Colossus DR, PUZ|
+100|Checklist / Cerebro CL|
