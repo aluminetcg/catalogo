@@ -1,0 +1,184 @@
+# set: CS3DC Primordial Arts V Starter Deck
+001/170|Ledyba|
+002/170|Ledian|
+003/170|Yanma|
+004/170|Yanmega|
+005/170|Heracross|
+006/170|Tropius|
+007/170|Genesect|
+008/170|Fomantis|
+009/170|Lurantis|
+010/170|Bounsweet|
+011/170|Steenee|
+012/170|Tsareena|
+013/170|Rillaboom V|
+014/170|Rillaboom VMAX|
+015/170|Zarude|
+016/170|Slugma|
+017/170|Magcargo|
+018/170|Heatmor|
+019/170|Larvesta|
+020/170|Volcarona|
+021/170|Litleo|
+022/170|Pyroar|
+023/170|Scorbunny|
+024/170|Raboot|
+025/170|Cinderace|
+026/170|Cinderace V|
+027/170|Cinderace VMAX|
+028/170|Remoraid|
+029/170|Octillery|
+030/170|Suicune|
+031/170|Spheal|
+032/170|Sealeo|
+033/170|Walrein|
+034/170|Luvdisc|
+035/170|Buizel|
+036/170|Floatzel|
+037/170|Bergmite|
+038/170|Avalugg|
+039/170|Volcanion|
+040/170|Chewtle|
+041/170|Drednaw|
+042/170|Cramorant|
+043/170|Cramorant|
+044/170|Ice Rider Calyrex V|
+045/170|Chinchou|
+046/170|Lanturn|
+047/170|Electrike|
+048/170|Manectric|
+049/170|Shinx|
+050/170|Luxio|
+051/170|Luxray|
+052/170|Emolga|
+053/170|Tapu Koko|
+054/170|Zeraora|
+055/170|Zeraora V|
+056/170|Gastly|
+057/170|Haunter|
+058/170|Gengar|
+059/170|Sableye|
+060/170|Spoink|
+061/170|Grumpig|
+062/170|Lunatone|
+063/170|Chimecho|
+064/170|Sigilyph|
+065/170|Golett|
+066/170|Golurk|
+067/170|Espurr|
+068/170|Meowstic|
+069/170|Swirlix|
+070/170|Slurpuff|
+071/170|Xerneas|
+072/170|Necrozma V|
+073/170|Shadow Rider Calyrex V|
+074/170|Onix|
+075/170|Sudowoodo|
+076/170|Gligar|
+077/170|Gliscor|
+078/170|Mienfoo|
+079/170|Mienshao|
+080/170|Zygarde|
+081/170|Crabrawler|
+082/170|Crabominable|
+083/170|Clobbopus|
+084/170|Grapploct|
+085/170|Stonjourner|
+086/170|Single Strike Urshifu V|
+087/170|Rapid Strike Urshifu V|
+088/170|Murkrow|
+089/170|Honchkrow|
+090/170|Galarian Slowking V|
+091/170|Galarian Slowking VMAX|
+092/170|Houndour|
+093/170|Houndoom|
+094/170|Sableye|
+095/170|Absol|
+096/170|Venipede|
+097/170|Whirlipede|
+098/170|Scolipede|
+099/170|Scraggy|
+100/170|Scrafty|
+101/170|Hoopa|
+102/170|Steelix|
+103/170|Mawile|
+104/170|Ferroseed|
+105/170|Ferrothorn|
+106/170|Pawniard|
+107/170|Bisharp|
+108/170|Cobalion|
+109/170|Magearna|
+110/170|Corviknight V|
+111/170|Corviknight VMAX|
+112/170|Zacian|
+113/170|Spearow|
+114/170|Fearow|
+115/170|Kangaskhan|
+116/170|Tauros|
+117/170|Snorlax|
+118/170|Lugia|
+119/170|Shaymin|
+120/170|Tornadus V|
+121/170|Fletchling|
+122/170|Fletchinder|
+123/170|Talonflame|
+124/170|Furfrou|
+125/170|Drampa|
+126/170|Indeedee|
+127/170|Escape Rope|
+128/170|Energy Retrieval|
+129/170|Energy Switch|
+130/170|Urn of Vitality|
+131/170|Camping Gear|
+132/170|Fog Crystal|
+133/170|Quick Ball|
+134/170|Expedition Uniform|
+135/170|Evolution Incense|
+136/170|Great Ball|
+137/170|Turbo Patch|
+138/170|Drone Rotom|
+139/170|Rare Candy|
+140/170|Switch|
+141/170|Pokémon Catcher|
+142/170|Metal Saucer|
+143/170|Moomoo Cheese|
+144/170|Exp. Share|
+145/170|Vitality Band|
+146/170|Rocky Helmet|
+147/170|Beauty|
+148/170|Allister|
+149/170|Caitlin|
+150/170|Karen's Conviction|
+151/170|Agatha|
+152/170|Korrina's Focus|
+153/170|Bruno|
+154/170|Judge|
+155/170|Siebold|
+156/170|Brawly|
+157/170|Doctor|
+158/170|Professor's Research|
+159/170|Poké Kid|
+160/170|Boss's Orders|
+161/170|Hop|
+162/170|Opal|
+163/170|Marnie|
+164/170|Bug Catcher|
+165/170|Melony|
+166/170|Single Strike Energy|
+167/170|Aurora Energy|
+168/170|Capture Energy|
+169/170|Powerful Colorless Energy|
+170/170|Rapid Strike Energy|
+171/170|Octillery|
+172/170|Houndoom|
+173/170|Galarian Slowking V|
+174/170|Galarian Slowking V|
+175/170|Corviknight V|
+176/170|Tornadus V|
+177/170|Tornadus V|
+178/170|Judge|
+179/170|Zeraora V|
+180/170|Corviknight V|
+181/170|Corviknight VMAX|
+182/170|Galarian Slowking VMAX|
+183/170|Corviknight VMAX|
