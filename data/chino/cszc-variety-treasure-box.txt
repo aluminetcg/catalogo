@@ -1,0 +1,69 @@
+# set: CSZC Variety Treasure Box
+001/066|Hisuian Voltorb|
+002/066|Entei V|
+003/066|Suicune V|
+004/066|Lumineon V|
+005/066|Manaphy|
+006/066|Hisuian Basculin|
+007/066|Sobble|
+008/066|Drizzile|
+009/066|Inteleon|
+010/066|Mareep|
+011/066|Flaaffy|
+012/066|Raikou V|
+013/066|Mew|
+014/066|Pumpkaboo|
+015/066|Diancie|
+016/066|Drapion V|
+017/066|Altaria|
+018/066|Snorlax|
+019/066|Dunsparce|
+020/066|Lugia VSTAR|
+021/066|Swablu|
+022/066|Bidoof|
+023/066|Bibarel|
+024/066|Arceus VSTAR|
+025/066|Archeops|
+026/066|Hisuian Zoroark VSTAR|
+027/066|Minccino|
+028/066|Hawlucha|
+029/066|Escape Rope|
+030/066|Switch Cart|
+031/066|Energy Switch|
+032/066|Capturing Aroma|
+033/066|Canceling Cologne|
+034/066|Ultra Ball|
+035/066|Battle VIP Pass|
+036/066|Hisuian Heavy Ball|
+037/066|Rare Candy|
+038/066|Switch|
+039/066|Level Ball|
+040/066|Lost Vacuum|
+041/066|Cleansing Gloves|
+042/066|Choice Belt|
+043/066|Tool Jammer|
+044/066|Colress's Experiment|
+045/066|Irida|
+046/066|Raihan|
+047/066|Klara|
+048/066|Worker|
+049/066|Serena|
+050/066|Roxanne|
+051/066|Professor's Research|
+052/066|Zinnia's Resolve|
+053/066|Boss's Orders|
+054/066|Path to the Peak|
+055/066|Temple of Sinnoh|
+056/066|Lost City|
+057/066|Gift Energy|
+058/066|Double Turbo Energy|
+059/066|Grass Energy|
+060/066|Fire Energy|
+061/066|Water Energy|
+062/066|Lightning Energy|
+063/066|Psychic Energy|
+064/066|Fighting Energy|
+065/066|Darkness Energy|
+066/066|Metal Energy|
+067/066|Kricketune|
+068/066|Ditto|
