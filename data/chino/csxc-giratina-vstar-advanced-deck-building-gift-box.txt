@@ -1,0 +1,21 @@
+# set: CSXC Giratina VSTAR Advanced Deck Building Gift Box
+001/020|Cramorant|
+002/020|Sableye|
+003/020|Comfey|
+004/020|Giratina V|
+005/020|Escape Rope|
+006/020|Switch Cart|
+007/020|Energy Recycler|
+008/020|Ultra Ball|
+009/020|Battle VIP Pass|
+010/020|Hisuian Heavy Ball|
+011/020|Mirage Gate|
+012/020|Level Ball|
+013/020|Lost Vacuum|
+014/020|Choice Belt|
+015/020|Colress's Experiment|
+016/020|Raihan|
+017/020|Judge|
+018/020|Professor's Research|
+019/020|Boss's Orders|
+020/020|Lost City|
