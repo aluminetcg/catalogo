@@ -1,0 +1,140 @@
+# set: CSVL2C Travel Theme Pack
+001/052|Scyther|
+002/052|Pineco|
+003/052|Forretress ex|
+004/052|Smoliv|
+005/052|Dolliv|
+006/052|Arboliva|
+007/052|Toedscool|
+008/052|Toedscruel ex|
+009/052|Capsakid|
+010/052|Scovillain|
+011/052|Rellor|
+012/052|Espathra ex|
+013/052|Wo-Chien ex|
+014/052|Charmeleon|
+015/052|Entei|
+016/052|Charcadet|
+017/052|Armarouge|
+018/052|Chi-Yu ex|
+019/052|Greninja ex|
+020/052|Finizen|
+021/052|Palafin|
+022/052|Veluza|
+023/052|Dondozo|
+024/052|Tatsugiri|
+025/052|Toxel|
+026/052|Toxtricity|
+027/052|Iron Hands ex|
+028/052|Miraidon ex|
+029/052|Mew ex|
+030/052|Cleffa|
+031/052|Drifloon|
+032/052|Drifblim|
+033/052|Mime Jr.|
+034/052|Mimikyu|
+035/052|Ceruledge|
+036/052|Rabsca|
+037/052|Flittle|
+038/052|Nacli|
+039/052|Naclstack|
+040/052|Garganacl|
+041/052|Glimmet|
+042/052|Glimmora ex|
+043/052|Great Tusk ex|
+044/052|Charizard ex|
+045/052|Scizor|
+046/052|Iron Treads ex|
+047/052|Cyclizar|
+048/052|Pidgeot ex|
+049/052|Lechonk|
+050/052|Oinkologne|
+051/052|Tandemaus|
+052/052|Maushold|
+053/052|Scyther|
+054/052|Pineco|
+055/052|Smoliv|
+056/052|Dolliv|
+057/052|Arboliva|
+058/052|Toedscool|
+059/052|Capsakid|
+060/052|Scovillain|
+061/052|Rellor|
+062/052|Charmeleon|
+063/052|Entei|
+064/052|Charcadet|
+065/052|Armarouge|
+066/052|Finizen|
+067/052|Palafin|
+068/052|Veluza|
+069/052|Dondozo|
+070/052|Tatsugiri|
+071/052|Toxel|
+072/052|Toxtricity|
+073/052|Cleffa|
+074/052|Drifloon|
+075/052|Drifblim|
+076/052|Mime Jr.|
+077/052|Mimikyu|
+078/052|Ceruledge|
+079/052|Rabsca|
+080/052|Flittle|
+081/052|Nacli|
+082/052|Naclstack|
+083/052|Garganacl|
+084/052|Glimmet|
+085/052|Scizor|
+086/052|Cyclizar|
+087/052|Lechonk|
+088/052|Oinkologne|
+089/052|Tandemaus|
+090/052|Maushold|
+091/052|Crustle|
+092/052|Dottler|
+093/052|Toedscool|
+094/052|Magby|
+095/052|Psyduck|
+096/052|Marill|
+097/052|Snorunt|
+098/052|Mantyke|
+099/052|Vanillish|
+100/052|Palafin|
+101/052|Iron Bundle|
+102/052|Blitzle|
+103/052|Rabsca|
+104/052|Scream Tail|
+105/052|Larvitar|
+106/052|Groudon|
+107/052|Mienshao|
+108/052|Nidoking|
+109/052|Steelix|
+110/052|Ferrothorn|
+111/052|Aegislash|
+112/052|Aipom|
+113/052|Loudred|
+114/052|Porygon-Z|
+115/052|Skwovet|
+116/052|Cyclizar|
+117/052|Forretress ex|
+118/052|Toedscruel ex|
+119/052|Espathra ex|
+120/052|Glimmora ex|
+121/052|Great Tusk ex|
+122/052|Charizard ex|
+123/052|Iron Treads ex|
+124/052|Pidgeot ex|
+125/052|Greninja ex|
+126/052|Iron Hands ex|
+127/052|Mew ex|
+128/052|Charizard ex|
+129/052|Wo-Chien ex|
+130/052|Chi-Yu ex|
+131/052|Miraidon ex|
+132/052|Basic Grass Energy|
+133/052|Basic Fire Energy|
+134/052|Basic Water Energy|
+135/052|Basic Lightning Energy|
+136/052|Basic Psychic Energy|
+137/052|Basic Fighting Energy|
+138/052|Basic Darkness Energy|
+139/052|Basic Metal Energy|
