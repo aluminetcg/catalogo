@@ -1,0 +1,164 @@
+# set: CS5DC Brave Stars V Starter Deck
+001/153|Exeggcute|
+002/153|Exeggutor|
+003/153|Scyther|
+004/153|Heracross|
+005/153|Wurmple|
+006/153|Cascoon|
+007/153|Dustox|
+008/153|Roselia|
+009/153|Roserade|
+010/153|Leafeon V|
+011/153|Leafeon VSTAR|
+012/153|Shaymin|
+013/153|Karrablast|
+014/153|Rowlet|
+015/153|Dartrix|
+016/153|Growlithe|
+017/153|Arcanine|
+018/153|Ponyta|
+019/153|Rapidash|
+020/153|Slugma|
+021/153|Magcargo|
+022/153|Torkoal|
+023/153|Heatran V|
+024/153|Victini|
+025/153|Heatmor|
+026/153|Litleo|
+027/153|Pyroar|
+028/153|Staryu|
+029/153|Lapras|
+030/153|Corphish|
+031/153|Crawdaunt|
+032/153|Buizel|
+033/153|Floatzel|
+034/153|Shellos|
+035/153|Snover|
+036/153|Abomasnow|
+037/153|Glaceon V|
+038/153|Glaceon VSTAR|
+039/153|Keldeo|
+040/153|Chinchou|
+041/153|Lanturn|
+042/153|Mareep|
+043/153|Flaaffy|
+044/153|Thundurus|
+045/153|Helioptile|
+046/153|Heliolisk|
+047/153|Zeraora V|
+048/153|Zeraora VSTAR|
+049/153|Regieleki|
+050/153|Starmie|
+051/153|Mewtwo|
+052/153|Spoink|
+053/153|Grumpig|
+054/153|Baltoy|
+055/153|Claydol|
+056/153|Deoxys V|
+057/153|Deoxys VSTAR|
+058/153|Uxie|
+059/153|Sigilyph|
+060/153|Machamp V|
+061/153|Hitmontop|
+062/153|Nosepass|
+063/153|Gastrodon|
+064/153|Hippopotas|
+065/153|Hippowdon|
+066/153|Gallade V|
+067/153|Throh|
+068/153|Mienfoo|
+069/153|Mienshao|
+070/153|Landorus|
+071/153|Hisuian Decidueye|
+072/153|Rolycoly|
+073/153|Carkol|
+074/153|Coalossal|
+075/153|Kleavor|
+076/153|Murkrow|
+077/153|Honchkrow|
+078/153|Galarian Zigzagoon|
+079/153|Galarian Linoone|
+080/153|Galarian Obstagoon|
+081/153|Absol|
+082/153|Croagunk|
+083/153|Toxicroak|
+084/153|Darkrai|
+085/153|Darkrai V|
+086/153|Darkrai VSTAR|
+087/153|Magnemite|
+088/153|Magneton|
+089/153|Magnezone|
+090/153|Probopass|
+091/153|Escavalier|
+092/153|Durant|
+093/153|Cobalion|
+094/153|Klefki|
+095/153|Melmetal V|
+096/153|Farfetch'd|
+097/153|Snorlax|
+098/153|Snorlax|
+099/153|Dunsparce|
+100/153|Stantler|
+101/153|Castform|
+102/153|Chatot|
+103/153|Rufflet|
+104/153|Hisuian Braviary|
+105/153|Furfrou|
+106/153|Hawlucha|
+107/153|Drampa|
+108/153|Skwovet|
+109/153|Greedent|
+110/153|Indeedee|
+111/153|Wyrdeer V|
+112/153|Lucky Ice Pop|
+113/153|Wait and See Turbo|
+114/153|Escape Rope|
+115/153|Arc Phone|
+116/153|Switch Cart|
+117/153|Energy Loto|
+118/153|Energy Retrieval|
+119/153|Energy Switch|
+120/153|Fresh Water Set|
+121/153|Gutsy Pickaxe|
+122/153|Potion|
+123/153|Camping Gear|
+124/153|Boost Shake|
+125/153|Great Ball|
+126/153|Dark Patch|
+127/153|Toy Catcher|
+128/153|Ultra Ball|
+129/153|Battle VIP Pass|
+130/153|Switch|
+131/153|Pokémon Catcher|
+132/153|Rescue Carrier|
+133/153|Level Ball|
+134/153|Exp. Share|
+135/153|Choice Belt|
+136/153|Pot Helmet|
+137/153|Full Face Guard|
+138/153|Irida|
+139/153|Shauna|
+140/153|Cyllene|
+141/153|Judge|
+142/153|Barry|
+143/153|Cynthia's Ambition|
+144/153|Choy|
+145/153|Kamado|
+146/153|Professor's Research|
+147/153|Arezu|
+148/153|Zisu|
+149/153|Boss's Orders|
+150/153|Marnie's Pride|
+151/153|Jubilife Village|
+152/153|Magma Basin|
+153/153|Double Turbo Energy|
+154/153|Keldeo|
+155/153|Dunsparce|
+156/153|Professor's Research|
+157/153|Boss's Orders|
+158/153|Leafeon VSTAR|
+159/153|Glaceon VSTAR|
+160/153|Zeraora VSTAR|
+161/153|Deoxys VSTAR|
+162/153|Darkrai VSTAR|
+163/153|Energy Switch|
