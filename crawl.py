@@ -388,7 +388,7 @@ COLORES_ES = {"W": "Blanco", "U": "Azul", "B": "Negro", "R": "Rojo", "G": "Verde
 def load_mtg_colors():
     """{nombre normalizado: ["Rojo", "Verde", "Multicolor"]}. Se baja una vez por semana (Scryfall pide cachear)."""
     import precios
-    f = precios.CACHE / "mtg_colores.json"
+    f = precios.CACHE / "mtg_colores2.json"
     if f.exists() and time.time() - f.stat().st_mtime < 7 * 86400:
         return json.loads(f.read_text())
     h = {"User-Agent": "AlumineTCG-catalogo/1.0", "Accept": "application/json"}
@@ -403,8 +403,10 @@ def load_mtg_colors():
         raw = requests.get(meta["jsonl_download_uri"], headers=h, timeout=600).content
         txt = gzip.decompress(raw) if raw[:2] == b"\x1f\x8b" else raw
         cards = [json.loads(l) for l in txt.decode("utf-8").splitlines() if l.strip()]
-    out = {}
+    out, partes = {}, {}
     for c in cards:
+        if c.get("layout") in ("art_series", "token", "double_faced_token", "emblem", "planar", "scheme", "vanguard", "minigame"):
+            continue            # cartas de arte, tokens, etc.: suelen tener el mismo nombre que la carta real y vienen sin color
         cols = c.get("colors")
         if cols is None:
             cols = sorted({x for face in c.get("card_faces") or [] for x in face.get("colors") or []})
@@ -413,8 +415,11 @@ def load_mtg_colors():
             vals = ["Tierra" if "Land" in (c.get("type_line") or "") else "Incoloro"]
         elif len(vals) > 1:
             vals.append("Multicolor")
-        for name in [c["name"]] + c["name"].split(" // "):
-            out.setdefault(norm(name), vals)
+        out.setdefault(norm(c["name"]), vals)
+        for name in c["name"].split(" // ")[1:] if " // " not in c["name"] else c["name"].split(" // "):
+            partes.setdefault(norm(name), vals)
+    for k, v in partes.items():     # caras de cartas dobles: solo si no hay una carta con ese nombre exacto
+        out.setdefault(k, v)
     precios.CACHE.mkdir(parents=True, exist_ok=True)
     f.write_text(json.dumps(out, ensure_ascii=False))
     return out
