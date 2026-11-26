@@ -1,0 +1,180 @@
+# set: CS3bC Primordial Arts (Torrent)
+001/122|Cherubi|C
+002/122|Cherrim|R
+003/122|Carnivine|U
+004/122|Petilil|C
+005/122|Lilligant|U
+006/122|Dwebble|C
+007/122|Crustle|U
+008/122|Deerling|C
+009/122|Sawsbuck|U
+010/122|Bounsweet|C
+011/122|Steenee|U
+012/122|Tsareena|U
+013/122|Tapu Bulu|R
+014/122|Grookey|C
+015/122|Thwackey|U
+016/122|Rillaboom|R
+017/122|Blipbug|C
+018/122|Flapple V|RR
+019/122|Flapple VMAX|RRR
+020/122|Blaziken V|RR
+021/122|Blaziken VMAX|RRR
+022/122|Heatmor|U
+023/122|Litleo|C
+024/122|Pyroar|U
+025/122|Blastoise V|RR
+026/122|Blastoise VMAX|RRR
+027/122|Tentacool|C
+028/122|Tentacruel|U
+029/122|Horsea|C
+030/122|Seadra|U
+031/122|Kingdra|R
+032/122|Galarian Mr. Mime|C
+033/122|Galarian Mr. Rime|U
+034/122|Lapras|C
+035/122|Remoraid|C
+036/122|Octillery|R
+037/122|Carvanha|C
+038/122|Sharpedo|U
+039/122|Snorunt|C
+040/122|Froslass|R
+041/122|Frillish|C
+042/122|Jellicent|U
+043/122|Tapu Fini|R
+044/122|Ice Rider Calyrex V|RR
+045/122|Ice Rider Calyrex VMAX|RRR
+046/122|Chinchou|C
+047/122|Lanturn|U
+048/122|Shinx|C
+049/122|Luxio|U
+050/122|Luxray|R
+051/122|Pachirisu|C
+052/122|Blitzle|C
+053/122|Zebstrika|U
+054/122|Thundurus|R
+055/122|Zeraora V|RR
+056/122|Drowzee|C
+057/122|Hypno|U
+058/122|Galarian Articuno V|RR
+059/122|Ralts|C
+060/122|Kirlia|U
+061/122|Gardevoir|R
+062/122|Sableye|C
+063/122|Baltoy|C
+064/122|Claydol|U
+065/122|Necrozma V|RR
+066/122|Dottler|U
+067/122|Orbeetle|R
+068/122|Diglett|C
+069/122|Dugtrio|U
+070/122|Onix|C
+071/122|Cubone|C
+072/122|Marowak|U
+073/122|Gallade|U
+074/122|Roggenrola|C
+075/122|Boldore|U
+076/122|Gigalith|U
+077/122|Mienfoo|C
+078/122|Mienshao|U
+079/122|Passimian|U
+080/122|Silicobra|C
+081/122|Sandaconda|R
+082/122|Sandaconda V|RR
+083/122|Sandaconda VMAX|RRR
+084/122|Falinks|U
+085/122|Rapid Strike Urshifu V|RR
+086/122|Rapid Strike Urshifu VMAX|RRR
+087/122|Steelix|R
+088/122|Aron|C
+089/122|Lairon|U
+090/122|Aggron|U
+091/122|Metagross V|RR
+092/122|Metagross VMAX|RRR
+093/122|Pawniard|C
+094/122|Bisharp|U
+095/122|Porygon|C
+096/122|Porygon2|U
+097/122|Porygon-Z|R
+098/122|Zangoose|U
+099/122|Kecleon|U
+100/122|Stoutland V|RR
+101/122|Rufflet|C
+102/122|Braviary|U
+103/122|Furfrou|C
+104/122|Escape Rope|U
+105/122|Fan of Waves|U
+106/122|Expedition Uniform|U
+107/122|Level Ball|U
+108/122|Rugged Helmet|U
+109/122|Justified Gloves|U
+110/122|Fire-Resistant Gloves|U
+111/122|Rapid Strike Scroll of the Skies|U
+112/122|Rapid Strike Scroll of Swirls|U
+113/122|Caitlin|U
+114/122|Korrina's Focus|U
+115/122|Siebold|U
+116/122|Brawly|U
+117/122|Doctor|U
+118/122|Rapid Strike Style Mustard|U
+119/122|Melony|U
+120/122|Dyna Tree Hill|U
+121/122|Tower of Waters|U
+122/122|Rapid Strike Energy|U
+123/122|Kingdra|CHR
+124/122|Gardevoir|CHR
+125/122|Passimian|CHR
+126/122|Falinks|CHR
+127/122|Flapple V|SR
+128/122|Blaziken V|SR
+129/122|Blastoise V|SR
+130/122|Ice Rider Calyrex V|SR
+131/122|Ice Rider Calyrex V|SR
+132/122|Zeraora V|SR
+133/122|Zeraora V|SR
+134/122|Galarian Articuno V|SR
+135/122|Galarian Articuno V|SR
+136/122|Necrozma V|SR
+137/122|Sandaconda V|SR
+138/122|Sandaconda V|SR
+139/122|Rapid Strike Urshifu V|SR
+140/122|Rapid Strike Urshifu V|SR
+141/122|Metagross V|SR
+142/122|Stoutland V|SR
+143/122|Caitlin|SR
+144/122|Korrina's Focus|SR
+145/122|Siebold|SR
+146/122|Brawly|SR
+147/122|Doctor|SR
+148/122|Rapid Strike Style Mustard|SR
+149/122|Melony|SR
+150/122|Blaziken V|CSR
+151/122|Blaziken VMAX|CSR
+152/122|Ice Rider Calyrex V|CSR
+153/122|Ice Rider Calyrex VMAX|CSR
+154/122|Galarian Articuno V|CSR
+155/122|Rapid Strike Urshifu V|CSR
+156/122|Rapid Strike Urshifu VMAX|CSR
+157/122|Flapple VMAX|HR
+158/122|Blaziken VMAX|HR
+159/122|Blaziken VMAX|HR
+160/122|Blastoise VMAX|HR
+161/122|Ice Rider Calyrex VMAX|HR
+162/122|Ice Rider Calyrex VMAX|HR
+163/122|Sandaconda VMAX|HR
+164/122|Rapid Strike Urshifu VMAX|HR
+165/122|Rapid Strike Urshifu VMAX|HR
+166/122|Metagross VMAX|HR
+167/122|Caitlin|HR
+168/122|Korrina's Focus|HR
+169/122|Siebold|HR
+170/122|Brawly|HR
+171/122|Doctor|HR
+172/122|Rapid Strike Style Mustard|HR
+173/122|Melony|HR
+174/122|Octillery|UR
+175/122|Froslass|UR
+176/122|Fan of Waves|UR
+177/122|Level Ball|UR
+178/122|Rugged Helmet|UR
+179/122|Rapid Strike Energy|UR
