@@ -1,0 +1,173 @@
+# set: CS6bC Shadow of the Blue Sea (Banish)
+001/131|Seel|C
+002/131|Dewgong|U
+003/131|Horsea|C
+004/131|Seadra|U
+005/131|Kingdra|R
+006/131|Lapras|U
+007/131|Omastar V|RR
+008/131|Articuno|R
+009/131|Wailmer|C
+010/131|Wailord|U
+011/131|Snorunt|C
+012/131|Glalie|U
+013/131|Froslass|U
+014/131|Relicanth|C
+015/131|Luvdisc|C
+016/131|Finneon|C
+017/131|Lumineon|U
+018/131|Phione|R
+019/131|Hisuian Basculin|C
+020/131|Hisuian Basculegion|U
+021/131|Kyurem V|RR
+022/131|Kyurem VMAX|RRR
+023/131|Keldeo|U
+024/131|Dewpider|C
+025/131|Araquanid|U
+026/131|Cramorant|U
+027/131|Glastrier|R
+028/131|Radiant Alakazam|K
+029/131|Drowzee|C
+030/131|Hypno|U
+031/131|Exeggcute|C
+032/131|Exeggutor|U
+033/131|Mewtwo|R
+034/131|Girafarig|U
+035/131|Mawile|C
+036/131|Meditite|C
+037/131|Medicham|R
+038/131|Shuppet|C
+039/131|Banette|U
+040/131|Chimecho|C
+041/131|Whimsicott V|RR
+042/131|Whimsicott VSTAR|RRR
+043/131|Sigilyph|U
+044/131|Solosis|C
+045/131|Duosion|U
+046/131|Reuniclus|R
+047/131|Elgyem|C
+048/131|Beheeyem|U
+049/131|Swirlix|C
+050/131|Slurpuff|U
+051/131|Diancie|R
+052/131|Comfey|U
+053/131|Mimikyu|U
+054/131|Tapu Lele|R
+055/131|Indeedee|C
+056/131|Dreepy|C
+057/131|Drakloak|U
+058/131|Dragapult|R
+059/131|Spectrier|R
+060/131|Hisuian Arcanine V|RR
+061/131|Aerodactyl V|RR
+062/131|Aerodactyl VSTAR|RRR
+063/131|Phanpy|C
+064/131|Donphan|U
+065/131|Meditite|C
+066/131|Medicham|U
+067/131|Baltoy|C
+068/131|Claydol|U
+069/131|Anorith|U
+070/131|Armaldo|U
+071/131|Relicanth|U
+072/131|Golett|C
+073/131|Golurk|U
+074/131|Terrakion|R
+075/131|Pancham|C
+076/131|Binacle|C
+077/131|Barbaracle|R
+078/131|Hawlucha|C
+079/131|Rockruff|C
+080/131|Lycanroc|U
+081/131|Sandygast|C
+082/131|Palossand|U
+083/131|Stonjourner|U
+084/131|Stonjourner|U
+085/131|Hisuian Qwilfish|C
+086/131|Hisuian Overqwil|C
+087/131|Absol|R
+088/131|Skuntank V|RR
+089/131|Drapion V|RR
+090/131|Drapion VSTAR|RRR
+091/131|Purrloin|C
+092/131|Liepard|U
+093/131|Sandile|C
+094/131|Krokorok|U
+095/131|Krookodile|R
+096/131|Pangoro|U
+097/131|Skrelp|C
+098/131|Dragalge|U
+099/131|Hoopa|C
+100/131|Mareanie|C
+101/131|Toxapex|U
+102/131|Nickit|C
+103/131|Thievul|U
+104/131|Hisuian Sneasler V|RR
+105/131|Dragonite V|RR
+106/131|Dragonite VSTAR|RRR
+107/131|Giratina V|RR
+108/131|Giratina VSTAR|RRR
+109/131|Noibat|C
+110/131|Noivern|U
+111/131|Radiant Eternatus|K
+112/131|Pidgeot V|RR
+113/131|Snorlax|R
+114/131|Spinda|C
+115/131|Regigigas V|RR
+116/131|Regigigas VSTAR|RRR
+117/131|Minccino|C
+118/131|Cinccino|U
+119/131|Bouffalant|U
+120/131|Komala|U
+121/131|Unidentified Fossil|C
+122/131|Mirage Gate|U
+123/131|Lost Vacuum|U
+124/131|Earthen Seal Stone|R
+125/131|Colress's Experiment|U
+126/131|Lady|U
+127/131|Brandon|U
+128/131|Candice|U
+129/131|Fantina|U
+130/131|Lost City|U
+131/131|Regenerative Energy|U
+132/131|Lapras|AR
+133/131|Diancie|AR
+134/131|Comfey|AR
+135/131|Absol|AR
+136/131|Thievul|AR
+137/131|Omastar V|SR
+138/131|Kyurem V|SR
+139/131|Whimsicott V|SR
+140/131|Hisuian Arcanine V|SR
+141/131|Aerodactyl V|SR
+142/131|Aerodactyl V|SR
+143/131|Skuntank V|SR
+144/131|Skuntank V|SR
+145/131|Drapion V|SR
+146/131|Hisuian Sneasler V|SR
+147/131|Hisuian Sneasler V|SR
+148/131|Dragonite V|SR
+149/131|Giratina V|SR
+150/131|Giratina V|SR
+151/131|Pidgeot V|SR
+152/131|Colress's Experiment|SR
+153/131|Brandon|SR
+154/131|Candice|SR
+155/131|Fantina|SR
+156/131|Drapion V|SAR
+157/131|Regigigas VSTAR|SAR
+158/131|Colress's Experiment|SAR
+159/131|Kyurem VMAX|HR
+160/131|Whimsicott VSTAR|HR
+161/131|Aerodactyl VSTAR|HR
+162/131|Drapion VSTAR|HR
+163/131|Dragonite VSTAR|HR
+164/131|Giratina VSTAR|HR
+165/131|Colress's Experiment|HR
+166/131|Brandon|HR
+167/131|Candice|HR
+168/131|Fantina|HR
+169/131|Giratina VSTAR|UR
+170/131|Lost Vacuum|UR
+171/131|Water Energy|UR
+172/131|Fighting Energy|UR
