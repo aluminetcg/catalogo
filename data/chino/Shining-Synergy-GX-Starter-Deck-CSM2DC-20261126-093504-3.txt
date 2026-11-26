@@ -1,0 +1,58 @@
+# set: Shining Synergy GX Starter Deck CSM2DC
+301/342|Guzma & Hala|
+302/342|Nanu|
+303/342|Blue's Tactics|
+304/342|Judge|
+305/342|Cynthia|
+306/342|Cynthia & Caitlin|
+307/342|Brock's Training|
+308/342|TV Reporter|
+309/342|Volkner|
+310/342|Sabrina's Suggestion|
+311/342|Ingo & Emmet|
+312/342|Hau|
+313/342|Wicke|
+314/342|Tate & Liza|
+315/342|Apricorn Maker|
+316/342|Pokémon Center Lady|
+317/342|Pokémon Fan Club|
+318/342|Pokémon Breeder|
+319/342|Mars|
+320/342|Sophocles|
+321/342|Mallow|
+322/342|Mallow & Lana|
+323/342|Crasher Wake|
+324/342|Bill's Maintenance|
+325/342|Morty|
+326/342|Bug Catcher|
+327/342|Copycat|
+328/342|Clay|
+329/342|Welder|
+330/342|Lillie|
+331/342|Lusamine|
+332/342|Red & Blue|
+333/342|Red's Challenge|
+334/342|Roller Skater|
+335/342|Martial Arts Dojo|
+336/342|Misty's Cerulean City Gym|
+337/342|Devoured Field|
+338/342|Brooklet Hill|
+339/342|Sky Pillar|
+340/342|Brock's Pewter City Gym|
+341/342|Viridian Forest|
+342/342|Double Colorless Energy|
+343/342|Vileplume-GX|
+344/342|Flygon-GX|
+345/342|Erika's Hospitality|
+346/342|Judge|
+347/342|TV Reporter|
+348/342|Sophocles|
+349/342|Welder|
+350/342|Celebi & Venusaur-GX|
+351/342|Vileplume-GX|
+352/342|Dedenne-GX|
+353/342|Marshadow & Machamp-GX|
+354/342|Melmetal-GX|
+355/342|Judge Whistle|
+356/342|Fiery Flint|
+357/342|Counter Gain|
