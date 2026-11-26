@@ -8,6 +8,7 @@ unificada como en el catálogo y precio de mercado en USD por acabado. No se gua
 se arma en cada actualización y se publica junto con la web.
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -19,10 +20,30 @@ OUT = HERE / "_site" / "data" / "singles"
 CATS = {"en": 3, "jp": 85, "mtg": 1}   # Pokémon inglés y japonés, y Magic, en TCGplayer
 
 
+def norm_set(s):
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+
+
+def fotos_tienda():
+    """Fotos de las publicaciones que ya tenés: '1990 Impel Marvel Universe #19 - Mister Fantastic' -> (set, número) -> foto."""
+    out = {}
+    try:
+        for r in json.loads((HERE / "data" / "cards.json").read_text(encoding="utf-8"))["cards"]:
+            m = re.match(r"^(.*?) #(\S+) - (.+)$", r.get("title", ""))
+            if m and r.get("img") and r.get("game") == "Marvel y DC":
+                k = (norm_set(m.group(1)), m.group(2).lower())
+                if k not in out or r.get("stock"):
+                    out[k] = r["img"]
+    except Exception as e:
+        print(f"AVISO: sin fotos de la tienda ({e})")
+    return out
+
+
 def manual(carpeta="chino", key="cn", titulo="Base china"):
     """Bases armadas a mano (chino, Marvel y DC): data/<carpeta>/*.txt ('# set: Nombre' + líneas 'número|nombre|rareza').
     Si el mismo número de un set aparece en varios archivos, gana el más nuevo (por nombre de archivo)."""
     porset = {}
+    fotos = fotos_tienda() if key == "mv" else {}
     for f in sorted((HERE / "data" / carpeta).glob("*.txt")):
         s = None
         for line in f.read_text(encoding="utf-8").splitlines():
@@ -37,7 +58,8 @@ def manual(carpeta="chino", key="cn", titulo="Base china"):
     for gi, s in enumerate(sorted(porset)):
         sets.append([s, ""])
         for k, (num, name, rz) in sorted(porset[s].items()):
-            cards.append([f"{key}|{gi}|{k}", name, num, gi, rz, {}])
+            foto = fotos.get((norm_set(s), num.lower()))
+            cards.append([f"{key}|{gi}|{k}", name, num, gi, rz, {}] + ([foto] if foto else []))
     (OUT / f"{key}.json").write_text(json.dumps({"stamp": "", "sets": sets, "cards": cards}, ensure_ascii=False, separators=(",", ":")))
     print(f"{titulo}: {len(cards)} cartas en {len(sets)} sets")
     return len(cards)

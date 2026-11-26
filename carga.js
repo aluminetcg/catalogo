@@ -288,7 +288,7 @@
     if (cnHtml) cnHtml = '<div class="msg" style="padding:8px 0 0;text-align:left">Chino a mano (si no est\u00e1 en la base):</div>' + cnHtml;
     $("#res").innerHTML = out.length || cnHtml ? out.map(function (c) {
       var p = bestPrice(c[5]);
-      return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + esc(c[0]) + '" data-l="' + c.L + '">' + (MAN[c.L] ? '<div class="ph">' + (c.L === "cn" ? "\u4e2d" : "\u2605") + '</div>' : '<img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">') +
+      return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + esc(c[0]) + '" data-l="' + c.L + '">' + (MAN[c.L] ? (c[6] ? '<img loading="lazy" src="' + esc(c[6]) + '" alt="">' : '<div class="ph">' + (c.L === "cn" ? "\u4e2d" : "\u2605") + '</div>') : '<img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">') +
         '<b>' + (L.length > 1 || MAN[c.L] ? '<span class="lg">' + (c.L === "jp" ? "JAP" : c.L === "cn" ? "CHI" : c.L === "mtg" ? "MTG" : c.L === "mv" ? "M/DC" : "ING") + "</span> " : "") + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(setOf(c))) + "</small>" +
         "<small>" + esc(c[4] || "") + (p ? " \u00b7 US$" + p[1] : "") + "</small></div>";
     }).join("") + cnHtml : '<div class="msg">No encontr\u00e9 cartas con eso. Prob\u00e1 solo con el n\u00famero (143/128) o con otra parte del nombre.</div>';
@@ -327,6 +327,7 @@
     $("#det").innerHTML = '<img class="big" id="big" alt="" hidden><div class="nof" id="nof">Sin foto (es opcional).<br>Peg\u00e1 (Ctrl+V), arrastr\u00e1 o eleg\u00ed una foto si quer\u00e9s ponerle.</div>' +
       '<div class="foto"><label class="sec">Elegir foto<input id="own" type="file" accept="image/*" hidden></label>' +
       '<button class="sec" id="rmown" hidden>Sacar la foto</button><span id="fotoinfo"></span></div>' +
+      (c[6] ? '<label style="flex-direction:row;align-items:center;gap:6px"><input id="uf" type="checkbox" checked style="width:auto"> Usar la foto de tu publicaci\u00f3n anterior de esta carta</label>' : "") +
       '<div class="row"><label>Nombre<input id="nm"></label><label' + (L === "cn" ? "" : " hidden") + '>Rareza<select id="rz">' + rzs.map(function (r) { return '<option value="' + esc(r) + '"' + (r === c[4] ? " selected" : "") + ">" + esc(r || "(ninguna)") + "</option>"; }).join("") + "</select></label></div>" +
       (setFull ? '<div class="hint">De tu base ' + (L === "cn" ? "china" : "Marvel y DC") + ": " + esc(setFull) + " #" + esc(c[2]) + "</div>" : "") +
       '<label>T\u00edtulo del producto<input id="ti" maxlength="80"></label>' +
@@ -337,6 +338,7 @@
       '<div class="log" id="log"></div>';
     $("#nm").value = c[1];
     $("#ti").value = titleFor(c, cat);
+    if (c[6]) { $("#big").src = c[6]; $("#big").hidden = false; $("#nof").hidden = true; $("#fotoinfo").textContent = "Foto de una publicaci\u00f3n tuya de esta carta."; }
     var te;
     $("#nm").oninput = function () { c[1] = this.value.trim(); $("#ti").value = titleFor(c, $("#ca").value); clearTimeout(te); te = setTimeout(function () { $("#ex").innerHTML = "Buscando si ya la ten\u00e9s cargada\u2026"; existentes(c); }, 500); };
     $("#rz").onchange = function () { c[4] = this.value; $("#ti").value = titleFor(c, $("#ca").value); };
@@ -421,9 +423,9 @@
     if (S.ownUrl) URL.revokeObjectURL(S.ownUrl);
     S.ownUrl = f ? URL.createObjectURL(f) : null;
     var cn = S.sel && MAN[S.sel.L];
-    if ($("#big")) { $("#big").src = S.ownUrl || (cn ? "" : IMG(S.sel[0], 1000)); if (cn) $("#big").hidden = !f; }
+    if ($("#big")) { $("#big").src = S.ownUrl || (cn ? S.sel[6] || "" : IMG(S.sel[0], 1000)); if (cn) $("#big").hidden = !f && !S.sel[6]; }
     if (!f && !cn && $("#fx") && $("#fx").checked) foilPreview(S.sel);
-    if ($("#nof")) $("#nof").hidden = !!f;
+    if ($("#nof")) $("#nof").hidden = !!f || !!(cn && S.sel[6]);
     if ($("#rmown")) $("#rmown").hidden = !f;
     if ($("#fotoinfo")) $("#fotoinfo").textContent = f ? "Se va a subir tu foto (" + Math.round(f.size / 1024) + " KB)." : cn ? "" : "o peg\u00e1 (Ctrl+V) / arrastr\u00e1 una imagen ac\u00e1";
   }
@@ -457,6 +459,7 @@
     if (!(stock > 0) && !(reemplaza && stock === 0)) return say("err", "Pon\u00e9 el stock (1 o m\u00e1s).");
     lock(true);
     var reemplazada = false, nota = "", vieja = [];
+    if (MAN[c.L] && !S.own && c[6] && c[6].indexOf(CDN) === 0 && $("#uf") && $("#uf").checked) vieja = [c[6].slice(CDN.length)];   // foto de tu publicaci\u00f3n anterior
     if (reemplaza) {                   // datos frescos de la publicaci\u00f3n vieja: stock, precio y fotos
       try {
         var vp = await api("/producto/" + reemplaza), vs = (vp.stock || [])[0] || {};

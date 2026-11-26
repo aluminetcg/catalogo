@@ -1,0 +1,101 @@
+# set: 1993 SkyBox X-Men Series 2
+1|Archangel|
+2|Beast|
+3|Bishop|
+4|Boomer|
+5|Cable|
+6|Cannonball|
+7|Captain Britain|
+8|Cerise|
+9|Colossus|
+10|Cyclops|
+11|Domino|
+12|Gambit|
+13|Jean Grey|
+14|Havok|
+15|Iceman|
+16|Jubilee|
+17|Kylun|
+18|Meggan|
+19|Multiple Man|
+20|Nightcrawler|
+21|Phoenix|
+22|Polaris|
+23|Professor X|
+24|Psylocke|
+25|Quicksilver|
+26|Rictor|
+27|Rogue|
+28|Shadowcat|
+29|Shatterstar|
+30|Siryn|
+31|Storm|
+32|Strong Guy|
+33|Sunspot|
+34|Warpath|
+35|Wolfsbane|
+36|Wolverine|
+37|Archangel|
+38|Apocalypse|
+39|X-Men|
+40|Bishop|
+41|Fitzroy|
+42|Magneto|
+43|Cable|
+44|Stryfe|
+45|Acolytes|
+46|Storm|
+47|Mystique|
+48|X-Factor|
+49|Wolverine|
+50|Omega Red|
+51|Mr. Sinister|
+52|Wolverine|
+53|Sabretooth|
+54|Nasty Boys|
+55|Arcade|
+56|Black Queen|
+57|Black Tom|
+58|Blob|
+59|Jamie Braddock|
+60|The Brood|
+61|Callisto|
+62|Deadpool|
+63|Deathbird|
+64|Fenris|
+65|Gideon|
+66|Juggernaut|
+67|Lady Deathstrike|
+68|Mastermind|
+69|Mojo|
+70|Phantazia|
+71|Pyro|
+72|Sat-Yr-9|
+73|Sauron|
+74|The Sentinels|
+75|Shinobi|
+76|Hazard|
+77|Siena Blaze|
+78|Silver Fox|
+79|Toad|
+80|Tolliver|
+81|White Queen|
+82|Excalibur|
+83|X-Factor|
+84|X-Force|
+85|X-Men Blue|
+86|X-Men Gold|
+87|Brotherhood of Evil Mutants|
+88|Dark Riders|
+89|Mutant Liberation Front|
+90|Six Pack|
+91|Sabretooth unleashed!|
+92|The Sentinel strikes!|
+93|Persuasion, Gambit-style|
+94|Rogue and Storm in action!|
+95|Jubilee's fireworks|
+96|Beast hangs out.|
+97|The power of Professor X.|
+98|The claws of Wolverine.|
+99|The fury of Storm.|
+100|Checklist CL|
