@@ -1,0 +1,144 @@
+# set: CS2bC Vivid Portrayals (Indigo)
+001/115|Galarian Darmanitan|U
+002/115|Suicune|R
+003/115|Wailmer|C
+004/115|Wailord|R
+005/115|Relicanth|U
+006/115|Kyogre|Amazing Rare
+007/115|Panpour|C
+008/115|Simipour|U
+009/115|Galarian Darumaka|C
+010/115|Galarian Darmanitan V|RR
+011/115|Galarian Darmanitan VMAX|RRR
+012/115|Vanillite|C
+013/115|Vanillish|U
+014/115|Vanilluxe|U
+015/115|Mareanie|C
+016/115|Toxapex|U
+017/115|Chewtle|C
+018/115|Drednaw|U
+019/115|Drednaw V|RR
+020/115|Drednaw VMAX|RRR
+021/115|Cramorant|U
+022/115|Arrokuda|C
+023/115|Barraskewda|U
+024/115|Dracovish|R
+025/115|Arctovish|U
+026/115|Zapdos|R
+027/115|Ampharos V|RR
+028/115|Raikou|Amazing Rare
+029/115|Electrike|C
+030/115|Manectric|U
+031/115|Rotom|U
+032/115|Blitzle|C
+033/115|Zebstrika|U
+034/115|Joltik|C
+035/115|Galvantula|U
+036/115|Tynamo|C
+037/115|Eelektrik|U
+038/115|Eelektross|U
+039/115|Zekrom|R
+040/115|Tapu Koko|R
+041/115|Zeraora|R
+042/115|Pincurchin|U
+043/115|Pincurchin V|RR
+044/115|Dracozolt|U
+045/115|Arctozolt|R
+046/115|Clefairy|C
+047/115|Clefable|U
+048/115|Jigglypuff|C
+049/115|Wigglytuff|U
+050/115|Alakazam V|RR
+051/115|Girafarig|U
+052/115|Shuppet|C
+053/115|Banette|U
+054/115|Chimecho|C
+055/115|Woobat|C
+056/115|Swoobat|U
+057/115|Cottonee|C
+058/115|Whimsicott|U
+059/115|Gothita|C
+060/115|Gothorita|U
+061/115|Gothitelle|U
+062/115|Golett|C
+063/115|Golurk|U
+064/115|Dedenne|C
+065/115|Xerneas|R
+066/115|Diancie|R
+067/115|Milcery|C
+068/115|Alcremie|U
+069/115|Alcremie V|RR
+070/115|Alcremie VMAX|RRR
+071/115|Zacian|Amazing Rare
+072/115|Spinarak|C
+073/115|Ariados|U
+074/115|Crobat V|RR
+075/115|Crobat VMAX|RRR
+076/115|Poochyena|C
+077/115|Mightyena|U
+078/115|Sableye|U
+079/115|Drapion V|RR
+080/115|Sandile|C
+081/115|Krokorok|U
+082/115|Krookodile|U
+083/115|Scraggy|C
+084/115|Scrafty|U
+085/115|Trubbish|C
+086/115|Garbodor|U
+087/115|Inkay|C
+088/115|Malamar|U
+089/115|Hoopa|R
+090/115|Nickit|C
+091/115|Thievul|U
+092/115|Eternatus V|RR
+093/115|Eternatus VMAX|RRR
+094/115|Kangaskhan|R
+095/115|Dunsparce|C
+096/115|Whismur|C
+097/115|Loudred|U
+098/115|Exploud|U
+099/115|Chatot|C
+100/115|Tornadus|R
+101/115|Skwovet|C
+102/115|Greedent|U
+103/115|Team Yell Towel|U
+104/115|Drone Rotom|U
+105/115|Rare Fossil|U
+106/115|Hero's Medal|U
+107/115|Rocky Helmet|U
+108/115|Telescopic Sight|U
+109/115|Cara Liss|U
+110/115|Piers|U
+111/115|Opal|U
+112/115|Nessa|U
+113/115|Spikemuth|U
+114/115|Wash Water Energy|U
+115/115|Hiding Darkness Energy|U
+116/115|Suicune|S
+117/115|Dracovish|S
+118/115|Arctovish|S
+119/115|Rotom|S
+120/115|Dracozolt|S
+121/115|Arctozolt|S
+122/115|Galarian Darmanitan V|SR
+123/115|Drednaw V|SR
+124/115|Ampharos V|SR
+125/115|Alakazam V|SR
+126/115|Alcremie V|SR
+127/115|Crobat V|SR
+128/115|Drapion V|SR
+129/115|Eternatus V|SR
+130/115|Piers|SR
+131/115|Opal|SR
+132/115|Nessa|SR
+133/115|Crobat V|SSR
+134/115|Crobat VMAX|SSR
+135/115|Galarian Darmanitan VMAX|HR
+136/115|Drednaw VMAX|HR
+137/115|Alcremie VMAX|HR
+138/115|Eternatus VMAX|HR
+139/115|Piers|HR
+140/115|Opal|HR
+141/115|Nessa|HR
+142/115|Hero's Medal|UR
+143/115|Telescopic Sight|UR

@@ -131,7 +131,7 @@ function parse(texto) {
     const nombre = lineas[i - 1];                               // bloque: nombre, número, … , "Rareza (SIGLA)"
     if (!nombre || /^\d+$/.test(nombre) || NUM.test(nombre)) { malas.push(l); continue; }
     let rz = "";
-    for (let j = i + 1; j < Math.min(i + 6, lineas.length) && !NUM.test(lineas[j]); j++) { const s = lineas[j].match(SIGLA); if (s) { rz = s[1].toUpperCase(); break; } }
+    for (let j = i + 1; j < Math.min(i + 6, lineas.length) && !NUM.test(lineas[j]); j++) { const s = lineas[j].match(SIGLA); if (s) { rz = s[1].toUpperCase(); break; } if (/^Amazing Rare$/i.test(lineas[j])) { rz = "Amazing Rare"; break; } }
     out.push([l, limpiaNombre(nombre), rz]);
   }
   const vistos = {}, unicas = [];                             // un número = una carta (la última gana)
