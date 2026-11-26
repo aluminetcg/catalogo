@@ -1,0 +1,91 @@
+# set: 1992 Comic Images Wolverine From Then 'Til Now II
+1|Wolverine|
+2|Change|
+3|Mutation|
+4|Fox-Like|
+5|Aging|
+6|S.H.I.E.L.D.|
+7|Logan|
+8|Project X|
+9|Professor|
+10|Dr. A.B. Cornelius|
+11|Wild Beast|
+12|Helmet|
+13|I Like Him|
+14|Shiva|
+15|Triggers|
+16|Mutant Powers|
+17|Ferocious|
+18|Adamantium|
+19|Claws|
+20|Hunting|
+21|Berserk|
+22|Discipline|
+23|Wild Beast|
+24|Anamalistic|
+25|Department H|
+26|First Mission|
+27|First Defeat|
+28|Weapon Alpha|
+29|In Search Of|
+30|New X-Men|
+31|Krakoa|
+32|Teammates|
+33|Just Kidding|
+34|Resentment|
+35|Magneto|
+36|Costume|
+37|Phoenix|
+38|Mariko|
+39|Alpha Flight|
+40|Hellfire Club|
+41|Slice and Dice|
+42|Old Ties|
+43|Disgrace|
+44|New Threads|
+45|The Brood|
+46|Shadowcat / Wolverine|
+47|Fastball Special|
+48|Vindicator|
+49|Mutant Massacre|
+50|Gray Hulk|
+51|Resurrection|
+52|Patch|
+53|Genosha|
+54|Donald Pierce|
+55|Reavers|
+56|Jubilation Lee|
+57|1941|
+58|The X-Men|
+59|Psylocke|
+60|Gambit|
+61|Popularity|
+62|Cable|
+63|Scorpio|
+64|Appeal|
+65|Lady Deathstrike|
+66|Cylla|
+67|Punisher|
+68|Buried Alive|
+69|Deadly Imitator|
+70|Elsie Dee|
+71|Matsuo|
+72|Flashback|
+73|Maverick|
+74|Resurrected|
+75|Omega Red|
+76|Carbonadium|
+77|Honor|
+78|Sabretooth|
+79|Silver Fox|
+80|Reiko|
+81|"Heavy Metal"|
+82|Escape|
+83|Barbaric|
+84|Rip and Tear|
+85|Ghost Rider|
+86|Cyber|
+87|Venom|
+88|The End?|
+89|The Future?|
+90|Checklist CL|
