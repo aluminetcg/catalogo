@@ -1,0 +1,50 @@
+# set: CSVH5eC Happy Set: Dragonite & Mewtwo & Camerupt & Sinistcha (Happy Pack)
+001/049|Caterpie|
+002/049|Metapod|
+003/049|Butterfree|
+004/049|Paras|
+005/049|Parasect|
+006/049|Karrablast|
+007/049|Phantump|
+008/049|Trevenant|
+009/049|Vulpix|
+010/049|Ninetales|
+011/049|Sizzlipede|
+012/049|Centiskorch|
+013/049|Remoraid|
+014/049|Octillery|
+015/049|Suicune|
+016/049|Finneon|
+017/049|Lumineon|
+018/049|Snover|
+019/049|Abomasnow|
+020/049|Alolan Geodude|
+021/049|Alolan Graveler|
+022/049|Alolan Golem|
+023/049|Yamper|
+024/049|Boltund|
+025/049|Mr. Mime|
+026/049|Shuppet|
+027/049|Banette|
+028/049|Beldum|
+029/049|Metang|
+030/049|Metagross|
+031/049|Riolu|
+032/049|Drilbur|
+033/049|Excadrill|
+034/049|Pancham|
+035/049|Pangoro|
+036/049|Bombirdier|
+037/049|Escavalier|
+038/049|Cufant|
+039/049|Copperajah|
+040/049|Farfetch'd|
+041/049|Tauros|
+042/049|Aipom|
+043/049|Ambipom|
+044/049|Black Belt's Training|
+045/049|Black Belt's Training|
+046/049|Black Belt's Training|
+047/049|Professor's Research|
+048/049|Professor's Research|
+049/049|Professor's Research|
