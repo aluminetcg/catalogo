@@ -1,0 +1,46 @@
+# set: 30thDC 30th Celebration Premium Deck Set: Espeon & Umbreon
+001/040|Tropius|
+002/040|Cherubi|
+003/040|Cherrim|
+004/040|Vulpix|
+005/040|Ninetales|
+006/040|Victini|
+007/040|Zeraora|
+008/040|Toxel|
+009/040|Toxtricity|
+010/040|Mewtwo|
+011/040|Mew|
+012/040|Marill|
+013/040|Azumarill|
+014/040|Espeon ex|
+015/040|Cresselia|
+016/040|Comfey|
+017/040|Umbreon ex|
+018/040|Murkrow|
+019/040|Zorua|
+020/040|Zoroark|
+021/040|Deino|
+022/040|Zweilous|
+023/040|Hydreigon|
+024/040|Kangaskhan|
+025/040|Eevee|
+026/040|Eevee|
+027/040|Minior|
+028/040|Potion|
+029/040|Crushing Hammer|
+030/040|Ultra Ball|
+031/040|Poké Pad|
+032/040|Switch|
+033/040|Pokémon Catcher|
+034/040|Iris's Fighting Spirit|
+035/040|Waitress|
+036/040|Urbain|
+037/040|Judge|
+038/040|Brock's Scouting|
+039/040|Boss's Orders|
+040/040|Lillie's Determination|
+041/040|Basic Grass Energy|
+042/040|Basic Fire Energy|
+043/040|Basic Lightning Energy|
+044/040|Basic Psychic Energy|
+045/040|Basic Darkness Energy|
