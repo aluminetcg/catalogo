@@ -391,7 +391,12 @@
     var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k]) || "" : ""; if (c.L === "mtg") { $("#ti").value = titleFor(c, $("#ca").value); $("#fx").checked = /foil/i.test(k) && !$("#es").checked; foilPreview(c); } };
     setPrice();
     $("#pk").onchange = setPrice;
-    if ($("#fx")) $("#fx").onchange = function () { foilPreview(c); };
+    if ($("#fx")) $("#fx").onchange = function () {     // tildar foil = pasar a la versi\u00f3n foil (precio y t\u00edtulo); destildar = volver a la normal
+      var on = this.checked, ks = Object.keys(c[5] || {});
+      var k = on ? ks.filter(function (k) { return /foil/i.test(k); })[0] : (c[5].Normal ? "Normal" : ks.filter(function (k) { return !/foil/i.test(k); })[0]);
+      if (k && k !== $("#pk").value) { $("#pk").value = k; setPrice(); }
+      $("#fx").checked = on; foilPreview(c);
+    };
     if ($("#es")) {
       $("#es").onchange = function () { $("#fx").disabled = this.checked; if (this.checked) $("#fx").checked = false; foilPreview(c); };
       scryfallEs(c).then(function (u) { if (u && S.sel === c && $("#eslb")) $("#eslb").hidden = false; });
