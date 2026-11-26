@@ -1,0 +1,50 @@
+# set: CSVH4eC Happy Set: Decidueye & Melmetal & Koraidon & Miraidon (Happy Pack)
+001/049|Petilil|
+002/049|Lilligant|
+003/049|Durant|
+004/049|Paldean Tauros|
+005/049|Torkoal|
+006/049|Larvesta|
+007/049|Volcarona|
+008/049|Oricorio|
+009/049|Paldean Tauros|
+010/049|Mantine|
+011/049|Wingull|
+012/049|Pelipper|
+013/049|Zapdos|
+014/049|Blitzle|
+015/049|Zebstrika|
+016/049|Wattrel|
+017/049|Kilowattrel|
+018/049|Marill|
+019/049|Azumarill|
+020/049|Latias|
+021/049|Xerneas|
+022/049|Oricorio|
+023/049|Comfey|
+024/049|Indeedee|
+025/049|Paldean Tauros|
+026/049|Rockruff|
+027/049|Lycanroc|
+028/049|Registeel|
+029/049|Galarian Stunfisk|
+030/049|Altaria|
+031/049|Swablu|
+032/049|Tropius|
+033/049|Glameow|
+034/049|Purugly|
+035/049|Tornadus|
+036/049|Furfrou|
+037/049|Drampa|
+038/049|Wooloo|
+039/049|Dubwool|
+040/049|Cramorant|
+041/049|Lechonk|
+042/049|Oinkologne|
+043/049|Squawkabilly|
+044/049|Black Belt's Training|
+045/049|Black Belt's Training|
+046/049|Black Belt's Training|
+047/049|Professor's Research|
+048/049|Professor's Research|
+049/049|Professor's Research|
