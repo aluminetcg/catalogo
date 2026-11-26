@@ -468,13 +468,24 @@ def recientes(n):
     pos = {r["id"]: i for i, r in enumerate(rows)}
     db = load_card_db()
     seen, nuevos, quitar, cambiados, page = set(), [], set(), 0, 0
+    # la tienda solo pagina /v4/product (página 1 en adelante) con la sesión que abre la página /productos
+    html = get(f"{BASE}/productos").text
+    m = re.search(r"csrf_token\s*=\s*['\"]([^'\"]+)", html) or re.search(r'name="csrf-token"\s+content="([^"]+)"', html)
+    hdr = {"X-Requested-With": "XMLHttpRequest", "Referer": f"{BASE}/productos"}
+    if m:
+        hdr["X-CSRF-TOKEN"] = m.group(1)
     while len(seen) < n and page <= MAX_PAGES:
         time.sleep(DELAY)
-        r = get(f"{BASE}/v4/product", params={"filter_page": page, "filter_order": 0})
-        if r.status_code != 200:
-            raise RuntimeError(f"La tienda respondió {r.status_code} al pedir los últimos productos")
-        prods = r.json().get("data") or []
-        if not prods:
+        r = get(f"{BASE}/v4/product", params={"filter_page": page, "filter_order": 0}, headers=hdr)
+        try:
+            body = r.json()
+        except ValueError:
+            body = {}
+        prods = body.get("data") or []
+        if r.status_code != 200 or not prods:
+            if page == 0:
+                raise RuntimeError(f"La tienda respondió {r.status_code} al pedir los últimos productos")
+            print(f"AVISO: la página {page} de /productos vino vacía ({r.status_code}: {str(body.get('message'))[:120]})")
             break
         for p in prods:
             pid = p["idProductos"]
