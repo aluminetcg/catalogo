@@ -1,0 +1,185 @@
+# set: CS4aC Nine Colors Gathering (Friend)
+001/132|Caterpie|C
+002/132|Metapod|U
+003/132|Butterfree|R
+004/132|Pinsir|U
+005/132|Shroomish|C
+006/132|Breloom|U
+007/132|Tropius|U
+008/132|Leafeon V|RR
+009/132|Leafeon VMAX|RRR
+010/132|Pansage|C
+011/132|Simisage|U
+012/132|Maractus|U
+013/132|Virizion|U
+014/132|Grubbin|C
+015/132|Tsareena V|RR
+016/132|Gossifleur|C
+017/132|Eldegoss|R
+018/132|Vulpix|C
+019/132|Ninetales|U
+020/132|Flareon V|RR
+021/132|Flareon VMAX|RRR
+022/132|Pansear|C
+023/132|Simisear|U
+024/132|Sizzlipede|C
+025/132|Centiskorch|U
+026/132|Vaporeon V|RR
+027/132|Vaporeon VMAX|RRR
+028/132|Mantine|C
+029/132|Mudkip|C
+030/132|Marshtomp|U
+031/132|Swampert|R
+032/132|Feebas|C
+033/132|Milotic|U
+034/132|Glaceon V|RR
+035/132|Glaceon VMAX|RRR
+036/132|Panpour|C
+037/132|Simipour|U
+038/132|Clauncher|C
+039/132|Clawitzer|U
+040/132|Crabominable V|RR
+041/132|Wishiwashi|U
+042/132|Pyukumuku|U
+043/132|Eiscue|U
+044/132|Pikachu|C
+045/132|Raichu|R
+046/132|Voltorb|C
+047/132|Electrode|U
+048/132|Jolteon V|RR
+049/132|Jolteon VMAX|RRR
+050/132|Tynamo|C
+051/132|Eelektrik|U
+052/132|Eelektross|U
+053/132|Charjabug|U
+054/132|Vikavolt|U
+055/132|Toxel|C
+056/132|Toxtricity|R
+057/132|Jynx|C
+058/132|Espeon V|RR
+059/132|Espeon VMAX|RRR
+060/132|Wobbuffet|C
+061/132|Snubbull|C
+062/132|Granbull|U
+063/132|Mawile|C
+064/132|Sigilyph|C
+065/132|Flabébé|C
+066/132|Floette|U
+067/132|Florges|R
+068/132|Sylveon V|RR
+069/132|Sylveon VMAX|RRR
+070/132|Dedenne|C
+071/132|Pumpkaboo|C
+072/132|Gourgeist|U
+073/132|Sandygast|C
+074/132|Palossand|U
+075/132|Geodude|C
+076/132|Graveler|U
+077/132|Golem|U
+078/132|Gligar|C
+079/132|Gliscor|U
+080/132|Medicham V|RR
+081/132|Baltoy|C
+082/132|Claydol|U
+083/132|Galarian Moltres|R
+084/132|Umbreon V|RR
+085/132|Umbreon VMAX|RRR
+086/132|Croagunk|C
+087/132|Toxicroak|U
+088/132|Trubbish|C
+089/132|Garbodor|U
+090/132|Vullaby|C
+091/132|Mandibuzz|U
+092/132|Impidimp|C
+093/132|Morgrem|U
+094/132|Grimmsnarl|R
+095/132|Galarian Meowth|C
+096/132|Galarian Perrserker|U
+097/132|Skarmory|C
+098/132|Klefki|C
+099/132|Dialga|R
+100/132|Deino|C
+101/132|Zweilous|U
+102/132|Hydreigon|R
+103/132|Kyurem|R
+104/132|Zygarde|R
+105/132|Drampa|U
+106/132|Duraludon V|RR
+107/132|Duraludon VMAX|RRR
+108/132|Meowth|C
+109/132|Persian|U
+110/132|Kangaskhan|U
+111/132|Eevee|C
+112/132|Dunsparce|U
+113/132|Stantler|U
+114/132|Smeargle|U
+115/132|Slakoth|C
+116/132|Vigoroth|U
+117/132|Slaking|R
+118/132|Switching Cups|U
+119/132|Dream Ball|U
+120/132|Rescue Carrier|U
+121/132|Digging Gloves|U
+122/132|Single Strike Scroll of the Fanged Dragon|U
+123/132|Rubber Gloves|U
+124/132|Full Face Guard|U
+125/132|Raihan|U
+126/132|Shauna|U
+127/132|Schoolgirl|U
+128/132|Gordie|U
+129/132|Copycat|U
+130/132|Crystal Cave|U
+131/132|Shopping Center|U
+132/132|Treasure Energy|U
+133/132|Leafeon V|SR
+134/132|Leafeon V|SR
+135/132|Tsareena V|SR
+136/132|Flareon V|SR
+137/132|Flareon V|SR
+138/132|Vaporeon V|SR
+139/132|Vaporeon V|SR
+140/132|Glaceon V|SR
+141/132|Glaceon V|SR
+142/132|Crabominable V|SR
+143/132|Jolteon V|SR
+144/132|Jolteon V|SR
+145/132|Espeon V|SR
+146/132|Espeon V|SR
+147/132|Sylveon V|SR
+148/132|Sylveon V|SR
+149/132|Medicham V|SR
+150/132|Medicham V|SR
+151/132|Umbreon V|SR
+152/132|Umbreon V|SR
+153/132|Duraludon V|SR
+154/132|Duraludon V|SR
+155/132|Raihan|SR
+156/132|Shauna|SR
+157/132|Schoolgirl|SR
+158/132|Gordie|SR
+159/132|Copycat|SR
+160/132|Sylveon V|CSR
+161/132|Sylveon VMAX|CSR
+162/132|Umbreon V|CSR
+163/132|Umbreon VMAX|CSR
+164/132|Duraludon VMAX|CSR
+165/132|Leafeon VMAX|HR
+166/132|Leafeon VMAX|HR
+167/132|Glaceon VMAX|HR
+168/132|Glaceon VMAX|HR
+169/132|Espeon VMAX|HR
+170/132|Sylveon VMAX|HR
+171/132|Sylveon VMAX|HR
+172/132|Umbreon VMAX|HR
+173/132|Umbreon VMAX|HR
+174/132|Duraludon VMAX|HR
+175/132|Duraludon VMAX|HR
+176/132|Raihan|HR
+177/132|Shauna|HR
+178/132|Schoolgirl|HR
+179/132|Gordie|HR
+180/132|Copycat|HR
+181/132|Full Face Guard|UR
+182/132|Crystal Cave|UR
+183/132|Fire Energy|UR
+184/132|Darkness Energy|UR
