@@ -1,0 +1,170 @@
+# set: CS6aC Shadow of the Blue Sea (Roar)
+001/131|Beedrill V|RR
+002/131|Oddish|C
+003/131|Gloom|U
+004/131|Bellossom|U
+005/131|Venonat|C
+006/131|Venomoth|U
+007/131|Tangela|C
+008/131|Tangrowth|U
+009/131|Scyther|C
+010/131|Spinarak|C
+011/131|Ariados|R
+012/131|Sunkern|C
+013/131|Sunflora|U
+014/131|Yanma|C
+015/131|Yanmega|U
+016/131|Tropius|U
+017/131|Petilil|C
+018/131|Hisuian Lilligant|R
+019/131|Hisuian Lilligant V|RR
+020/131|Hisuian Lilligant VSTAR|RRR
+021/131|Foongus|C
+022/131|Amoonguss|U
+023/131|Durant|C
+024/131|Virizion|C
+025/131|Phantump|C
+026/131|Trevenant|R
+027/131|Radiant Tsareena|K
+028/131|Zarude|R
+029/131|Vulpix|C
+030/131|Ninetales|U
+031/131|Growlithe|C
+032/131|Arcanine|U
+033/131|Ponyta|C
+034/131|Rapidash|R
+035/131|Magmar|C
+036/131|Magmortar|U
+037/131|Entei V|RR
+038/131|Victini|C
+039/131|Simisear V|RR
+040/131|Simisear VSTAR|RRR
+041/131|Larvesta|C
+042/131|Volcarona|U
+043/131|Reshiram V|RR
+044/131|Fennekin|C
+045/131|Braixen|U
+046/131|Delphox|U
+047/131|Fletchinder|U
+048/131|Talonflame|U
+049/131|Volcanion|R
+050/131|Litten|C
+051/131|Torracat|U
+052/131|Incineroar|U
+053/131|Salandit|C
+054/131|Salazzle|U
+055/131|Electabuzz|C
+056/131|Electivire|U
+057/131|Zapdos|R
+058/131|Chinchou|C
+059/131|Lanturn|U
+060/131|Raikou V|RR
+061/131|Shinx|C
+062/131|Luxio|U
+063/131|Luxray|U
+064/131|Magnezone V|RR
+065/131|Magnezone VSTAR|RRR
+066/131|Emolga|C
+067/131|Tynamo|C
+068/131|Eelektrik|U
+069/131|Eelektross|U
+070/131|Stunfisk|C
+071/131|Helioptile|C
+072/131|Heliolisk|C
+073/131|Zeraora|U
+074/131|Regieleki V|RR
+075/131|Regieleki VMAX|RRR
+076/131|Galarian Meowth|C
+077/131|Galarian Perrserker|U
+078/131|Galarian Perrserker V|RR
+079/131|Scizor|U
+080/131|Aron|C
+081/131|Lairon|U
+082/131|Aggron|R
+083/131|Beldum|C
+084/131|Metang|U
+085/131|Metagross|R
+086/131|Radiant Jirachi|K
+087/131|Bronzor|C
+088/131|Bronzong|U
+089/131|Ferroseed|C
+090/131|Ferrothorn|U
+091/131|Galarian Stunfisk|U
+092/131|Pawniard|C
+093/131|Bisharp|U
+094/131|Cobalion|C
+095/131|Magearna V|RR
+096/131|Zacian V|RR
+097/131|Zacian VSTAR|RRR
+098/131|Zamazenta V|RR
+099/131|Zamazenta VSTAR|RRR
+100/131|Tauros|U
+101/131|Miltank|R
+102/131|Lugia V|RR
+103/131|Lugia VSTAR|RRR
+104/131|Ho-Oh V|RR
+105/131|Swablu|C
+106/131|Altaria|U
+107/131|Buneary|C
+108/131|Lopunny|U
+109/131|Glameow|C
+110/131|Purugly|U
+111/131|Shaymin|U
+112/131|Archen|U
+113/131|Archeops|R
+114/131|Rufflet|C
+115/131|Hisuian Braviary|U
+116/131|Fletchling|C
+117/131|Yungoos|C
+118/131|Gumshoos|U
+119/131|Oranguru|U
+120/131|Capturing Aroma|U
+121/131|Quad Stone|U
+122/131|Unidentified Fossil|C
+123/131|Sky Seal Stone|R
+124/131|Volo|R
+125/131|Worker|U
+126/131|Serena|U
+127/131|Thorton|U
+128/131|Wallace|C
+129/131|Miss Fortune Sisters|U
+130/131|Primordial Altar|U
+131/131|Gift Energy|U
+132/131|Magmortar|AR
+133/131|Electivire|AR
+134/131|Miltank|AR
+135/131|Beedrill V|SR
+136/131|Beedrill V|SR
+137/131|Hisuian Lilligant V|SR
+138/131|Hisuian Lilligant V|SR
+139/131|Reshiram V|SR
+140/131|Magnezone V|SR
+141/131|Regieleki V|SR
+142/131|Magearna V|SR
+143/131|Galarian Perrserker V|SR
+144/131|Galarian Perrserker V|SR
+145/131|Lugia V|SR
+146/131|Lugia V|SR
+147/131|Ho-Oh V|SR
+148/131|Volo|SR
+149/131|Volo|SR
+150/131|Serena|SR
+151/131|Thorton|SR
+152/131|Wallace|SR
+153/131|Miss Fortune Sisters|SR
+154/131|Entei V|SAR
+155/131|Simisear VSTAR|SAR
+156/131|Raikou V|SAR
+157/131|Zamazenta V|SAR
+158/131|Hisuian Lilligant VSTAR|HR
+159/131|Magnezone VSTAR|HR
+160/131|Regieleki VMAX|HR
+161/131|Lugia VSTAR|HR
+162/131|Volo|HR
+163/131|Serena|HR
+164/131|Thorton|HR
+165/131|Wallace|HR
+166/131|Miss Fortune Sisters|HR
+167/131|Lugia VSTAR|UR
+168/131|Grass Energy|UR
+169/131|Metal Energy|UR
