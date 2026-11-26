@@ -398,7 +398,10 @@ def set_icons(rows):
         poke = []
         if (DB / "_sets.json").exists():
             poke = [[s["name"], (s.get("images") or {}).get("symbol")] for s in json.loads((DB / "_sets.json").read_text())]
-        key = lambda n: norm((n or "").replace("&", " and ").replace("Mistery", "Mystery"))
+        ORD = {"4th": "fourth", "5th": "fifth", "6th": "sixth", "7th": "seventh", "8th": "eighth", "9th": "ninth", "10th": "tenth"}
+        def key(n):
+            n = re.sub(r"['’]", "", (n or "").replace("&", " and ").replace("Mistery", "Mystery"))
+            return " ".join(ORD.get(w, w) for w in norm(n).split())
         fuentes = {"Magic": [(key(n), u) for n, u in mtg if u], "Pokémon": [(key(n), u) for n, u in poke if u]}
         out = {}
         for r in rows:
@@ -413,8 +416,8 @@ def set_icons(rows):
             if u:
                 out[s] = u
         (HERE / "data" / "set_icons.json").write_text(json.dumps(out, ensure_ascii=False))
-        falta = sorted({r["set"] for r in rows if r.get("set") and r["game"] in fuentes and r["set"] not in out})
-        print(f"Íconos de expansión: {len(out)} (sin ícono: {len(falta)}: {', '.join(falta[:40])})", flush=True)
+        falta = sorted({r["set"] for r in rows if r.get("set") and r["game"] in fuentes and r["set"] not in out and not re.match(r"(\d{4}$|C?S\w*\d\w*C\b|\d+C\b)", r["set"])})
+        print(f"Íconos de expansión: {len(out)} (sin ícono: {len(falta)}: {', '.join(falta[:150])})", flush=True)
     except Exception as e:      # nunca frenar el catálogo por esto
         print(f"AVISO: sin íconos de expansión ({e})")
 
