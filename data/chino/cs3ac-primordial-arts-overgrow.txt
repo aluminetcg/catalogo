@@ -1,0 +1,185 @@
+# set: CS3aC Primordial Arts (Overgrow)
+001/125|Venusaur V|RR
+002/125|Venusaur VMAX|RRR
+003/125|Bellsprout|C
+004/125|Weepinbell|U
+005/125|Victreebel|U
+006/125|Heracross|C
+007/125|Celebi V|RR
+008/125|Celebi VMAX|RRR
+009/125|Seedot|C
+010/125|Cacnea|C
+011/125|Cacturne|U
+012/125|Snover|C
+013/125|Abomasnow|U
+014/125|Scatterbug|C
+015/125|Spewpa|U
+016/125|Vivillon|U
+017/125|Zarude|R
+018/125|Entei|R
+019/125|Salandit|C
+020/125|Salazzle|U
+021/125|Scorbunny|C
+022/125|Raboot|U
+023/125|Cinderace|R
+024/125|Psyduck|C
+025/125|Golduck|U
+026/125|Luvdisc|C
+027/125|Tympole|C
+028/125|Electabuzz|C
+029/125|Electivire|U
+030/125|Mareep|C
+031/125|Flaaffy|U
+032/125|Ampharos|U
+033/125|Emolga|C
+034/125|Tapu Koko V|RR
+035/125|Tapu Koko VMAX|RRR
+036/125|Yamper|C
+037/125|Boltund|U
+038/125|Galarian Rapidash V|RR
+039/125|Gastly|C
+040/125|Haunter|U
+041/125|Gengar|R
+042/125|Shuppet|C
+043/125|Banette|U
+044/125|Chimecho|C
+045/125|Cresselia|R
+046/125|Golett|C
+047/125|Golurk|U
+048/125|Espurr|C
+049/125|Meowstic|R
+050/125|Swirlix|C
+051/125|Slurpuff|U
+052/125|Cutiefly|C
+053/125|Ribombee|U
+054/125|Shadow Rider Calyrex V|RR
+055/125|Shadow Rider Calyrex VMAX|RRR
+056/125|Mankey|C
+057/125|Primeape|U
+058/125|Galarian Farfetch'd|C
+059/125|Galarian Sirfetch'd|U
+060/125|Galarian Zapdos V|RR
+061/125|Palpitoad|U
+062/125|Seismitoad|U
+063/125|Rockruff|C
+064/125|Lycanroc|R
+065/125|Rolycoly|C
+066/125|Carkol|U
+067/125|Coalossal|R
+068/125|Clobbopus|C
+069/125|Grapploct|R
+070/125|Stonjourner|U
+071/125|Single Strike Urshifu V|RR
+072/125|Single Strike Urshifu VMAX|RRR
+073/125|Zubat|C
+074/125|Golbat|U
+075/125|Crobat|R
+076/125|Koffing|C
+077/125|Weezing|U
+078/125|Galarian Weezing|U
+079/125|Murkrow|C
+080/125|Honchkrow|U
+081/125|Galarian Slowking V|RR
+082/125|Galarian Slowking VMAX|RRR
+083/125|Qwilfish|C
+084/125|Houndour|C
+085/125|Houndoom|R
+086/125|Tyranitar V|RR
+087/125|Nuzleaf|U
+088/125|Shiftry|U
+089/125|Seviper|U
+090/125|Liepard V|RR
+091/125|Morpeko|U
+092/125|Mawile|C
+093/125|Bronzor|C
+094/125|Bronzong|R
+095/125|Cobalion|R
+096/125|Tauros|R
+097/125|Blissey V|RR
+098/125|Lillipup|C
+099/125|Herdier|U
+100/125|Stoutland|U
+101/125|Tornadus V|RR
+102/125|Tornadus VMAX|RRR
+103/125|Fletchling|C
+104/125|Fletchinder|U
+105/125|Talonflame|U
+106/125|Welcoming Lantern|U
+107/125|Urn of Vitality|U
+108/125|Camping Gear|U
+109/125|Fog Crystal|U
+110/125|Single Strike Scroll of Scorn|U
+111/125|Single Strike Scroll of Piercing|U
+112/125|Exp. Share|U
+113/125|Weeding Gloves|U
+114/125|Crushing Gloves|U
+115/125|Flannery|U
+116/125|Karen's Conviction|U
+117/125|Agatha|U
+118/125|Bruno|U
+119/125|Peonia|U
+120/125|Phoebe|U
+121/125|Single Strike Style Mustard|U
+122/125|Cheryl|U
+123/125|Tower of Darkness|U
+124/125|Old Cemetery|U
+125/125|Single Strike Energy|U
+126/125|Abomasnow|CHR
+127/125|Banette|CHR
+128/125|Rockruff|CHR
+129/125|Bronzong|CHR
+130/125|Venusaur V|SR
+131/125|Celebi V|SR
+132/125|Celebi V|SR
+133/125|Tapu Koko V|SR
+134/125|Galarian Rapidash V|SR
+135/125|Galarian Rapidash V|SR
+136/125|Shadow Rider Calyrex V|SR
+137/125|Shadow Rider Calyrex V|SR
+138/125|Galarian Zapdos V|SR
+139/125|Galarian Zapdos V|SR
+140/125|Single Strike Urshifu V|SR
+141/125|Single Strike Urshifu V|SR
+142/125|Tyranitar V|SR
+143/125|Tyranitar V|SR
+144/125|Liepard V|SR
+145/125|Blissey V|SR
+146/125|Blissey V|SR
+147/125|Flannery|SR
+148/125|Karen's Conviction|SR
+149/125|Agatha|SR
+150/125|Bruno|SR
+151/125|Peonia|SR
+152/125|Phoebe|SR
+153/125|Single Strike Style Mustard|SR
+154/125|Cheryl|SR
+155/125|Shadow Rider Calyrex V|CSR
+156/125|Shadow Rider Calyrex VMAX|CSR
+157/125|Galarian Zapdos V|CSR
+158/125|Single Strike Urshifu V|CSR
+159/125|Single Strike Urshifu VMAX|CSR
+160/125|Blissey V|CSR
+161/125|Venusaur VMAX|HR
+162/125|Celebi VMAX|HR
+163/125|Tapu Koko VMAX|HR
+164/125|Shadow Rider Calyrex VMAX|HR
+165/125|Shadow Rider Calyrex VMAX|HR
+166/125|Single Strike Urshifu VMAX|HR
+167/125|Single Strike Urshifu VMAX|HR
+168/125|Tornadus VMAX|HR
+169/125|Flannery|HR
+170/125|Karen's Conviction|HR
+171/125|Agatha|HR
+172/125|Bruno|HR
+173/125|Peonia|HR
+174/125|Phoebe|HR
+175/125|Single Strike Style Mustard|HR
+176/125|Cheryl|HR
+177/125|Cresselia|UR
+178/125|Houndoom|UR
+179/125|Bronzong|UR
+180/125|Welcoming Lantern|UR
+181/125|Urn of Vitality|UR
+182/125|Fog Crystal|UR
+183/125|Exp. Share|UR
+184/125|Single Strike Energy|UR
