@@ -1,0 +1,63 @@
+# set: CSVH2C Happy Set: Lucario & Greninja & Zamazenta & Mabosstiff
+001/058|Scyther|
+002/058|Staryu|
+003/058|Starmie|
+004/058|Lapras|
+005/058|Delibird|
+006/058|Keldeo|
+007/058|Froakie|
+008/058|Frogadier|
+009/058|Greninja ex|
+010/058|Glastrier|
+011/058|Tatsugiri|
+012/058|Riolu|
+013/058|Lucario|
+014/058|Terrakion|
+015/058|Passimian|
+016/058|Kleavor|
+017/058|Seviper|
+018/058|Absol|
+019/058|Darkrai|
+020/058|Morpeko|
+021/058|Maschiff|
+022/058|Mabosstiff ex|
+023/058|Skarmory|
+024/058|Bronzor|
+025/058|Bronzong|
+026/058|Dialga|
+027/058|Cobalion|
+028/058|Klefki|
+029/058|Zacian|
+030/058|Zamazenta|
+031/058|Orthworm|
+032/058|Farfetch'd|
+033/058|Doduo|
+034/058|Dodrio|
+035/058|Smeargle|
+036/058|Chatot|
+037/058|Hawlucha|
+038/058|Energy Switch|
+039/058|Energy Recycler|
+040/058|Potion|
+041/058|Super Rod|
+042/058|Dark Patch|
+043/058|Nest Ball|
+044/058|Ultra Ball|
+045/058|Rare Candy|
+046/058|Switch|
+047/058|Pokémon Catcher|
+048/058|Exp. Share|
+049/058|Rigid Band|
+050/058|Vitality Band|
+051/058|Dendra|
+052/058|Judge|
+053/058|Candice|
+054/058|Youngster|
+055/058|Nemona|
+056/058|Professor's Research|
+057/058|Arven|
+058/058|Marnie's Pride|
+059/058|Basic Darkness Energy|
+060/058|Basic Fighting Energy|
+061/058|Basic Metal Energy|
+062/058|Basic Water Energy|
