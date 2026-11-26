@@ -1,0 +1,91 @@
+# set: 1996 SkyBox Amalgam
+1|Super-Soldier|
+2|Spider-Boy|
+3|Dark Claw|
+4|Sparrow|
+5|Huntress|
+6|Bruce Wayne Agent of S.H.I.E.L.D.|
+7|Black Bat|
+8|Moonwing|
+9|Wonder Woman|
+10|Dr. Strangefate|
+11|Dr. Strangefate's aides|
+12|Myx|
+13|Speed Demon|
+14|Kid Demon|
+15|Prince|
+16|Castle|
+17|JLA: Captain Marvel/Angelhawk|
+18|JLA: Canary, Goliath & Hawkeye|
+19|Mister X|
+20|Mariner|
+21|Firebird|
+22|Apollo|
+23|Mercury|
+24|Nightcreeper|
+25|Wraith|
+26|Runaway|
+27|Kokoro|
+28|Magneto|
+29|Iron|
+30|Cobalt|
+31|Nickel|
+32|Antimony|
+33|Bismuth|
+34|Catsai|
+35|Dare|
+36|Niles Cable|
+37|Ferro Man|
+38|Beastling|
+39|Elasti-Girl|
+40|Dial H.U.S.K.|
+41|Shatterstarfire|
+42|The Microverse Saga|
+43|The Return of the Super-Soldier|
+44|Death of Bruce Wayne's Parents|
+45|Birth of an Amazon|
+46|The Ultimate Price|
+47|Behold the Crimson Whirlwind|
+48|The Brotherhood of Mutants|
+49|Who is Dr. Strangefate?|
+50|First Fight!|
+51|Weapons X|
+52|Challengers of the Fantastic|
+53|Mariner is Framed!|
+54|A Monster is born|
+55|Seeing Sparks!|
+56|America's Guardian Angel|
+57|Femmes Fatale|
+58|Cyborg Revealed|
+59|The Once and Future Menace|
+60|The Green Skull|
+61|Madame Cat|
+62|The Big Question|
+63|Sinistron|
+64|Ultra-Metallo|
+65|Super-Soldier versus Ultra-Metallo|
+66|Ultra-Metallo versus Super-Solider|
+67|Bizarnage versus Spider-Boy|
+68|Spider-Boy versus Bizarnage|
+69|Bizarnage|
+70|Poseidon|
+71|Wonder Woman versus Poseidon|
+72|Poseidon versus Wonder Woman|
+73|Nuke versus Bruce Wayne|
+74|Bruce Wayne versus Nuke|
+75|Nuke|
+76|Hyena|
+77|Dark Claw versus Hyena|
+78|Hyena versus Dark Claw|
+79|Night Spectre versus Speed Demon|
+80|Speed Demon versus Night Spectre|
+81|Night Spectre|
+82|Will Magnus|
+83|King Lizard|
+84|Jocasta|
+85|Dr. Doomsday|
+86|Lethal, Deadeye & Wired|
+87|Thanoseid|
+88|Hydra|
+89|Baron Zero|
+90|Checklist CL|
