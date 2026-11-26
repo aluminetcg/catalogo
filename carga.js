@@ -247,7 +247,12 @@
       var list = await api("/producto?search=" + encodeURIComponent(name) + "&limit=60");
       if (S.sel !== c) return;
       var num = nnum(c[2]);
-      var hits = (list || []).filter(function (p) { return norm(p.p_nombre).split(" ").some(function (w) { return w.indexOf("/") > 0 && nnum(w) === num; }); });
+      // n\u00famero con total (143/128): tiene que coincidir entero. Promos sin total (MEP099, SVP012, 099): alcanza con el n\u00famero
+      var dig = (String(c[2]).split("/")[0].match(/\d+/g) || [""]).pop().replace(/^0+/, "");
+      var hits = (list || []).filter(function (p) { return norm(p.p_nombre).split(" ").some(function (w) {
+        if (num.indexOf("/") > 0) return w.indexOf("/") > 0 && nnum(w) === num;
+        var m = w.match(/^[a-z]*0*(\d+)[a-z]*$/); return !!dig && !!m && m[1] === dig;
+      }); });
       if (!hits.length) { box.innerHTML = "No hay ning\u00fan producto con ese nombre y n\u00famero en tu tienda."; return; }
       box.innerHTML = "<b>Ya ten\u00e9s cargada" + (hits.length > 1 ? "s estas" : " esta") + ":</b>" + hits.map(function (p) {
         var s = (p.stock || [])[0] || {};
