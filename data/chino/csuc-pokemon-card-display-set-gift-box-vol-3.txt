@@ -1,0 +1,14 @@
+# set: CSUC Pokémon Card Display Set Gift Box Vol. 3
+001/012|Parasect|
+002/012|Roserade|
+003/012|Chandelure|
+004/012|Milotic|
+005/012|Gengar|
+006/012|Jynx|
+007/012|Gardevoir|
+008/012|Hisuian Arcanine|
+009/012|Mightyena|
+010/012|Snorlax|
+011/012|Smeargle|
+012/012|Altaria|
+013/012|Braixen|
