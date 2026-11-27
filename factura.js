@@ -8,7 +8,7 @@
   if (old) old.remove();
 
   var REPO = "https://api.github.com/repos/aluminetcg/facturador";
-  var PROD_LISTO = false;      // pasa a true cuando esté el certificado de producción
+  var PROD_LISTO = true;       // pasa a true cuando esté el certificado de producción
   var host = document.createElement("div");
   host.id = "alumine-factura";
   host.style.cssText = "position:fixed;inset:0;z-index:2147483000";
@@ -131,7 +131,7 @@
   }
 
   // ------------------------------------------------------------------ pantalla principal
-  var ENT = PROD_LISTO ? ls.get("entorno", "homo") : "homo";
+  var ENT = PROD_LISTO ? ls.get("entorno", "prod") : "homo";
   function carpeta() { return "/contents/facturas/" + ENT; }
 
   function iniciar() {
