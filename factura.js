@@ -81,6 +81,8 @@
     var o = { venta: "", nombre: "", doc: "", domicilio: "", cond_venta: "", items: [] };
     var m = txt.match(/Orden\s*#\s*(\d+)/);
     if (m) o.venta = m[1];
+    m = txt.match(/\b(\d{2})\/(\d{2})\/(\d{2}|\d{4})\s+\d{1,2}:\d{2}/);      // fecha de la orden: 25/11/26 22:40
+    if (m) o.fecha = (m[3].length === 2 ? "20" + m[3] : m[3]) + "-" + m[2] + "-" + m[1];
     function despues(titulo, campo) {      // "campo: valor" dentro de la sección que empieza en "titulo"
       var i = L.findIndex(function (l) { return l.indexOf(titulo) === 0; });
       if (i < 0) return "";
@@ -173,6 +175,12 @@
     root.getElementById("pdf").onclick = function () { bajarPdf("facturas/" + ENT + "/venta-" + o.venta + ".pdf", o.venta); };
   }
 
+  function hoyStr(d) { d = d || new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function fechaDefault(o) {      // la de la orden si está dentro de los 5 días que acepta ARCA
+    if (o.fechaElegida) return o.fechaElegida;
+    var lim = hoyStr(new Date(Date.now() - 5 * 864e5));
+    return o.fecha && o.fecha >= lim && o.fecha <= hoyStr() ? o.fecha : hoyStr();
+  }
   function formulario(o, aviso) {
     var docTipo = o.anon ? 99 : o.doc.length === 11 ? 80 : o.doc ? 96 : 99;
     var filas = o.items.map(function (it, i) {
@@ -186,7 +194,7 @@
       '<div class="row"><div><label>Cliente</label><input id="nombre" value="' + esc(o.nombre) + '"></div>' +
       '<div style="flex:.5"><label>Documento</label><select id="dt"><option value="96">DNI</option><option value="80">CUIT</option><option value="86">CUIL</option><option value="99">Sin identificar</option></select></div>' +
       '<div style="flex:.6"><label>Número</label><input id="dn" value="' + esc(o.doc) + '"></div></div>' +
-      '<div class="row"><div><label>Domicilio</label><input id="dom" value="' + esc(o.domicilio) + '"></div><div style="flex:.5"><label>Condición de venta</label><select id="cv">' + ["Otros medios de pago electrónico", "Transferencia Bancaria", "Contado", "Tarjeta de Débito", "Tarjeta de Crédito", "Cuenta Corriente", "Otra"].map(function (v) {
+      '<div class="row"><div><label>Domicilio</label><input id="dom" value="' + esc(o.domicilio) + '"></div><div style="flex:.35"><label>Fecha</label><input id="fe" type="date" value="' + esc(fechaDefault(o)) + '"></div><div style="flex:.5"><label>Condición de venta</label><select id="cv">' + ["Otros medios de pago electrónico", "Transferencia Bancaria", "Contado", "Tarjeta de Débito", "Tarjeta de Crédito", "Cuenta Corriente", "Otra"].map(function (v) {
         return "<option" + (v === o.cond_venta ? " selected" : "") + ">" + v + "</option>"; }).join("") + '</select></div></div>' +
       '<table><thead><tr><th>Producto / Servicio</th><th>Cant.</th><th>Precio unit.</th><th style="text-align:right">Subtotal</th><th></th></tr></thead><tbody>' + filas + "</tbody></table>" +
       '<button id="add" style="margin-top:6px;font-size:13px">+ Agregar línea</button>' +
@@ -211,7 +219,7 @@
     });
     root.querySelectorAll("[data-del]").forEach(function (b) { b.onclick = function () { o.items.splice(+b.dataset.del, 1); guardarCampos(); formulario(o); }; });
     $("add").onclick = function () { guardarCampos(); o.items.push({ d: "", c: 1, p: 0 }); formulario(o); };
-    function guardarCampos() { o.nombre = $("nombre").value; o.doc = $("dn").value; o.domicilio = $("dom").value; o.cond_venta = $("cv").value; }
+    function guardarCampos() { o.fechaElegida = $("fe").value; o.nombre = $("nombre").value; o.doc = $("dn").value; o.domicilio = $("dom").value; o.cond_venta = $("cv").value; }
     $("ent").onchange = function () {
       ENT = $("ent").value; ls.set("entorno", ENT); guardarCampos(); iniciar();
     };
@@ -223,7 +231,7 @@
       var dt = +$("dt").value, dn = o.doc.replace(/\D/g, "");
       if (dt !== 99 && !dn) { $("msg").innerHTML = '<div class="msg err">Falta el número de documento (o elegí "Sin identificar").</div>'; return; }
       if (dt === 80 && dn.length !== 11) { $("msg").innerHTML = '<div class="msg err">El CUIT tiene que tener 11 números.</div>'; return; }
-      emitir(o, { venta: o.venta, nombre: o.nombre || "Consumidor final", doc_tipo: dn ? dt : 99, doc_nro: dn || "0", domicilio: o.domicilio, cond_venta: o.cond_venta || "Otra", items: items }, t);
+      emitir(o, { venta: o.venta, nombre: o.nombre || "Consumidor final", doc_tipo: dn ? dt : 99, doc_nro: dn || "0", domicilio: o.domicilio, cond_venta: o.cond_venta || "Otra", fecha: $("fe").value, items: items }, t);
     };
   }
 
@@ -269,7 +277,9 @@
         if (!r.ok) throw new Error(r.error || "ARCA rechazó la factura");
         pantalla('<h2>¡Factura emitida!</h2>' + (ENT === "homo" ? '<div class="prueba">Modo PRUEBA: esta factura no tiene validez</div>' : "") +
           '<div class="msg bien">Factura C <b>' + String(r.pto_vta).padStart(5, "0") + "-" + String(r.nro).padStart(8, "0") + "</b> · " + plata(r.total) +
-          "<br>CAE <b>" + esc(r.cae) + "</b> (vence " + esc(r.cae_vto.replace(/(\d{4})(\d\d)(\d\d)/, "$3/$2/$1")) + ")</div>" +
+          "<br>CAE <b>" + esc(r.cae) + "</b> (vence " + esc(r.cae_vto.replace(/(\d{4})(\d\d)(\d\d)/, "$3/$2/$1")) + ")" +
+          (r.fecha ? "<br>Fecha de la factura: " + esc(r.fecha.replace(/(\d{4})(\d\d)(\d\d)/, "$3/$2/$1")) : "") + "</div>" +
+          (r.nota ? '<div class="msg info">' + esc(r.nota) + "</div>" : "") +
           '<div class="btns"><button data-cerrar>Cerrar</button><button class="ok" id="pdf">Descargar PDF</button></div>');
         root.getElementById("pdf").onclick = function () { bajarPdf(r.pdf, o.venta); };
         bajarPdf(r.pdf, o.venta);
