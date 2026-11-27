@@ -19,7 +19,7 @@ on:
         default: 100
   push:
     branches: [main]
-    paths: ["index.html", "precios.html", "rarezas.html", "tienda.js", "carga.js", "carga.html", "crawl.py", "precios.py", "singles.py", "data/manual/**", "data/chino/**", "data/marvel/**", "chino.html", ".github/workflows/actualizar.yml"]
+    paths: ["index.html", "precios.html", "rarezas.html", "tienda.js", "carga.js", "carga.html", "factura.js", "crawl.py", "precios.py", "singles.py", "data/manual/**", "data/chino/**", "data/marvel/**", "chino.html", ".github/workflows/actualizar.yml"]
 
 permissions:
   contents: write
