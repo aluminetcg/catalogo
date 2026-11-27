@@ -96,7 +96,9 @@
       ciudad = despues("Dirección de envío", "Ciudad"), prov = despues("Dirección de envío", "Provincia");
     o.domicilio = [[calle, nro].filter(function (s) { return s && s !== "-"; }).join(" "), ciudad, prov].filter(Boolean).join(", ");
     m = txt.match(/Pago\s*:\s*([^\n]+)/);
-    if (m) o.cond_venta = m[1].trim().replace(/\b\w+/g, function (w) { return w.charAt(0) + w.slice(1).toLowerCase(); });
+    var pago = m ? m[1] : "";
+    o.cond_venta = /transf/i.test(pago) ? "Transferencia Bancaria" : /efectivo|contado|local/i.test(pago) ? "Contado"
+      : /d[eé]bito/i.test(pago) ? "Tarjeta de Débito" : /cr[eé]dito/i.test(pago) ? "Tarjeta de Crédito" : "Otros medios de pago electrónico";
 
     // productos: "3 x Nombre" ... "$29.067,00" entre "Detalle de la orden" y "Subtotal"
     var i0 = L.findIndex(function (l) { return /^Detalle de la orden/i.test(l); });
@@ -184,7 +186,8 @@
       '<div class="row"><div><label>Cliente</label><input id="nombre" value="' + esc(o.nombre) + '"></div>' +
       '<div style="flex:.5"><label>Documento</label><select id="dt"><option value="96">DNI</option><option value="80">CUIT</option><option value="86">CUIL</option><option value="99">Sin identificar</option></select></div>' +
       '<div style="flex:.6"><label>Número</label><input id="dn" value="' + esc(o.doc) + '"></div></div>' +
-      '<div class="row"><div><label>Domicilio</label><input id="dom" value="' + esc(o.domicilio) + '"></div><div style="flex:.5"><label>Condición de venta</label><input id="cv" value="' + esc(o.cond_venta || "Otra") + '"></div></div>' +
+      '<div class="row"><div><label>Domicilio</label><input id="dom" value="' + esc(o.domicilio) + '"></div><div style="flex:.5"><label>Condición de venta</label><select id="cv">' + ["Otros medios de pago electrónico", "Transferencia Bancaria", "Contado", "Tarjeta de Débito", "Tarjeta de Crédito", "Cuenta Corriente", "Otra"].map(function (v) {
+        return "<option" + (v === o.cond_venta ? " selected" : "") + ">" + v + "</option>"; }).join("") + '</select></div></div>' +
       '<table><thead><tr><th>Producto / Servicio</th><th>Cant.</th><th>Precio unit.</th><th style="text-align:right">Subtotal</th><th></th></tr></thead><tbody>' + filas + "</tbody></table>" +
       '<button id="add" style="margin-top:6px;font-size:13px">+ Agregar línea</button>' +
       '<div class="tot" id="tot"></div><div id="dif"></div><div id="msg"></div>' +
