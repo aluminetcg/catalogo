@@ -232,17 +232,35 @@
     pantalla('<h2>Facturando orden #' + esc(o.venta) + "</h2>" + (ENT === "homo" ? '<div class="prueba">Modo PRUEBA (homologación)</div>' : "") +
       '<div class="msg info" id="st">Enviando a ARCA… (tarda alrededor de 30 segundos)</div><div class="btns"><button data-cerrar>Cerrar</button></div>');
     var st = root.getElementById("st");
-    gh("/actions/workflows/facturar.yml/dispatches", { method: "POST", body: { ref: "main", inputs: { datos: JSON.stringify(datos), entorno: ENT } } })
+    function disparar() {
+      return gh("/actions/workflows/facturar.yml/dispatches", { method: "POST", body: { ref: "main", inputs: { datos: JSON.stringify(datos), entorno: ENT } } });
+    }
+    disparar()
       .then(function () {
-        var inicio = Date.now();
+        // se pueden facturar varias órdenes a la vez: GitHub las hace de a una (cola). Si cancela una en espera, se reenvía.
+        var inicio = Date.now(), vuelta = 0, reenvios = 0, fallo = 0;
         return new Promise(function (ok, mal) {
           (function poll() {
+            vuelta++;
             gh(carpeta() + "/pedidos/" + datos.req + ".json", { raw: true, ok404: true }).then(function (b) {
               if (b) return b.text().then(function (x) { ok(JSON.parse(x)); });
               var s = Math.round((Date.now() - inicio) / 1000);
-              if (s > 240) return mal(new Error("Tardó demasiado. Fijate en github.com/aluminetcg/facturador/actions si terminó."));
-              st.textContent = "Esperando a ARCA… " + s + " s";
-              setTimeout(poll, 5000);
+              if (s > 600) return mal(new Error("Tardó demasiado. Fijate en github.com/aluminetcg/facturador/actions si terminó."));
+              if (fallo && ++fallo > 3) return mal(new Error("El proceso falló sin respuesta de ARCA. Mirá github.com/aluminetcg/facturador/actions"));
+              var sigue = function () { setTimeout(poll, 5000); };
+              if (vuelta % 3) { st.textContent = "Esperando a ARCA… " + s + " s"; return sigue(); }
+              return gh("/actions/runs?event=workflow_dispatch&per_page=30").then(function (r) {
+                var run = (r.workflow_runs || []).filter(function (w) { return (w.display_title || "").indexOf(datos.req) >= 0; })[0];
+                if (run && run.status !== "completed" && run.status !== "in_progress") st.textContent = "En cola: hay otra factura procesándose… " + s + " s";
+                else st.textContent = "Esperando a ARCA… " + s + " s";
+                if (run && run.status === "completed" && run.conclusion === "cancelled" && reenvios < 3) {
+                  reenvios++;
+                  st.textContent = "Había varias facturas en cola, reenviando esta…";
+                  return disparar().then(sigue);
+                }
+                if (run && run.status === "completed" && run.conclusion === "failure" && !fallo) fallo = 1;
+                sigue();
+              });
             })["catch"](mal);
           })();
         });
