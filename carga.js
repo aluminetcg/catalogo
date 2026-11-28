@@ -374,7 +374,8 @@
       var foil = ($("#pk") && /foil/i.test($("#pk").value)) || ($("#fx") && $("#fx").checked) ? "Foil" : "";
       return [mtgName(c[1]), "#" + c[2], mtgVar(c[1]), foil, set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
     }
-    var holo = $("#pk") && /^holo ?foil$/i.test($("#pk").value) && !/holo/i.test(c[4] || "") ? "HOLO" : "";    // "Klinklang 067/086 HOLO SV11W White Flare"
+    var pk = $("#pk") ? $("#pk").value : "";
+    var holo = /^holo ?foil$/i.test(pk) && !/holo/i.test(c[4] || "") ? "HOLO" : /^reverse holo ?foil$/i.test(pk) && !/reverse/i.test(c[4] || "") ? "Reverse Holo" : "";    // "Klinklang 067/086 HOLO SV11W White Flare"
     return [cardName(c[1]), BASICAS[c[4]] ? "" : c[4], c[2], holo, set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
   }
   function catOptions(sel, L) {
