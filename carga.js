@@ -162,6 +162,7 @@
     '.ph{width:100%;aspect-ratio:1;background:#f4f2ec;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:44px;color:#c9c3b3}' +
     '.nof{border:2px dashed #e3dfd3;border-radius:12px;padding:26px 14px;text-align:center;color:#6a7080;font-size:13px}' +
     '.lg{display:inline-block;font-size:10px;font-weight:800;background:#1d2330;color:#fff;border-radius:5px;padding:1px 5px;vertical-align:1px}' +
+    '.stk{display:inline-block;margin-top:2px;font-size:11px;font-weight:700;background:#e3f4e6;color:#1d7a36;border-radius:6px;padding:2px 7px}.stk.cero{background:#f0f0f2;color:#8a8f9c}' +
     '.t b{font-size:13px;line-height:1.2}.t small{color:#6a7080;font-size:12px;line-height:1.25}' +
     '.msg{grid-column:1/-1;color:#6a7080;padding:30px;text-align:center}' +
     'aside{background:#fff;border-left:1px solid #e3dfd3;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:12px}' +
@@ -289,6 +290,42 @@
     if (quiet) return html;
     $("#res").innerHTML = html;
   }
+  // ---- stock de la tienda en la vista rápida (índice que arma el catálogo cada 6 h; se corrige en vivo al abrir una carta)
+  var STK = null, STKlive = {};
+  function cargarStock() {
+    if (STK) return;
+    STK = {};
+    fetch(PAGES + "data/singles/stock.json?t=" + Math.floor(Date.now() / 36e5)).then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (d) { STK = d || {}; pintarStock(); })["catch"](function () {});
+  }
+  function stockDe(c) {
+    if (STKlive[c[0]]) return STKlive[c[0]];
+    var idx = STK && STK[c.L]; if (!idx) return null;
+    var nm = norm(cardName(c[1]).replace(/\(.*?\)/g, "")); if (!nm) return null;
+    var hits = (idx[nnum(c[2])] || []).filter(function (x) {
+      return (" " + x[0] + " ").indexOf(" " + nm + " ") >= 0 && (c.L !== "mv" || x[0].indexOf(norm(setName(setOf(c))).split(" ").slice(-2).join(" ")) >= 0);
+    });
+    if (!hits.length && c.L === "mtg") {      // publicaciones viejas de Magic sin número
+      var dig = (String(c[2]).match(/\d+/) || [""])[0].replace(/^0+/, "");
+      hits = (idx[""] || []).filter(function (x) {
+        if (!(x[0] === nm || x[0].indexOf(nm + " ") === 0)) return false;
+        var sig = (x[0].slice(nm.length).trim().split(" ")[0] || "").replace(/^0+(?=\d)/, "");
+        return !/^\d+[a-z]?$/.test(sig) || sig === dig;
+      });
+    }
+    return hits.length ? { n: hits.reduce(function (s, x) { return s + x[1]; }, 0), t: hits.map(function (x) { return x[0] + ": " + x[1]; }).join("\n") } : null;
+  }
+  function badge(c) {
+    var s = stockDe(c);
+    if (!s || s.none) return "";
+    return '<span class="stk' + (s.n > 0 ? "" : " cero") + '" title="' + esc(s.t) + '">' + (s.n > 0 ? "\ud83d\udce6 " + s.n + " en stock" : "Sin stock") + "</span>";
+  }
+  function pintarStock() {
+    (S.tiles || []).forEach(function (c) {
+      var el = $("#res").querySelector('[data-pid="' + (window.CSS && CSS.escape ? CSS.escape(c[0]) : c[0]) + '"] .stkbox');
+      if (el) el.innerHTML = badge(c);
+    });
+  }
   function search() {
     var L = searchLangs().filter(function (l) { return S.idx[l]; }); if (!L.length) return;
     var toks = norm($("#q").value).split(" ").filter(Boolean);
@@ -311,11 +348,13 @@
     if (S.lang === "mv" && !out.length) { $("#res").innerHTML = '<div class="msg">No est\u00e1 en la base de Marvel y DC. Si es de un set que todav\u00eda no cargamos, pasame la lista del set.</div>'; return; }
     var cnHtml = S.lang === "all" || S.lang === "cn" ? searchCn(true) || "" : "";
     if (cnHtml) cnHtml = '<div class="msg" style="padding:8px 0 0;text-align:left">Chino a mano (si no est\u00e1 en la base):</div>' + cnHtml;
+    cargarStock();
+    S.tiles = out;
     $("#res").innerHTML = out.length || cnHtml ? out.map(function (c) {
       var p = bestPrice(c[5]);
       return '<div class="t' + (S.sel === c ? " on" : "") + '" data-pid="' + esc(c[0]) + '" data-l="' + c.L + '">' + (MAN[c.L] ? (c[6] ? '<img loading="lazy" src="' + esc(c[6]) + '" alt="">' : '<div class="ph">' + (c.L === "cn" ? "\u4e2d" : "\u2605") + '</div>') : '<img loading="lazy" src="' + IMG(c[0], 200) + '" alt="">') +
         '<b>' + (L.length > 1 || MAN[c.L] ? '<span class="lg">' + (c.L === "jp" ? "JAP" : c.L === "cn" ? "CHI" : c.L === "mtg" ? "MTG" : c.L === "mv" ? "M/DC" : "ING") + "</span> " : "") + esc(cardName(c[1])) + '</b><small>' + esc(c[2]) + " \u00b7 " + esc(setName(setOf(c))) + "</small>" +
-        "<small>" + esc(c[4] || "") + (p ? " \u00b7 US$" + p[1] : "") + "</small></div>";
+        "<small>" + esc(c[4] || "") + (p ? " \u00b7 US$" + p[1] : "") + '</small><span class="stkbox">' + badge(c) + "</span></div>";
     }).join("") + cnHtml : '<div class="msg">No encontr\u00e9 cartas con eso. Prob\u00e1 solo con el n\u00famero (143/128) o con otra parte del nombre.</div>';
   }
   function bestPrice(prices, prefer) {
@@ -441,6 +480,9 @@
         });
         viejas = hits.length > 0;
       }
+      STKlive[c[0]] = hits.length ? { n: hits.reduce(function (s, p) { var x = (p.stock || [])[0] || {}; return s + (x.s_ilimitado ? 999 : +x.s_cantidad || 0); }, 0),
+        t: hits.map(function (p) { var x = (p.stock || [])[0] || {}; return p.p_nombre + ": " + (x.s_ilimitado ? "ilimitado" : x.s_cantidad); }).join("\n") } : { n: 0, t: "", none: 1 };
+      pintarStock();
       if (!hits.length) { box.innerHTML = "No hay ning\u00fan producto con ese nombre y n\u00famero en tu tienda."; return; }
       box.innerHTML = (viejas ? "<b>Ten\u00e9s publicaciones con este nombre pero sin n\u00famero</b> (de antes). Fijate en la foto si es la misma versi\u00f3n:" :
         "<b>Ya ten\u00e9s cargada" + (hits.length > 1 ? "s estas" : " esta") + ":</b>") + hits.map(function (p) {

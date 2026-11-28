@@ -150,6 +150,39 @@ def ck_prices():
     return out
 
 
+def stock_index():
+    """Stock de la tienda para la vista rápida: {idioma: {número: [[título normalizado, stock], ...]}}.
+    Idiomas como en carga.js (en/jp/cn/mtg/mv); las publicaciones sin número van en el número ""."""
+    import unicodedata
+
+    def nrm(s):
+        s = unicodedata.normalize("NFD", s or "")
+        s = "".join(c for c in s if unicodedata.category(c) != "Mn").lower().replace("'", "").replace("\u2019", "")
+        return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9/ ]+", " ", s)).strip()
+
+    def nnum(s):
+        out = []
+        for part in str(s or "").lower().split("/"):
+            m = re.match(r"^([a-z]*)0*(\d+)([a-z]*)$", part.strip())
+            out.append(m.group(1) + m.group(2) + m.group(3) if m else part.strip())
+        return "/".join(out)
+
+    LANG = {("Pokémon", "Inglés"): "en", ("Pokémon", ""): "en", ("Pokémon", "Japonés"): "jp", ("Pokémon", "Chino"): "cn"}
+    idx = {}
+    for r in json.loads((HERE / "data" / "cards.json").read_text(encoding="utf-8"))["cards"]:
+        lg = "mtg" if r.get("game") == "Magic" else "mv" if r.get("game") == "Marvel y DC" else LANG.get((r.get("game"), r.get("lang") or ""))
+        if not lg:
+            continue
+        num = r.get("number") or ""
+        if not num:
+            m = re.search(r"#\s*(\w+)", r.get("title", ""))
+            num = m.group(1) if m else ""
+        idx.setdefault(lg, {}).setdefault(nnum(num), []).append([nrm(r.get("title")), int(r.get("stock") or 0)])
+    f = OUT / "stock.json"
+    f.write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")))
+    print(f"Stock para la vista rápida: {sum(len(l) for d in idx.values() for l in d.values())} publicaciones ({f.stat().st_size // 1024} KB)")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     meta = {"files": {}}
@@ -194,6 +227,10 @@ def main():
         print(f"Índice de carga rápida {key}: {len(cards)} cartas en {len(sets)} sets ({f.stat().st_size // 1024} KB)")
     meta["files"]["cn"] = manual()
     meta["files"]["mv"] = manual("marvel", "mv", "Base Marvel y DC")
+    try:
+        stock_index()
+    except Exception as e:
+        print(f"AVISO: sin stock para la vista rápida ({e})")
     (OUT / "meta.json").write_text(json.dumps(meta, ensure_ascii=False))
 
 
