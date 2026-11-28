@@ -170,6 +170,10 @@
     '.foto{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px;color:#6a7080}' +
     '.foto label.sec{display:inline-block;font-size:13px;color:#c2410c;flex-direction:row}' +
     '.drop{outline:3px dashed #c2410c;outline-offset:-6px}' +
+    '.xs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0}.xs #xs{display:contents}.xi{position:relative;display:inline-block}' +
+    '.xi img{width:46px;height:64px;object-fit:cover;border-radius:5px;border:1px solid #ddd;display:block}' +
+    '.xi button{position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:50%;border:0;background:#1d2330;color:#fff;font-size:12px;line-height:18px;padding:0;cursor:pointer}' +
+    '.xs small{color:#6a7080;font-size:12px}.mas{font-size:13px}' +
     'aside label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:#6a7080;font-weight:600}' +
     'aside input,aside select{padding:9px 10px;border:1.5px solid #e3dfd3;border-radius:9px;font:inherit;font-size:15px;color:#1d2330;width:100%}' +
     '.row{display:flex;gap:10px}.row>*{flex:1;min-width:0}' +
@@ -390,14 +394,15 @@
     return '<option value="">\u2014 Eleg\u00ed la categor\u00eda \u2014</option>' + list.map(opt).join("") + (others.length ? '<optgroup label="Otras categor\u00edas">' + others.map(opt).join("") + "</optgroup>" : "");
   }
   function showDetailCn(c) {
-    S.sel = c; S.own = null;
+    S.sel = c; S.own = null; S.extras = [];
     root.querySelectorAll(".t").forEach(function (t) { t.classList.toggle("on", (t.dataset.l === "cn" && S.cnRes[+t.dataset.i] === c) || (t.dataset.pid !== undefined && t.dataset.pid == c[0])); });
     var L = c.L, setFull = typeof c[0] === "string" && c[0].indexOf(L + "|") === 0 ? setOf(c) : "";
     var cat = (setFull && (S.catMap[L + "|" + setFull] || guessCat(setFull, L))) || (L === "cn" && S.catMap[cnKey(c)]) || S.catMap[L + "|last"] || "";
     var rzs = RZ.indexOf(c[4]) >= 0 ? RZ : RZ.concat([c[4]]);
     $("#det").innerHTML = '<img class="big" id="big" alt="" hidden><div class="nof" id="nof">Sin foto (es opcional).<br>Peg\u00e1 (Ctrl+V), arrastr\u00e1 o eleg\u00ed una foto si quer\u00e9s ponerle.</div>' +
-      '<div class="foto"><label class="sec">Elegir foto<input id="own" type="file" accept="image/*" hidden></label>' +
+      '<div class="foto"><label class="sec">Elegir foto<input id="own" type="file" accept="image/*" multiple hidden></label>' +
       '<button class="sec" id="rmown" hidden>Sacar la foto</button><span id="fotoinfo"></span></div>' +
+      '<div class="xs"><div id="xs"></div><label class="sec mas">+ M\u00e1s fotos<input id="xf" type="file" accept="image/*" multiple hidden></label></div>' +
       (c[6] ? '<label style="flex-direction:row;align-items:center;gap:6px"><input id="uf" type="checkbox" checked style="width:auto"> Usar la foto de tu publicaci\u00f3n anterior de esta carta</label>' : "") +
       '<div class="row"><label>Nombre<input id="nm"></label><label' + (L === "cn" ? "" : " hidden") + '>Rareza<select id="rz">' + rzs.map(function (r) { return '<option value="' + esc(r) + '"' + (r === c[4] ? " selected" : "") + ">" + esc(r || "(ninguna)") + "</option>"; }).join("") + "</select></label></div>" +
       (setFull ? '<div class="hint">De tu base ' + (L === "cn" ? "china" : "Marvel y DC") + ": " + esc(setFull) + " #" + esc(c[2]) + "</div>" : "") +
@@ -415,20 +420,23 @@
     $("#rz").onchange = function () { c[4] = this.value; $("#ti").value = titleFor(c, $("#ca").value); };
     $("#ca").onchange = function () { $("#ti").value = titleFor(c, $("#ca").value); };
     $("#add").onclick = function () { crear(c); };
-    $("#own").onchange = function () { if (this.files && this.files[0]) setOwn(this.files[0]); this.value = ""; };
+    $("#own").onchange = function () { if (this.files && this.files.length) agregarFotos(this.files, true); this.value = ""; };
+    $("#xf").onchange = function () { if (this.files && this.files.length) agregarFotos(this.files, false); this.value = ""; };
+    pintarExtras();
     $("#rmown").onclick = function () { setOwn(null); };
     renderLog();
     existentes(c);
   }
   function showDetail(c) {
     if (MAN[c.L]) return showDetailCn(c);
-    S.sel = c; S.own = null;
+    S.sel = c; S.own = null; S.extras = [];
     root.querySelectorAll(".t").forEach(function (t) { t.classList.toggle("on", t.dataset.pid == c[0]); });
     var setFull = setOf(c), cat = guessCat(setFull, c.L);
     var keys = Object.keys(c[5] || {}), bp = bestPrice(c[5]);
     $("#det").innerHTML = '<img class="big" id="big" src="' + IMG(c[0], 1000) + '" alt="">' +
-      '<div class="foto"><label class="sec">Usar foto propia<input id="own" type="file" accept="image/*" hidden></label>' +
+      '<div class="foto"><label class="sec">Usar foto propia<input id="own" type="file" accept="image/*" multiple hidden></label>' +
       '<button class="sec" id="rmown" hidden>Volver a la de stock</button><span id="fotoinfo">o peg\u00e1 (Ctrl+V) / arrastr\u00e1 una imagen ac\u00e1</span></div>' +
+      '<div class="xs"><div id="xs"></div><label class="sec mas">+ M\u00e1s fotos<input id="xf" type="file" accept="image/*" multiple hidden></label></div>' +
       (c.L === "mtg" ? '<label style="flex-direction:row;align-items:center;gap:6px"><input id="fx" type="checkbox" style="width:auto"> Efecto foil en la foto de stock</label>' +
         '<label id="eslb" style="flex-direction:row;align-items:center;gap:6px" hidden><input id="es" type="checkbox" style="width:auto"> Usar la foto de la carta en espa\u00f1ol (Scryfall, sin efecto foil)</label>' : "") +
       '<div><b>' + esc(cardName(c[1])) + "</b> \u00b7 " + esc(c[2]) + '<br><small class="hint">' + esc(setFull) + " \u00b7 " + esc(c[4] || "sin rareza") + "</small></div>" +
@@ -457,7 +465,9 @@
     }
     $("#ca").onchange = function () { $("#ti").value = titleFor(c, $("#ca").value); };
     $("#add").onclick = function () { crear(c); };
-    $("#own").onchange = function () { if (this.files && this.files[0]) setOwn(this.files[0]); this.value = ""; };
+    $("#own").onchange = function () { if (this.files && this.files.length) agregarFotos(this.files, true); this.value = ""; };
+    $("#xf").onchange = function () { if (this.files && this.files.length) agregarFotos(this.files, false); this.value = ""; };
+    pintarExtras();
     $("#rmown").onclick = function () { setOwn(null); };
     renderLog();
     existentes(c);
@@ -513,6 +523,32 @@
   }
 
   // ------------------------------------------------------------------ acciones
+  // ---- fotos extra (Empretienda acepta hasta 20 por producto: la principal + 19)
+  var MAXF = 20;
+  function fotoOk(f) {
+    if (!/^image\/(jpe?g|png|webp)$/i.test(f.type)) { say("err", "Las fotos tienen que ser JPG, PNG o WEBP."); return false; }
+    if (f.size > 10 * 1024 * 1024) { say("err", "Una foto pesa m\u00e1s de 10 MB."); return false; }
+    return true;
+  }
+  function agregarFotos(files, principal) {      // principal: la primera reemplaza la foto principal, el resto van como extra
+    files = [].slice.call(files).filter(fotoOk);
+    if (principal && files.length) setOwn(files.shift());
+    S.extras = S.extras || [];
+    var lugar = MAXF - 1 - S.extras.length;
+    if (files.length > lugar) say("hint", "Empretienda acepta hasta " + MAXF + " fotos por producto: agregu\u00e9 " + Math.max(0, lugar) + " de " + files.length + ".");
+    files.slice(0, Math.max(0, lugar)).forEach(function (f) { S.extras.push({ f: f, u: URL.createObjectURL(f) }); });
+    pintarExtras();
+  }
+  function pintarExtras() {
+    var box = $("#xs"); if (!box) return;
+    var xs = S.extras || [];
+    box.innerHTML = xs.map(function (x, i) {
+      return '<span class="xi"><img src="' + x.u + '" alt=""><button data-xi="' + i + '" title="Sacar esta foto">\u00d7</button></span>';
+    }).join("") + (xs.length ? '<small>' + (xs.length + 1) + " fotos en total</small>" : "");
+    box.querySelectorAll("[data-xi]").forEach(function (b) {
+      b.onclick = function () { var x = S.extras.splice(+b.dataset.xi, 1)[0]; if (x) URL.revokeObjectURL(x.u); pintarExtras(); };
+    });
+  }
   function setOwn(f) {
     if (f && !/^image\/(jpe?g|png|webp)$/i.test(f.type)) { say("err", "La foto tiene que ser JPG, PNG o WEBP."); return; }
     if (f && f.size > 10 * 1024 * 1024) { say("err", "La foto pesa m\u00e1s de 10 MB."); return; }
@@ -529,19 +565,19 @@
   root.addEventListener("paste", function (e) {
     if (!S.sel || host.hidden) return;
     var it = [].slice.call((e.clipboardData && e.clipboardData.items) || []).filter(function (i) { return /^image\//.test(i.type); })[0];
-    if (it) { e.preventDefault(); setOwn(it.getAsFile()); }
+    if (it) { e.preventDefault(); agregarFotos([it.getAsFile()], !S.own); }
   });
   document.addEventListener("paste", function (e) {
     if (!S.sel || host.hidden || e.composedPath().indexOf(host) >= 0) return;
     var it = [].slice.call((e.clipboardData && e.clipboardData.items) || []).filter(function (i) { return /^image\//.test(i.type); })[0];
-    if (it) { e.preventDefault(); setOwn(it.getAsFile()); }
+    if (it) { e.preventDefault(); agregarFotos([it.getAsFile()], !S.own); }
   });
   ["dragover", "dragleave", "drop"].forEach(function (ev) {
     root.addEventListener(ev, function (e) {
       var det = e.target.closest && e.target.closest("#det"); if (!det || !S.sel) return;
       e.preventDefault();
       det.classList.toggle("drop", ev === "dragover");
-      if (ev === "drop" && e.dataTransfer.files && e.dataTransfer.files[0]) setOwn(e.dataTransfer.files[0]);
+      if (ev === "drop" && e.dataTransfer.files && e.dataTransfer.files.length) agregarFotos(e.dataTransfer.files, !S.own);
     });
   });
   function lock(on) { S.busy = on; root.querySelectorAll("#det button").forEach(function (b) { b.disabled = on; }); }
@@ -584,6 +620,16 @@
     }
     try {
       var imgs = vieja.length ? vieja : await subirStock();
+      if ((S.extras || []).length) {
+        say("hint", "Subiendo " + S.extras.length + " foto" + (S.extras.length > 1 ? "s" : "") + " m\u00e1s\u2026");
+        for (var xi = 0; xi < S.extras.length; xi += 5) {        // de a 5 para no mandar un pedido gigante
+          var fx = new FormData(); fx.append("max_width", "600"); fx.append("max_height", "1200");
+          S.extras.slice(xi, xi + 5).forEach(function (x) { fx.append("images[]", x.f); });
+          var upx = await api("/upload/products", { method: "POST", body: fx });
+          imgs = imgs.concat(upx || []);
+        }
+        imgs = imgs.slice(0, MAXF);
+      }
       var borrada = "";
       if (reemplaza) {                 // Empretienda no deja dos productos con el mismo nombre: primero se borra la vieja (sin stock)
         say("hint", "Borrando la publicaci\u00f3n vieja\u2026");
