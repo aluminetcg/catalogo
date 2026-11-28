@@ -374,7 +374,8 @@
       var foil = ($("#pk") && /foil/i.test($("#pk").value)) || ($("#fx") && $("#fx").checked) ? "Foil" : "";
       return [mtgName(c[1]), "#" + c[2], mtgVar(c[1]), foil, set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
     }
-    return [cardName(c[1]), BASICAS[c[4]] ? "" : c[4], c[2], set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
+    var holo = $("#pk") && /^holo ?foil$/i.test($("#pk").value) && !/holo/i.test(c[4] || "") ? "HOLO" : "";    // "Klinklang 067/086 HOLO SV11W White Flare"
+    return [cardName(c[1]), BASICAS[c[4]] ? "" : c[4], c[2], holo, set].filter(Boolean).join(" ").replace(/\s+/g, " ").slice(0, 80);
   }
   function catOptions(sel, L) {
     var rootRe = ROOTS[L], f = MAN[L] ? "path" : "root";
@@ -434,7 +435,7 @@
       '<div id="out"></div><div id="ex" class="hint">Buscando si ya la ten\u00e9s cargada\u2026</div>' +
       '<div class="log" id="log"></div>';
     $("#ti").value = titleFor(c, cat);
-    var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k], minimo(c, k)) || "" : ""; if (c.L === "mtg") { $("#ti").value = titleFor(c, $("#ca").value); $("#fx").checked = /foil/i.test(k) && !$("#es").checked; foilPreview(c); } };
+    var setPrice = function () { var k = $("#pk").value; $("#pr").value = k ? sugerido(c[5][k], minimo(c, k)) || "" : ""; $("#ti").value = titleFor(c, $("#ca").value); if (c.L === "mtg") { $("#fx").checked = /foil/i.test(k) && !$("#es").checked; foilPreview(c); } };
     setPrice();
     $("#pk").onchange = setPrice;
     if ($("#fx")) $("#fx").onchange = function () {     // tildar foil = pasar a la versi\u00f3n foil (precio y t\u00edtulo); destildar = volver a la normal
