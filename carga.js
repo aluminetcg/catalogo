@@ -331,19 +331,23 @@
     var toks = norm($("#q").value).split(" ").filter(Boolean);
     if (!toks.length) { $("#res").innerHTML = '<div class="msg">Escrib\u00ed el n\u00famero de la carta (por ejemplo 143/128) o parte del nombre.</div>'; return; }
     var nums = toks.filter(function (t) { return /\d/.test(t); }), names = toks.filter(function (t) { return !/\d/.test(t); });
-    var out = [];
+    var out = [], parciales = [];
     for (var li = 0; li < L.length; li++) {
     var d = S.idx[L[li]], lim = out.length + 80;
     for (var i = 0; i < d.cards.length && out.length < lim; i++) {
-      var c = d.cards[i], ok = true;
+      var c = d.cards[i], ok = true, parcial = false;
       for (var a = 0; a < nums.length && ok; a++) {
         var t = nnum(nums[a]);
-        ok = t.indexOf("/") >= 0 ? c.n === t : (c.n.split("/")[0] === t || c.s.split(" ").indexOf(nums[a]) >= 0 || c.w.split(" ").indexOf(nums[a]) >= 0);
+        if (t.indexOf("/") >= 0) {       // 133/19 también encuentra 133/192, 133/198… (el número completo va primero)
+          ok = c.n.indexOf(t) === 0;
+          if (ok && c.n !== t) parcial = true;
+        } else ok = c.n.split("/")[0] === t || c.s.split(" ").indexOf(nums[a]) >= 0 || c.w.split(" ").indexOf(nums[a]) >= 0;
       }
       for (var b = 0; b < names.length && ok; b++) ok = c.w.indexOf(names[b]) >= 0 || c.s.indexOf(names[b]) >= 0;
-      if (ok) out.push(c);
+      if (ok) (parcial ? parciales : out).push(c);
     }
     }
+    out = out.concat(parciales.slice(0, 120));
     if (S.lang === "cn" && !out.length) return searchCn();
     if (S.lang === "mv" && !out.length) { $("#res").innerHTML = '<div class="msg">No est\u00e1 en la base de Marvel y DC. Si es de un set que todav\u00eda no cargamos, pasame la lista del set.</div>'; return; }
     var cnHtml = S.lang === "all" || S.lang === "cn" ? searchCn(true) || "" : "";
