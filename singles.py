@@ -45,6 +45,32 @@ def fotos_tienda():
     return out
 
 
+def fotos_chino(codigos):
+    """Fotos de tus publicaciones de cartas chinas: 'Marowak 105/151 Collect 151 151C HOLO' -> ('151C', '105/151') -> foto.
+    Se reconoce el código del set (CSV4C, CBB3C, 30thC...) en el título y el número NNN/TTT."""
+    out = {}
+    cods = sorted(((re.sub(r"\W", "", c).lower(), c) for c in codigos if len(c) >= 3), key=lambda x: -len(x[0]))
+    try:
+        for r in json.loads((HERE / "data" / "cards.json").read_text(encoding="utf-8"))["cards"]:
+            t = r.get("title", "")
+            if not r.get("img") or r.get("game") != "Pokémon":
+                continue
+            m = re.search(r"\b([A-Z]{0,3}\d{1,4}[a-z]?/[A-Z]{0,3}\d{1,4})\b", t)
+            if not m:
+                continue
+            plano = re.sub(r"\W", "", t).lower()
+            cod = next((c for k, c in cods if k in plano), None)
+            if not cod:
+                continue
+            k = (cod, m.group(1).lower())
+            mejor = not re.search(r"reverse|holo|master ball|pok[eé] ?ball", t, re.I)       # preferir la foto de la versión común
+            if k not in out or (mejor and not out[k][1]):
+                out[k] = (r["img"], mejor)
+    except Exception as e:
+        print(f"AVISO: sin fotos de la tienda para chino ({e})")
+    return {k: v[0] for k, v in out.items()}
+
+
 def manual(carpeta="chino", key="cn", titulo="Base china"):
     """Bases armadas a mano (chino, Marvel y DC): data/<carpeta>/*.txt ('# set: Nombre' + líneas 'número|nombre|rareza').
     Si el mismo número de un set aparece en varios archivos, gana el más nuevo (por nombre de archivo)."""
@@ -60,12 +86,14 @@ def manual(carpeta="chino", key="cn", titulo="Base china"):
                 num, name, rz = (line.split("|") + ["", ""])[:3]
                 if num.strip() and name.strip():
                     porset.setdefault(s, {})[num.strip().upper() + ("|" + name.strip().upper() if key == "mv" else "")] = (num.strip(), name.strip(), rz.strip())
+    if key == "cn":
+        fotos = fotos_chino({s.split()[0] for s in porset})
     sets, cards = [], []
     for gi, s in enumerate(sorted(porset)):
         sets.append([s, ""])
         for k, (num, name, rz) in sorted(porset[s].items()):
-            foto = fotos.get((norm_set(s), num.lower()))
-            if not foto and fotos:      # títulos viejos con el set abreviado ("1994 SkyBox Batman #54" -> Saga of the Dark Knight)
+            foto = fotos.get((s.split()[0], num.lower())) if key == "cn" else fotos.get((norm_set(s), num.lower()))
+            if not foto and fotos and key != "cn":      # títulos viejos con el set abreviado ("1994 SkyBox Batman #54" -> Saga of the Dark Knight)
                 ws = set(norm_set(s).split())
                 foto = next((v for (ks, kn), v in fotos.items() if kn == num.lower() and set(ks.split()) <= ws), None)
             cards.append([f"{key}|{gi}|{k}", name, num, gi, rz, {}] + ([foto] if foto else []))
